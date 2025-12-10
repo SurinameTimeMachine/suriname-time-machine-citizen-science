@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #f4f8f7;
+  --foreground: #0e231f;
+  --ink: #0b3c34;
+  --teal-strong: #006d5b;
+  --teal-bright: #34d1b3;
+  --teal-soft: #b9f4e6;
+  --sand: #fff7e6;
+  --deep-teal: #003c34;
+  --cream: #fdf8f2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ink: var(--ink);
+  --color-teal-strong: var(--teal-strong);
+  --color-teal-bright: var(--teal-bright);
+  --color-teal-soft: var(--teal-soft);
+  --color-sand: var(--sand);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-geist-sans), system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::selection {
+  background: var(--teal-bright);
+  color: var(--ink);
+}
+
+.angled-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.angled-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(52, 209, 179, 0.2), transparent);
+  pointer-events: none;
+}
+
+.diagonal-stack {
+  position: relative;
+}
+
+.diagonal-stack::before,
+.diagonal-stack::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.diagonal-stack::before {
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(255, 247, 230, 0.7)
+  );
+  clip-path: polygon(55% 0, 100% 0, 100% 35%, 0 90%, 0 55%);
+}
+
+.diagonal-stack::after {
+  background: linear-gradient(135deg, rgba(11, 60, 52, 0.65), rgba(0, 0, 0, 0));
+  clip-path: polygon(0 20%, 70% 0, 100% 0, 100% 60%, 30% 100%, 0 100%);
+}
+
+.hero-surface {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--deep-teal),
+    #004f43 55%,
+    var(--teal-strong)
+  );
+  color: white;
+  overflow: hidden;
+}
+
+.hero-surface::before,
+.hero-surface::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-surface::before {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.12),
+    transparent 60%
+  );
+}
+
+.hero-surface::after {
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(52, 209, 179, 0.2) 45%,
+    rgba(255, 247, 230, 0.18) 70%
+  );
+  clip-path: polygon(55% 0, 100% 0, 100% 55%, 35% 100%, 0 100%, 0 35%);
+}
+
+.flag-label {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+.flag-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: var(--teal-bright);
+  transform: translateY(-50%) skewX(-20deg);
+}
+
+.download-dot::before,
+.download-dot::after {
+  content: '';
+  position: absolute;
+  width: 0.5rem;
+  height: 1px;
+  background: currentColor;
+}
+
+.download-dot::before {
+  transform: rotate(90deg);
+}
+
+.download-dot::after {
+  width: 0.5rem;
+}
+
+.angled-card {
+  position: relative;
+  background: white;
+  box-shadow: 0 30px 60px rgba(0, 30, 24, 0.08);
+}
+
+.angled-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(11, 60, 52, 0.12);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%
+  );
+  pointer-events: none;
+}
+
+.angled-card::after {
+  content: '';
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  width: 60px;
+  height: 30px;
+  background: var(--cream);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.applications-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cut-corner {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(2.25rem 0, 100% 0, 100% 100%, 0 100%, 0 2.25rem);
+  box-shadow: 0 28px 60px rgba(0, 30, 24, 0.09);
+}
+
+.cut-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.25rem;
+  height: 3.25rem;
+  background: linear-gradient(135deg, var(--teal-soft), rgba(255, 255, 255, 0));
+  opacity: 0.85;
+  pointer-events: none;
+}
