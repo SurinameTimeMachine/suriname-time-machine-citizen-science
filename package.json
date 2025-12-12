@@ -2,16 +2,15 @@
   "name": "suriname-time-machine-citizen-science",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.19.0",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "export": "next build && next export",
-    "lint": "eslint"
+    "lint": "eslint",
+    "start": "next start"
   },
   "dependencies": {
-    "next": "16.0.7",
+    "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
@@ -24,5 +23,6 @@
     "eslint-config-next": "16.0.7",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@10.19.0"
 }
