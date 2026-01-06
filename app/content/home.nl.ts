@@ -202,7 +202,6 @@ export const homeContent: HomeContent = {
     },
   },
   section06Contact: {
-    email: 'communicatie[AT]huygens.knaw.nl',
-    phone: 'Thijs van der Veen, +31 20 224 68 18',
+    email: 'thunnis.van.oort[AT]huygens.knaw.nl',
   },
 };
