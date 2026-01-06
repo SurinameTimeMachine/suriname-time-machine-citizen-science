@@ -1,5 +1,4 @@
-import type { ResourceItem } from '../components';
-import type { HomeContent } from './home.en';
+import type { HomeContent } from './types';
 
 const sharedSourceParagraph =
   'Dit soort informatie komt uit allerlei bronnen: de Burgerlijke Stand van Suriname, het Wijkregister van Paramaribo, het Slavenregister (beschikbaar via het Nationaal Archief Suriname), het Emancipatieregister (Nationaal Archief Nederland) en digitale collecties zoals DBNL en Delpher, beheerd door de Koninklijke Bibliotheek. Het reconstrueren van het verhaal van een familie als Ellis-de Hart betekent het geduldig samenbrengen van fragmenten uit al deze verschillende archieven.';
@@ -135,7 +134,7 @@ export const homeContent: HomeContent = {
             'Afbeelding van een suikerplantage in 1850 uit de collectie van de Surinaams Museum Stichting.',
         },
       },
-    ] satisfies ResourceItem[],
+    ],
   },
   section03CaseStudy: {
     paragraphs: [
