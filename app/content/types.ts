@@ -16,9 +16,7 @@ export type HomeUiStrings = {
     kicker: string;
     primaryCtaLabel: string;
     textureAlt: string;
-    textureCaption: string;
     snapshotLabel: string;
-    snapshotFooter: string;
   };
   section02Intro: {
     eyebrow: string;
@@ -46,11 +44,17 @@ export type HomeUiStrings = {
     title: string;
     calloutTitle: string;
     calloutBody: string;
+    linksTitle: string;
   };
   footer: {
     coordinatorLine: string;
     organizationLabel: string;
   };
+};
+
+export type ExternalLink = {
+  label: string;
+  href: string;
 };
 
 export type HomeSeo = {
@@ -125,5 +129,6 @@ export type HomeContent = {
   };
   section06Contact: {
     email: string;
+    links?: ExternalLink[];
   };
 };

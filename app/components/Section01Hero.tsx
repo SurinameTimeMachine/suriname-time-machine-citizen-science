@@ -11,9 +11,7 @@ type Section01HeroProps = {
   kicker: string;
   primaryCtaLabel: string;
   textureAlt: string;
-  textureCaption: string;
   snapshotLabel: string;
-  snapshotFooter: string;
 };
 
 export function Section01Hero({
@@ -26,9 +24,7 @@ export function Section01Hero({
   kicker,
   primaryCtaLabel,
   textureAlt,
-  textureCaption,
   snapshotLabel,
-  snapshotFooter,
 }: Section01HeroProps) {
   return (
     <section id="overview" className="hero-surface px-0 py-0">
@@ -90,9 +86,6 @@ export function Section01Hero({
                   sizes="(min-width: 1024px) 360px, 100vw"
                   className="object-cover opacity-50"
                 />
-                <figcaption className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.35em] text-white/80">
-                  {textureCaption}
-                </figcaption>
               </figure>
               <aside className="grid gap-4 border border-white/25 bg-white/5 p-6 text-sm text-white/85">
                 <p className="text-xs uppercase tracking-[0.35em]">
@@ -113,7 +106,6 @@ export function Section01Hero({
                     </div>
                   ))}
                 </dl>
-                <p className="text-xs text-white/70">{snapshotFooter}</p>
               </aside>
             </div>
           </div>

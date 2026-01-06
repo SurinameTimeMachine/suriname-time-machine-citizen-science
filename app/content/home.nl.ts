@@ -28,10 +28,7 @@ export const homeContent: HomeContent = {
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
       textureAlt: 'Geometrisch raster dat SCiTMI-datasets verbeeldt.',
-      textureCaption: 'data',
-      snapshotLabel: 'Momentopname',
-      snapshotFooter:
-        'Bronnen uit verschillende archieven, samengebracht op historische kaarten.',
+      snapshotLabel: 'Projectoverzicht',
     },
     section02Intro: {
       eyebrow: 'De Suriname Tijdmachine',
@@ -63,6 +60,7 @@ export const homeContent: HomeContent = {
       calloutTitle: 'Blijf verbonden met het erfgoedwerk in Suriname.',
       calloutBody:
         'Meehelpen? Deel datasets, organiseer workshops mee of kom met burgerwetenschappelijke initiatieven en help het netwerk groeien.',
+      linksTitle: "Officiële projectpagina's",
     },
     footer: {
       coordinatorLine: 'Coördinatie: Thunnis van Oort',
@@ -82,7 +80,10 @@ export const homeContent: HomeContent = {
       'Surinaamse bronnen uit de 19e eeuw',
       'interactieve kaarten van Paramaribo en de Surinaamse plantages',
     ],
-    stats: [],
+    stats: [
+      { label: 'Looptijd', value: '2025-2026, met mogelijke verlenging' },
+      { label: 'Subsidieverstrekker', value: 'Stichting Pica' },
+    ],
     background: {
       src: '/images/section-01-hero-map.png',
       alt: '19e-eeuwse kaart van Paramaribo met plantages en waterwegen.',
@@ -212,5 +213,15 @@ export const homeContent: HomeContent = {
   },
   section06Contact: {
     email: 'thunnis.van.oort[AT]huygens.knaw.nl',
+    links: [
+      {
+        label: 'Projectpagina Huygens (Engels)',
+        href: 'https://www.huygens.knaw.nl/en/projecten/suriname-time-machine/',
+      },
+      {
+        label: 'Projectpagina Huygens (Nederlands)',
+        href: 'https://www.huygens.knaw.nl/projecten/suriname-tijdmachine/',
+      },
+    ],
   },
 };

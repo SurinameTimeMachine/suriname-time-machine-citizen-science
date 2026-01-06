@@ -38,9 +38,7 @@ export function HomePage({ content }: HomePageProps) {
           kicker={content.ui.section01Hero.kicker}
           primaryCtaLabel={content.ui.section01Hero.primaryCtaLabel}
           textureAlt={content.ui.section01Hero.textureAlt}
-          textureCaption={content.ui.section01Hero.textureCaption}
           snapshotLabel={content.ui.section01Hero.snapshotLabel}
-          snapshotFooter={content.ui.section01Hero.snapshotFooter}
         />
 
         <section className="relative isolate overflow-hidden bg-white pb-20 pt-16">
@@ -137,6 +135,8 @@ export function HomePage({ content }: HomePageProps) {
                 title={content.ui.section06Contact.title}
                 calloutTitle={content.ui.section06Contact.calloutTitle}
                 calloutBody={content.ui.section06Contact.calloutBody}
+                linksTitle={content.ui.section06Contact.linksTitle}
+                links={content.section06Contact.links}
               />
             </div>
           </div>

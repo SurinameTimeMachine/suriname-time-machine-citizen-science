@@ -26,10 +26,7 @@ export const homeContent: HomeContent = {
         'Combining the Suriname Time Machine with the KNAW Citizen Science Incubator.',
       primaryCtaLabel: 'Discover SCiTMI',
       textureAlt: 'Geometric texture grid representing SCiTMI datasets.',
-      textureCaption: 'SCiTMI field datasets',
-      snapshotLabel: 'Project snapshot',
-      snapshotFooter:
-        'Rooted in Paramaribo and extending across the Atlantic archives network.',
+      snapshotLabel: 'Project overview',
     },
     section02Intro: {
       eyebrow: 'Our technology story',
@@ -60,6 +57,7 @@ export const homeContent: HomeContent = {
       calloutTitle: 'Stay aligned with Suriname’s heritage work.',
       calloutBody:
         'Share datasets, plan workshops, or align citizen science efforts with the Suriname Time Machine network.',
+      linksTitle: 'Official project pages',
     },
     footer: {
       organizationLabel: 'SCiTMI · Suriname Citizen Time Machine Incubator',
@@ -83,7 +81,6 @@ export const homeContent: HomeContent = {
     stats: [
       { label: 'Duration', value: '2025-2026, with possible extension' },
       { label: 'Subsidy provider', value: 'Pica Foundation' },
-      { label: 'Subsidy size', value: '150.000,- euro' },
     ],
     background: {
       src: '/images/section-01-hero-map.png',
@@ -210,5 +207,15 @@ export const homeContent: HomeContent = {
   },
   section06Contact: {
     email: 'thunnis.van.oort[AT]huygens.knaw.nl',
+    links: [
+      {
+        label: 'Huygens project page (English)',
+        href: 'https://www.huygens.knaw.nl/en/projecten/suriname-time-machine/',
+      },
+      {
+        label: 'Huygens project page (Dutch)',
+        href: 'https://www.huygens.knaw.nl/projecten/suriname-tijdmachine/',
+      },
+    ],
   },
 };

@@ -3,6 +3,8 @@ type Section06ContactProps = {
   title: string;
   calloutTitle: string;
   calloutBody: string;
+  linksTitle: string;
+  links?: Array<{ label: string; href: string }>;
 };
 
 export function Section06Contact({
@@ -10,6 +12,8 @@ export function Section06Contact({
   title,
   calloutTitle,
   calloutBody,
+  linksTitle,
+  links,
 }: Section06ContactProps) {
   return (
     <section
@@ -24,6 +28,28 @@ export function Section06Contact({
         <div className="bg-sand px-6 py-4 text-sm shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40">
           <p className="font-semibold text-ink">{calloutTitle}</p>
           <p className="mt-1 text-ink/80">{calloutBody}</p>
+
+          {!!links?.length && (
+            <div className="mt-3">
+              <p className="text-xs font-semibold tracking-wide text-ink/70 uppercase">
+                {linksTitle}
+              </p>
+              <ul className="mt-2 space-y-1">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      className="text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-ink/60"
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </section>
