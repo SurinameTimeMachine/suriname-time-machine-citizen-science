@@ -22,10 +22,10 @@ export function SourcesPanel({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <aside className="mt-6 rounded-sm bg-ink/[0.02] ring-1 ring-ink/10 transition-all">
+    <aside className="mt-6 rounded-sm bg-ink/2 ring-1 ring-ink/10 transition-all">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex w-full items-center justify-between px-4 py-3 text-left transition-colors hover:bg-ink/[0.03]"
+        className="flex w-full items-center justify-between px-4 py-3 text-left transition-colors hover:bg-ink/3"
         aria-expanded={isExpanded}
       >
         <div className="flex items-center gap-2">
