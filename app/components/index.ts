@@ -1,4 +1,5 @@
 export { Navigation } from './Navigation';
+export { BackToTop } from './BackToTop';
 export { LanguageToggle } from './LanguageToggle';
 export { SetHtmlLang } from './SetHtmlLang';
 export { Section01Hero } from './Section01Hero';

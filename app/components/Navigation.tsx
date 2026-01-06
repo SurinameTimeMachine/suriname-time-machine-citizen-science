@@ -19,7 +19,7 @@ export function Navigation({
   languageToggleLabel,
 }: NavigationProps) {
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header id="site-header" className="border-b border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-6 lg:px-10">
         <div>
           <p className="text-xs uppercase tracking-[0.35em] text-teal-strong">
