@@ -25,10 +25,7 @@ export const homeContent: HomeContent = {
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
       textureAlt: 'Geometrisch raster dat SCiTMI-datasets verbeeldt.',
-      textureCaption: 'SCiTMI velddata',
-      snapshotLabel: 'Projectoverzicht',
-      snapshotFooter:
-        'Geworteld in Paramaribo en verbonden met een Atlantisch netwerk van archieven.',
+      textureCaption: 'data',
     },
     section02Intro: {
       eyebrow: 'De Suriname Tijdmachine',
