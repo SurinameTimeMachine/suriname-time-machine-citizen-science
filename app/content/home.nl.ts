@@ -37,12 +37,12 @@ export const homeContent: HomeContent = {
     section04Methodology: {
       title: 'Onderzoekshub en methodologie',
       projectTeamTitle: 'Projectteam',
-      relatedEmployeesLabel: 'Gerelateerde medewerkers',
+      relatedEmployeesLabel: 'Medewerkers',
       digitalInfrastructureTitle: 'Digitale infrastructuur',
-      departmentsLabel: 'Afdelingen',
-      departmentsValue: 'LivesLab',
+      departmentsLabel: 'Afdeling',
+      departmentsValue: 'LivesLab, Huygens Instituut (KNAW)',
       tagsLabel: 'Tags',
-      tagsValue: 'erfgoed · overzeese gebieden · samenleving',
+      tagsValue: 'erfgoed · koloniale geschiedenis · linked open data · burgerwetenschap',
     },
     section05Partners: {
       title: 'Partners',
@@ -55,12 +55,10 @@ export const homeContent: HomeContent = {
       title: 'Contact',
       calloutTitle: 'Blijf verbonden met het erfgoedwerk in Suriname.',
       calloutBody:
-        'Deel datasets, plan workshops of verbind citizen-science-initiatieven met het netwerk van de Suriname Time Machine.',
+        'Meehelpen? Deel datasets, organiseer workshops mee of kom met burgerwetenschappelijke initiatieven en help het netwerk groeien.',
     },
     footer: {
-      organizationLabel: 'SCiTMI · Suriname Citizen Time Machine Incubator',
-      coordinatorLine:
-        'Gecoördineerd door het Huygens Instituut en partners in Suriname en Nederland.',
+      organizationLabel: 'Suriname Tijdmachine',
     },
   },
   navLinks: [
@@ -73,13 +71,8 @@ export const homeContent: HomeContent = {
   ],
   section01Hero: {
     highlights: [
-      'Historische gegevens vanaf de 19e eeuw',
-      '1 interactieve kaart',
-    ],
-    stats: [
-      { label: 'Looptijd', value: '2025–2026, met mogelijke verlenging' },
-      { label: 'Subsidieverstrekker', value: 'Pica Foundation' },
-      { label: 'Subsidiebedrag', value: '150.000,- euro' },
+      'Surinaamse bronnen uit de 19e eeuw',
+      'interactieve kaarten van Paramaribo en de Surinaamse plantages',
     ],
     background: {
       src: '/images/section-01-hero-map.png',
@@ -92,10 +85,11 @@ export const homeContent: HomeContent = {
   },
   section02Intro: {
     paragraphs: [
-      'De Suriname Time Machine brengt verspreide bronnen samen. Gebruikers hebben alles op één plek, zonder constant te hoeven controleren of gegevens over dezelfde mensen, straten of plantages gaan. Makkelijker onderzoek helpt om bredere patronen zichtbaar te maken, bijvoorbeeld rond migratie en slavernij, en maakt het eenvoudiger om individuele familiegeschiedenissen te volgen.',
-      'Neem bijvoorbeeld een portret uit de collectie van het Rijksmuseum. Het toont het Surinaamse echtpaar Johannes Ellis en Maria Louisa de Hart, geschilderd in 1846, het jaar waarin hun huwelijk plaatsvond. Hij was toen 33; zij 19. Het bijschrift vermeldt dat hij in Ghana is geboren, maar haar herkomst is onbekend.',
-      'Een beetje online speurwerk levert meer op. Johannes Ellis werd geboren in Fort Elmina (het huidige Ghana) en verhuisde naar Suriname, waar hij in de jaren 1830 ambtenaar werd. Maria Louisa was de dochter van Mozes Meijer de Hart, een Joodse koopman. Zij werd in slavernij geboren, maar op jonge leeftijd door haar vader vrijgemaakt. Het echtpaar woonde aan de Keizerstraat, een van Paramaribo’s meest prestigieuze adressen. Ze kregen vijf kinderen: één zoon en vier dochters.',
-      'Zoals veel midden- en hogereklassehuishoudens in 19e-eeuws Suriname bezaten ze tot slaaf gemaakte mensen: in 1846 bestond hun huishouden uit drie mannen, twee vrouwen en vijf kinderen. Een van deze vrouwen, Marietje, was even oud als Maria Louisa en had zelf twee jonge kinderen.',
+      'De Suriname Time Machine brengt verspreide bronnen samen. Met de Suriname Tijdmachine hoeven gebruikers niet langer op verschillende plekken bronnen te raadplegen en dubbel te checken of het om dezelfde personen, straten of plantages gaat. Dit maakt het makkelijker om patronen uit het verleden te herkennen, zoals rondom migratie en slavernij, en ook om individuele familiegeschiedenissen beter in kaart te brengen.',
+      'Neem bijvoorbeeld een portret uit de collectie van het Rijksmuseum, de eerste bekende foto gemaakt in Suriname. Het toont het Surinaamse echtpaar Johannes Ellis en Maria Louisa de Hart, geschilderd in 1846, het jaar waarin hun huwelijk plaatsvond. Hij was toen 33 jaar, Maria Louisa was 19. Het bijschrift vermeldt dat hij in Ghana is geboren, maar haar herkomst is niet vermeld.',
+      'Wat online speurwerk levert al snel meer informatie op. Johannes Ellis werd geboren in Fort Elmina (in het huidige Ghana). Hij verhuisde naar Suriname, waar hij in de jaren 1830 was hij opgeklommen tot ambtenaar. Maria Louisa was de dochter van de Joodse koopman Mozes Meijer de Hart maar werd geboren in slavernij. Zij werd door hem op jonge leeftijd vrijgemaakt. Het stel Ellis-de Hart woonde in de deftige Keizerstraat in Paramaribo. Ze kregen een groot gezin met 1 zoon en 4 dochters.',
+      'Zoals veel midden- en hogereklassehuishoudens in 19e-eeuws Suriname bezaten ze tot slaaf gemaakte mensen: in 1846 waren dat 3 mannen, 2 vrouwen en 5 kinderen. Een van deze vrouwen in slavernij heette Marietje. Zij was even oud als Maria Louisa en moeder van 1 zoon en 1 dochter.',
+      'Voor meer informatie over deze iconische afbeelding, zie: Carl Haarnack, Garrelt Verhoeven en Eveline Sint Nicolaas, Suriname in beeld. Fotografie in Suriname 1845-1975 (Terra, 2025), p. 22.',
     ],
     source: sharedSourceParagraph,
     portrait: {
@@ -127,18 +121,18 @@ export const homeContent: HomeContent = {
           width: 704,
           height: 396,
           caption:
-            'Afbeelding van een suikerplantage in 1850 uit de collectie van de Surinaams Museum Stichting.',
+            'Afbeelding van een suikerplantage in 1850 uit de collectie van de Stichting Surinaams Museum.',
         },
       },
     ],
   },
   section03CaseStudy: {
     paragraphs: [
-      'Het echtpaar was ook mede-eigenaar en beheerder van de suikerplantage Sardam, gelegen aan de Cotticarivier. Volgens de Surinaamsche Almanak van 1847 werden daar ongeveer 200 tot slaaf gemaakte mensen gedwongen te werken. Een oude krantenknipsel suggereert dat het echtpaar in 1868 nog deels eigenaar was. Toen de slavernij in 1863 werd afgeschaft, werden 287 mensen op Sardam vrijgemaakt.',
+      'Ook was het echtpaar mede-eigenaar en beheerder van de suikerplantage Sardam aan de Cottica rivier, waar volgens de Surinaamsche Almanak van 1847 tweehonderd mensen in slavernij te werk werden gesteld. Volgens een kort krantenbericht was het echtpaar in 1868 nog altijd deels eigenaar van deze plantage. In 1863 zijn op Sardam 287 mensen vrijgemaakt door de afschaffing van de slavernij.',
     ],
     captions: [
       'Plantagerecords van Sardam met het aantal tot slaaf gemaakte arbeiders in 1847.',
-      'Afbeelding van een suikerplantage in 1850 uit de collectie van de Surinaams Museum Stichting.',
+      'Afbeelding van een suikerplantage in 1850 uit de collectie van de Stichting Surinaams Museum.',
     ],
     plantationAsset: {
       src: '/images/section-03-case-study-plantation.png',
@@ -152,13 +146,14 @@ export const homeContent: HomeContent = {
   },
   section04Methodology: {
     missionParagraphs: [
-      'Dit is precies het probleem dat de Suriname Time Machine wil oplossen. Het project wil deze uiteenlopende datasets samenbrengen in één centrale hub. Zo wordt het makkelijker om verhalen zoals dat van Ellis en de Hart te ontsluiten. Rijke personen laten doorgaans meer sporen na, maar door bronnen te koppelen kunnen we ook het leven zichtbaar maken van mensen die minder documenten achterlieten, zoals mensen van bescheiden middelen en mensen die in slavernij leefden.',
-      'De Time Machine integreert een steeds groeiend aantal databanken uit Surinames verleden, beheerd door verschillende erfgoedinstellingen, in één digitale kaart. Onderzoekers kunnen daardoor efficiënter en nauwkeuriger werken. Mensen die hun familiegeschiedenis onderzoeken vinden records gemakkelijker terug, ook wanneer namen of adressen in de loop van de tijd zijn veranderd.',
-      'Ook instellingen zoals het Rijksmuseum kunnen profiteren: met zo’n tool kunnen zij objecten in hun collecties beter contextualiseren, of het nu een portret zoals dat van Ellis-de Hart is, of een afbeelding van een plantage. Dit is extra relevant in een land als Suriname, waar meerdere plantages vaak dezelfde naam hadden. Minstens vijf plantages heetten Libanon, elk gelegen aan een andere rivier of kreek.',
+      'Voor deze informatie zijn meerdere online databestanden bezocht: de Burgerlijke Stand van Suriname, het Wijkregister van Paramaribo en het Slavenregister, allemaal te raadplegen op de website van het Nationaal Archief Suriname, het Emancipatieregister (Nationaal Archief Nederland) en daarnaast de Digitale Bibliotheek voor de Nederlandse Letteren (DBNL) en Delpher, beide beheerd door de Koninklijke Bibliotheek. We moeten het verhaal van Ellis-de Hart letterlijk bij elkaar sprokkelen.',
+      'Dit is precies het probleem dat de Suriname Tijdmachine wil oplossen. Door één centrale plek voor zulke databestanden te maken, kan straks informatie over het echtpaar Ellis-de Hart veel sneller worden gevonden. De Suriname Tijdmachine wordt zo’n knooppunt dat verschillende bronnen samenbrengt. Zo kunnen we meer te weten komen over het leven van Surinamers in het verleden. Dat is weliswaar makkelijker bij rijkere mensen zoals Ellis-de Hart, omdat zij meer sporen hebben achtergelaten. Maar ook over minder rijke mensen en mensen die in slavernij leefden, valt meer te ontdekken als we bronnen op één plek combineren.',
+      'De Tijdmachine integreert een steeds groeiend aantal databanken uit Surinames verleden, beheerd door verschillende erfgoedinstellingen, op één digitale kaart. Onderzoekers kunnen daardoor efficiënter en nauwkeuriger werken. Mensen die hun familiegeschiedenis onderzoeken vinden informatie gemakkelijker terug, ook wanneer namen of adressen in de loop van de tijd zijn veranderd.',
+      'Erfgoedinstellingen, zoals het Rijksmuseum, kunnen de tijdmachine gebruiken om objecten in hun collectie beter te begrijpen en beschrijven, zoals het portret van het echtpaar Ellis-de Hart, of afbeeldingen van verschillende plantages met dezelfde naam, iets dat veel voorkwam in Suriname. Zo waren er minstens vijf plantages genaamd Libanon, allemaal gelegen aan een andere rivier of kreek.',
     ],
     mapParagraphs: [
-      'Een kaart van Paramaribo uit 1846 die per adres de etniciteit van zowel vrije als onvrije inwoners laat zien, gebaseerd op de huidskleurclassificaties in het Districtsregister van dat jaar. Blauw staat voor inwoners van Afrikaanse afkomst, rood voor (witte) Europeanen en groen voor mensen van gemengde of inheemse herkomst. Hoe groter de cirkel, hoe groter het aantal inwoners.',
-      'De Suriname Time Machine laat zich inspireren door de European Time Machine, die technologie en erfgoed combineert om de geschiedenis van steden en samenlevingen digitaal te reconstrueren. Hoewel er vergelijkbare projecten bestaan in Nederland, zoals de Amsterdam Time Machine en de Gouda Time Machine, richt dit project zich buiten Europa en kijkt het naar een land in het mondiale Zuiden.',
+      'Een kaart van Paramaribo uit 1846 met per adres de etniciteit van zowel vrije als onvrije inwoners, volgens de aanduidingen van huidskleur gehanteerd in het Wijkregister van dat jaar. Blauw staat voor inwoners van Afrikaanse herkomst, rood voor (witte) Europeanen en groen voor personen van gemengde of inheemse afkomst. Hoe groter de cirkel hoe meer bewoners.',
+      'De Suriname Tijdmachine is geïnspireerd op het Europese Time Machine project, dat technologie en erfgoed samenbrengt om het verleden van steden en samenlevingen digitaal tot leven te wekken. In Nederland zijn diverse tijdmachineprojecten zoals Amsterdam Time Machine en Gouda tijdmachine. De Suriname tijdmachine richt de blik buiten Europa, op een land in het mondiale Zuiden.',
     ],
     mapAsset: {
       src: '/images/section-04-methodology-map.png',
@@ -169,15 +164,16 @@ export const homeContent: HomeContent = {
         'Een kaart van Paramaribo uit 1846 die per adres de etniciteit van zowel vrije als onvrije inwoners laat zien.',
     },
     teamParagraphs: [
-      'De Suriname Time Machine wordt geleid door onderzoeker Thunnis van Oort, samen met Gerhard de Kok van Datacollecties. Van Oort werkte eerder aan de Historical Database of Suriname and the Caribbean (HDSC), een grootschalig onderzoeksproject aan de Radboud Universiteit, waarbij honderden citizen scientists hielpen met het digitaliseren van historische registers.',
-      'In 2023 werden de gedigitaliseerde slavenregisters van Suriname en Curaçao, ontwikkeld via de HDSC, internationaal erkend en toegevoegd aan UNESCO’s Memory of the World Register, het VN-programma voor het behoud van documentair erfgoed. HDSC is een van de belangrijkste partners van de Suriname Time Machine.',
+      'De Suriname Tijdmachine wordt geleid door onderzoeker Thunnis van Oort. Van Oort werkte eerder mee aan de Historische Database van Suriname en de Cariben (HDSC), een grootschalig onderzoeksproject aan de Radboud Universiteit, waarbij honderden burgerwetenschappers hielpen met het digitaliseren van historische gegevens.',
+      'In 2023 kregen de gedigitaliseerde slavenregisters van Suriname en Curaçao internationale erkenning: ze werden opgenomen in het Memory of the World Register van UNESCO, de VN-organisatie voor erfgoedbehoud. De HDSC is één van de partners van het Suriname tijdmachine.',
     ],
     employees: [
-      'Thunnis van Oort – Dr. – postdoconderzoeker',
-      'Gerhard de Kok – Dr. – projectcoördinator Netwerk Maritieme Bronnen (Network of Maritime Sources)',
-      'Jelle van Lottum – Prof. dr. – hoofd onderzoeksgroep LivesLab',
+      'Thunnis van Oort – Huygens Instituut',
+      'Jona Schlegel – Huygens Instituut',
+      'Gerhard de Kok – Huygens Instituut',
+      'Jelle van Lottum – Huygens Instituut',
       'Matthias Rosenbaum-Feldbrügge – Radboud Universiteit',
-      'Leon van Wissen – MA – Universiteit van Amsterdam',
+      'Leon van Wissen – Universiteit van Amsterdam',
     ],
     infrastructureParagraph:
       'De digitale infrastructuur van het project is gebouwd op Linked Open Data-principes, zodat datasets interoperabel en open toegankelijk zijn. Het platform is ontworpen om continu door te groeien, met nieuwe collecties en bronnen die in de loop van de tijd worden toegevoegd. De onderliggende technologie is bovendien aanpasbaar voor toekomstig gebruik in andere regio’s, bijvoorbeeld de (voormalige) Nederlandse Antillen.',
@@ -187,13 +183,14 @@ export const homeContent: HomeContent = {
       'Nationaal Archief Suriname',
       'Nationaal Archief Nederland',
       'Stichting Surinaamse Genealogie',
-      'Philip Dikland, architect in Paramaribo en curator van de Suriname Heritage Guide',
-      'Historical Database of Suriname and the Caribbean (HDSC), Radboud University',
-      'Amsterdam Time Machine, University of Amsterdam',
-      'Allard Pierson Museum en Bibliotheek, UvA / HvA',
+      'Suriname Heritage Guide (Philip Dikland)',
+      'Historische Database van Suriname en de Cariben (HDSC), Radboud Universiteit',
+      'Amsterdam Time Machine, UvA',
+      'Allard Pierson Museum en Bibliotheek UvA / HvA',
       'Universiteitsbibliotheek Leiden',
       'Internationaal Instituut voor Sociale Geschiedenis',
-      'Wikidata',
+      'Wikimedia Nederland',
+      'Rijksmuseum',
     ],
     mapAsset: {
       src: '/images/section-05-partners-map.png',
