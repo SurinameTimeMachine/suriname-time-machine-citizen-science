@@ -20,6 +20,8 @@ export type HomeUiStrings = {
   };
   section02Intro: {
     eyebrow: string;
+    sourcesTitle: string;
+    sourcesDescription: string;
   };
   section03CaseStudy: {
     label: string;
@@ -57,6 +59,12 @@ export type ExternalLink = {
   href: string;
 };
 
+export type ArchiveSource = {
+  label: string;
+  href: string;
+  institution?: string;
+};
+
 export type HomeSeo = {
   title: string;
   description: string;
@@ -82,6 +90,7 @@ export type HomeContent = {
   section02Intro: {
     paragraphs: string[];
     source: string;
+    sources: ArchiveSource[];
     portrait: {
       src: string;
       alt: string;
@@ -102,6 +111,7 @@ export type HomeContent = {
       caption: string;
     };
     source: string;
+    sources: ArchiveSource[];
   };
   section04Methodology: {
     missionParagraphs: string[];

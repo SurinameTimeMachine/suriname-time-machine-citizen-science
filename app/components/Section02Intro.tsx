@@ -1,11 +1,21 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 import { RichText } from './RichText';
+import { SourcesPanel } from './SourcesPanel';
 import type { MediaAsset } from './types';
+
+type Source = {
+  label: string;
+  href: string;
+  institution?: string;
+};
 
 type Section02IntroProps = {
   storyParagraphs: string[];
   sourceParagraph: string;
+  sources: Source[];
+  sourcesTitle: string;
+  sourcesDescription: string;
   portraitAsset: MediaAsset;
   eyebrow: string;
   children?: ReactNode;
@@ -14,6 +24,9 @@ type Section02IntroProps = {
 export function Section02Intro({
   storyParagraphs,
   sourceParagraph,
+  sources,
+  sourcesTitle,
+  sourcesDescription,
   portraitAsset,
   eyebrow,
   children,
@@ -50,9 +63,12 @@ export function Section02Intro({
                 {portraitAsset.caption}
               </figcaption>
             </figure>
-            <RichText className="text-sm text-ink/70">
-              {sourceParagraph}
-            </RichText>
+            <p className="text-sm text-ink/70">{sourceParagraph}</p>
+            <SourcesPanel
+              title={sourcesTitle}
+              description={sourcesDescription}
+              sources={sources}
+            />
           </div>
         </div>
       </div>

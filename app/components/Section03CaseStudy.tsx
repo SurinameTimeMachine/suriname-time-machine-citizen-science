@@ -1,12 +1,22 @@
 import Image from 'next/image';
 import { RichText } from './RichText';
+import { SourcesPanel } from './SourcesPanel';
 import type { MediaAsset } from './types';
+
+type Source = {
+  label: string;
+  href: string;
+  institution?: string;
+};
 
 type Section03CaseStudyProps = {
   plantationParagraphs: string[];
   plantationCaptions: string[];
   plantationAsset: MediaAsset;
   sourceParagraph: string;
+  sources: Source[];
+  sourcesTitle: string;
+  sourcesDescription: string;
   label: string;
   title: string;
 };
@@ -16,6 +26,9 @@ export function Section03CaseStudy({
   plantationCaptions,
   plantationAsset,
   sourceParagraph,
+  sources,
+  sourcesTitle,
+  sourcesDescription,
   label,
   title,
 }: Section03CaseStudyProps) {
@@ -35,7 +48,12 @@ export function Section03CaseStudy({
           {plantationParagraphs.map((paragraph, index) => (
             <RichText key={index}>{paragraph}</RichText>
           ))}
-          <RichText>{sourceParagraph}</RichText>
+          <p>{sourceParagraph}</p>
+          <SourcesPanel
+            title={sourcesTitle}
+            description={sourcesDescription}
+            sources={sources}
+          />
         </div>
         <div className="space-y-4">
           <figure className="space-y-3">
@@ -52,7 +70,7 @@ export function Section03CaseStudy({
               {plantationAsset.caption}
             </figcaption>
           </figure>
-          <div className="grid gap-3 text-sm text-white/80">
+          <div className="grid gap-3 text-sm">
             {plantationCaptions.map((caption, index) => (
               <p
                 key={`${caption}-${index}`}

@@ -3,6 +3,7 @@ export { BackToTop } from './BackToTop';
 export { LanguageToggle } from './LanguageToggle';
 export { SetHtmlLang } from './SetHtmlLang';
 export { parseInlineLinks, RichText } from './RichText';
+export { SourcesPanel } from './SourcesPanel';
 export { Section01Hero } from './Section01Hero';
 export { Section02Intro } from './Section02Intro';
 export { ApplicationsList } from './ApplicationsList';

@@ -48,6 +48,11 @@ export function HomePage({ content }: HomePageProps) {
               <Section02Intro
                 storyParagraphs={content.section02Intro.paragraphs}
                 sourceParagraph={content.section02Intro.source}
+                sources={content.section02Intro.sources}
+                sourcesTitle={content.ui.section02Intro.sourcesTitle}
+                sourcesDescription={
+                  content.ui.section02Intro.sourcesDescription
+                }
                 portraitAsset={content.section02Intro.portrait}
                 eyebrow={content.ui.section02Intro.eyebrow}
               >
@@ -68,6 +73,11 @@ export function HomePage({ content }: HomePageProps) {
                 plantationCaptions={content.section03CaseStudy.captions}
                 plantationAsset={content.section03CaseStudy.plantationAsset}
                 sourceParagraph={content.section03CaseStudy.source}
+                sources={content.section03CaseStudy.sources}
+                sourcesTitle={content.ui.section02Intro.sourcesTitle}
+                sourcesDescription={
+                  content.ui.section02Intro.sourcesDescription
+                }
                 label={content.ui.section03CaseStudy.label}
                 title={content.ui.section03CaseStudy.title}
               />

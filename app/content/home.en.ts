@@ -1,7 +1,40 @@
 import type { HomeContent } from './types';
 
 const sharedSourceParagraph =
-  'This kind of information comes from a variety of sources: the [Civil Registry of Suriname](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-burgerlijke-stand/persons?f=%7B%22search_s_type_title%22:%7B%22v%22:%22Vader%22%7D%7D&ss=%7B%22q%22:%22johannes%20ellis%22%7D), the [Paramaribo Ward Register](https://www.nationaalarchief.nl/onderzoeken/archief/2.10.77/invnr/4/file/NL-HaNA_2.10.77_4_0082), the [Slave Register](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-slavenregister/persons?ss=%7B%22q%22:%22johannes%20ellis%22%7D) (available via the [National Archives of Suriname](https://nationaalarchief.sr/)), the [Emancipation Register (Netherlands National Archives)](https://www.nationaalarchief.nl/), and digital collections like [DBNL](https://www.dbnl.org/) and [Delpher](https://www.delpher.nl/), managed by the [Royal Library of the Netherlands](https://www.kb.nl/). Reconstructing the story of a family like Ellis-de Hart means painstakingly piecing together fragments from all these different archives.';
+  'This kind of information comes from a variety of sources: the Civil Registry of Suriname, the Paramaribo Ward Register, the Slave Register (via the National Archives of Suriname), the Emancipation Register (Netherlands National Archives), and digital collections like DBNL and Delpher. Reconstructing the story of a family like Ellis-de Hart means painstakingly piecing together fragments from all these different archives.';
+
+const sharedSources = [
+  {
+    label: 'Civil Registry',
+    href: 'https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-burgerlijke-stand/persons?f=%7B%22search_s_type_title%22:%7B%22v%22:%22Vader%22%7D%7D&ss=%7B%22q%22:%22johannes%20ellis%22%7D',
+    institution: 'National Archives Suriname',
+  },
+  {
+    label: 'Ward Register Paramaribo',
+    href: 'https://www.nationaalarchief.nl/onderzoeken/archief/2.10.77/invnr/4/file/NL-HaNA_2.10.77_4_0082',
+    institution: 'National Archives NL',
+  },
+  {
+    label: 'Slave Register',
+    href: 'https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-slavenregister/persons?ss=%7B%22q%22:%22johannes%20ellis%22%7D',
+    institution: 'National Archives Suriname',
+  },
+  {
+    label: 'Emancipation Register',
+    href: 'https://www.nationaalarchief.nl/',
+    institution: 'National Archives NL',
+  },
+  {
+    label: 'DBNL',
+    href: 'https://www.dbnl.org/',
+    institution: 'Royal Library NL',
+  },
+  {
+    label: 'Delpher',
+    href: 'https://www.delpher.nl/',
+    institution: 'Royal Library NL',
+  },
+];
 
 export const homeContent: HomeContent = {
   locale: 'en',
@@ -30,6 +63,8 @@ export const homeContent: HomeContent = {
     },
     section02Intro: {
       eyebrow: 'Our technology story',
+      sourcesTitle: 'Sources',
+      sourcesDescription: 'Explore the original archives:',
     },
     section03CaseStudy: {
       label: 'Paramaribo focus',
@@ -96,6 +131,7 @@ export const homeContent: HomeContent = {
       'Like many middle- and upperclass households in 19th-century Suriname, they owned enslaved people: in 1846, their household included three men, two women and five children. One of these women, Marietje, was the same age as Maria Louisa and had two young children of her own.',
     ],
     source: sharedSourceParagraph,
+    sources: sharedSources,
     portrait: {
       src: '/images/section-02-intro-portrait.png',
       alt: 'Portrait of Johannes Ellis and Maria Louisa de Hart.',
@@ -147,6 +183,7 @@ export const homeContent: HomeContent = {
         'Image of a sugar plantation in 1850 from the collection of the Surinamese Museum Foundation.',
     },
     source: sharedSourceParagraph,
+    sources: sharedSources,
   },
   section04Methodology: {
     missionParagraphs: [

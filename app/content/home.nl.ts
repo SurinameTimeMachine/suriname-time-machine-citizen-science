@@ -1,7 +1,40 @@
 import type { HomeContent } from './types';
 
 const sharedSourceParagraph =
-  'Dit soort informatie komt uit allerlei bronnen: de [Burgerlijke Stand van Suriname](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-burgerlijke-stand/persons?f=%7B%22search_s_type_title%22:%7B%22v%22:%22Vader%22%7D%7D&ss=%7B%22q%22:%22johannes%20ellis%22%7D), het [Wijkregister van Paramaribo](https://www.nationaalarchief.nl/onderzoeken/archief/2.10.77/invnr/4/file/NL-HaNA_2.10.77_4_0082), het [Slavenregister](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-slavenregister/persons?ss=%7B%22q%22:%22johannes%20ellis%22%7D) (beschikbaar via het [Nationaal Archief Suriname](https://nationaalarchief.sr/)), het [Emancipatieregister (Nationaal Archief Nederland)](https://www.nationaalarchief.nl/) en digitale collecties zoals [DBNL](https://www.dbnl.org/) en [Delpher](https://www.delpher.nl/), beheerd door de [Koninklijke Bibliotheek](https://www.kb.nl/). Het reconstrueren van het verhaal van een familie als Ellis-de Hart betekent het geduldig samenbrengen van fragmenten uit al deze verschillende archieven.';
+  'Dit soort informatie komt uit allerlei bronnen: de Burgerlijke Stand van Suriname, het Wijkregister van Paramaribo, het Slavenregister (via het Nationaal Archief Suriname), het Emancipatieregister (Nationaal Archief Nederland) en digitale collecties zoals DBNL en Delpher. Het reconstrueren van het verhaal van een familie als Ellis-de Hart betekent het geduldig samenbrengen van fragmenten uit al deze verschillende archieven.';
+
+const sharedSources = [
+  {
+    label: 'Burgerlijke Stand',
+    href: 'https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-burgerlijke-stand/persons?f=%7B%22search_s_type_title%22:%7B%22v%22:%22Vader%22%7D%7D&ss=%7B%22q%22:%22johannes%20ellis%22%7D',
+    institution: 'Nationaal Archief Suriname',
+  },
+  {
+    label: 'Wijkregister Paramaribo',
+    href: 'https://www.nationaalarchief.nl/onderzoeken/archief/2.10.77/invnr/4/file/NL-HaNA_2.10.77_4_0082',
+    institution: 'Nationaal Archief NL',
+  },
+  {
+    label: 'Slavenregister',
+    href: 'https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-slavenregister/persons?ss=%7B%22q%22:%22johannes%20ellis%22%7D',
+    institution: 'Nationaal Archief Suriname',
+  },
+  {
+    label: 'Emancipatieregister',
+    href: 'https://www.nationaalarchief.nl/',
+    institution: 'Nationaal Archief NL',
+  },
+  {
+    label: 'DBNL',
+    href: 'https://www.dbnl.org/',
+    institution: 'Koninklijke Bibliotheek',
+  },
+  {
+    label: 'Delpher',
+    href: 'https://www.delpher.nl/',
+    institution: 'Koninklijke Bibliotheek',
+  },
+];
 
 export const homeContent: HomeContent = {
   locale: 'nl',
@@ -32,6 +65,8 @@ export const homeContent: HomeContent = {
     },
     section02Intro: {
       eyebrow: 'De Suriname Tijdmachine',
+      sourcesTitle: 'Bronnen',
+      sourcesDescription: 'Raadpleeg de originele archieven:',
     },
     section03CaseStudy: {
       label: 'Focus op Paramaribo',
@@ -101,6 +136,7 @@ export const homeContent: HomeContent = {
       'Voor meer informatie over deze iconische afbeelding, zie: Carl Haarnack, Garrelt Verhoeven en Eveline Sint Nicolaas, Suriname in beeld. Fotografie in Suriname 1845-1975 (Terra, 2025), p. 22.',
     ],
     source: sharedSourceParagraph,
+    sources: sharedSources,
     portrait: {
       src: '/images/section-02-intro-portrait.png',
       alt: 'Portret van Johannes Ellis en Maria Louisa de Hart.',
@@ -141,7 +177,6 @@ export const homeContent: HomeContent = {
     ],
     captions: [
       'Plantagerecords van Sardam met het aantal tot slaaf gemaakte arbeiders in 1847.',
-      'Afbeelding van een suikerplantage in 1850 uit de collectie van de Stichting Surinaams Museum.',
     ],
     plantationAsset: {
       src: '/images/section-03-case-study-plantation.png',
@@ -152,10 +187,11 @@ export const homeContent: HomeContent = {
         'Afbeelding van een suikerplantage in 1850 uit de collectie van de Surinaams Museum Stichting.',
     },
     source: sharedSourceParagraph,
+    sources: sharedSources,
   },
   section04Methodology: {
     missionParagraphs: [
-      'Voor deze informatie zijn meerdere online databestanden bezocht: de [Burgerlijke Stand van Suriname](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-burgerlijke-stand/persons?f=%7B%22search_s_type_title%22:%7B%22v%22:%22Vader%22%7D%7D&ss=%7B%22q%22:%22johannes%20ellis%22%7D), het [Wijkregister van Paramaribo](https://www.nationaalarchief.nl/onderzoeken/archief/2.10.77/invnr/4/file/NL-HaNA_2.10.77_4_0082) en het [Slavenregister](https://nationaalarchief.sr/onderzoeken/alle-genealogie/genealogie-slavenregister/persons?ss=%7B%22q%22:%22johannes%20ellis%22%7D), allemaal te raadplegen op de website van het [Nationaal Archief Suriname](https://nationaalarchief.sr/), het [Emancipatieregister (Nationaal Archief Nederland)](https://www.nationaalarchief.nl/) en daarnaast de [Digitale Bibliotheek voor de Nederlandse Letteren (DBNL)](https://www.dbnl.org/) en [Delpher](https://www.delpher.nl/), beide beheerd door de [Koninklijke Bibliotheek](https://www.kb.nl/). We moeten het verhaal van Ellis-de Hart letterlijk bij elkaar sprokkelen.',
+      'Voor deze informatie zijn meerdere online databestanden bezocht: de Burgerlijke Stand van Suriname, het Wijkregister van Paramaribo en het Slavenregister (allemaal te raadplegen op de website van het Nationaal Archief Suriname), het Emancipatieregister (Nationaal Archief Nederland) en daarnaast de Digitale Bibliotheek voor de Nederlandse Letteren (DBNL) en Delpher, beide beheerd door de Koninklijke Bibliotheek. We moeten het verhaal van Ellis-de Hart letterlijk bij elkaar sprokkelen.',
       'Dit is precies het probleem dat de Suriname Tijdmachine wil oplossen. Door één centrale plek voor zulke databestanden te maken, kan straks informatie over het echtpaar Ellis-de Hart veel sneller worden gevonden. De Suriname Tijdmachine wordt zo’n knooppunt dat verschillende bronnen samenbrengt. Zo kunnen we meer te weten komen over het leven van Surinamers in het verleden. Dat is weliswaar makkelijker bij rijkere mensen zoals Ellis-de Hart, omdat zij meer sporen hebben achtergelaten. Maar ook over minder rijke mensen en mensen die in slavernij leefden, valt meer te ontdekken als we bronnen op één plek combineren.',
       'De Tijdmachine integreert een steeds groeiend aantal databanken uit Surinames verleden, beheerd door verschillende erfgoedinstellingen, op één digitale kaart. Onderzoekers kunnen daardoor efficiënter en nauwkeuriger werken. Mensen die hun familiegeschiedenis onderzoeken vinden informatie gemakkelijker terug, ook wanneer namen of adressen in de loop van de tijd zijn veranderd.',
       'Erfgoedinstellingen, zoals het Rijksmuseum, kunnen de tijdmachine gebruiken om objecten in hun collectie beter te begrijpen en beschrijven, zoals het portret van het echtpaar Ellis-de Hart, of afbeeldingen van verschillende plantages met dezelfde naam, iets dat veel voorkwam in Suriname. Zo waren er minstens vijf plantages genaamd [Libanon](https://www.wikidata.org/w/index.php?search=libanon+plantation&language=en&title=Special%3ASearch&ns0=1), allemaal gelegen aan een andere rivier of kreek.',
