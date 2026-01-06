@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
 import { HomePage } from './components/HomePage';
 import { getHomeContent } from './content/getHomeContent';
 import { createHomeMetadata } from './content/homeMetadata';

@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound } from 'next/dist/client/components/not-found';
+import type { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
 import { HomePage } from '../components/HomePage';
 import { getHomeContent } from '../content/getHomeContent';
 import { createHomeMetadata } from '../content/homeMetadata';
