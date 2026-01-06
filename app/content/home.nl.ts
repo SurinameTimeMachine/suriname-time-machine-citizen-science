@@ -15,7 +15,7 @@ export const homeContent: HomeContent = {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
       projectCode: 'Suriname Tijdmachine',
-      languageToggleLabel: 'Nederlands',
+      languageToggleLabel: 'Engels',
     },
     section01Hero: {
       tagline: 'Huygens Instituut | Historische Database Suriname en de Cariben | Stichting Pica | KNAW Citizen Science Incubator',
