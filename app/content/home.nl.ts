@@ -14,18 +14,24 @@ export const homeContent: HomeContent = {
   ui: {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
-      projectCode: 'Suriname Tijdmachine',
+      projectCode: 'SCiTMI',
+      projectSubtitle: 'Suriname Tijdmachine',
       languageToggleLabel: 'Engels',
     },
     section01Hero: {
-      tagline: 'Huygens Instituut | Historische Database Suriname en de Cariben | Stichting Pica | KNAW Citizen Science Incubator',
-      title: 'De Suriname Tijdmachine brengt verspreide historische bronnen samen op de kaart.',
+      tagline:
+        'Huygens Instituut | Historische Database Suriname en de Cariben | Stichting Pica | KNAW Citizen Science Incubator',
+      title:
+        'De Suriname Tijdmachine brengt verspreide historische bronnen samen op de kaart.',
       lead: 'Gebruikers vinden alle informatie op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan. Zo wordt het gemakkelijker om de weg te vinden in het verleden. De herkomst van informatie wordt altijd vermeld zodat gebruikers zelf de originele bron kunnen raadplegen en hun eigen oordeel vellen. ',
       kicker:
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
       textureAlt: 'Geometrisch raster dat SCiTMI-datasets verbeeldt.',
       textureCaption: 'data',
+      snapshotLabel: 'Momentopname',
+      snapshotFooter:
+        'Bronnen uit verschillende archieven, samengebracht op historische kaarten.',
     },
     section02Intro: {
       eyebrow: 'De Suriname Tijdmachine',
@@ -42,7 +48,8 @@ export const homeContent: HomeContent = {
       departmentsLabel: 'Afdeling',
       departmentsValue: 'LivesLab, Huygens Instituut (KNAW)',
       tagsLabel: 'Tags',
-      tagsValue: 'erfgoed · koloniale geschiedenis · linked open data · burgerwetenschap',
+      tagsValue:
+        'erfgoed · koloniale geschiedenis · linked open data · burgerwetenschap',
     },
     section05Partners: {
       title: 'Partners',
@@ -58,6 +65,7 @@ export const homeContent: HomeContent = {
         'Meehelpen? Deel datasets, organiseer workshops mee of kom met burgerwetenschappelijke initiatieven en help het netwerk groeien.',
     },
     footer: {
+      coordinatorLine: 'Coördinatie: Thunnis van Oort',
       organizationLabel: 'Suriname Tijdmachine',
     },
   },
@@ -74,6 +82,7 @@ export const homeContent: HomeContent = {
       'Surinaamse bronnen uit de 19e eeuw',
       'interactieve kaarten van Paramaribo en de Surinaamse plantages',
     ],
+    stats: [],
     background: {
       src: '/images/section-01-hero-map.png',
       alt: '19e-eeuwse kaart van Paramaribo met plantages en waterwegen.',

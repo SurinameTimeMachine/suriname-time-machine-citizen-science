@@ -125,6 +125,5 @@ export type HomeContent = {
   };
   section06Contact: {
     email: string;
-    phone: string;
   };
 };

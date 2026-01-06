@@ -134,7 +134,6 @@ export function HomePage({ content }: HomePageProps) {
             <div className="w-full lg:w-[80%] lg:translate-x-6">
               <Section06Contact
                 email={content.section06Contact.email}
-                phone={content.section06Contact.phone}
                 title={content.ui.section06Contact.title}
                 calloutTitle={content.ui.section06Contact.calloutTitle}
                 calloutBody={content.ui.section06Contact.calloutBody}
