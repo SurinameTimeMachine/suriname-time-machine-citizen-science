@@ -6,6 +6,8 @@ type Section03CaseStudyProps = {
   plantationCaptions: string[];
   plantationAsset: MediaAsset;
   sourceParagraph: string;
+  label: string;
+  title: string;
 };
 
 export function Section03CaseStudy({
@@ -13,6 +15,8 @@ export function Section03CaseStudy({
   plantationCaptions,
   plantationAsset,
   sourceParagraph,
+  label,
+  title,
 }: Section03CaseStudyProps) {
   return (
     <section
@@ -25,8 +29,8 @@ export function Section03CaseStudy({
       </div>
       <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr,0.9fr]">
         <div className="space-y-6">
-          <p className="flag-label">Paramaribo focus</p>
-          <h2 className="text-3xl font-semibold">Ellis–de Hart and Sardam</h2>
+          <p className="flag-label">{label}</p>
+          <h2 className="text-3xl font-semibold">{title}</h2>
           {plantationParagraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}

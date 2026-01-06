@@ -5,12 +5,30 @@ type Section01HeroProps = {
   quickHighlights: string[];
   heroStats: Stat[];
   backgroundAsset?: MediaAsset;
+  tagline: string;
+  title: string;
+  lead: string;
+  kicker: string;
+  primaryCtaLabel: string;
+  textureAlt: string;
+  textureCaption: string;
+  snapshotLabel: string;
+  snapshotFooter: string;
 };
 
 export function Section01Hero({
   quickHighlights,
   heroStats,
   backgroundAsset,
+  tagline,
+  title,
+  lead,
+  kicker,
+  primaryCtaLabel,
+  textureAlt,
+  textureCaption,
+  snapshotLabel,
+  snapshotFooter,
 }: Section01HeroProps) {
   return (
     <section id="overview" className="hero-surface px-0 py-0">
@@ -19,7 +37,7 @@ export function Section01Hero({
           <div className="absolute inset-0">
             <Image
               src={backgroundAsset.src}
-              alt="Contextual imagery from the Suriname Time Machine collections"
+              alt={backgroundAsset.alt}
               fill
               priority
               sizes="100vw"
@@ -35,20 +53,13 @@ export function Section01Hero({
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
             <div className="space-y-6">
-              <p className="flag-label text-white/80">
-                SCiTMI • Suriname Citizen Time Machine Incubator
-              </p>
+              <p className="flag-label text-white/80">{tagline}</p>
               <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-                The Suriname Time Machine brings together scattered sources.
+                {title}
               </h1>
-              <p className="text-lg text-white/80">
-                Users can access everything in one place, without constant
-                cross-checking whether data refer to the same people, streets or
-                plantations.
-              </p>
+              <p className="text-lg text-white/80">{lead}</p>
               <p className="text-sm uppercase tracking-[0.35em] text-white/60">
-                Combining the Suriname Time Machine with the KNAW Citizen
-                Science Incubator.
+                {kicker}
               </p>
               <div className="flex flex-wrap gap-3 text-sm">
                 {quickHighlights.map((item) => (
@@ -65,33 +76,27 @@ export function Section01Hero({
                   href="#story"
                   className="inline-flex items-center gap-2 border border-white/40 px-5 py-2 uppercase tracking-[0.25em] text-white transition hover:border-white"
                 >
-                  Discover SCiTMI
+                  {primaryCtaLabel}
                   <span aria-hidden>↘</span>
                 </a>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 bg-white/15 px-5 py-2 uppercase tracking-[0.25em] text-white transition hover:bg-white/25"
-                >
-                  Download brief
-                </button>
               </div>
             </div>
             <div className="space-y-6">
               <figure className="relative h-[360px] overflow-hidden border border-white/20 bg-white/5">
                 <Image
                   src="/texture-grid.svg"
-                  alt="Geometric texture grid representing SCiTMI datasets."
+                  alt={textureAlt}
                   fill
                   sizes="(min-width: 1024px) 360px, 100vw"
                   className="object-cover opacity-50"
                 />
                 <figcaption className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.35em] text-white/80">
-                  SCiTMI field datasets
+                  {textureCaption}
                 </figcaption>
               </figure>
               <aside className="grid gap-4 border border-white/25 bg-white/5 p-6 text-sm text-white/85">
                 <p className="text-xs uppercase tracking-[0.35em]">
-                  Project snapshot
+                  {snapshotLabel}
                 </p>
                 <dl className="grid gap-4">
                   {heroStats.map((stat) => (
@@ -108,10 +113,7 @@ export function Section01Hero({
                     </div>
                   ))}
                 </dl>
-                <p className="text-xs text-white/70">
-                  Rooted in Paramaribo and extending across the Atlantic
-                  archives network.
-                </p>
+                <p className="text-xs text-white/70">{snapshotFooter}</p>
               </aside>
             </div>
           </div>

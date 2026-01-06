@@ -6,6 +6,7 @@ type Section02IntroProps = {
   storyParagraphs: string[];
   sourceParagraph: string;
   portraitAsset: MediaAsset;
+  eyebrow: string;
   children?: ReactNode;
 };
 
@@ -13,6 +14,7 @@ export function Section02Intro({
   storyParagraphs,
   sourceParagraph,
   portraitAsset,
+  eyebrow,
   children,
 }: Section02IntroProps) {
   return (
@@ -24,7 +26,7 @@ export function Section02Intro({
             className="inline-flex h-3 w-3 -skew-x-12 bg-teal-strong"
             aria-hidden
           />
-          Our technology story
+          {eyebrow}
         </div>
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="space-y-4">

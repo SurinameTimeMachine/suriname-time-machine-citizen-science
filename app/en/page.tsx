@@ -8,15 +8,16 @@ import {
   Section04Methodology,
   Section05Partners,
   Section06Contact,
+  SetHtmlLang,
   SiteFooter,
-} from './components';
-import { homeContent } from './content/home.nl';
+} from '../components';
+import { homeContent } from '../content/home.en';
 
 export const metadata: Metadata = {
   title: homeContent.seo.title,
   description: homeContent.seo.description,
   alternates: {
-    canonical: '/',
+    canonical: '/en',
     languages: {
       nl: '/',
       en: '/en',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: homeContent.seo.title,
     description: homeContent.seo.description,
-    url: '/',
+    url: '/en',
     type: 'website',
     locale: homeContent.seo.openGraphLocale,
   },
@@ -36,12 +37,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <div className="min-h-screen bg-white text-ink">
+      <SetHtmlLang lang="en" />
       <Navigation
         navLinks={homeContent.navLinks}
-        locale="nl"
+        locale="en"
         locationLabel={homeContent.ui.navigation.locationLabel}
         projectCode={homeContent.ui.navigation.projectCode}
         projectSubtitle={homeContent.ui.navigation.projectSubtitle}

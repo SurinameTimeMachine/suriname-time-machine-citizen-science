@@ -4,24 +4,25 @@ import type { MediaAsset } from './types';
 type Section05PartnersProps = {
   partners: string[];
   mapAsset: MediaAsset;
+  title: string;
+  intro: string;
+  figureSuffix: string;
 };
 
 export function Section05Partners({
   partners,
   mapAsset,
+  title,
+  intro,
+  figureSuffix,
 }: Section05PartnersProps) {
   return (
     <section
       id="partners"
       className="cut-corner space-y-6 border border-slate-200 bg-white px-8 py-12"
     >
-      <h2 className="text-3xl font-semibold">Partners</h2>
-      <p>
-        The Suriname Time Machine is not only a digital platform but also a
-        collaborative network, connecting a wide range of heritage institutions
-        and researchers in both Suriname and the Netherlands. Project partners
-        include:
-      </p>
+      <h2 className="text-3xl font-semibold">{title}</h2>
+      <p>{intro}</p>
       <ul className="grid gap-3 text-sm text-ink/85 sm:grid-cols-2">
         {partners.map((partner) => (
           <li
@@ -43,9 +44,7 @@ export function Section05Partners({
           />
         </div>
         <figcaption className="text-sm text-ink/70">
-          {mapAsset.caption} The Suriname Time Machine brings this kind of
-          historical data digitally to life, making it easy to search and
-          explore.
+          {mapAsset.caption} {figureSuffix}
         </figcaption>
       </figure>
     </section>
