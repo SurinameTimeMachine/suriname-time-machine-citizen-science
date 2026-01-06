@@ -8,23 +8,23 @@ export const homeContent: HomeContent = {
   seo: {
     title: 'Suriname Tijdmachine',
     description:
-      'Ontdek hoe archieven, kaarten en citizen scientists de gelaagde geschiedenissen van Suriname tot leven brengen in de Suriname Tijdmachine.',
+      'Ontdek hoe archiefmateriaal over Suriname samenkomt op historische kaarten in de Suriname Tijdmachine.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
-      projectCode: 'SCiTMI',
-      projectSubtitle: 'Suriname Citizen Time Machine Incubator',
-      languageToggleLabel: 'English',
+      projectCode: 'STM',
+      projectSubtitle: 'Suriname Tijdachine',
+      languageToggleLabel: 'Nederlands',
     },
     section01Hero: {
-      tagline: 'SCiTMI • Suriname Citizen Time Machine Incubator',
-      title: 'De Suriname Time Machine brengt verspreide bronnen samen.',
-      lead: 'Gebruikers hebben alles op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan.',
+      tagline: 'Suriname Tijdmachine',
+      title: 'De Suriname Tijdmachine brengt verspreide historische bronnen samen op de kaart.',
+      lead: 'Gebruikers hebben alles op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan. Zo wordt het gemakkelijker om de weg te vinden in het verleden.',
       kicker:
-        'De Suriname Time Machine in combinatie met de KNAW Citizen Science Incubator.',
-      primaryCtaLabel: 'Ontdek SCiTMI',
+        'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
+      primaryCtaLabel: 'Ontdek de Tijdmachine',
       textureAlt: 'Geometrisch raster dat SCiTMI-datasets verbeeldt.',
       textureCaption: 'SCiTMI velddata',
       snapshotLabel: 'Projectoverzicht',
@@ -32,7 +32,7 @@ export const homeContent: HomeContent = {
         'Geworteld in Paramaribo en verbonden met een Atlantisch netwerk van archieven.',
     },
     section02Intro: {
-      eyebrow: 'Ons technologieverhaal',
+      eyebrow: 'De Suriname Tijdmachine',
     },
     section03CaseStudy: {
       label: 'Focus op Paramaribo',
