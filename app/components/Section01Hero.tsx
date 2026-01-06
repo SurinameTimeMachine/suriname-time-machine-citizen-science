@@ -23,7 +23,7 @@ export function Section01Hero({
   lead,
   kicker,
   primaryCtaLabel,
-  textureAlt,
+  // textureAlt,
   snapshotLabel,
 }: Section01HeroProps) {
   return (
@@ -78,7 +78,7 @@ export function Section01Hero({
               </div>
             </div>
             <div className="space-y-6">
-              <figure className="relative h-[360px] overflow-hidden border border-white/20 bg-white/5">
+              {/* <figure className="relative h-[360px] overflow-hidden border border-white/20 bg-white/5">
                 <Image
                   src="/texture-grid.svg"
                   alt={textureAlt}
@@ -86,7 +86,7 @@ export function Section01Hero({
                   sizes="(min-width: 1024px) 360px, 100vw"
                   className="object-cover opacity-50"
                 />
-              </figure>
+              </figure> */}
               <aside className="grid gap-4 border border-white/25 bg-white/5 p-6 text-sm text-white/85">
                 <p className="text-xs uppercase tracking-[0.35em]">
                   {snapshotLabel}
