@@ -176,7 +176,7 @@ export const homeContent: HomeContent = {
       'Ook was het echtpaar mede-eigenaar en beheerder van de [suikerplantage Sardam](https://nl.wikipedia.org/wiki/Sardam_(plantage)) aan de Cottica rivier, waar volgens de [Surinaamsche Almanak van 1847](https://www.dbnl.org/tekst/_sur001184701_01/_sur001184701_01_0050.php) tweehonderd mensen in slavernij te werk werden gesteld. Volgens een kort [krantenbericht](https://resolver.kb.nl/resolve?urn=ddd:010504287:mpeg21:a0011) was het echtpaar in 1868 nog altijd deels eigenaar van deze plantage. In 1863 zijn op Sardam [287 mensen vrijgemaakt](https://www.nationaalarchief.nl/onderzoeken/index/nt00341?activeTab=nt&qf_nt-rdf_groupLabel=Slaven&qf_nt-rdf_groupLabelLabel=Slaven%20(287)&qf_nt-rdf_pla_naam_plantage_stadsslaven=Sardam&searchTerm=sardam&sortering=prs_achternaam_stadsslaven&volgorde=asc) door de afschaffing van de slavernij.',
     ],
     captions: [
-      'Plantagerecords van Sardam met het aantal tot slaaf gemaakte arbeiders in 1847.',
+
     ],
     plantationAsset: {
       src: '/images/section-03-case-study-plantation.png',

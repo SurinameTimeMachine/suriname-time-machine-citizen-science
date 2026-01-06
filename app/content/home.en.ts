@@ -170,10 +170,7 @@ export const homeContent: HomeContent = {
     paragraphs: [
       'The couple were also co-owners and managers of the [Sardam sugar plantation](https://nl.wikipedia.org/wiki/Sardam_(plantage)), located on the Cottica River. According to the [1847 Surinaamsche Almanak](https://www.dbnl.org/tekst/_sur001184701_01/_sur001184701_01_0050.php), around 200 enslaved people were forced to work there. An [old newspaper clipping](https://resolver.kb.nl/resolve?urn=ddd:010504287:mpeg21:a0011) suggests the couple still partially owned the plantation in 1868. When slavery was abolished in 1863, [287 people were freed from Sardam](https://www.nationaalarchief.nl/onderzoeken/index/nt00341?activeTab=nt&qf_nt-rdf_groupLabel=Slaven&qf_nt-rdf_groupLabelLabel=Slaven%20(287)&qf_nt-rdf_pla_naam_plantage_stadsslaven=Sardam&searchTerm=sardam&sortering=prs_achternaam_stadsslaven&volgorde=asc).',
     ],
-    captions: [
-      'Sardam plantation records detailing the number of enslaved workers in 1847.',
-      'Image of a sugar plantation in 1850 from the collection of the Surinamese Museum Foundation.',
-    ],
+    captions: [],
     plantationAsset: {
       src: '/images/section-03-case-study-plantation.png',
       alt: 'Illustration of labourers working on a Surinamese sugar plantation around 1850.',
