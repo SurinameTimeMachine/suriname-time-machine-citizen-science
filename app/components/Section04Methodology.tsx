@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { RichText } from './RichText';
 import type { MediaAsset } from './types';
 
 type Section04MethodologyProps = {
@@ -43,7 +44,7 @@ export function Section04Methodology({
         <div className="space-y-4">
           <h2 className="text-3xl font-semibold">{title}</h2>
           {missionParagraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <RichText key={index}>{paragraph}</RichText>
           ))}
         </div>
         <div className="space-y-4 bg-sand px-6 py-6 text-sm shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40">
@@ -62,9 +63,9 @@ export function Section04Methodology({
             </figcaption>
           </figure>
           {mapParagraphs.map((paragraph, index) => (
-            <p key={index} className="text-ink/80">
+            <RichText key={index} className="text-ink/80">
               {paragraph}
-            </p>
+            </RichText>
           ))}
         </div>
       </div>
@@ -74,7 +75,7 @@ export function Section04Methodology({
           <h3 className="text-lg font-semibold text-ink">{projectTeamTitle}</h3>
           <div className="mt-3 space-y-4 text-ink">
             {teamParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <RichText key={index}>{paragraph}</RichText>
             ))}
           </div>
           <p className="mt-5 text-xs uppercase tracking-[0.3em] text-teal-strong">
@@ -90,7 +91,9 @@ export function Section04Methodology({
           <h3 className="text-lg font-semibold text-ink">
             {digitalInfrastructureTitle}
           </h3>
-          <p className="mt-3 text-ink">{infrastructureParagraph}</p>
+          <RichText className="mt-3 text-ink">
+            {infrastructureParagraph}
+          </RichText>
           <div className="mt-5 grid gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-teal-strong">

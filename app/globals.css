@@ -43,6 +43,19 @@ a {
   color: inherit;
 }
 
+/* Rich text inline links - override the global reset */
+a.rich-text-link {
+  color: var(--teal-strong) !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(0, 109, 91, 0.6);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+
+a.rich-text-link:hover {
+  text-decoration-color: var(--teal-strong);
+}
+
 ::selection {
   background: var(--teal-bright);
   color: var(--ink);

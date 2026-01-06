@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
+import { RichText } from './RichText';
 import type { MediaAsset } from './types';
 
 type Section02IntroProps = {
@@ -31,7 +32,7 @@ export function Section02Intro({
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="space-y-4">
             {storyParagraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <RichText key={index}>{paragraph}</RichText>
             ))}
           </div>
           <div className="space-y-4">
@@ -49,7 +50,9 @@ export function Section02Intro({
                 {portraitAsset.caption}
               </figcaption>
             </figure>
-            <p className="text-sm text-ink/70">{sourceParagraph}</p>
+            <RichText className="text-sm text-ink/70">
+              {sourceParagraph}
+            </RichText>
           </div>
         </div>
       </div>

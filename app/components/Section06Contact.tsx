@@ -30,15 +30,15 @@ export function Section06Contact({
           <p className="mt-1 text-ink/80">{calloutBody}</p>
 
           {!!links?.length && (
-            <div className="mt-3">
-              <p className="text-xs font-semibold tracking-wide text-ink/70 uppercase">
+            <div className="mt-4 border-t border-ink/10 pt-3">
+              <p className="text-xs font-medium tracking-wide text-ink/60 uppercase">
                 {linksTitle}
               </p>
-              <ul className="mt-2 space-y-1">
+              <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                 {links.map((link) => (
                   <li key={link.href}>
                     <a
-                      className="text-ink underline decoration-ink/30 underline-offset-4 hover:decoration-ink/60"
+                      className="text-teal-strong underline decoration-teal-strong/40 underline-offset-2 transition-colors hover:text-teal-strong/80 hover:decoration-teal-strong/60"
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"

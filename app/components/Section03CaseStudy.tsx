@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { RichText } from './RichText';
 import type { MediaAsset } from './types';
 
 type Section03CaseStudyProps = {
@@ -32,9 +33,9 @@ export function Section03CaseStudy({
           <p className="flag-label">{label}</p>
           <h2 className="text-3xl font-semibold">{title}</h2>
           {plantationParagraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <RichText key={index}>{paragraph}</RichText>
           ))}
-          <p>{sourceParagraph}</p>
+          <RichText>{sourceParagraph}</RichText>
         </div>
         <div className="space-y-4">
           <figure className="space-y-3">

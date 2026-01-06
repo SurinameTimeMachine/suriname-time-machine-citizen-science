@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { RichText } from './RichText';
 import type { MediaAsset } from './types';
 
 type Section05PartnersProps = {
@@ -22,7 +23,7 @@ export function Section05Partners({
       className="cut-corner space-y-6 border border-slate-200 bg-white px-8 py-12"
     >
       <h2 className="text-3xl font-semibold">{title}</h2>
-      <p>{intro}</p>
+      <RichText>{intro}</RichText>
       <ul className="grid gap-3 text-sm text-ink/85 sm:grid-cols-2">
         {partners.map((partner) => (
           <li
