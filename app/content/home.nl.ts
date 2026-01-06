@@ -14,14 +14,13 @@ export const homeContent: HomeContent = {
   ui: {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
-      projectCode: 'STM',
-      projectSubtitle: 'Suriname Tijdachine',
+      projectCode: 'Suriname Tijdmachine',
       languageToggleLabel: 'Nederlands',
     },
     section01Hero: {
-      tagline: 'Suriname Tijdmachine',
+      tagline: 'Huygens Instituut | Historische Database Suriname en de Cariben | Stichting Pica | KNAW Citizen Science Incubator',
       title: 'De Suriname Tijdmachine brengt verspreide historische bronnen samen op de kaart.',
-      lead: 'Gebruikers hebben alles op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan. Zo wordt het gemakkelijker om de weg te vinden in het verleden.',
+      lead: 'Gebruikers vinden alle informatie op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan. Zo wordt het gemakkelijker om de weg te vinden in het verleden. De herkomst van informatie wordt altijd vermeld zodat gebruikers zelf de originele bron kunnen raadplegen en hun eigen oordeel vellen. ',
       kicker:
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
