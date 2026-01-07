@@ -142,3 +142,55 @@ export type HomeContent = {
     links?: ExternalLink[];
   };
 };
+
+// Projects page types
+export type ProjectCategory = 'maps' | 'data' | 'interactive';
+
+export type ProjectItem = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  category: ProjectCategory;
+  thumbnail: {
+    src: string;
+    alt: string;
+  };
+};
+
+export type ProjectsUiStrings = {
+  navigation: {
+    locationLabel: string;
+    projectCode: string;
+    projectSubtitle: string;
+    languageToggleLabel: string;
+    backToHome: string;
+  };
+  hero: {
+    tagline: string;
+    title: string;
+    lead: string;
+  };
+  categories: {
+    maps: string;
+    data: string;
+    interactive: string;
+  };
+  footer: {
+    coordinatorLine: string;
+    organizationLabel: string;
+  };
+};
+
+export type ProjectsSeo = {
+  title: string;
+  description: string;
+  openGraphLocale: string;
+};
+
+export type ProjectsContent = {
+  locale: HomeLocale;
+  seo: ProjectsSeo;
+  ui: ProjectsUiStrings;
+  projects: ProjectItem[];
+};

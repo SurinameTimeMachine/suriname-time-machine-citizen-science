@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect fill="#e8f5f3" width="800" height="500"/>
+  <!-- Map background -->
+  <rect fill="#00887a" x="40" y="40" width="720" height="320" rx="4" opacity="0.1"/>
+  <!-- Map markers -->
+  <g fill="#00887a">
+    <circle cx="200" cy="150" r="8" opacity="0.6"/>
+    <circle cx="350" cy="200" r="8" opacity="0.6"/>
+    <circle cx="450" cy="120" r="8" opacity="0.6"/>
+    <circle cx="550" cy="180" r="8" opacity="0.6"/>
+    <circle cx="300" cy="280" r="8" opacity="0.6"/>
+    <circle cx="600" cy="250" r="8" opacity="0.6"/>
+    <!-- Camera icons (simplified) -->
+    <circle cx="400" cy="220" r="12" opacity="0.8"/>
+    <rect x="395" y="215" width="10" height="10" rx="1" fill="white" opacity="0.8"/>
+  </g>
+  <!-- No image markers -->
+  <g fill="#ff6b6b" opacity="0.5">
+    <circle cx="150" cy="250" r="6"/>
+    <circle cx="500" cy="300" r="6"/>
+    <circle cx="650" cy="140" r="6"/>
+  </g>
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#00887a" font-weight="600">WikiShootMe</text>
+  <text x="400" y="455" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#00887a" opacity="0.7">Photo contribution map</text>
+</svg>
