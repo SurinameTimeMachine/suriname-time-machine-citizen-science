@@ -5,6 +5,7 @@ import type {
   ProjectItem,
   ProjectsContent,
 } from '../content/types';
+import { ResourcesSection } from './ResourcesSection';
 
 type ProjectsPageProps = {
   content: ProjectsContent;
@@ -162,6 +163,15 @@ export function ProjectsPage({ content }: ProjectsPageProps) {
         <CategorySection
           title={ui.categories.interactive}
           projects={grouped.interactive}
+        />
+
+        {/* Divider */}
+        <hr className="border-ink/10" />
+
+        {/* Resources Section */}
+        <ResourcesSection
+          ui={content.resourcesUi}
+          resources={content.resources}
         />
       </main>
 

@@ -188,9 +188,50 @@ export type ProjectsSeo = {
   openGraphLocale: string;
 };
 
+// Resource/Bookmark types
+export type ResourcePurpose =
+  | 'archive'
+  | 'tool'
+  | 'inspiration'
+  | 'reference'
+  | 'collaboration';
+
+export type BookmarkLink = {
+  id: string;
+  name: string;
+  description: string;
+  href: string;
+  purpose: ResourcePurpose;
+  keywords: string[];
+  institution?: string;
+};
+
+export type ResourcesUiStrings = {
+  title: string;
+  lead: string;
+  filters: {
+    all: string;
+    archive: string;
+    tool: string;
+    inspiration: string;
+    reference: string;
+    collaboration: string;
+  };
+  searchPlaceholder: string;
+  noResults: string;
+  tableHeaders: {
+    name: string;
+    description: string;
+    purpose: string;
+    keywords: string;
+  };
+};
+
 export type ProjectsContent = {
   locale: HomeLocale;
   seo: ProjectsSeo;
   ui: ProjectsUiStrings;
   projects: ProjectItem[];
+  resourcesUi: ResourcesUiStrings;
+  resources: BookmarkLink[];
 };
