@@ -227,6 +227,7 @@ export const homeContent: HomeContent = {
       'Leiden University Library',
       'International Institute of Social History',
       'Wikidata',
+      'AnnoRepo',
     ],
     mapAsset: {
       src: '/images/section-05-partners-map.png',
