@@ -235,3 +235,79 @@ export type ProjectsContent = {
   resourcesUi: ResourcesUiStrings;
   resources: BookmarkLink[];
 };
+
+// Citizen Science / Participatory Science page types
+export type WorkshopLink = {
+  label: string;
+  href: string;
+  description?: string;
+};
+
+export type Workshop = {
+  id: string;
+  title: string;
+  description: string;
+  links: WorkshopLink[];
+};
+
+export type Partner = {
+  id: string;
+  name: string;
+  href?: string;
+  logo?: string;
+  darkBg?: boolean;
+};
+
+export type EventDetails = {
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  locationHref?: string;
+  externalEventHref?: string;
+  externalEventLabel?: string;
+};
+
+export type CitizenScienceEvent = {
+  id: string;
+  event: EventDetails;
+  partners: Partner[];
+  workshops: Workshop[];
+};
+
+export type CitizenScienceSeo = {
+  title: string;
+  description: string;
+  openGraphLocale: string;
+};
+
+export type CitizenScienceUiStrings = {
+  navigation: {
+    locationLabel: string;
+    projectCode: string;
+    projectSubtitle: string;
+    languageToggleLabel: string;
+    backToHome: string;
+  };
+  hero: {
+    tagline: string;
+    title: string;
+    lead: string;
+  };
+  sections: {
+    partners: string;
+    workshops: string;
+  };
+  footer: {
+    coordinatorLine: string;
+    organizationLabel: string;
+  };
+};
+
+export type CitizenScienceContent = {
+  locale: HomeLocale;
+  seo: CitizenScienceSeo;
+  ui: CitizenScienceUiStrings;
+  events: CitizenScienceEvent[];
+};

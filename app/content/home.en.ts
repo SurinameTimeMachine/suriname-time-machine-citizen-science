@@ -107,6 +107,7 @@ export const homeContent: HomeContent = {
     { label: 'Methodology', href: '#methodology' },
     { label: 'Partners', href: '#partners' },
     { label: 'Contact', href: '#contact' },
+    { label: 'Participatory Science', href: '/en/participatory-science' },
   ],
   section01Hero: {
     highlights: ['Historical data from the 19th century on 1 interactive map'],

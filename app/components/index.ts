@@ -13,4 +13,5 @@ export { Section05Partners } from './Section05Partners';
 export { Section06Contact } from './Section06Contact';
 export { SiteFooter } from './SiteFooter';
 export { ResourcesSection } from './ResourcesSection';
+export { CitizenSciencePage } from './CitizenSciencePage';
 export type { MediaAsset, NavLink, ResourceItem, Stat } from './types';
