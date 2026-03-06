@@ -3,7 +3,7 @@ import type { CitizenScienceContent } from './types';
 
 type CreateCitizenScienceMetadataParams = {
   content: CitizenScienceContent;
-  canonicalPath: '/burgerwetenschap' | '/en/participatory-science';
+  canonicalPath: '/participatie' | '/en/participatory-science';
 };
 
 export function createCitizenScienceMetadata({
@@ -16,7 +16,7 @@ export function createCitizenScienceMetadata({
     alternates: {
       canonical: canonicalPath,
       languages: {
-        nl: '/burgerwetenschap',
+        nl: '/participatie',
         en: '/en/participatory-science',
       },
     },

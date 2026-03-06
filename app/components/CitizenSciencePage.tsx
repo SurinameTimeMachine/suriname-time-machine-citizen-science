@@ -293,7 +293,7 @@ function EventBlock({
 export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
   const { ui, events } = content;
   const otherLocalePath =
-    content.locale === 'nl' ? '/en/participatory-science' : '/burgerwetenschap';
+    content.locale === 'nl' ? '/en/participatory-science' : '/participatie';
 
   return (
     <div className="min-h-screen bg-(--cream)">

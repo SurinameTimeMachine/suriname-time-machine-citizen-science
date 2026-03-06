@@ -15,7 +15,7 @@ export default function ReChartedDocumentatiePage() {
       <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
           <Link
-            href="/burgerwetenschap"
+            href="/participatie"
             className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
           >
             <svg
@@ -31,7 +31,7 @@ export default function ReChartedDocumentatiePage() {
                 d="M10 19l-7-7m0 0l7-7m-7 7h18"
               />
             </svg>
-            Terug naar Burgerwetenschap
+            Terug naar Participatie
           </Link>
           <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
             STM

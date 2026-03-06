@@ -7,9 +7,9 @@ const content = getCitizenScienceContent('nl');
 
 export const metadata: Metadata = createCitizenScienceMetadata({
   content,
-  canonicalPath: '/burgerwetenschap',
+  canonicalPath: '/participatie',
 });
 
-export default function BurgerwetenschapRoute() {
+export default function ParticipatieRoute() {
   return <CitizenSciencePage content={content} />;
 }

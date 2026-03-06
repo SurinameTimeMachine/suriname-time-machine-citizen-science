@@ -109,7 +109,7 @@ export const homeContent: HomeContent = {
     { label: 'Methodologie', href: '#methodology' },
     { label: 'Partners', href: '#partners' },
     { label: 'Contact', href: '#contact' },
-    { label: 'Burgerwetenschap', href: '/burgerwetenschap' },
+    { label: 'Participatie', href: '/participatie' },
   ],
   section01Hero: {
     highlights: [

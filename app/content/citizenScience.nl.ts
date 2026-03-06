@@ -3,22 +3,22 @@ import type { CitizenScienceContent } from './types';
 export const citizenScienceNl: CitizenScienceContent = {
   locale: 'nl',
   seo: {
-    title: 'Burgerwetenschap | Suriname Tijdmachine',
+    title: 'Participatie | Suriname Tijdmachine',
     description:
       'Doe mee aan workshops en evenementen van de Suriname Tijdmachine — georefereer historische kaarten, verrijk Wikidata en annoteer archiefbronnen samen.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
     navigation: {
-      locationLabel: 'Burgerwetenschap',
+      locationLabel: 'Participatie',
       projectCode: 'STM',
-      projectSubtitle: 'Burgerwetenschap',
+      projectSubtitle: 'Participatie',
       languageToggleLabel: 'EN',
       backToHome: 'Back to Home',
     },
     hero: {
       tagline: 'Suriname Tijdmachine',
-      title: 'Burgerwetenschap & Evenementen',
+      title: 'Participatie & Evenementen',
       lead: 'Draag bij aan historisch onderzoek via hands-on workshops, mapathons en gezamenlijke datasessies. Iedereen kan helpen het verleden te ontsluiten.',
     },
     sections: {
