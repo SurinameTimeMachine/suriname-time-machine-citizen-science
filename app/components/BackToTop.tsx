@@ -62,15 +62,16 @@ export function BackToTop() {
     <div className={wrapperClassName}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         <div className="flex justify-end -mr-2 sm:-mr-3 lg:-mr-6">
-          <a
-            href="#overview"
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             aria-label="Back to top"
-            className="cut-corner pointer-events-auto inline-flex h-12 w-12 items-center justify-center border border-slate-200 bg-white text-teal-strong shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40 transition hover:bg-sand"
+            className="cut-corner pointer-events-auto inline-flex h-12 w-12 cursor-pointer items-center justify-center border border-slate-200 bg-white text-teal-strong shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40 transition hover:bg-sand"
           >
             <span aria-hidden className="text-lg leading-none">
               ↑
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

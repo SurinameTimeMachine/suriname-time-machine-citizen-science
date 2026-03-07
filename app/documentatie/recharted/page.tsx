@@ -9,41 +9,13 @@ export const metadata: Metadata = {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Tiny utility components                                           */
+/*  Tiny reusable pieces                                              */
 /* ------------------------------------------------------------------ */
 
-function ExternalLinkIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className ?? 'h-3.5 w-3.5 shrink-0'}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-      />
-    </svg>
-  );
-}
+const linkCls =
+  'font-medium text-teal-strong underline decoration-teal-strong/40 underline-offset-2 hover:text-teal-strong/80 transition-colors';
 
-function PlayIcon() {
-  return (
-    <svg className="h-5 w-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
-      <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8.132v3.736a1 1 0 001.555.832l3.197-1.868a1 1 0 000-1.664L9.555 7.168z"
-        clipRule="evenodd"
-      />
-    </svg>
-  );
-}
-
-/** Styled link to an external resource */
-function ExtLink({
+function ExternalLink({
   href,
   children,
 }: {
@@ -55,14 +27,13 @@ function ExtLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="font-medium text-teal-strong underline decoration-teal-strong/40 underline-offset-2 transition-colors hover:text-teal-strong/80"
+      className={linkCls}
     >
       {children}
     </a>
   );
 }
 
-/** Small video link card */
 function VideoLink({
   href,
   children,
@@ -75,76 +46,30 @@ function VideoLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group mt-2 flex items-center gap-2.5 rounded-sm bg-ink/2 px-4 py-3 ring-1 ring-ink/5 transition-colors hover:bg-teal-strong/5 hover:ring-teal-strong/20"
+      className="group mt-2 flex items-center gap-2 rounded-sm bg-(--deep-teal)/5 px-4 py-2.5 ring-1 ring-(--deep-teal)/10 transition-colors hover:bg-(--deep-teal)/10"
     >
-      <PlayIcon />
-      <span className="text-sm font-medium text-ink group-hover:text-teal-strong">
+      <svg
+        className="h-5 w-5 shrink-0 text-teal-strong"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <span className="text-sm font-medium text-teal-strong group-hover:text-teal-strong/80">
         {children}
       </span>
-      <ExternalLinkIcon className="ml-auto h-3.5 w-3.5 text-ink/30 group-hover:text-teal-strong/60" />
     </a>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  Section wrapper — deep-teal header + white body                    */
-/* ------------------------------------------------------------------ */
-
-function DocSection({
-  id,
-  number,
-  title,
-  badge,
-  children,
-}: {
-  id: string;
-  number: number;
-  title: string;
-  badge?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section
-      id={id}
-      className="scroll-mt-20 overflow-hidden rounded-sm border border-slate-200 bg-white shadow-[0_15px_35px_rgba(0,30,24,0.08)]"
-    >
-      <div className="border-b border-ink/5 bg-(--deep-teal) px-6 py-4">
-        <div className="flex items-center gap-3">
-          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-xs font-bold text-white">
-            {number}
-          </span>
-          <h2 className="text-lg font-semibold text-white sm:text-xl">
-            {title}
-          </h2>
-        </div>
-        {badge && (
-          <p className="mt-1.5 pl-10 text-xs uppercase tracking-[0.2em] text-white/50">
-            {badge}
-          </p>
-        )}
-      </div>
-      <div className="space-y-4 px-6 py-6 text-sm leading-relaxed text-ink/70">
-        {children}
-      </div>
-    </section>
-  );
-}
-
-/** Subsection card inside the editing guide */
-function SubStep({
-  title,
-  children,
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="rounded-sm border border-ink/5 bg-(--cream) p-5">
-      <h3 className="mb-3 text-base font-semibold text-ink">{title}</h3>
-      <div className="space-y-3 text-sm leading-relaxed text-ink/70">
-        {children}
-      </div>
-    </div>
   );
 }
 
@@ -154,7 +79,7 @@ function SubStep({
 
 export default function ReChartedDocumentatiePage() {
   return (
-    <div className="min-h-screen bg-(--cream)">
+    <div className="min-h-screen bg-(--cream) text-ink">
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
@@ -188,476 +113,583 @@ export default function ReChartedDocumentatiePage() {
         <div className="mx-auto max-w-6xl">
           <p className="flag-label mb-4 text-white/80">Suriname Tijdmachine</p>
           <h1 className="mb-6 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
-            re:Charted Documentatie
+            re:Charted Handleiding
           </h1>
-          <p className="max-w-2xl text-lg text-white/80">
-            Nederlandse handleiding voor het annoteren van historische kaarten
-            met re:Charted.
+          <p className="max-w-2xl text-lg leading-relaxed text-white/80">
+            Stapsgewijze handleiding voor het annoteren van historische kaarten
+            met re:Charted — het annotatieplatform voor de Suriname Tijdmachine.
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <main className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-10">
-        <div className="mx-auto max-w-3xl space-y-8">
-          {/* ---- Table of contents ---- */}
-          <nav className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
-            <div className="border-b border-ink/5 bg-sand px-6 py-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-strong">
-                Inhoud
-              </p>
-            </div>
-            <ol className="space-y-0 divide-y divide-ink/5 text-sm">
+      <main className="relative mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-10">
+        {/* ── TOC: sticky in the left viewport gutter, only visible below hero ── */}
+        <aside
+          className="pointer-events-none absolute inset-y-0 right-full top-12 mr-6 hidden w-44 xl:block"
+          aria-hidden="true"
+        >
+          <nav
+            className="pointer-events-auto sticky top-0 rounded-sm border border-slate-200 bg-white px-4 py-4 shadow-[0_15px_35px_rgba(0,30,24,0.08)]"
+            aria-label="Inhoudsopgave"
+          >
+            <p className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-teal-strong">
+              <span
+                className="inline-flex h-2 w-2 -skew-x-12 bg-teal-strong"
+                aria-hidden
+              />
+              Inhoud
+            </p>
+            <ol className="space-y-1.5 text-xs">
               {[
-                { id: 'inleiding', label: 'Inleiding' },
-                { id: 'inloggen', label: 'Inloggen en starten' },
-                { id: 'switchen', label: 'Switchen tussen NeRu en STM' },
-                { id: 'overzicht', label: 'Hoe ziet re:Charted eruit?' },
-                { id: 'basis', label: 'De basis: kaarten bekijken' },
-                { id: 'oud-op-nieuw', label: 'Oud op Nieuw (Map-tab)' },
-                { id: 'annotaties', label: 'Verrijkingen door annotaties' },
-                {
-                  id: 'taken',
-                  label: 'Annotaties verbeteren en toevoegen',
-                },
-                {
-                  id: 'bewerkmodus',
-                  label: 'Zelf markeringen aanpassen (bewerkmodus)',
-                },
-              ].map((item, i) => (
-                <li key={item.id}>
+                ['#inleiding', 'Inleiding'],
+                ['#inloggen', 'Inloggen en starten'],
+                ['#switchen', 'Switchen NeRu / STM'],
+                ['#overzicht', 'Interface-overzicht'],
+                ['#basis', 'Kaarten bekijken'],
+                ['#oud-op-nieuw', 'Oud op Nieuw'],
+                ['#annotaties', 'Annotaties'],
+                ['#taken', 'Taken bij de mapathon'],
+                ['#bewerkmodus', 'Bewerkmodus'],
+              ].map(([href, label], i) => (
+                <li key={href}>
                   <a
-                    href={`#${item.id}`}
-                    className="flex items-center gap-3 px-6 py-3 transition-colors hover:bg-teal-strong/5"
+                    href={href}
+                    className="flex gap-2 py-0.5 text-ink/60 transition-colors hover:text-teal-strong"
                   >
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-strong/10 text-xs font-bold text-teal-strong">
-                      {i + 1}
+                    <span className="shrink-0 font-mono text-[10px] text-ink/30">
+                      {String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-ink/70">{item.label}</span>
+                    {label}
                   </a>
                 </li>
               ))}
             </ol>
           </nav>
+        </aside>
 
-          {/* ---- 1. Inleiding ---- */}
-          <DocSection id="inleiding" number={1} title="Inleiding">
-            <p>
-              Voor deze mapathon gaan we aan de slag met het toegankelijk maken
-              van informatie op historische kaarten van Suriname. Op deze manier
-              wordt het gemakkelijker om historische plaatsen terug te vinden,
-              onder andere plaatsen die van naam zijn veranderd of in de loop
-              der tijd zijn verdwenen (denk aan plantages, verouderde
-              straatnamen, enz.)
-            </p>
-            <p>
-              We maken hiervoor gebruik van een instrument{' '}
-              <strong>re:Charted</strong> dat is ontwikkeld in een eerder
-              project genaamd{' '}
-              <ExtLink href="https://necessaryreunions.org/">
-                Necessary Reunions
-              </ExtLink>
-              , dat zich richtte op historische kaarten van Kerala, hedendaags
-              India. In deze handleiding wordt stap voor stap uitgelegd hoe het
-              werkt.
-              <sup className="text-ink/40">1</sup>
-            </p>
-            <p>
-              De informatie die uit deze mapathon voortkomt, komt als open data
-              voor iedereen beschikbaar in het kader van de Suriname
-              Tijdmachine.
-            </p>
-            <p className="mt-4 rounded-sm bg-sand px-4 py-3 text-xs text-ink/50">
-              <sup>1</sup> Voor deze mapathon is de handleiding voldoende, maar
-              voor wie meer wil weten is een meer uitgebreide handleiding hier
+        <div className="space-y-10">
+          {/* 1. Inleiding */}
+          <section
+            id="inleiding"
+            className="scroll-mt-20 angled-card px-8 py-8"
+          >
+            <p className="flag-label mb-3 text-ink/60">01</p>
+            <h2 className="mb-4 text-2xl font-semibold">Inleiding</h2>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                Voor deze mapathon gaan we aan de slag met het toegankelijk
+                maken van informatie op historische kaarten van Suriname. Op
+                deze manier wordt het gemakkelijker om historische plaatsen
+                terug te vinden, onder andere plaatsen die van naam zijn
+                veranderd of in de loop der tijd zijn verdwenen (denk aan
+                plantages, verouderde straatnamen, enz.)
+              </p>
+              <p>
+                We maken hiervoor gebruik van een instrument{' '}
+                <strong>re:Charted</strong> dat is ontwikkeld in een eerder
+                project genaamd{' '}
+                <ExternalLink href="https://necessaryreunions.org/">
+                  Necessary Reunions
+                </ExternalLink>
+                , dat zich richtte op historische kaarten van Kerala, hedendaags
+                India. In deze handleiding wordt stap voor stap uitgelegd hoe
+                het werkt.
+                <sup className="ml-0.5 text-xs text-teal-strong">1</sup>
+              </p>
+              <p>
+                De informatie die uit deze mapathon voortkomt, komt als open
+                data voor iedereen beschikbaar in het kader van de Suriname
+                Tijdmachine.
+              </p>
+            </div>
+            <p className="mt-6 text-xs leading-relaxed text-ink/40">
+              <sup>1</sup> Voor deze mapathon is de handleiding voldoende maar
+              voor wie meer wil weten, is een meer uitgebreide handleiding hier
               te vinden:{' '}
-              <ExtLink href="https://necessaryreunions.org/documentation">
+              <ExternalLink href="https://necessaryreunions.org/documentation">
                 necessaryreunions.org/documentation
-              </ExtLink>
+              </ExternalLink>
               .
             </p>
-          </DocSection>
+          </section>
 
-          {/* ---- 2. Inloggen en starten ---- */}
-          <DocSection id="inloggen" number={2} title="Inloggen en starten">
-            <p>
-              Ga naar deze website:{' '}
-              <ExtLink href="https://necessaryreunions.org/viewer?project=suriname">
-                necessaryreunions.org/viewer?project=suriname
-              </ExtLink>
-            </p>
-            <p>
-              Op deze website kan je alle informatie bekijken. Als je ook
-              informatie wil toevoegen (en dat is het hele doel van de mapathon)
-              dan heb je een (gratis) <strong>ORCID-account</strong> nodig.
-            </p>
-            <p>
-              ORCID is een soort burgerservicenummer voor de wetenschappelijke
-              wereld: het is een uniek nummer gekoppeld aan jouw persoon. Als je
-              nog geen ORCID-account hebt, kan je er hier een aanmaken:{' '}
-              <ExtLink href="https://orcid.org/register">
-                orcid.org/register
-              </ExtLink>
-              . Het enige dat je nodig hebt is een werkend mailadres waar je
-              toegang toe hebt.
-            </p>
-            <p>Met je ORCID-account kan je je rechtsboven aanmelden.</p>
-          </DocSection>
+          {/* 2. Inloggen en starten */}
+          <section id="inloggen" className="scroll-mt-20 angled-card px-8 py-8">
+            <p className="flag-label mb-3 text-ink/60">02</p>
+            <h2 className="mb-4 text-2xl font-semibold">Inloggen en starten</h2>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                Ga naar deze website:{' '}
+                <ExternalLink href="https://necessaryreunions.org/viewer?project=suriname">
+                  necessaryreunions.org/viewer?project=suriname
+                </ExternalLink>
+              </p>
+              <p>
+                Op deze website kan je alle informatie bekijken. Als je ook
+                informatie wil toevoegen (en dat is het hele doel van de
+                mapathon) dan heb je een (gratis) <strong>ORCID-account</strong>{' '}
+                nodig.
+              </p>
+              <p>
+                ORCID is een soort burgerservicenummer voor de wetenschappelijke
+                wereld: het is een uniek nummer gekoppeld aan jouw persoon. Als
+                je nog geen ORCID-account hebt, kan je er hier een aanmaken:{' '}
+                <ExternalLink href="https://orcid.org/register">
+                  orcid.org/register
+                </ExternalLink>
+                . Het enige dat je nodig hebt is een werkend mailadres waar je
+                toegang toe hebt.
+              </p>
+              <p>Met je ORCID-account kan je je rechtsboven aanmelden.</p>
+            </div>
+          </section>
 
-          {/* ---- 3. Switchen ---- */}
-          <DocSection
-            id="switchen"
-            number={3}
-            title="Switchen tussen NeRu en STM"
-          >
-            <p>
-              Linksboven in het scherm in de balk naast <em>re:Charted</em> is
-              een knop om te wisselen tussen <strong>NeRu</strong> (Necessary
-              Reunions, Indiase kaarten) en <strong>STM</strong> (Suriname
-              Tijdmachine). In de mapathon richten we ons op de Suriname
-              Tijdmachine (STM).
-            </p>
-            <p>
-              We gebruiken in de mapathon alleen de tool re:Charted, de andere
-              tools laten we voor nu buiten beschouwing (Gazetteer, GAVOC).
-            </p>
-          </DocSection>
+          {/* 3. Switchen */}
+          <section id="switchen" className="scroll-mt-20 angled-card px-8 py-8">
+            <p className="flag-label mb-3 text-ink/60">03</p>
+            <h2 className="mb-4 text-2xl font-semibold">
+              Switchen tussen NeRu en STM
+            </h2>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                Linksboven in het scherm in de balk naast <em>re:Charted</em> is
+                een knop om te wisselen tussen <strong>NeRu</strong> (Necessary
+                Reunions, Indiase kaarten) en <strong>STM</strong> (Suriname
+                Tijdmachine). In de mapathon richten we ons op de Suriname
+                Tijdmachine (STM).
+              </p>
+              <p>
+                We gebruiken in de mapathon alleen de tool re:Charted, de andere
+                tools laten we voor nu buiten beschouwing (Gazetteer, GAVOC).
+              </p>
+            </div>
+          </section>
 
-          {/* ---- 4. Overzicht ---- */}
-          <DocSection
+          {/* 4. Overzicht */}
+          <section
             id="overzicht"
-            number={4}
-            title="Hoe ziet de tool re:Charted eruit?"
+            className="scroll-mt-20 angled-card px-8 py-8"
           >
-            <div className="grid gap-3 sm:grid-cols-3">
+            <p className="flag-label mb-3 text-ink/60">04</p>
+            <h2 className="mb-4 text-2xl font-semibold">
+              Hoe ziet de tool re:Charted eruit?
+            </h2>
+            <div className="grid gap-4 sm:grid-cols-3">
               {[
-                {
-                  title: 'Linkerpaneel',
-                  desc: 'Een overzicht van de beschikbare kaarten.',
-                },
-                {
-                  title: 'Middenpaneel',
-                  desc: 'Het kaartscherm (nadere uitleg hieronder).',
-                },
-                {
-                  title: 'Rechterpaneel',
-                  desc: 'Drie tabbladen — Info, Annotations, Map.',
-                },
-              ].map((panel) => (
+                ['Linkerpaneel', 'Een overzicht van de beschikbare kaarten.'],
+                ['Middenpaneel', 'Het kaartscherm — nadere uitleg hieronder.'],
+                ['Rechterpaneel', 'Drie tabbladen — Info, Annotations, Map.'],
+              ].map(([title, desc]) => (
                 <div
-                  key={panel.title}
-                  className="rounded-sm bg-(--cream) p-4 ring-1 ring-ink/5"
+                  key={title}
+                  className="rounded-sm bg-sand px-5 py-4 ring-1 ring-ink/5"
                 >
-                  <p className="mb-1 text-sm font-semibold text-ink">
-                    {panel.title}
+                  <p className="text-sm font-semibold text-ink">{title}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-ink/60">
+                    {desc}
                   </p>
-                  <p className="text-xs text-ink/60">{panel.desc}</p>
                 </div>
               ))}
             </div>
-          </DocSection>
+          </section>
 
-          {/* ---- 5. De Basis ---- */}
-          <DocSection
-            id="basis"
-            number={5}
-            title="De basis: kaarten bekijken"
-            badge="Middenpaneel · Info-tabblad"
-          >
-            <p>
-              In het linkerpaneel selecteer je een kaart naar keuze. In het
-              middenpaneel kun je de historische kaarten tot in de kleinste
-              details bestuderen. In het rechterpaneel (Info-tabblad) vind je
-              informatie over de kaart en onder andere een link naar de
-              bewaarplaats.
+          {/* 5. De Basis */}
+          <section id="basis" className="scroll-mt-20 angled-card px-8 py-8">
+            <p className="flag-label mb-3 text-ink/60">05</p>
+            <h2 className="mb-1 text-2xl font-semibold">
+              De basis: kaarten bekijken
+            </h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-ink/40">
+              Middenpaneel · Info-tabblad
             </p>
-            <ul className="list-inside list-disc space-y-1.5">
-              <li>
-                <strong>Slepen:</strong> Klik en houd de muisknop ingedrukt om
-                de kaart te bewegen.
-              </li>
-              <li>
-                <strong>Zoomen:</strong> Gebruik je muiswieltje of de knoppen op
-                het scherm om in en uit te zoomen (net als bij Google Maps).
-              </li>
-              <li>
-                <strong>Draaien:</strong> Je kunt de kaart een slag draaien als
-                de tekst ondersteboven staat.
-              </li>
-              <li>
-                <strong>Volledig scherm:</strong> Gebruik deze knop voor een
-                rustig beeld zonder afleiding.
-              </li>
-              <li>
-                <strong>Mini-kaart:</strong> Als je bent ingezoomd zie je in het
-                minikaartje waar je je bevindt op de kaart.
-              </li>
-            </ul>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                In het linkerpaneel selecteer je een kaart naar keuze. In het
+                middenpaneel kun je de historische kaarten tot in de kleinste
+                details bestuderen. In het rechterpaneel (Info-tabblad) vind je
+                informatie over de kaart en onder andere een link naar de
+                bewaarplaats.
+              </p>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {[
+                  [
+                    'Slepen',
+                    'Klik en houd de muisknop ingedrukt om de kaart te bewegen.',
+                  ],
+                  [
+                    'Zoomen',
+                    'Gebruik je muiswieltje of de knoppen op het scherm (net als bij Google Maps).',
+                  ],
+                  [
+                    'Draaien',
+                    'Je kunt de kaart een slag draaien als de tekst ondersteboven staat.',
+                  ],
+                  [
+                    'Volledig scherm',
+                    'Gebruik deze knop voor een rustig beeld zonder afleiding.',
+                  ],
+                  [
+                    'Mini-kaart',
+                    'Als je bent ingezoomd, zie je in het minikaartje waar je je bevindt op de kaart.',
+                  ],
+                ].map(([title, desc]) => (
+                  <div
+                    key={title}
+                    className="flex gap-3 rounded-sm bg-white px-4 py-3 ring-1 ring-ink/5"
+                  >
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-strong/10 text-[10px] font-bold text-teal-strong">
+                      {title![0]}
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-ink">{title}</p>
+                      <p className="text-xs leading-relaxed text-ink/60">
+                        {desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
             <VideoLink href="https://necessaryreunions.org/video/neru_recharted_annotation-tab-view-mode.mp4">
               Video: kaartinformatie bekijken
             </VideoLink>
-          </DocSection>
+          </section>
 
-          {/* ---- 6. Oud op Nieuw ---- */}
-          <DocSection
+          {/* 6. Oud op Nieuw */}
+          <section
             id="oud-op-nieuw"
-            number={6}
-            title="Oud op Nieuw (Map-tab)"
+            className="scroll-mt-20 angled-card px-8 py-8"
           >
-            <p>
-              In dit venster kun je de historische kaart vergelijken met de
-              wereld van nu. Deze functie is nog niet actief. Zodra deze functie
-              actief is en de kaart is gegeorefereerd kan je de oude kaart over
-              de moderne OpenStreetMaps-kaart leggen. Met een schuifbalk kun je
-              de oude kaart doorzichtig maken. Zo zie je precies waar een oud
-              fort of dorp nu zou liggen op een moderne landkaart.
+            <p className="flag-label mb-3 text-ink/60">06</p>
+            <h2 className="mb-1 text-2xl font-semibold">Oud op Nieuw</h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-ink/40">
+              Map-tab
             </p>
-          </DocSection>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                In dit venster kun je de historische kaart vergelijken met de
+                wereld van nu. Deze functie is nog niet actief. Zodra deze
+                functie actief is en de kaart is gegeorefereerd kan je de oude
+                kaart over de moderne OpenStreetMaps-kaart leggen. Met een
+                schuifbalk kun je de oude kaart doorzichtig maken. Zo zie je
+                precies waar een oud fort of dorp nu zou liggen op een moderne
+                landkaart.
+              </p>
+            </div>
+          </section>
 
-          {/* ---- 7. Verrijkingen door annotaties ---- */}
-          <DocSection
+          {/* 7. Verrijkingen door annotaties */}
+          <section
             id="annotaties"
-            number={7}
-            title="Verrijkingen door annotaties"
-            badge="Annotation-tabblad"
+            className="scroll-mt-20 angled-card px-8 py-8"
           >
-            <p>
-              Dit is de kern van de tool: in dit tabblad kunnen we de informatie
-              van de kaart halen zodat deze doorzoekbaar wordt en kan worden
-              gekoppeld aan andere bronnen. We hebben met kunstmatige
-              intelligentie (AI) al geprobeerd op de kaart geschreven teksten te
-              herkennen en te lezen. Soms werkt dit, maar lang niet altijd: de
-              computer ziet veel tekst over het hoofd en kan de tekst ook niet
-              altijd goed lezen. Hier kan jij dus helpen!
+            <p className="flag-label mb-3 text-ink/60">07</p>
+            <h2 className="mb-1 text-2xl font-semibold">
+              Verrijkingen door annotaties
+            </h2>
+            <p className="mb-4 text-xs font-medium uppercase tracking-wider text-ink/40">
+              Annotation-tabblad
             </p>
-            <p>
-              Alle informatie die we van de kaart overnemen, noemen we{' '}
-              <strong>annotaties</strong>: het zijn eigenlijk opmerkingen die
-              horen bij een specifieke plek op de kaart. Er zijn twee soorten
-              annotaties: <strong>teksten</strong> (bijvoorbeeld de naam van een
-              plaats) en <strong>iconen</strong> (dat kan een symbool zijn van
-              een vuurtoren, maar ook het perceel van een plantage). Tijdens de
-              mapathon richten we ons alleen op de teksten, de iconen doen we
-              een volgende keer.
-            </p>
-            <p>
-              In de filteropties kan je bepalen of je teksten en/of iconen ziet
-              en of je door AI en/of door mensen gemaakte annotaties wil zien.
-              Er is ook een zoekveld waarmee je bestaande annotaties kan
-              doorzoeken.{' '}
-              <strong>
-                Let op: als er veel annotaties zijn, kan het even duren voordat
-                de pagina wordt ingeladen!
-              </strong>
-            </p>
-            <p>
-              Onder het zoekveld zie je hoeveel annotaties er zijn op de gekozen
-              kaart en hoeveel daarvan door mensen is bewerkt. Daaronder begint
-              de daadwerkelijke lijst met annotaties.
-            </p>
-          </DocSection>
+            <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+              <p>
+                Dit is de kern van de tool: in dit tabblad kunnen we de
+                informatie van de kaart halen zodat deze doorzoekbaar wordt en
+                kan worden gekoppeld aan andere bronnen. We hebben met
+                kunstmatige intelligentie (AI) al geprobeerd op de kaart
+                geschreven teksten te herkennen en te lezen. Soms werkt dit,
+                maar lang niet altijd: de computer ziet veel tekst over het
+                hoofd en kan de tekst ook niet altijd goed lezen. Hier kan jij
+                dus helpen!
+              </p>
+              <p>
+                Alle informatie die we van de kaart overnemen, noemen we{' '}
+                <strong>annotaties</strong>: het zijn eigenlijk opmerkingen die
+                horen bij een specifieke plek op de kaart. Er zijn twee soorten
+                annotaties: <strong>teksten</strong> (bijvoorbeeld de naam van
+                een plaats) en <strong>iconen</strong> (dat kan een symbool zijn
+                van een vuurtoren, maar ook het perceel van een plantage).
+                Tijdens de mapathon richten we ons alleen op de teksten, de
+                iconen doen we een volgende keer.
+              </p>
+              <p>
+                In de filteropties kan je bepalen of je teksten en/of iconen
+                ziet en of je door AI en/of door mensen gemaakte annotaties wil
+                zien. Er is ook een zoekveld waarmee je bestaande annotaties kan
+                doorzoeken.
+              </p>
+              <div className="rounded-sm border-l-2 border-amber-400 bg-amber-50 px-4 py-3 text-ink/70">
+                <strong>Let op:</strong> als er veel annotaties zijn, kan het
+                even duren voordat de pagina wordt ingeladen!
+              </div>
+              <p>
+                Onder het zoekveld zie je hoeveel annotaties er zijn op de
+                gekozen kaart en hoeveel daarvan door mensen is bewerkt.
+                Daaronder begint de daadwerkelijke lijst met annotaties.
+              </p>
+            </div>
+          </section>
 
-          {/* ---- 8. Annotaties verbeteren en toevoegen ---- */}
-          <DocSection
-            id="taken"
-            number={8}
-            title="Annotaties verbeteren en toevoegen"
-          >
-            <p>
+          {/* 8. Taken bij de mapathon */}
+          <section id="taken" className="scroll-mt-20 angled-card px-8 py-8">
+            <p className="flag-label mb-3 text-ink/60">08</p>
+            <h2 className="mb-4 text-2xl font-semibold">
+              Annotaties verbeteren en toevoegen
+            </h2>
+            <p className="mb-4 text-sm leading-relaxed text-ink/70">
               Voor de mapathon richten we ons op <strong>3 taken</strong>:
             </p>
-            <ol className="list-inside list-decimal space-y-2">
-              <li>
-                <strong>
-                  Het markeren van tekstvelden op de kaart waar tekst is
-                  geschreven
-                </strong>{' '}
-                — ofwel verbeteren of bevestigen van AI, ofwel het tekenen van
-                nieuwe tekstvelden.
-              </li>
-              <li>
-                <strong>Het verbeteren van de inhoud van de tekstvelden</strong>{' '}
-                — verbeteren of bevestigen van AI, of tekst invullen.
-              </li>
-              <li>
-                <strong>Koppelen van verbonden tekstvelden</strong> — Als één
-                begrip uit meerdere woorden bestaat, is het van belang dat we de
-                velden koppelen. Bijvoorbeeld:{' '}
-                <em>&lsquo;Houtgrond Weltevreeden&rsquo;</em> bestaat uit 2
-                woorden die één begrip vormen. Hetzelfde geldt voor de{' '}
-                <em>&lsquo;Rust en Vredestraat&rsquo;</em>.
-              </li>
-            </ol>
+            <div className="space-y-3">
+              {[
+                {
+                  n: '1',
+                  title: 'Tekstvelden markeren',
+                  desc: 'Markeer tekstvelden op de kaart waar tekst is geschreven — ofwel verbeteren of bevestigen van AI, ofwel het tekenen van nieuwe tekstvelden.',
+                },
+                {
+                  n: '2',
+                  title: 'Inhoud verbeteren',
+                  desc: 'Verbeter de inhoud van de tekstvelden — verbeteren of bevestigen van AI, of tekst invullen.',
+                },
+                {
+                  n: '3',
+                  title: 'Tekstvelden koppelen',
+                  desc: "Als één begrip uit meerdere woorden bestaat, is het van belang dat we de velden koppelen. Bijvoorbeeld: 'Houtgrond Weltevreeden' bestaat uit 2 woorden die één begrip vormen. Hetzelfde geldt voor de 'Rust en Vredestraat'.",
+                },
+              ].map((task) => (
+                <div
+                  key={task.n}
+                  className="flex gap-4 rounded-sm bg-white px-5 py-4 shadow-[0_4px_20px_rgba(0,30,24,0.06)] ring-1 ring-ink/5"
+                >
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-(--deep-teal) text-xs font-bold text-white">
+                    {task.n}
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-ink">
+                      {task.title}
+                    </p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-ink/60">
+                      {task.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-            <div className="mt-4 rounded-sm border border-ink/5 bg-sand px-5 py-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-strong">
+            {/* Optional: locatie koppelen */}
+            <div className="mt-6 rounded-sm border border-ink/5 bg-sand px-6 py-5">
+              <p className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-teal-strong">
+                <span
+                  className="inline-flex h-2.5 w-2.5 -skew-x-12 bg-teal-strong"
+                  aria-hidden
+                />
                 Optioneel voor de liefhebber
               </p>
-              <div className="space-y-3">
+              <div className="space-y-3 text-sm leading-relaxed text-ink/70">
                 <p>
                   <strong>Linken aan locaties.</strong> Een annotatie is alleen
                   nog een naam op een kaart. Als je zeker weet dat die naam
                   correspondeert met een bekende locatie, is het waardevol om
                   die koppeling te maken. We maken daarbij vooral gebruik van{' '}
-                  <ExtLink href="https://www.wikidata.org/">Wikidata</ExtLink>,
-                  omdat de meeste plantages daar in zijn vermeld.
+                  <ExternalLink href="https://www.wikidata.org/">
+                    Wikidata
+                  </ExternalLink>
+                  , omdat de meeste plantages daar in zijn vermeld.
                 </p>
                 <p>
                   De in het vorige voorbeeld genoemde houtgrond Weltevreden: is
                   dat de plantage aan de{' '}
-                  <ExtLink href="https://www.wikidata.org/wiki/Q124805954">
+                  <ExternalLink href="https://www.wikidata.org/wiki/Q124805954">
                     Commewijne
-                  </ExtLink>
+                  </ExternalLink>
                   ,{' '}
-                  <ExtLink href="https://www.wikidata.org/wiki/Q2854713">
+                  <ExternalLink href="https://www.wikidata.org/wiki/Q2854713">
                     Surinamerivier
-                  </ExtLink>{' '}
+                  </ExternalLink>{' '}
                   of{' '}
-                  <ExtLink href="https://www.wikidata.org/wiki/Q124805910">
+                  <ExternalLink href="https://www.wikidata.org/wiki/Q124805910">
                     Saramacca
-                  </ExtLink>
+                  </ExternalLink>
                   ? Je kan het Q-nummer van Wikidata invoeren en dan verschijnt
                   de plantage. Vergeet niet te saven!
                 </p>
               </div>
             </div>
-          </DocSection>
+          </section>
 
-          {/* ---- 9. Bewerkmodus ---- */}
-          <DocSection
-            id="bewerkmodus"
-            number={9}
-            title="Zelf markeringen aanpassen"
-            badge="Annotation-tab · Bewerkmodus"
-          >
-            <p>
-              Om aanpassingen te kunnen doen, moet je zijn aangemeld (zie
-              stap&nbsp;2).
-            </p>
+          {/* 9. Bewerkmodus */}
+          <section id="bewerkmodus" className="scroll-mt-20 space-y-6">
+            <div className="angled-card px-8 py-8">
+              <p className="flag-label mb-3 text-ink/60">09</p>
+              <h2 className="mb-1 text-2xl font-semibold">
+                Zelf markeringen aanpassen
+              </h2>
+              <p className="mb-4 text-xs font-medium uppercase tracking-wider text-ink/40">
+                Annotation-tab · Bewerkmodus
+              </p>
+              <p className="text-sm leading-relaxed text-ink/70">
+                Om aanpassingen te kunnen doen, moet je zijn aangemeld (zie
+                stap&nbsp;2).
+              </p>
+            </div>
 
-            <div className="mt-2 space-y-5">
-              <SubStep title="Tekstvelden aanpassen: verwijderen, corrigeren, samenvoegen">
-                <p>
-                  Soms maakt de computer een fout, bijvoorbeeld een vlek die als
-                  tekst wordt gezien. Soms zijn tekstvelden over elkaar
-                  aangemaakt of ten onrechte in meerdere delen gesplitst.
+            {/* Sub-cards for each editing action */}
+            <div className="space-y-4 pl-4 sm:pl-8">
+              {/* a. Tekstvelden aanpassen */}
+              <div className="cut-corner border border-slate-200 bg-white px-6 py-6">
+                <h3 className="mb-3 text-base font-semibold text-ink">
+                  Tekstvelden aanpassen
+                </h3>
+                <p className="mb-1 text-xs font-medium uppercase tracking-wider text-ink/40">
+                  Verwijderen · corrigeren · samenvoegen
                 </p>
-                <p>
-                  De tekstvelden kan je aanpassen met de icoontjes die
-                  rechtsboven in het middenpaneel staan. Het{' '}
-                  <strong>prullenbakje</strong> verwijdert een tekstveld, met
-                  het <strong>stippellijn-icoontje</strong> kan je het
-                  aanpassen. Zorg dat de getekende vorm de letters (inclusief
-                  leestekens) helemaal omsluit, maar raak andere onderdelen op
-                  de kaart zo min mogelijk aan. Bevestig daarna met het{' '}
-                  <strong>groene vinkje</strong> of annuleer de wijziging met
-                  het <strong>rode kruisje</strong>.
-                </p>
+                <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+                  <p>
+                    Soms maakt de computer een fout, bijvoorbeeld een vlek die
+                    als tekst wordt gezien. Soms zijn tekstvelden over elkaar
+                    aangemaakt of ten onrechte in meerdere delen gesplitst.
+                  </p>
+                  <p>
+                    De tekstvelden kan je aanpassen met de icoontjes die
+                    rechtsboven in het middenpaneel staan. Het{' '}
+                    <strong>prullenbakje</strong> verwijdert een tekstveld, met
+                    het <strong>stippellijn-icoontje</strong> kan je het
+                    aanpassen. Zorg dat de getekende vorm de letters (inclusief
+                    leestekens) helemaal omsluit, maar raak andere onderdelen op
+                    de kaart zo min mogelijk aan. Bevestig daarna met het{' '}
+                    <strong>groene vinkje</strong> of annuleer de wijziging met
+                    het <strong>rode kruisje</strong>.
+                  </p>
+                  <p>
+                    Als er bijvoorbeeld per ongeluk twee tekstvelden zijn
+                    aangemaakt voor één woord, dan kan je één veld verwijderen
+                    en het andere veld aanpassen zodat het om het hele woord
+                    past. Je kan ook meteen de inhoud van het tekstveld
+                    aanpassen.
+                  </p>
+                </div>
                 <VideoLink href="https://necessaryreunions.org/video/neru_recharted_correct.mp4">
                   Video: tekstveld aanpassen
                 </VideoLink>
-                <p className="mt-3">
-                  Als er bijvoorbeeld per ongeluk twee tekstvelden zijn
-                  aangemaakt voor één woord, dan kan je één veld verwijderen en
-                  het andere veld aanpassen zodat het om het hele woord past. Je
-                  kan ook meteen de inhoud van het tekstveld aanpassen.
-                </p>
                 <VideoLink href="https://necessaryreunions.org/video/neru_recharted_deleting.mp4">
                   Video: meerdere tekstvelden verwijderen
                 </VideoLink>
-              </SubStep>
+              </div>
 
-              <SubStep title="Nieuwe tekstvelden aanmaken">
-                <p>
-                  De computer ziet regelmatig tekst over het hoofd. In dat geval
-                  kan je zelf een nieuw tekstveld aanmaken. Klik op het icoon
-                  met de <strong>T en een potlood</strong>. Teken het veld om de
-                  tekst heen en klik op het groene vinkje om te bevestigen.
-                  Vervolgens kan je de tekst in het tekstveld invoeren (ook weer
-                  bevestigen met groen vinkje).
-                </p>
+              {/* b. Nieuwe tekstvelden */}
+              <div className="cut-corner border border-slate-200 bg-white px-6 py-6">
+                <h3 className="mb-3 text-base font-semibold text-ink">
+                  Nieuwe tekstvelden aanmaken
+                </h3>
+                <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+                  <p>
+                    De computer ziet regelmatig tekst over het hoofd. In dat
+                    geval kan je zelf een nieuw tekstveld aanmaken. Klik op het
+                    icoon met de <strong>T en een potlood</strong>. Teken het
+                    veld om de tekst heen en klik op het groene vinkje om te
+                    bevestigen. Vervolgens kan je de tekst in het tekstveld
+                    invoeren (ook weer bevestigen met groen vinkje).
+                  </p>
+                </div>
                 <VideoLink href="https://necessaryreunions.org/video/neru_recharted_addnew.mp4">
                   Video: nieuwe tekstvelden aanmaken
                 </VideoLink>
-              </SubStep>
+              </div>
 
-              <SubStep title="Tekstvelden koppelen">
-                <p>
-                  Vaak zijn er meerdere woorden die samen een naam vormen.
-                  Eerder werd het voorbeeld al genoemd van{' '}
-                  <em>&lsquo;Houtgrond Weltevreeden&rsquo;</em>. We willen deze
-                  woorden aan elkaar koppelen zodat we weten dat dit één term
-                  is.
-                </p>
-                <p>Hoe doe je dit?</p>
-                <ol className="list-inside list-decimal space-y-1.5">
-                  <li>
-                    Klik op de annotatie die je wil koppelen. Je kan eventueel
-                    de tekst verbeteren.
-                  </li>
-                  <li>
-                    Onder de tekst zie je een blokje <strong>Enrichment</strong>{' '}
-                    en daarin het kopje <strong>Link annotations</strong>.
-                  </li>
-                  <li>
-                    Klik daarop — er verschijnt een knop{' '}
-                    <strong>+ Start selecting</strong>.
-                  </li>
-                  <li>
-                    Klik op de kaart de verschillende tekstvelden aan. Let op
-                    dat je de goede volgorde aanhoudt (af te lezen aan de
-                    nummers die de tekstvelden krijgen).
-                  </li>
-                  <li>
-                    Als je de juiste tekstvelden hebt aangeklikt, klik je op{' '}
-                    <strong>Save</strong>.
-                  </li>
-                </ol>
-              </SubStep>
+              {/* c. Tekstvelden koppelen */}
+              <div className="cut-corner border border-slate-200 bg-white px-6 py-6">
+                <h3 className="mb-3 text-base font-semibold text-ink">
+                  Tekstvelden koppelen
+                </h3>
+                <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+                  <p>
+                    Vaak zijn er meerdere woorden die samen een naam vormen.
+                    Eerder werd het voorbeeld al genoemd van{' '}
+                    <em>&lsquo;Houtgrond Weltevreeden&rsquo;</em>. We willen
+                    deze woorden aan elkaar koppelen zodat we weten dat dit één
+                    term is.
+                  </p>
+                  <ol className="list-inside list-decimal space-y-1.5 pl-1">
+                    <li>
+                      Klik op de annotatie die je wil koppelen. Je kan eventueel
+                      de tekst verbeteren.
+                    </li>
+                    <li>
+                      Onder de tekst zie je{' '}
+                      <strong>Enrichment → Link annotations</strong>.
+                    </li>
+                    <li>
+                      Klik op <strong>+ Start selecting</strong>.
+                    </li>
+                    <li>
+                      Klik op de kaart de tekstvelden aan in de juiste volgorde
+                      (af te lezen aan de nummers).
+                    </li>
+                    <li>
+                      Klik op <strong>Save</strong>.
+                    </li>
+                  </ol>
+                </div>
+              </div>
 
-              <SubStep title="Teksten verbeteren of invoeren">
-                <p>
-                  Door AI gelezen teksten kunnen worden gecontroleerd en
-                  verbeterd. Als AI de tekst goed heeft gelezen, bevestig dan
-                  dat de tekst correct is door op het <strong>potloodje</strong>{' '}
-                  naast de tekst te klikken. Als de tekst moet worden verbeterd,
-                  kan dat in het tekstveld, gevolgd door bevestiging met het
-                  groene vinkje.
-                </p>
-                <p>
-                  Neem de tekst zo exact mogelijk over: afkortingen,
-                  interpunctie, hoofdlettergebruik. Bij twijfel kan je ook
-                  altijd een comment achterlaten (<em>Add a comment</em>).
-                </p>
-              </SubStep>
+              {/* d. Teksten verbeteren */}
+              <div className="cut-corner border border-slate-200 bg-white px-6 py-6">
+                <h3 className="mb-3 text-base font-semibold text-ink">
+                  Teksten verbeteren of invoeren
+                </h3>
+                <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+                  <p>
+                    Door AI gelezen teksten kunnen worden gecontroleerd en
+                    verbeterd. Als AI de tekst goed heeft gelezen, bevestig dan
+                    dat de tekst correct is door op het{' '}
+                    <strong>potloodje</strong> naast de tekst te klikken. Als de
+                    tekst moet worden verbeterd, kan dat in het tekstveld,
+                    gevolgd door bevestiging met het groene vinkje.
+                  </p>
+                  <p>
+                    Neem de tekst zo exact mogelijk over: afkortingen,
+                    interpunctie, hoofdlettergebruik. Bij twijfel kan je ook
+                    altijd een comment achterlaten (<em>Add a comment</em>).
+                  </p>
+                </div>
+              </div>
 
-              <SubStep title="Voor de liefhebber: koppelen locatie">
-                <p>
-                  In de mapathon ligt de nadruk op het in orde maken van de
-                  tekstvelden en de teksten. Een volgende stap is het koppelen
-                  met locatiegegevens, zoals de namen van plaatsen, plantages,
-                  straatnamen enzovoorts. We richten ons daarbij vooral op{' '}
-                  <ExtLink href="https://www.wikidata.org/">Wikidata</ExtLink>.
-                </p>
-                <p>
-                  Je kan het beste eerst de locatie opzoeken op{' '}
-                  <ExtLink href="https://www.wikidata.org/">
-                    wikidata.org
-                  </ExtLink>{' '}
-                  en als je zeker bent dat het de juiste is, het unieke Q-nummer
-                  invoeren:{' '}
-                  <strong>
-                    Add Location → zoekveld &lsquo;Search for a place&rsquo; →
-                    Q-nummer invoeren → juiste item aanklikken → Save
-                  </strong>
-                  .
-                </p>
+              {/* e. Koppelen locatie */}
+              <div className="cut-corner border border-slate-200 bg-white px-6 py-6">
+                <h3 className="mb-3 text-base font-semibold text-ink">
+                  Voor de liefhebber: koppelen locatie
+                </h3>
+                <div className="space-y-3 text-sm leading-relaxed text-ink/70">
+                  <p>
+                    In de mapathon ligt de nadruk op het in orde maken van de
+                    tekstvelden en de teksten. Een volgende stap is het koppelen
+                    met locatiegegevens, zoals de namen van plaatsen, plantages,
+                    straatnamen enzovoorts. We richten ons daarbij vooral op{' '}
+                    <ExternalLink href="https://www.wikidata.org/">
+                      Wikidata
+                    </ExternalLink>
+                    .
+                  </p>
+                  <p>
+                    Je kan het beste eerst de locatie opzoeken op{' '}
+                    <ExternalLink href="https://www.wikidata.org/">
+                      wikidata.org
+                    </ExternalLink>{' '}
+                    en als je zeker bent dat het de juiste is, het unieke
+                    Q-nummer invoeren:{' '}
+                    <strong>
+                      Add Location → zoekveld &lsquo;Search for a place&rsquo; →
+                      Q-nummer invoeren → juiste item aanklikken → Save
+                    </strong>
+                    .
+                  </p>
+                </div>
                 <VideoLink href="https://necessaryreunions.org/video/neru_recharted_linking.mp4">
                   Video: tekst koppelen aan een locatie
                 </VideoLink>
-              </SubStep>
+              </div>
             </div>
-          </DocSection>
+          </section>
         </div>
       </main>
 
