@@ -130,7 +130,7 @@ export default function ReChartedDocumentatiePage() {
           aria-hidden="true"
         >
           <nav
-            className="pointer-events-auto sticky top-0 rounded-sm border border-slate-200 bg-white px-4 py-4 shadow-[0_15px_35px_rgba(0,30,24,0.08)]"
+            className="pointer-events-auto sticky top-12 rounded-sm border border-slate-200 bg-white px-4 py-4 shadow-[0_15px_35px_rgba(0,30,24,0.08)]"
             aria-label="Inhoudsopgave"
           >
             <p className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.3em] text-teal-strong">
