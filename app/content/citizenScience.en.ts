@@ -38,6 +38,7 @@ export const citizenScienceEn: CitizenScienceContent = {
         description:
           'The university libraries of Amsterdam and Leiden hold rich collections of historic Surinamese maps. These contain valuable data about plantations, rivers, streets, and buildings. During this Mapathon we will digitally capture that information — laying a foundation for linking it with other sources such as images and digitized documents about the people who lived there. There are different activities, suitable for both beginners and experienced tech enthusiasts. We provide coffee, tea, and drinks at the closing get-together. Just bring your laptop.',
         date: '9 March 2026',
+        isoDate: '2026-03-09',
         time: '13:00 – 18:00',
         location:
           'Bushuis / Oost-Indisch Huis, Kloveniersburgwal 48, Amsterdam',
@@ -119,6 +120,7 @@ export const citizenScienceEn: CitizenScienceContent = {
               label: 'IIIF Manifest',
               href: 'https://surinametimemachine.github.io/iiif-suriname/manifest.json',
               description: 'The IIIF manifest containing all digitized maps',
+              copyable: true,
             },
           ],
         },
@@ -173,6 +175,7 @@ export const citizenScienceEn: CitizenScienceContent = {
               href: 'https://surinametimemachine.github.io/iiif-suriname/manifest.json',
               description:
                 'Use the manifest with Mirador, Theseus Viewer, IIIF Live, Universal Viewer, or other IIIF-compatible tools',
+              copyable: true,
             },
           ],
         },

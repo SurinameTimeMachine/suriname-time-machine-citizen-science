@@ -241,6 +241,7 @@ export type WorkshopLink = {
   label: string;
   href: string;
   description?: string;
+  copyable?: boolean;
 };
 
 export type Workshop = {
@@ -262,6 +263,7 @@ export type EventDetails = {
   title: string;
   description: string;
   date: string;
+  isoDate: string;
   time: string;
   location: string;
   locationHref?: string;

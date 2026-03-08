@@ -5,6 +5,7 @@ import type {
   CitizenScienceEvent,
   Workshop,
 } from '../content/types';
+import { CopyButton } from './CopyButton';
 import { RichText } from './RichText';
 
 type CitizenSciencePageProps = {
@@ -116,7 +117,7 @@ function WorkshopCard({ workshop }: { workshop: Workshop }) {
                   className="group flex items-start gap-2 rounded-sm bg-ink/2 px-3 py-2.5 ring-1 ring-ink/5 transition-colors hover:bg-teal-strong/5 hover:ring-teal-strong/20"
                 >
                   <ExternalLinkIcon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-teal-strong opacity-60 transition-opacity group-hover:opacity-100" />
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <span className="text-sm font-medium text-ink group-hover:text-teal-strong">
                       {link.label}
                     </span>
@@ -126,6 +127,7 @@ function WorkshopCard({ workshop }: { workshop: Workshop }) {
                       </p>
                     )}
                   </div>
+                  {link.copyable && <CopyButton text={link.href} />}
                 </a>
               </li>
             ))}
@@ -163,9 +165,9 @@ function EventBlock({
 
   return (
     <article className="overflow-hidden rounded-sm border border-slate-200 bg-white shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
-      <details open={defaultOpen}>
+      <details className="group" open={defaultOpen}>
         {/* Collapsible summary: event title + meta */}
-        <summary className="group cursor-pointer list-none bg-(--deep-teal) px-6 py-5 [&::-webkit-details-marker]:hidden">
+        <summary className="cursor-pointer list-none bg-(--deep-teal) px-6 py-5 [&::-webkit-details-marker]:hidden">
           <div className="flex items-start justify-between gap-4">
             <div className="space-y-2">
               <h2 className="text-xl font-semibold text-white sm:text-2xl">
@@ -182,7 +184,7 @@ function EventBlock({
                 </span>
               </div>
             </div>
-            <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-white/60 transition-transform group-open:rotate-180" />
+            <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-white/60 transition-transform duration-200 rotate-[-90deg] group-open:rotate-0" />
           </div>
         </summary>
 
@@ -295,6 +297,11 @@ export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
   const otherLocalePath =
     content.locale === 'nl' ? '/en/participatory-science' : '/participatie';
 
+  // Find the first upcoming (or today's) event to default-open
+  const today = new Date().toISOString().slice(0, 10);
+  const firstUpcomingIndex = events.findIndex((e) => e.event.isoDate >= today);
+  const defaultOpenIndex = firstUpcomingIndex >= 0 ? firstUpcomingIndex : 0;
+
   return (
     <div className="min-h-screen bg-(--cream)">
       {/* Header */}
@@ -353,7 +360,7 @@ export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
             key={entry.id}
             entry={entry}
             ui={ui}
-            defaultOpen={index === 0}
+            defaultOpen={index === defaultOpenIndex}
           />
         ))}
       </main>
