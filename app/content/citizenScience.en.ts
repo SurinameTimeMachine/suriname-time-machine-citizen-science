@@ -88,7 +88,7 @@ export const citizenScienceEn: CitizenScienceContent = {
         {
           id: 'hdsc',
           name: 'Historische Database van Suriname en de Cariben',
-          href: 'https://datasets.iisg.amsterdam/dataverse/HDSC',
+          href: 'http://www.hdsc.ning.com/',
           logo: '/images/partners/hdsc.png',
         },
         {
