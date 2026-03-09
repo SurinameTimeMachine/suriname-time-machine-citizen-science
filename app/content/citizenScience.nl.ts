@@ -132,6 +132,12 @@ export const citizenScienceNl: CitizenScienceContent = {
             "Verbeter de historisch-geografische informatie over Suriname op Wikidata, in het kader van het Wiki goes Caribbean-initiatief. Voeg ontbrekende gegevens, foto's en gestructureerde kennis over erfgoedlocaties toe.",
           links: [
             {
+              label: 'WikiProject Plantations in Suriname',
+              href: 'https://www.wikidata.org/wiki/Wikidata:WikiProject_Plantations_in_Suriname/Todo#s',
+              description:
+                'Lijst van Wikidata-items over Surinaamse plantages die nog informatie nodig hebben',
+            },
+            {
               label: 'WikiShootMe — Suriname',
               href: 'https://wikishootme.toolforge.org/#lat=5.607704545696418&lng=-55.802306961268194&zoom=9&layers=wikidata_image,wikidata_no_image&sparql_filter=%3Fq%20wdt%3AP31%20wd%3AQ188913%3B%20wdt%3AP17%20wd%3AQ7646305%3B%20wdt%3AP625%20%3Flocation.&worldwide=1',
               description:
