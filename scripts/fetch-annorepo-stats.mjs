@@ -8,7 +8,7 @@
  *   SURINAME_ROOT_API_KEY    – Root API key (sent as x-api-key header)
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 
 const BASE_URL = 'https://annorepo.surinametijdmachine.org';
@@ -139,6 +139,12 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error('❌ Failed to fetch AnnRepo stats:', err.message);
-  process.exit(1);
+  console.warn('⚠️  Failed to fetch AnnRepo stats:', err.message);
+  if (existsSync(OUT_PATH)) {
+    console.log('   Using existing', OUT_PATH);
+  } else {
+    console.log('   Writing empty fallback so the build can continue.');
+    mkdirSync(dirname(OUT_PATH), { recursive: true });
+    writeFileSync(OUT_PATH, JSON.stringify(null));
+  }
 });

@@ -92,7 +92,8 @@ export function DashboardPage({ content }: DashboardPageProps) {
     try {
       const res = await fetch('/data/annorepo-stats.json');
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-      const result: DashboardData = await res.json();
+      const result: DashboardData | null = await res.json();
+      if (!result) throw new Error('No data available');
       setData(result);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Unknown error');
