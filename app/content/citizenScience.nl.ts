@@ -113,7 +113,8 @@ export const citizenScienceNl: CitizenScienceContent = {
             {
               label: 'Kaart van Suriname (1930)',
               href: 'https://surinametijdmachine.org/iiif/mapathon/kaart-van-suriname-1930.json',
-              description: 'Georeferentie Annotatie van de Kaart van Suriname (1930)',
+              description:
+                'Georeferentie Annotatie van de Kaart van Suriname (1930)',
               copyable: true,
             },
             {
@@ -130,8 +131,7 @@ export const citizenScienceNl: CitizenScienceContent = {
             {
               label: 'IIIF Manifest',
               href: 'https://surinametimemachine.github.io/iiif-suriname/manifest.json',
-              description:
-                'IIIF-manifest met alle gedigitaliseerde kaarten',
+              description: 'IIIF-manifest met alle gedigitaliseerde kaarten',
               copyable: true,
             },
           ],
@@ -173,6 +173,11 @@ export const citizenScienceNl: CitizenScienceContent = {
           description:
             'Annoteer historische kaarten met re:Charted — een tool waarmee je gestructureerde notities en transcripties direct op kaartafbeeldingen kunt plaatsen. Jouw annotaties helpen handgeschreven kaartdetails machineleesbaar en doorzoekbaar te maken.',
           links: [
+            {
+              label: 'liiive Suriname kaartannotatie alternatief',
+              href: 'https://edu.nl/h8veg',
+              description: 'Plan B - kaartannotatie-omgeving voor Suriname',
+            },
             {
               label: 're:Charted — Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',

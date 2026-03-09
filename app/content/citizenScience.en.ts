@@ -162,6 +162,11 @@ export const citizenScienceEn: CitizenScienceContent = {
             'Annotate historic maps with re:Charted — a tool for adding structured notes and transcriptions directly onto map images. Your annotations help make handwritten map details machine-readable and searchable.',
           links: [
             {
+              label: 'liiive Suriname map annotation alternative',
+              href: 'https://edu.nl/h8veg',
+              description: 'Plan B - map annotation environment for Suriname',
+            },
+            {
               label: 're:Charted — Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',
               description: 'Open the re:Charted annotation viewer for Suriname',
