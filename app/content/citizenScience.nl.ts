@@ -184,6 +184,18 @@ export const citizenScienceNl: CitizenScienceContent = {
                 'Gebruik het manifest met Mirador, Theseus Viewer, IIIF Live, Universal Viewer of andere IIIF-compatibele tools',
               copyable: true,
             },
+            {
+              label: 'ORCID voor annotatie-toekenning',
+              href: 'https://docs.google.com/spreadsheets/d/1SPGA--E5eslwkssQfhgH9JHP4zipg3vM8Oe1bY1nQhI/edit?usp=sharing',
+              description:
+                'Voeg je ORCID toe aan het Excel-blad om toegang te krijgen tot re:Charted voor Surinaamse kaarten.',
+            },
+            {
+              label: 'Dashboard met live annotatiestatistieken',
+              href: '/dashboard',
+              description:
+                'Bekijk real-time statistieken van annotaties op Surinaamse kaarten',
+            },
           ],
         },
       ],

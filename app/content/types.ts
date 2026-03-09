@@ -313,3 +313,61 @@ export type CitizenScienceContent = {
   ui: CitizenScienceUiStrings;
   events: CitizenScienceEvent[];
 };
+
+// Dashboard page types
+export type DashboardSeo = {
+  title: string;
+  description: string;
+  openGraphLocale: string;
+};
+
+export type DashboardUiStrings = {
+  navigation: {
+    locationLabel: string;
+    projectCode: string;
+    projectSubtitle: string;
+    languageToggleLabel: string;
+    backToHome: string;
+  };
+  hero: {
+    tagline: string;
+    title: string;
+    lead: string;
+  };
+  stats: {
+    totalAnnotations: string;
+    aiAnnotations: string;
+    humanAnnotations: string;
+    lastUpdated: string;
+  };
+  sections: {
+    motivationTitle: string;
+    motivationDescription: string;
+    leaderboardTitle: string;
+    leaderboardDescription: string;
+    purposeTitle: string;
+    purposeDescription: string;
+    canvasTitle: string;
+    canvasDescription: string;
+  };
+  labels: {
+    annotations: string;
+    loading: string;
+    error: string;
+    retryButton: string;
+    rank: string;
+    contributor: string;
+    count: string;
+    canvas: string;
+  };
+  footer: {
+    coordinatorLine: string;
+    organizationLabel: string;
+  };
+};
+
+export type DashboardContent = {
+  locale: HomeLocale;
+  seo: DashboardSeo;
+  ui: DashboardUiStrings;
+};

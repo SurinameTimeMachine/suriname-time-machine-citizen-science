@@ -183,6 +183,18 @@ export const citizenScienceEn: CitizenScienceContent = {
                 'Use the manifest with Mirador, Theseus Viewer, IIIF Live, Universal Viewer, or other IIIF-compatible tools',
               copyable: true,
             },
+            {
+              label: 'ORCID for annotation attribution',
+              href: 'https://docs.google.com/spreadsheets/d/1SPGA--E5eslwkssQfhgH9JHP4zipg3vM8Oe1bY1nQhI/edit?usp=sharing',
+              description:
+                'Add your ORCID to the excel sheet to get access to re:Charted for Suriname maps.',
+            },
+            {
+              label: 'Dashboard with live annotation stats',
+              href: '/dashboard',
+              description:
+                'View real-time statistics of annotations made on Suriname maps',
+            },
           ],
         },
       ],

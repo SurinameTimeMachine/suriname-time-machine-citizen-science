@@ -1,0 +1,390 @@
+'use client';
+
+import Link from 'next/link';
+import { useCallback, useEffect, useState } from 'react';
+import {
+  Bar,
+  BarChart,
+  Cell,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
+import type { DashboardContent } from '../content/types';
+import type { DashboardData } from '../lib/annorepo';
+
+type DashboardPageProps = {
+  content: DashboardContent;
+};
+
+const CHART_COLORS = [
+  'var(--teal-strong)',
+  'var(--teal-bright)',
+  '#f59e0b',
+  '#8b5cf6',
+  '#ef4444',
+  '#06b6d4',
+  '#ec4899',
+  '#84cc16',
+];
+
+function formatNumber(n: number): string {
+  return n.toLocaleString('en-US');
+}
+
+function tooltipFormatter(
+  value: number | string | ReadonlyArray<number | string> | undefined,
+) {
+  return formatNumber(Number(value ?? 0));
+}
+
+function StatCard({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: string;
+  accent?: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-sm px-6 py-5 ring-1 ${accent ? 'bg-(--deep-teal) text-white ring-white/10' : 'bg-white ring-ink/5'}`}
+    >
+      <p
+        className={`text-xs font-semibold uppercase tracking-[0.2em] ${accent ? 'text-white/60' : 'text-ink/50'}`}
+      >
+        {label}
+      </p>
+      <p className="mt-1 text-3xl font-bold tabular-nums">{value}</p>
+    </div>
+  );
+}
+
+function SectionHeading({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="mb-6">
+      <h2 className="text-xl font-semibold text-ink sm:text-2xl">{title}</h2>
+      <p className="mt-1 text-sm text-ink/60">{description}</p>
+    </div>
+  );
+}
+
+export function DashboardPage({ content }: DashboardPageProps) {
+  const { ui } = content;
+  const otherLocalePath =
+    content.locale === 'nl' ? '/en/dashboard' : '/dashboard';
+
+  const [data, setData] = useState<DashboardData | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const loadData = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/data/annorepo-stats.json');
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      const result: DashboardData = await res.json();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unknown error');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
+
+  return (
+    <div className="min-h-screen bg-(--cream)">
+      {/* Header */}
+      <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+          <div className="flex items-center gap-4">
+            <Link
+              href={content.locale === 'nl' ? '/' : '/en'}
+              className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
+            >
+              <svg
+                className="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
+              </svg>
+              {ui.navigation.backToHome}
+            </Link>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
+              {ui.navigation.projectCode}
+            </span>
+            <Link
+              href={otherLocalePath}
+              className="rounded-sm border border-ink/10 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-ink/60 transition-colors hover:border-teal-strong/30 hover:text-teal-strong"
+            >
+              {ui.navigation.languageToggleLabel}
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-6xl">
+          <p className="flag-label mb-4 text-white/80">{ui.hero.tagline}</p>
+          <h1 className="mb-6 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+            {ui.hero.title}
+          </h1>
+          <p className="max-w-2xl text-lg text-white/80">{ui.hero.lead}</p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <main className="mx-auto max-w-6xl space-y-12 px-4 py-12 sm:px-6 lg:px-10">
+        {loading && (
+          <div className="flex items-center justify-center py-20">
+            <div className="flex items-center gap-3 text-ink/60">
+              <svg
+                className="h-5 w-5 animate-spin"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                />
+              </svg>
+              <span className="text-sm">{ui.labels.loading}</span>
+            </div>
+          </div>
+        )}
+
+        {error && !loading && (
+          <div className="flex flex-col items-center justify-center gap-4 py-20">
+            <p className="text-sm text-red-600">{ui.labels.error}</p>
+            <button
+              type="button"
+              onClick={loadData}
+              className="rounded-sm bg-teal-strong px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-deep-teal"
+            >
+              {ui.labels.retryButton}
+            </button>
+          </div>
+        )}
+
+        {data && !loading && (
+          <>
+            {/* Stats overview */}
+            <section>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <StatCard
+                  label={ui.stats.totalAnnotations}
+                  value={formatNumber(data.totalAnnotations)}
+                  accent
+                />
+                <StatCard
+                  label={ui.stats.aiAnnotations}
+                  value={formatNumber(data.aiAnnotations)}
+                />
+                <StatCard
+                  label={ui.stats.humanAnnotations}
+                  value={formatNumber(data.humanAnnotations)}
+                />
+              </div>
+              <p className="mt-3 text-xs text-ink/40">
+                {ui.stats.lastUpdated}:{' '}
+                {new Date(data.fetchedAt).toLocaleString(
+                  content.locale === 'nl' ? 'nl-NL' : 'en-US',
+                )}
+              </p>
+            </section>
+
+            {/* Motivation breakdown */}
+            <section>
+              <SectionHeading
+                title={ui.sections.motivationTitle}
+                description={ui.sections.motivationDescription}
+              />
+              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart
+                    data={data.motivationCounts}
+                    margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+                  >
+                    <XAxis
+                      dataKey="motivation"
+                      tick={{ fontSize: 12 }}
+                      tickLine={false}
+                    />
+                    <YAxis tick={{ fontSize: 12 }} tickLine={false} />
+                    <Tooltip formatter={tooltipFormatter} />
+                    <Bar dataKey="count" radius={[4, 4, 0, 0]}>
+                      {data.motivationCounts.map((_, i) => (
+                        <Cell
+                          key={`mot-${data.motivationCounts[i].motivation}`}
+                          fill={CHART_COLORS[i % CHART_COLORS.length]}
+                        />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </section>
+
+            {/* Top contributors */}
+            <section>
+              <SectionHeading
+                title={ui.sections.leaderboardTitle}
+                description={ui.sections.leaderboardDescription}
+              />
+              <div className="overflow-hidden rounded-sm bg-white ring-1 ring-ink/5">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-ink/5 bg-ink/2">
+                      <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                        {ui.labels.rank}
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                        {ui.labels.contributor}
+                      </th>
+                      <th className="px-6 py-3 text-right text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+                        {ui.labels.count}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {data.creatorCounts.map((creator, i) => (
+                      <tr
+                        key={creator.label}
+                        className="border-b border-ink/5 last:border-0"
+                      >
+                        <td className="px-6 py-3 tabular-nums text-ink/50">
+                          {i + 1}
+                        </td>
+                        <td className="px-6 py-3 font-medium text-ink">
+                          {creator.label}
+                        </td>
+                        <td className="px-6 py-3 text-right tabular-nums text-ink/70">
+                          {formatNumber(creator.count)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            {/* Purpose breakdown */}
+            <section>
+              <SectionHeading
+                title={ui.sections.purposeTitle}
+                description={ui.sections.purposeDescription}
+              />
+              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
+                <ResponsiveContainer width="100%" height={300}>
+                  <BarChart
+                    data={data.purposeCounts}
+                    margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
+                  >
+                    <XAxis
+                      dataKey="purpose"
+                      tick={{ fontSize: 12 }}
+                      tickLine={false}
+                    />
+                    <YAxis tick={{ fontSize: 12 }} tickLine={false} />
+                    <Tooltip formatter={tooltipFormatter} />
+                    <Bar dataKey="count" radius={[4, 4, 0, 0]}>
+                      {data.purposeCounts.map((_, i) => (
+                        <Cell
+                          key={`purp-${data.purposeCounts[i].purpose}`}
+                          fill={CHART_COLORS[(i + 2) % CHART_COLORS.length]}
+                        />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </section>
+
+            {/* Top canvases */}
+            <section>
+              <SectionHeading
+                title={ui.sections.canvasTitle}
+                description={ui.sections.canvasDescription}
+              />
+              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
+                <ResponsiveContainer
+                  width="100%"
+                  height={Math.max(300, data.topCanvases.length * 32)}
+                >
+                  <BarChart
+                    data={data.topCanvases}
+                    layout="vertical"
+                    margin={{ top: 5, right: 20, bottom: 5, left: 60 }}
+                  >
+                    <XAxis
+                      type="number"
+                      tick={{ fontSize: 12 }}
+                      tickLine={false}
+                    />
+                    <YAxis
+                      type="category"
+                      dataKey="canvas"
+                      tick={{ fontSize: 11 }}
+                      tickLine={false}
+                      width={55}
+                    />
+                    <Tooltip formatter={tooltipFormatter} />
+                    <Bar
+                      dataKey="count"
+                      radius={[0, 4, 4, 0]}
+                      fill="var(--teal-strong)"
+                    />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </section>
+          </>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-ink/5 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
+          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
+            <p>
+              {ui.footer.coordinatorLine} · {ui.footer.organizationLabel}
+            </p>
+            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

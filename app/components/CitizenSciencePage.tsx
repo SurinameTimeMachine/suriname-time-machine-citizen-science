@@ -184,7 +184,7 @@ function EventBlock({
                 </span>
               </div>
             </div>
-            <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-white/60 transition-transform duration-200 rotate-[-90deg] group-open:rotate-0" />
+            <ChevronIcon className="mt-1 h-5 w-5 shrink-0 text-white/60 transition-transform duration-200 rotate-90deg group-open:rotate-0" />
           </div>
         </summary>
 
