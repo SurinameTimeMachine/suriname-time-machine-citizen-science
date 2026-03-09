@@ -111,6 +111,12 @@ export const citizenScienceNl: CitizenScienceContent = {
               description: 'Open geselecteerde kaarten in Allmaps Editor',
             },
             {
+              label: 'Kaart van Suriname (1930)',
+              href: 'https://surinametijdmachine.org/iiif/mapathon/kaart-van-suriname-1930.json',
+              description: 'Georeferentie Annotatie van de Kaart van Suriname (1930)',
+              copyable: true,
+            },
+            {
               label: 'Allmaps Explore',
               href: 'https://dev.explore.allmaps.org/#7.06/5.352/-54.974',
               description: 'Open Allmaps Explore',
