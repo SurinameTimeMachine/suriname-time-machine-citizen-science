@@ -1,147 +1,179 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126755,
+    "total": 126813,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126755,
-  "humanAnnotations": 55,
-  "aiAnnotations": 126700,
+  "totalAnnotations": 126813,
+  "humanAnnotations": 320,
+  "aiAnnotations": 126493,
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 300
-    },
-    {
-      "motivation": "linking",
-      "count": 18
+      "count": 126664
     },
     {
       "motivation": "textspotting",
-      "count": 12
+      "count": 104
+    },
+    {
+      "motivation": "linking",
+      "count": 34
     },
     {
       "motivation": "iconography",
-      "count": 6
+      "count": 10
     }
   ],
   "creatorCounts": [
     {
+      "label": "Bart van Duijvenbode",
+      "count": 173
+    },
+    {
       "label": "Thunnis van Oort",
-      "count": 35
+      "count": 39
     },
     {
       "label": "Jona Schlegel",
-      "count": 20
+      "count": 35
+    },
+    {
+      "label": "Ryan Jessurun",
+      "count": 23
+    },
+    {
+      "label": "Joan Mertodirjo",
+      "count": 16
+    },
+    {
+      "label": "Maurijn Heus, de",
+      "count": 14
+    },
+    {
+      "label": "Peter  Laarakker",
+      "count": 14
+    },
+    {
+      "label": "Guus Frumau",
+      "count": 3
+    },
+    {
+      "label": "Ingeborg Verheul",
+      "count": 2
+    },
+    {
+      "label": "Catho",
+      "count": 1
     }
   ],
   "purposeCounts": [
     {
       "purpose": "supplementing",
-      "count": 400
+      "count": 126767
     },
     {
       "purpose": "assessing",
-      "count": 16
+      "count": 161
     },
     {
       "purpose": "selecting",
-      "count": 6
+      "count": 9
     },
     {
       "purpose": "geotagging",
-      "count": 5
+      "count": 6
     },
     {
       "purpose": "identifying",
-      "count": 5
+      "count": 6
     },
     {
       "purpose": "commenting",
-      "count": 1
+      "count": 4
     }
   ],
   "topCanvases": [
     {
+      "canvas": "c9",
+      "count": 4135
+    },
+    {
       "canvas": "c99",
       "count": 3398
+    },
+    {
+      "canvas": "c35",
+      "count": 3189
+    },
+    {
+      "canvas": "c33",
+      "count": 2963
+    },
+    {
+      "canvas": "c255",
+      "count": 2962
     },
     {
       "canvas": "c34",
       "count": 2905
     },
     {
+      "canvas": "c124",
+      "count": 2870
+    },
+    {
+      "canvas": "c8",
+      "count": 2298
+    },
+    {
+      "canvas": "c110",
+      "count": 2286
+    },
+    {
+      "canvas": "c262",
+      "count": 2186
+    },
+    {
+      "canvas": "c107",
+      "count": 1656
+    },
+    {
+      "canvas": "c88",
+      "count": 1656
+    },
+    {
+      "canvas": "c97",
+      "count": 1656
+    },
+    {
       "canvas": "c4",
-      "count": 1610
+      "count": 1608
+    },
+    {
+      "canvas": "c103",
+      "count": 1591
     },
     {
       "canvas": "c84",
       "count": 1591
     },
     {
-      "canvas": "c220",
-      "count": 1441
+      "canvas": "c93",
+      "count": 1591
     },
     {
-      "canvas": "c16",
-      "count": 1104
+      "canvas": "c109",
+      "count": 1560
     },
     {
-      "canvas": "c214",
-      "count": 932
+      "canvas": "c14",
+      "count": 1548
     },
     {
-      "canvas": "c108",
-      "count": 813
-    },
-    {
-      "canvas": "c89",
-      "count": 813
-    },
-    {
-      "canvas": "c239",
-      "count": 708
-    },
-    {
-      "canvas": "c87",
-      "count": 672
-    },
-    {
-      "canvas": "c11",
-      "count": 665
-    },
-    {
-      "canvas": "c225",
-      "count": 557
-    },
-    {
-      "canvas": "c55",
-      "count": 541
-    },
-    {
-      "canvas": "c252",
-      "count": 540
-    },
-    {
-      "canvas": "c254",
-      "count": 500
-    },
-    {
-      "canvas": "c267",
-      "count": 500
-    },
-    {
-      "canvas": "c228",
-      "count": 470
-    },
-    {
-      "canvas": "c45",
-      "count": 465
-    },
-    {
-      "canvas": "c54",
-      "count": 465
+      "canvas": "c116",
+      "count": 1507
     }
   ],
-  "fetchedAt": "2026-03-09T13:38:18.737Z"
+  "fetchedAt": "2026-03-09T14:57:38.894Z"
 }

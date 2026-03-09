@@ -14,6 +14,8 @@ import { dirname, resolve } from 'node:path';
 const BASE_URL = 'https://annorepo.surinametijdmachine.org';
 const CONTAINER = 'suriname-time-machine';
 const OUT_PATH = resolve('public/data/annorepo-stats.json');
+const MAX_CONCURRENCY = 3; // max parallel requests to avoid overwhelming AnnRepo
+const REQUEST_TIMEOUT = 15_000; // 15s per request
 
 function authHeaders() {
   /** @type {Record<string, string>} */
@@ -30,10 +32,13 @@ function authHeaders() {
 async function fetchJson(url) {
   const res = await fetch(url, {
     headers: { Accept: 'application/json', ...authHeaders() },
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT),
   });
   if (!res.ok) throw new Error(`${res.status} ${res.statusText} – ${url}`);
   return res.json();
 }
+
+const delay = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function searchCount(query) {
   // Step 1: POST creates a search result set, returns 201 + Location header
@@ -46,6 +51,7 @@ async function searchCount(query) {
     },
     redirect: 'manual',
     body: JSON.stringify(query),
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT),
   });
   const location = createRes.headers.get('location');
   if (!location) return 0;
@@ -56,6 +62,7 @@ async function searchCount(query) {
   while (true) {
     const pageRes = await fetch(`${location}?page=${page}`, {
       headers: { Accept: 'application/json', ...authHeaders() },
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT),
     });
     if (!pageRes.ok) break;
     const data = await pageRes.json();
@@ -67,57 +74,77 @@ async function searchCount(query) {
   return total;
 }
 
-async function main() {
-  console.log('⏳ Fetching AnnRepo statistics…');
+/**
+ * Run async tasks with limited concurrency to avoid overwhelming the server.
+ * @template T, R
+ * @param {T[]} items
+ * @param {(item: T) => Promise<R>} fn
+ * @returns {Promise<R[]>}
+ */
+async function mapWithLimit(items, fn) {
+  const results = new Array(items.length);
+  let index = 0;
 
-  const [meta, fields] = await Promise.all([
-    fetchJson(`${BASE_URL}/services/${CONTAINER}/metadata`),
-    fetchJson(`${BASE_URL}/services/${CONTAINER}/fields`),
-  ]);
+  async function worker() {
+    while (index < items.length) {
+      const i = index++;
+      results[i] = await fn(items[i]);
+      await delay(200); // be gentle to the server
+    }
+  }
+
+  const workers = Array.from(
+    { length: Math.min(MAX_CONCURRENCY, items.length) },
+    () => worker(),
+  );
+  await Promise.all(workers);
+  return results;
+}
+
+async function main() {
+  console.log('Fetching AnnoRepo statistics');
+
+  const meta = await fetchJson(`${BASE_URL}/services/${CONTAINER}/metadata`);
+  const fields = await fetchJson(`${BASE_URL}/services/${CONTAINER}/fields`);
 
   const total = meta.size;
   const humanAnnotations = fields['body.creator.id'] ?? 0;
   const aiAnnotations = total - humanAnnotations;
 
-  const [motivations, creators, purposes, sources] = await Promise.all([
-    fetchJson(`${BASE_URL}/services/${CONTAINER}/distinct-values/motivation`),
-    fetchJson(
-      `${BASE_URL}/services/${CONTAINER}/distinct-values/body.creator.label`,
-    ),
-    fetchJson(`${BASE_URL}/services/${CONTAINER}/distinct-values/body.purpose`),
-    fetchJson(
-      `${BASE_URL}/services/${CONTAINER}/distinct-values/target.source`,
-    ),
-  ]);
+  const motivations = await fetchJson(
+    `${BASE_URL}/services/${CONTAINER}/distinct-values/motivation`,
+  );
+  const creators = await fetchJson(
+    `${BASE_URL}/services/${CONTAINER}/distinct-values/body.creator.label`,
+  );
+  const purposes = await fetchJson(
+    `${BASE_URL}/services/${CONTAINER}/distinct-values/body.purpose`,
+  );
+  const sources = await fetchJson(
+    `${BASE_URL}/services/${CONTAINER}/distinct-values/target.source`,
+  );
 
-  const [motivationCounts, creatorCounts, purposeCounts, canvasCounts] =
-    await Promise.all([
-      Promise.all(
-        motivations.map(async (m) => ({
-          motivation: m,
-          count: await searchCount({ motivation: m }),
-        })),
-      ),
-      Promise.all(
-        creators.map(async (label) => ({
-          label,
-          count: await searchCount({ 'body.creator.label': label }),
-        })),
-      ),
-      Promise.all(
-        purposes.map(async (p) => ({
-          purpose: p,
-          count: await searchCount({ 'body.purpose': p }),
-        })),
-      ),
-      Promise.all(
-        sources.map(async (src) => {
-          const count = await searchCount({ 'target.source': src });
-          const parts = src.split('/');
-          return { canvas: parts[parts.length - 1] || src, count };
-        }),
-      ),
-    ]);
+  // Run searches sequentially in batches to avoid overloading the server
+  const motivationCounts = await mapWithLimit(motivations, async (m) => ({
+    motivation: m,
+    count: await searchCount({ motivation: m }),
+  }));
+
+  const creatorCounts = await mapWithLimit(creators, async (label) => ({
+    label,
+    count: await searchCount({ 'body.creator.label': label }),
+  }));
+
+  const purposeCounts = await mapWithLimit(purposes, async (p) => ({
+    purpose: p,
+    count: await searchCount({ 'body.purpose': p }),
+  }));
+
+  const canvasCounts = await mapWithLimit(sources, async (src) => {
+    const count = await searchCount({ 'target.source': src });
+    const parts = src.split('/');
+    return { canvas: parts[parts.length - 1] || src, count };
+  });
 
   const stats = {
     metadata: { label: meta.label, total, created: meta.created },
@@ -134,12 +161,12 @@ async function main() {
   mkdirSync(dirname(OUT_PATH), { recursive: true });
   writeFileSync(OUT_PATH, JSON.stringify(stats, null, 2));
   console.log(
-    `✅ Wrote ${OUT_PATH} (${stats.totalAnnotations.toLocaleString()} annotations)`,
+    `Wrote ${OUT_PATH} (${stats.totalAnnotations.toLocaleString()} annotations)`,
   );
 }
 
 main().catch((err) => {
-  console.warn('⚠️  Failed to fetch AnnRepo stats:', err.message);
+  console.warn('Failed to fetch AnnoRepo stats:', err.message);
   if (existsSync(OUT_PATH)) {
     console.log('   Using existing', OUT_PATH);
   } else {
