@@ -107,8 +107,13 @@ export const citizenScienceNl: CitizenScienceContent = {
           links: [
             {
               label: 'Allmaps Editor',
+              href: 'https://editor.allmaps.org/images?url=https%3A%2F%2Fsurinametijdmachine.org%2Fiiif%2Fmapathon%2Fcollection.json',
+              description: 'Open geselecteerde kaarten in Allmaps Editor',
+            },
+            {
+              label: 'Allmaps Explore',
               href: 'https://dev.explore.allmaps.org/#7.06/5.352/-54.974',
-              description: 'Open de Allmaps georefereer-omgeving',
+              description: 'Open Allmaps Explore',
             },
             {
               label: 'Kaartenlijst (Google Sheet)',
@@ -120,7 +125,7 @@ export const citizenScienceNl: CitizenScienceContent = {
               label: 'IIIF Manifest',
               href: 'https://surinametimemachine.github.io/iiif-suriname/manifest.json',
               description:
-                'Het IIIF-manifest met alle gedigitaliseerde kaarten',
+                'IIIF-manifest met alle gedigitaliseerde kaarten',
               copyable: true,
             },
           ],
