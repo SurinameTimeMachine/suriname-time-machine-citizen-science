@@ -129,6 +129,12 @@ export const citizenScienceNl: CitizenScienceContent = {
                 'Spreadsheet met alle beschikbare kaarten om te georefereren',
             },
             {
+              label: 'Allmaps Tutorial (Google Doc)',
+              href: 'https://docs.google.com/document/d/1FbgURG-H2uPdrc4qYX4c7x9aGeBwIpHhehlYlkfYcNA/edit?usp=sharing',
+              description:
+                'Tutorial voor het georefereren van kaarten met Allmaps (deels verouderd ivm veranderingen in de interface!)',
+            },
+            {
               label: 'IIIF Manifest',
               href: 'https://surinametimemachine.github.io/iiif-suriname/manifest.json',
               description: 'IIIF-manifest met alle gedigitaliseerde kaarten',
