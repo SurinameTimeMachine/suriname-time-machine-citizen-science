@@ -52,11 +52,6 @@ type ServiceMetadata = {
   size: number;
 };
 
-type SearchResult = {
-  items: Array<{ id: string }>;
-  total?: number;
-};
-
 async function getContainerInfo(): Promise<ContainerMetadata> {
   const meta = await fetchJson<ServiceMetadata>(
     `${BASE_URL}/services/${CONTAINER}/metadata`,
