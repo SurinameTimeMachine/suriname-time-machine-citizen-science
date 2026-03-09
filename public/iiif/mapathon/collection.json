@@ -1,0 +1,2278 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://surinametijdmachine.org/iiif/mapathon/collection.json",
+  "type": "Collection",
+  "label": { "en": ["Mapathon Suriname Tijdmachine"] },
+  "items": [
+    {
+      "id": "http://sammeltassen.nl/iiif-manifests/suriname-tijdmachine/collection-grouped.json/allard-pierson",
+      "label": { "nl": ["Allard Pierson"] },
+      "type": "Collection",
+      "items": [
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38608/manifest/",
+          "label": { "nl": ["Nieuwe Kaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!0!6!990009566010205131!SURI01_Kaartenzl-33-24-69.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!0!6!990009566010205131!SURI01_Kaartenzl-33-24-69.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38619/manifest/",
+          "label": {
+            "nl": ["Algemeene kaart van de Colonie of Provintie van Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!9!9!990016059910205131!SURI01_Kaartenzl-105-20-03.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!9!9!990016059910205131!SURI01_Kaartenzl-105-20-03.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38612/manifest/",
+          "label": { "nl": ["Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!0!0!990009640020205131!SURI01_Kaartenzl-63-07-08.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!0!0!990009640020205131!SURI01_Kaartenzl-63-07-08.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38625/manifest/",
+          "label": {
+            "nl": ["Nieuwe specialkaart van de colonie Suriname [...]"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!9!1!9!990006509190205131!SURI01_Kaartenzl-101-12-15-A-D_001.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!9!1!9!990006509190205131!SURI01_Kaartenzl-101-12-15-A-D_001.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38606/manifest/",
+          "label": { "nl": ["Generale kaart der kolonie Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!8!2!990009612820205131!SURI01_Kaartenzl-33-24-66.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!8!2!990009612820205131!SURI01_Kaartenzl-33-24-66.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38598/manifest/",
+          "label": {
+            "nl": ["Kaart van het bebouwde gedeelte van Surinamen [...]"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!8!4!1!990009591480205131!SURI01_Kaartenzl-108-04-07.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!8!4!1!990009591480205131!SURI01_Kaartenzl-108-04-07.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_1212/manifest/",
+          "label": { "nl": ["Platte grond van de stad Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!kaarten!0!9!0!990009780900205131!61-35-17.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!kaarten!0!9!0!990009780900205131!61-35-17.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38566/manifest/",
+          "label": { "nl": ["A chart of the coast of Guyana"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!8!4!3!990010143480205131!SURI01_Kaartenzl-101-12-12.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!8!4!3!990010143480205131!SURI01_Kaartenzl-101-12-12.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38589/manifest/",
+          "label": { "nl": ["Carte de la Guiane Française & Hollandaise"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!2!2!990009572260205131!SURI01_Kaartenzl-104-08-03.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!2!2!990009572260205131!SURI01_Kaartenzl-104-08-03.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38603/manifest/",
+          "label": {
+            "nl": [
+              "Schetskaart aangevende de in verschillende tractaten en uitspraken vastgestelde grenzen der 3 Guyana's"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!1!4!990009794160205131!SURI01_Kaartenzl-30-29-48.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!1!4!990009794160205131!SURI01_Kaartenzl-30-29-48.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38626/manifest/",
+          "label": {
+            "nl": ["Algemeene kaart van de Colonie of Provintie van Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!7!2!0!990009570270205131!SURI01_Kaartenzl-105-13-02-03_001.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!7!2!0!990009570270205131!SURI01_Kaartenzl-105-13-02-03_001.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38593/manifest/",
+          "label": { "nl": ["Generale caart van de provintie Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!8!2!990009612820205131!SURI01_Kaartenzl-33-24-66.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!8!2!990009612820205131!SURI01_Kaartenzl-33-24-66.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38584/manifest/",
+          "label": { "nl": ["Kaart van geheel Guajana of de Wilden-kust"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!5!0!4!990009804050205131!SURI01_Kaartenzl-104-07-21.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!5!0!4!990009804050205131!SURI01_Kaartenzl-104-07-21.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38617/manifest/",
+          "label": { "nl": ["Plan of Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!0!0!990009850010205131!SURI01_Kaartenzl-104-07-31.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!1!0!0!990009850010205131!SURI01_Kaartenzl-104-07-31.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_39624/manifest/",
+          "label": { "nl": ["Figuratieve plattegrond der stad Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/default!1!3!1!990006520920205131!hb-kzl-108-03-21-1.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/default!1!3!1!990006520920205131!hb-kzl-108-03-21-1.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38611/manifest/",
+          "label": {
+            "nl": [
+              "Paramaribo 1916-17 vervaardigd door den Opnemingsdienst van Suriname"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!2!1!990006521220205131!SURI01_Kaartenzl-62-14-26.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!2!2!1!990006521220205131!SURI01_Kaartenzl-62-14-26.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38568/manifest/",
+          "label": { "nl": ["Plattegrond der Plantage Adrichem"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!9!8!6!990010106890205131!SURI01_Kaartenzl-101-12-14.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!9!8!6!990010106890205131!SURI01_Kaartenzl-101-12-14.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://uvaerfgoed.nl/viewer/api/v1/records/11245_3_38609/manifest/",
+          "label": {
+            "nl": ["Kaart van de rivier de Suriname door G.P.H. Zimmermann"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!5!8!990006508560205131!SURI01_Kaartenzl-34-32-15.jpg/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://images.uba.uva.nl/iiif/2/erfgoed!surinamica!6!5!8!990006508560205131!SURI01_Kaartenzl-34-32-15.jpg",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://sammeltassen.nl/iiif-manifests/suriname-tijdmachine/collection-grouped.json/universitaire-bibliotheken-leiden",
+      "label": { "nl": ["Universitaire Bibliotheken Leiden"] },
+      "type": "Collection",
+      "items": [
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53112/manifest",
+          "label": { "nl": ["Platte grond van de stad Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53112/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53112",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3753552/manifest",
+          "label": { "nl": ["Colonie Surinaame"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017252/manifest",
+          "label": { "nl": ["Kaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017252/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017252",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011651/manifest",
+          "label": {
+            "nl": ["Woongebieden der Boslandcreolen aan de Suriname rivier"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011651/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011651",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011901/manifest",
+          "label": { "nl": ["Overzichtskaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011901/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011901",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012510/manifest",
+          "label": { "nl": ["Kaart van de rivier de Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012510/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012510",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011245/manifest",
+          "label": { "nl": ["Moengo "] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011245/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011245",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011373/manifest",
+          "label": {
+            "nl": ["Paramaribo. Hoofdstad van Hollandsch Guyana of Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011373/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011373",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53016/manifest",
+          "label": { "nl": ["COLLBN 011-11-077"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53016/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53016",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013394/manifest",
+          "label": {
+            "nl": [
+              "Pas-kaart vande rivieren Commewini, Suriname, Suramaca, Cupanama en Courantin"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013394/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013394",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012118/manifest",
+          "label": { "nl": ["Telephoonnet in Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012118/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012118",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53030/manifest",
+          "label": { "nl": ["A chart of the colony of Surinam"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53030/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53030",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53021/manifest",
+          "label": {
+            "nl": ["Landkaart van de Volkplantingen Suriname en Berbice"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53021/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53021",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A814814/manifest",
+          "label": { "nl": ["D A 57,5"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:814814/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:814814",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A1996024/manifest",
+          "label": {
+            "nl": [
+              "Kaart van het terrein tusschen de rivieren Suriname en Saramaca"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1996024/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1996024",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012573/manifest",
+          "label": {
+            "nl": ["Kaart van Suriname, aangevende de ligging der scholen"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012573/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012573",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012789/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Paramaribo met aanduiding der verschillende grondlagen"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012789/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012789",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012588/manifest",
+          "label": { "nl": ["Overzichtskaart van Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012588/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012588",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012376/manifest",
+          "label": { "nl": ["Plattegrond van de stad Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012376/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012376",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A815672/manifest",
+          "label": { "nl": ["D A 52,2"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815672/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815672",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011482/manifest",
+          "label": { "nl": ["Overzichts-kaart van het district Nickerie"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011482/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011482",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A130167/manifest",
+          "label": {
+            "nl": ["De kusten van Suraname van Marawini tot de Barbice"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:130167/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:130167",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013495/manifest",
+          "label": {
+            "nl": ["Plan de la ville de Paramaribo et de ses environs"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013495/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013495",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011153/manifest",
+          "label": { "nl": ["Kaart van de Beneden-Marowijne"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011153/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011153",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012157/manifest",
+          "label": { "nl": ["Plan van Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012157/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012157",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011881/manifest",
+          "label": {
+            "nl": [
+              "Kaart van het tot Suriname behoorende stroomgebied van Lawa, Litanie en Goninie"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011881/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011881",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012642/manifest",
+          "label": { "nl": ["Kaart van de Marowijne"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012642/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012642",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A814159/manifest",
+          "label": { "nl": ["D A 53,2"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:814159/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:814159",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2014032/manifest",
+          "label": { "nl": ["COLLBN Port 63 N 61"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2014032/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2014032",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A812614/manifest",
+          "label": { "nl": ["D A 56,3"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:812614/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:812614",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3509936/manifest",
+          "label": { "nl": ["D H 824-53"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509936/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509936",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013482/manifest",
+          "label": {
+            "nl": [
+              "Land kaart van de land streeken Cottica Comowini en Suriname"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013482/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013482",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017249/manifest",
+          "label": { "nl": ["Kaart van Suriname (handgetekend)"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2481433/manifest",
+          "label": { "nl": ["COLLBN 006-11-009"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2481433/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2481433",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013986/manifest",
+          "label": { "nl": ["La Guyane néerlandaise"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013986/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013986",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2010998/manifest",
+          "label": { "nl": ["KK 119-05-03"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2010998/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2010998",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A815460/manifest",
+          "label": { "nl": ["D A 56,7"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815460/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815460",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A815995/manifest",
+          "label": { "nl": ["D A 58,2"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815995/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815995",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011216/manifest",
+          "label": { "nl": ["Nickerie"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011216/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011216",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3509926/manifest",
+          "label": {
+            "nl": [
+              "Kaart van een gedeelte van de Suriname-rivier en de Para-kreek"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509926/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509926",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A1995551/manifest",
+          "label": {
+            "nl": ["Paskaert van de rivieren van Suriname en Commewyne"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1995551/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1995551",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53185/manifest",
+          "label": { "nl": ["Plan van Paramaribo, hoofdstad van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53185/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53185",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53200/manifest",
+          "label": { "nl": ["Plattegrond van de stad Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53200/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53200",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2010703/manifest",
+          "label": { "nl": ["Kaart van de kust van Guayana"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2010703/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2010703",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013602/manifest",
+          "label": { "nl": ["Afteekening van de Rivier Courantin"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013602/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013602",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A815664/manifest",
+          "label": { "nl": ["D A 51,4 Carte de la colonie de Surinam"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815664/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:815664",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53031/manifest",
+          "label": { "nl": ["Kaart van de colonie Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53031/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53031",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012438/manifest",
+          "label": { "nl": ["Religions 1936"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012438/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012438",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013194/manifest",
+          "label": { "nl": ["[Kaart van het noordelijk deel van Suriname]"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013194/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013194",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3509931/manifest",
+          "label": { "nl": ["0001"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509931/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3509931",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013765/manifest",
+          "label": { "nl": ["Caart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013765/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013765",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53096/manifest",
+          "label": {
+            "nl": [
+              "Pas-kaart vande rivieren Commewini, Suriname, Suramaca, Cupanama en Courantin"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53096/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53096",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017253/manifest",
+          "label": { "nl": ["Kaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017253/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017253",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012760/manifest",
+          "label": { "nl": ["Overzichtskaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012760/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012760",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013296/manifest",
+          "label": { "nl": ["COLLBN Port 63 N 55"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013296/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013296",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013561/manifest",
+          "label": { "nl": ["Generale kaart der kolonie Suriname (west)"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013561/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013561",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3278462/manifest",
+          "label": { "nl": ["COLLBN Port 63 N 73"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3278462/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3278462",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012116/manifest",
+          "label": {
+            "nl": [
+              "Overzichtskaart van Suriname, aangevende de ligging der op 1 april 1927 uitgegeven houtconcessies en houtvergunningen"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012116/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012116",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011683/manifest",
+          "label": { "nl": ["Schets van Paramaribo"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011683/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011683",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A1997033/manifest",
+          "label": { "nl": ["Nederlandsch-Guyana"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1997033/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1997033",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011326/manifest",
+          "label": { "nl": ["Overzichtskaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011326/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011326",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013193/manifest",
+          "label": { "nl": ["Generale kaart der kolonie Suriname (oost)"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013193/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013193",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013939/manifest",
+          "label": { "nl": ["De kolonie Surinamen of Hollandsch Guyana"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013939/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013939",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3633336/manifest",
+          "label": {
+            "nl": [
+              "Nieuwe special kaart van de colonie Suriname met de tot culture gebragt zijnde landen en plantagien"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3633336/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3633336",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2011103/manifest",
+          "label": {
+            "nl": [
+              "Kaart van de kust van Suriname, aangevende de ligging der plantages"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011103/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2011103",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013782/manifest",
+          "label": {
+            "nl": ["Paskaert van de rivieren van Suriname en Commewyne"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013782/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013782",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3753552/manifest",
+          "label": { "nl": ["Colonie Surinaame"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A1996774/manifest",
+          "label": {
+            "nl": ["Kaart van het westelijke gedeelte der kolonie Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1996774/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:1996774",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012369/manifest",
+          "label": {
+            "nl": [
+              "Getekende kaart van het noordoostelijk gedeelte van Suriname, met grenzen van districten en zetels van het districtsbestuur"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012369/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012369",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2481434/manifest",
+          "label": {
+            "nl": ["Algemeene kaart van de Colonie of Provintie van Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2481434/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2481434",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3618828/manifest",
+          "label": {
+            "nl": ["Algemeene kaart van de Colonie of Provintie van Suriname"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3618828/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3618828",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A53015/manifest",
+          "label": { "nl": ["Kaart van Suriname [meerbladig]"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53015/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:53015",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017256/manifest",
+          "label": { "nl": ["Kaart van Suriname [meerbladig]"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017256/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017256",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3753552/manifest",
+          "label": {
+            "nl": [
+              "Colonie Surinaame\t\nDeze Denerale kaart der voormelde colonie COLLBN 053-51"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3753552",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017256/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Suriname opgenomen en getekend in de jaren 1860-1879 door J.F.A. Cateau van Rosevelt en J.F.A.E. van Lansberge"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017256/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017256",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017249/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Suriname opgenomen en getekend in de jaren 1860-1879 door J.F.A. Cateau van Rosevelt en J.F.A.E. van Lansberge"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017249/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Suriname opgenomen en getekend in de jaren 1860-1879 door J.F.A. Cateau van Rosevelt en J.F.A.E. van Lansberge"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017249/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Suriname opgenomen en getekend in de jaren 1860-1879 door J.F.A. Cateau van Rosevelt en J.F.A.E. van Lansberge"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2017249/manifest",
+          "label": {
+            "nl": [
+              "Kaart van Suriname opgenomen en getekend in de jaren 1860-1879 door J.F.A. Cateau van Rosevelt en J.F.A.E. van Lansberge"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2017249",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2013495/manifest",
+          "label": {
+            "nl": [
+              "Plan de la ville de Paramaribo et de ses environs, jusqu'au terrein de la société"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013495/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2013495",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A2012417/manifest",
+          "label": { "nl": ["Paramaribo 1916-17"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012417/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:2012417",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3254319/manifest",
+          "label": {
+            "nl": ["Carte de la colonie de Demerari en 1784 COLLBN 002-10-017"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3254319/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3254319",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A3156379/manifest",
+          "label": {
+            "nl": [
+              "Plan du plantage Maria Elizabeth a J. Ryan sur lisle Leguwaan 1783. Was gete: Pechor COLLBN 006-12-009"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3156379/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:3156379",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://digitalcollections.universiteitleiden.nl/iiif_manifest/item%3A127199/manifest",
+          "label": {
+            "nl": ["Plan der geprojecteerde Nieuwe Brandwagt of Speelbattery"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:127199/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "id": "https://iiif.universiteitleiden.nl/iiif/2/hdl:1887.1%2Fitem:127199",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://sammeltassen.nl/iiif-manifests/suriname-tijdmachine/collection-grouped.json/nationaal-archief",
+      "label": { "nl": ["Nationaal Archief"] },
+      "type": "Collection",
+      "items": [
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.MIKO/I/I.3/I.3.A/I.3.A.4/I.3.A.4.1/6108.json",
+          "label": {
+            "nl": [
+              "6108 - Surinaamse Waterleiding Mij. Met kavelnummers getekend op de plattegrond van Paramaribo"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/6f/1c/2c/92/a8/89/40/4c/9a/a0/89/97/e3/50/a3/4f/68dd39df-05dc-4bbc-9946-38f495a0fbf4.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/6f/1c/2c/92/a8/89/40/4c/9a/a0/89/97/e3/50/a3/4f/68dd39df-05dc-4bbc-9946-38f495a0fbf4.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.VEL/C/C.3/C.3.4/suriname/rivier-suriname/plantages-en-landen-gelegen-aan-beide-oevers/1696.json",
+          "label": {
+            "nl": [
+              "Naadere kaart en rapport, specterende de nieuw te begeeven landeryen in de Marchals kreek en of dezelve tot nadeel konde strekken voor de Houtgrond Weltevreden C.A."
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/b6/7f/00/01/5b/a0/47/d1/8c/7a/b9/2f/3d/a0/9f/f4/cacd0f2a-2ad4-49ad-a3df-8c7ad8d559ee.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/b6/7f/00/01/5b/a0/47/d1/8c/7a/b9/2f/3d/a0/9f/f4/cacd0f2a-2ad4-49ad-a3df-8c7ad8d559ee.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.MIKO/I/I.3/I.3.A/I.3.A.4/I.3.A.4.1/635-635B.json",
+          "label": { "nl": ["Kaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/57/b8/55/09/1e/80/45/3a/a7/3b/2a/8e/eb/86/23/7f/99702373-357f-4d06-9a9c-5accda01c552.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/57/b8/55/09/1e/80/45/3a/a7/3b/2a/8e/eb/86/23/7f/99702373-357f-4d06-9a9c-5accda01c552.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.MIKO/I/I.3/I.3.A/I.3.A.4/I.3.A.4.1/6050.json",
+          "label": { "nl": ["Kaart van Suriname"] },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/57/8e/21/21/80/08/4a/8a/ae/20/30/b8/df/72/c4/bb/67e6a4a3-739c-43e6-9361-e756fb2f8fb1.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/57/8e/21/21/80/08/4a/8a/ae/20/30/b8/df/72/c4/bb/67e6a4a3-739c-43e6-9361-e756fb2f8fb1.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.TOPO/B/B7/16A401.json",
+          "label": {
+            "nl": ["Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/70/6a/ba/89/e6/7b/4d/09/a8/17/70/e6/7f/bc/fb/e9/cf8fbb84-5e14-4093-a253-4f82ed669d3e.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/70/6a/ba/89/e6/7b/4d/09/a8/17/70/e6/7f/bc/fb/e9/cf8fbb84-5e14-4093-a253-4f82ed669d3e.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.VELH/C/C.4/C.4.3/suriname/rivieren-en-kreken/614.json",
+          "label": {
+            "nl": ["Plaan van het hospitaal à Paramaribo in Surinamen"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/ed/a5/77/45/61/af/46/1c/9f/16/f0/34/64/34/85/a2/7251493c-319c-4776-bc59-ab7968775bb5.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/ed/a5/77/45/61/af/46/1c/9f/16/f0/34/64/34/85/a2/7251493c-319c-4776-bc59-ab7968775bb5.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.MIKO/I/I.3/I.3.A/I.3.A.4/I.3.A.4.1/1160.json",
+          "label": {
+            "nl": [
+              "Kaart van Suriname met naamlijst der in ontginning zijnde plantages"
+            ]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/80/ca/06/e1/02/9a/48/b3/a8/9d/f5/af/ac/f2/0b/67/67894bd7-d88f-4786-b0df-4b503a58c299.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/80/ca/06/e1/02/9a/48/b3/a8/9d/f5/af/ac/f2/0b/67/67894bd7-d88f-4786-b0df-4b503a58c299.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.MIKO/I/I.3/I.3.A/I.3.A.4/I.3.A.4.1/2030.json",
+          "label": {
+            "nl": ["Kaart van Suriname. Met inzet van Plantagen der Commewijne"]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/75/45/30/ce/54/d1/4f/0f/98/40/d4/1d/22/48/85/34/41278280-bba8-4113-8637-782bfbe4bfed.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/75/45/30/ce/54/d1/4f/0f/98/40/d4/1d/22/48/85/34/41278280-bba8-4113-8637-782bfbe4bfed.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "https://data.globalise.huygens.knaw.nl/manifests/maps/4.VEL/C/C.3/C.3.4/suriname/rivier-suriname/plantages-en-landen-gelegen-aan-de-rechteroever-in-t-afvaren/1793.json",
+          "label": {
+            "nl": ["Le Plantage Voorborg à l'Est de la Riviere Surinam etc."]
+          },
+          "type": "Manifest",
+          "thumbnail": [
+            {
+              "id": "https://service.archief.nl/iip/3e/9e/e2/3f/1b/a7/40/e5/b3/e1/6e/13/1e/7e/96/6f/a9d059e0-4ed0-4d4e-933c-971b94e01cb7.jp2/full/!512,512/0/default.jpg",
+              "type": "Image",
+              "format": "image/jpeg",
+              "service": [
+                {
+                  "@context": "http://iiif.io/api/image/3/context.json",
+                  "id": "https://service.archief.nl/iip/3e/9e/e2/3f/1b/a7/40/e5/b3/e1/6e/13/1e/7e/96/6f/a9d059e0-4ed0-4d4e-933c-971b94e01cb7.jp2",
+                  "profile": "level2"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
