@@ -14,15 +14,11 @@ export type MotivationCount = {
   count: number;
 };
 
-export type CreatorCount = {
-  label: string;
-  count: number;
-};
-
 export type CanvasCount = {
   canvas: string;
   label: string;
   count: number;
+  citizenCount: number;
 };
 
 export type CitizenScienceStats = {
@@ -37,9 +33,10 @@ export type DashboardData = {
   humanAnnotations: number;
   aiAnnotations: number;
   canvasesAnnotated: number;
+  contributorCount: number;
+  daysActive: number;
   citizenScience: CitizenScienceStats;
   motivationCounts: MotivationCount[];
-  creatorCounts: CreatorCount[];
   topCanvases: CanvasCount[];
   fetchedAt: string;
 };
@@ -127,16 +124,6 @@ async function getMotivationCounts(
   return results.sort((a, b) => b.count - a.count);
 }
 
-async function getCreatorCounts(creators: string[]): Promise<CreatorCount[]> {
-  const results = await Promise.all(
-    creators.map(async (label) => {
-      const count = await searchCount({ 'body.creator.label': label });
-      return { label, count };
-    }),
-  );
-  return results.sort((a, b) => b.count - a.count);
-}
-
 async function getTopCanvases(
   sources: string[],
   limit = 20,
@@ -146,7 +133,7 @@ async function getTopCanvases(
       const count = await searchCount({ 'target.source': source });
       const parts = source.split('/');
       const canvas = parts[parts.length - 1] || source;
-      return { canvas, label: canvas, count };
+      return { canvas, label: canvas, count, citizenCount: 0 };
     }),
   );
   return results.sort((a, b) => b.count - a.count).slice(0, limit);
@@ -167,14 +154,21 @@ export async function fetchDashboardData(): Promise<DashboardData> {
   const humanAnnotations = fields['body.creator.id'] ?? 0;
   const aiAnnotations = containerInfo.total - humanAnnotations;
 
-  const [motivationCounts, creatorCounts, topCanvases] = await Promise.all([
+  const [motivationCounts, topCanvases] = await Promise.all([
     getMotivationCounts(motivations),
-    getCreatorCounts(creators),
     getTopCanvases(sources),
   ]);
 
   const motMap = Object.fromEntries(
     motivationCounts.map((m) => [m.motivation, m.count]),
+  );
+
+  const daysActive = Math.max(
+    1,
+    Math.ceil(
+      (Date.now() - new Date(containerInfo.created).getTime()) /
+        (1000 * 60 * 60 * 24),
+    ),
   );
 
   return {
@@ -183,13 +177,14 @@ export async function fetchDashboardData(): Promise<DashboardData> {
     humanAnnotations,
     aiAnnotations,
     canvasesAnnotated: topCanvases.filter((c) => c.count > 0).length,
+    contributorCount: creators.length,
+    daysActive,
     citizenScience: {
       textsSpotted: motMap['textspotting'] ?? 0,
       iconsIdentified: motMap['iconography'] ?? 0,
       placesLinked: motMap['linking'] ?? 0,
     },
     motivationCounts,
-    creatorCounts,
     topCanvases,
     fetchedAt: new Date().toISOString(),
   };

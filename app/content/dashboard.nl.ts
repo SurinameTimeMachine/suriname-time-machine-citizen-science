@@ -36,23 +36,25 @@ export const dashboardNl: DashboardContent = {
       iconsIdentified: 'Iconen geïdentificeerd',
       placesLinked: 'Locaties gekoppeld',
     },
+    community: {
+      title: 'Gemeenschap',
+      description:
+        'Samen ontsluiten we de verhalen die verborgen liggen in historische kaarten van Suriname.',
+      contributors: 'Vrijwilligers',
+      daysActive: 'Dagen actief',
+    },
     sections: {
-      leaderboardTitle: 'Topbijdragers',
-      leaderboardDescription:
-        'Menselijke bijdragers gerangschikt op het aantal annotaties dat zij hebben gemaakt.',
-      canvasTitle: 'Meest geannoteerde kaartbladen',
+      canvasTitle: 'Annotaties per kaartblad',
       canvasDescription:
-        'Welke historische kaartbladen tot nu toe de meeste annotaties hebben ontvangen.',
+        'AI-gegenereerde annotaties en citizen-sciencebijdragen per historisch kaartblad.',
     },
     labels: {
       annotations: 'annotaties',
       loading: 'Live data laden uit AnnRepo…',
       error: 'Kan geen data laden uit AnnRepo.',
       retryButton: 'Opnieuw proberen',
-      rank: '#',
-      contributor: 'Bijdrager',
-      count: 'Annotaties',
-      canvas: 'Kaartblad',
+      aiLabel: 'AI',
+      citizenLabel: 'Citizen science',
     },
     footer: {
       coordinatorLine: 'Projectcoördinator',

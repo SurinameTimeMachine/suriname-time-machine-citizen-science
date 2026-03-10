@@ -36,23 +36,25 @@ export const dashboardEn: DashboardContent = {
       iconsIdentified: 'Icons identified',
       placesLinked: 'Places linked',
     },
+    community: {
+      title: 'Community',
+      description:
+        'Together we are unlocking the stories hidden in historic maps of Suriname.',
+      contributors: 'Volunteers',
+      daysActive: 'Days active',
+    },
     sections: {
-      leaderboardTitle: 'Top contributors',
-      leaderboardDescription:
-        'Human contributors ranked by the number of annotations they created.',
-      canvasTitle: 'Most annotated map sheets',
+      canvasTitle: 'Annotations per map sheet',
       canvasDescription:
-        'Which historic map sheets have received the most annotations so far.',
+        'AI-generated annotations and citizen science contributions per historic map sheet.',
     },
     labels: {
       annotations: 'annotations',
       loading: 'Loading live data from AnnRepo…',
       error: 'Could not load data from AnnRepo.',
       retryButton: 'Retry',
-      rank: '#',
-      contributor: 'Contributor',
-      count: 'Annotations',
-      canvas: 'Canvas',
+      aiLabel: 'AI',
+      citizenLabel: 'Citizen science',
     },
     footer: {
       coordinatorLine: 'Project coordinator',

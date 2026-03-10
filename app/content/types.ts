@@ -348,9 +348,13 @@ export type DashboardUiStrings = {
     iconsIdentified: string;
     placesLinked: string;
   };
+  community: {
+    title: string;
+    description: string;
+    contributors: string;
+    daysActive: string;
+  };
   sections: {
-    leaderboardTitle: string;
-    leaderboardDescription: string;
     canvasTitle: string;
     canvasDescription: string;
   };
@@ -359,10 +363,8 @@ export type DashboardUiStrings = {
     loading: string;
     error: string;
     retryButton: string;
-    rank: string;
-    contributor: string;
-    count: string;
-    canvas: string;
+    aiLabel: string;
+    citizenLabel: string;
   };
   footer: {
     coordinatorLine: string;

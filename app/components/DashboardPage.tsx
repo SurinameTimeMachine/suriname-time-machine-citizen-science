@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 import {
   Bar,
   BarChart,
+  Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -261,50 +262,25 @@ export function DashboardPage({ content }: DashboardPageProps) {
               </div>
             </section>
 
-            {/* Top contributors leaderboard */}
+            {/* Community */}
             <section>
               <SectionHeading
-                title={ui.sections.leaderboardTitle}
-                description={ui.sections.leaderboardDescription}
+                title={ui.community.title}
+                description={ui.community.description}
               />
-              <div className="overflow-hidden rounded-sm bg-white ring-1 ring-ink/5">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-ink/5 bg-ink/2">
-                      <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
-                        {ui.labels.rank}
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
-                        {ui.labels.contributor}
-                      </th>
-                      <th className="px-6 py-3 text-right text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
-                        {ui.labels.count}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.creatorCounts.map((creator, i) => (
-                      <tr
-                        key={creator.label}
-                        className={`border-b border-ink/5 last:border-0 ${i < 3 ? 'bg-teal-soft/20' : ''}`}
-                      >
-                        <td className="px-6 py-3 tabular-nums text-ink/50">
-                          {i + 1}
-                        </td>
-                        <td className="px-6 py-3 font-medium text-ink">
-                          {creator.label}
-                        </td>
-                        <td className="px-6 py-3 text-right tabular-nums text-ink/70">
-                          {formatNumber(creator.count)}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <StatCard
+                  label={ui.community.contributors}
+                  value={formatNumber(data.contributorCount)}
+                />
+                <StatCard
+                  label={ui.community.daysActive}
+                  value={formatNumber(data.daysActive)}
+                />
               </div>
             </section>
 
-            {/* Top canvases — now with map names */}
+            {/* Top canvases — stacked AI vs citizen science */}
             <section>
               <SectionHeading
                 title={ui.sections.canvasTitle}
@@ -317,8 +293,10 @@ export function DashboardPage({ content }: DashboardPageProps) {
                 >
                   <BarChart
                     data={data.topCanvases.map((c) => ({
-                      ...c,
                       name: truncateLabel(c.label),
+                      fullLabel: c.label,
+                      ai: c.count - c.citizenCount,
+                      citizen: c.citizenCount,
                     }))}
                     layout="vertical"
                     margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
@@ -339,15 +317,25 @@ export function DashboardPage({ content }: DashboardPageProps) {
                       formatter={tooltipFormatter}
                       labelFormatter={(_, payload) => {
                         const entry = payload?.[0]?.payload as
-                          | { label?: string }
+                          | { fullLabel?: string }
                           | undefined;
-                        return entry?.label ?? '';
+                        return entry?.fullLabel ?? '';
                       }}
                     />
+                    <Legend />
                     <Bar
-                      dataKey="count"
-                      radius={[0, 4, 4, 0]}
+                      dataKey="ai"
+                      name={ui.labels.aiLabel}
+                      stackId="a"
                       fill="var(--teal-strong)"
+                      radius={[0, 0, 0, 0]}
+                    />
+                    <Bar
+                      dataKey="citizen"
+                      name={ui.labels.citizenLabel}
+                      stackId="a"
+                      fill="var(--teal-bright)"
+                      radius={[0, 4, 4, 0]}
                     />
                   </BarChart>
                 </ResponsiveContainer>

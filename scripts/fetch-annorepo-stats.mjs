@@ -77,6 +77,40 @@ async function searchCount(query) {
 }
 
 /**
+ * Fetch all items from a search (use only for small result sets).
+ */
+async function searchItems(query) {
+  const createRes = await fetch(`${BASE_URL}/services/${CONTAINER}/search`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+      ...authHeaders(),
+    },
+    redirect: 'manual',
+    body: JSON.stringify(query),
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT),
+  });
+  const location = createRes.headers.get('location');
+  if (!location) return [];
+
+  const items = [];
+  let page = 0;
+  while (true) {
+    const pageRes = await fetch(`${location}?page=${page}`, {
+      headers: { Accept: 'application/json', ...authHeaders() },
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT),
+    });
+    if (!pageRes.ok) break;
+    const data = await pageRes.json();
+    items.push(...(data.items ?? []));
+    if (!data.items?.length || !data.next) break;
+    page++;
+  }
+  return items;
+}
+
+/**
  * Run async tasks with limited concurrency to avoid overwhelming the server.
  * @template T, R
  * @param {T[]} items
@@ -160,16 +194,34 @@ async function main() {
     count: await searchCount({ motivation: m }),
   }));
 
-  const creatorCounts = await mapWithLimit(creators, async (label) => ({
-    label,
-    count: await searchCount({ 'body.creator.label': label }),
-  }));
-
   const canvasCounts = await mapWithLimit(sources, async (src) => {
     const count = await searchCount({ 'target.source': src });
     const id = src.split('/').pop() || src;
     return { canvas: id, label: canvasLabels[id] || id, count };
   });
+
+  // Fetch all citizen-science annotations (small sets) and group by canvas
+  console.log(
+    '  Fetching citizen-science annotation items for per-canvas breakdown…',
+  );
+  const [textspottingItems, iconographyItems] = await Promise.all([
+    searchItems({ motivation: 'textspotting' }),
+    searchItems({ motivation: 'iconography' }),
+  ]);
+  /** @type {Record<string, number>} */
+  const citizenByCanvas = {};
+  for (const item of [...textspottingItems, ...iconographyItems]) {
+    const src =
+      typeof item.target?.source === 'string' ? item.target.source : '';
+    if (!src) continue;
+    const id = src.split('/').pop();
+    if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
+  }
+
+  // Attach citizenCount to each canvas
+  for (const c of canvasCounts) {
+    c.citizenCount = citizenByCanvas[c.canvas] ?? 0;
+  }
 
   // Extract citizen-science activity counts from motivations
   const motMap = Object.fromEntries(
@@ -181,6 +233,15 @@ async function main() {
     placesLinked: motMap['linking'] ?? 0,
   };
 
+  // Community stats
+  const contributorCount = creators.length;
+  const daysActive = Math.max(
+    1,
+    Math.ceil(
+      (Date.now() - new Date(meta.created).getTime()) / (1000 * 60 * 60 * 24),
+    ),
+  );
+
   // Total canvases that received annotations
   const canvasesAnnotated = canvasCounts.filter((c) => c.count > 0).length;
 
@@ -190,9 +251,10 @@ async function main() {
     humanAnnotations,
     aiAnnotations,
     canvasesAnnotated,
+    contributorCount,
+    daysActive,
     citizenScience,
     motivationCounts: motivationCounts.sort((a, b) => b.count - a.count),
-    creatorCounts: creatorCounts.sort((a, b) => b.count - a.count),
     topCanvases: canvasCounts.sort((a, b) => b.count - a.count).slice(0, 20),
     fetchedAt: new Date().toISOString(),
   };
