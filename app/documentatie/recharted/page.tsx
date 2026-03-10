@@ -226,10 +226,9 @@ export default function ReChartedDocumentatiePage() {
                 </ExternalLink>
               </p>
               <p>
-                Op deze website kan je alle informatie bekijken. Als je ook
-                informatie wil toevoegen (en dat is het hele doel van de
-                mapathon) dan heb je een (gratis) <strong>ORCID-account</strong>{' '}
-                nodig.
+                Op deze website kan je alle informatie <em>bekijken</em>. Als je
+                ook informatie wil <em>toevoegen</em> dan heb je een (gratis){' '}
+                <strong>ORCID-account</strong> nodig om in te loggen.
               </p>
               <p>
                 ORCID is een soort burgerservicenummer voor de wetenschappelijke
@@ -241,7 +240,23 @@ export default function ReChartedDocumentatiePage() {
                 . Het enige dat je nodig hebt is een werkend mailadres waar je
                 toegang toe hebt.
               </p>
-              <p>Met je ORCID-account kan je je rechtsboven aanmelden.</p>
+              <p>
+                <strong>
+                  Je moet je ORCID-account eenmalig bij ons aanmelden!
+                </strong>{' '}
+                Stuur je naam en ORCID-nummer per mail naar{' '}
+                <a
+                  href="mailto:jona.schlegel@huygens.knaw.nl"
+                  className={linkCls}
+                >
+                  jona.schlegel@huygens.knaw.nl
+                </a>
+                , dan zetten wij je in het systeem.
+              </p>
+              <p>
+                Met je ORCID-account kan je je rechtsboven aanmelden (&apos;Sign
+                in&apos;): je krijgt een scherm te zien waar je je toestemming (&apos;authorisation&apos;) geeft om je ORCID te gebruiken voor het inloggen (het kan zijn dat je een stukje naar beneden moet scrollen om de &apos;authorisation&apos; knop te zien).
+              </p>
             </div>
           </section>
 
