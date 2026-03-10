@@ -377,3 +377,65 @@ export type DashboardContent = {
   seo: DashboardSeo;
   ui: DashboardUiStrings;
 };
+
+// Output page types
+export type OutputCategory =
+  | 'events'
+  | 'articles'
+  | 'presentations'
+  | 'data'
+  | 'code'
+  | 'media';
+
+export type OutputItem = {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  category: OutputCategory;
+  date: string;
+  isoDate: string;
+  authors?: string;
+  venue?: string;
+  doi?: string;
+};
+
+export type OutputSeo = {
+  title: string;
+  description: string;
+  openGraphLocale: string;
+};
+
+export type OutputUiStrings = {
+  navigation: {
+    locationLabel: string;
+    projectCode: string;
+    projectSubtitle: string;
+    languageToggleLabel: string;
+    backToHome: string;
+  };
+  hero: {
+    tagline: string;
+    title: string;
+    lead: string;
+  };
+  categories: {
+    events: string;
+    articles: string;
+    presentations: string;
+    data: string;
+    code: string;
+    media: string;
+  };
+  footer: {
+    coordinatorLine: string;
+    organizationLabel: string;
+  };
+};
+
+export type OutputContent = {
+  locale: HomeLocale;
+  seo: OutputSeo;
+  ui: OutputUiStrings;
+  items: OutputItem[];
+};

@@ -108,6 +108,7 @@ export const homeContent: HomeContent = {
     { label: 'Partners', href: '#partners' },
     { label: 'Contact', href: '#contact' },
     { label: 'Participatory Science', href: '/en/participatory-science' },
+    { label: 'Output', href: '/en/output' },
     { label: 'Dashboard', href: '/en/dashboard' },
   ],
   section01Hero: {

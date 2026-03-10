@@ -110,6 +110,7 @@ export const homeContent: HomeContent = {
     { label: 'Partners', href: '#partners' },
     { label: 'Contact', href: '#contact' },
     { label: 'Participatie', href: '/participatie' },
+    { label: 'Output', href: '/output' },
     { label: 'Voortgang', href: '/dashboard' },
   ],
   section01Hero: {
