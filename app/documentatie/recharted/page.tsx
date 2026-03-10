@@ -254,8 +254,26 @@ export default function ReChartedDocumentatiePage() {
                 , dan zetten wij je in het systeem.
               </p>
               <p>
+                Na ontvangst voegen wij je ORCID en e-mailadres handmatig toe
+                aan het systeem. Zodra dit is gebeurd ontvang je een
+                bevestigingsmail. Pas daarna kun je succesvol inloggen. Door een
+                e-mail te sturen naar dit adres stem je ermee in dat het Huygens
+                Instituut / Suriname Time Machine-project je ORCID-nummer en
+                e-mailadres opslaat en verwerkt met als doel: je toegang tot het
+                systeem mogelijk te maken en je te informeren over relevante
+                updates, nieuwe functies en activiteiten van de Suriname Time
+                Machine en het Sranan Story Collective. Je gegevens worden
+                uitsluitend voor deze doeleinden gebruikt en niet met derden
+                gedeeld. Je kunt op elk moment verzoeken om je gegevens te laten
+                verwijderen of je afmelden voor projectcommunicatie door contact
+                op te nemen via hetzelfde e-mailadres.
+              </p>
+              <p>
                 Met je ORCID-account kan je je rechtsboven aanmelden (&apos;Sign
-                in&apos;): je krijgt een scherm te zien waar je je toestemming (&apos;authorisation&apos;) geeft om je ORCID te gebruiken voor het inloggen (het kan zijn dat je een stukje naar beneden moet scrollen om de &apos;authorisation&apos; knop te zien).
+                in&apos;): je krijgt een scherm te zien waar je je toestemming
+                (&apos;authorisation&apos;) geeft om je ORCID te gebruiken voor
+                het inloggen (het kan zijn dat je een stukje naar beneden moet
+                scrollen om de &apos;authorisation&apos; knop te zien).
               </p>
             </div>
           </section>
