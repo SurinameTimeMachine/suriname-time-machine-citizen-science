@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from 'react';
 import {
   Bar,
   BarChart,
-  Cell,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -17,17 +16,6 @@ import type { DashboardData } from '../lib/annorepo';
 type DashboardPageProps = {
   content: DashboardContent;
 };
-
-const CHART_COLORS = [
-  'var(--teal-strong)',
-  'var(--teal-bright)',
-  '#f59e0b',
-  '#8b5cf6',
-  '#ef4444',
-  '#06b6d4',
-  '#ec4899',
-  '#84cc16',
-];
 
 function formatNumber(n: number): string {
   return n.toLocaleString('en-US');
@@ -75,6 +63,27 @@ function SectionHeading({
       <p className="mt-1 text-sm text-ink/60">{description}</p>
     </div>
   );
+}
+
+function ActivityCard({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-sm bg-white px-6 py-5 ring-1 ring-ink/5">
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+        {label}
+      </p>
+      <p className="mt-1 text-2xl font-bold tabular-nums text-ink">
+        {formatNumber(value)}
+      </p>
+    </div>
+  );
+}
+
+/**
+ * Truncate long map names for the canvas chart axis labels.
+ */
+function truncateLabel(label: string, max = 42): string {
+  if (label.length <= max) return label;
+  return label.slice(0, max - 1) + '…';
 }
 
 export function DashboardPage({ content }: DashboardPageProps) {
@@ -203,19 +212,23 @@ export function DashboardPage({ content }: DashboardPageProps) {
           <>
             {/* Stats overview */}
             <section>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <StatCard
                   label={ui.stats.totalAnnotations}
                   value={formatNumber(data.totalAnnotations)}
                   accent
                 />
                 <StatCard
+                  label={ui.stats.humanAnnotations}
+                  value={formatNumber(data.humanAnnotations)}
+                />
+                <StatCard
                   label={ui.stats.aiAnnotations}
                   value={formatNumber(data.aiAnnotations)}
                 />
                 <StatCard
-                  label={ui.stats.humanAnnotations}
-                  value={formatNumber(data.humanAnnotations)}
+                  label={ui.stats.canvasesAnnotated}
+                  value={formatNumber(data.canvasesAnnotated)}
                 />
               </div>
               <p className="mt-3 text-xs text-ink/40">
@@ -226,39 +239,29 @@ export function DashboardPage({ content }: DashboardPageProps) {
               </p>
             </section>
 
-            {/* Motivation breakdown */}
+            {/* Citizen Science Spotlight */}
             <section>
               <SectionHeading
-                title={ui.sections.motivationTitle}
-                description={ui.sections.motivationDescription}
+                title={ui.citizenScience.title}
+                description={ui.citizenScience.description}
               />
-              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart
-                    data={data.motivationCounts}
-                    margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-                  >
-                    <XAxis
-                      dataKey="motivation"
-                      tick={{ fontSize: 12 }}
-                      tickLine={false}
-                    />
-                    <YAxis tick={{ fontSize: 12 }} tickLine={false} />
-                    <Tooltip formatter={tooltipFormatter} />
-                    <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-                      {data.motivationCounts.map((_, i) => (
-                        <Cell
-                          key={`mot-${data.motivationCounts[i].motivation}`}
-                          fill={CHART_COLORS[i % CHART_COLORS.length]}
-                        />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <ActivityCard
+                  label={ui.citizenScience.textsSpotted}
+                  value={data.citizenScience.textsSpotted}
+                />
+                <ActivityCard
+                  label={ui.citizenScience.iconsIdentified}
+                  value={data.citizenScience.iconsIdentified}
+                />
+                <ActivityCard
+                  label={ui.citizenScience.placesLinked}
+                  value={data.citizenScience.placesLinked}
+                />
               </div>
             </section>
 
-            {/* Top contributors */}
+            {/* Top contributors leaderboard */}
             <section>
               <SectionHeading
                 title={ui.sections.leaderboardTitle}
@@ -283,7 +286,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
                     {data.creatorCounts.map((creator, i) => (
                       <tr
                         key={creator.label}
-                        className="border-b border-ink/5 last:border-0"
+                        className={`border-b border-ink/5 last:border-0 ${i < 3 ? 'bg-teal-soft/20' : ''}`}
                       >
                         <td className="px-6 py-3 tabular-nums text-ink/50">
                           {i + 1}
@@ -301,39 +304,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
               </div>
             </section>
 
-            {/* Purpose breakdown */}
-            <section>
-              <SectionHeading
-                title={ui.sections.purposeTitle}
-                description={ui.sections.purposeDescription}
-              />
-              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart
-                    data={data.purposeCounts}
-                    margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-                  >
-                    <XAxis
-                      dataKey="purpose"
-                      tick={{ fontSize: 12 }}
-                      tickLine={false}
-                    />
-                    <YAxis tick={{ fontSize: 12 }} tickLine={false} />
-                    <Tooltip formatter={tooltipFormatter} />
-                    <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-                      {data.purposeCounts.map((_, i) => (
-                        <Cell
-                          key={`purp-${data.purposeCounts[i].purpose}`}
-                          fill={CHART_COLORS[(i + 2) % CHART_COLORS.length]}
-                        />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </section>
-
-            {/* Top canvases */}
+            {/* Top canvases — now with map names */}
             <section>
               <SectionHeading
                 title={ui.sections.canvasTitle}
@@ -342,12 +313,15 @@ export function DashboardPage({ content }: DashboardPageProps) {
               <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
                 <ResponsiveContainer
                   width="100%"
-                  height={Math.max(300, data.topCanvases.length * 32)}
+                  height={Math.max(400, data.topCanvases.length * 36)}
                 >
                   <BarChart
-                    data={data.topCanvases}
+                    data={data.topCanvases.map((c) => ({
+                      ...c,
+                      name: truncateLabel(c.label),
+                    }))}
                     layout="vertical"
-                    margin={{ top: 5, right: 20, bottom: 5, left: 60 }}
+                    margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
                   >
                     <XAxis
                       type="number"
@@ -356,12 +330,20 @@ export function DashboardPage({ content }: DashboardPageProps) {
                     />
                     <YAxis
                       type="category"
-                      dataKey="canvas"
+                      dataKey="name"
                       tick={{ fontSize: 11 }}
                       tickLine={false}
-                      width={55}
+                      width={240}
                     />
-                    <Tooltip formatter={tooltipFormatter} />
+                    <Tooltip
+                      formatter={tooltipFormatter}
+                      labelFormatter={(_, payload) => {
+                        const entry = payload?.[0]?.payload as
+                          | { label?: string }
+                          | undefined;
+                        return entry?.label ?? '';
+                      }}
+                    />
                     <Bar
                       dataKey="count"
                       radius={[0, 4, 4, 0]}

@@ -162,11 +162,6 @@ export const citizenScienceEn: CitizenScienceContent = {
             'Annotate historic maps with re:Charted — a tool for adding structured notes and transcriptions directly onto map images. Your annotations help make handwritten map details machine-readable and searchable.',
           links: [
             {
-              label: 'liiive Suriname map annotation alternative',
-              href: 'https://edu.nl/h8veg',
-              description: 'Plan B - map annotation environment for Suriname',
-            },
-            {
               label: 're:Charted — Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',
               description: 'Open the re:Charted annotation viewer for Suriname',
@@ -187,12 +182,6 @@ export const citizenScienceEn: CitizenScienceContent = {
               description:
                 'Use the manifest with Mirador, Theseus Viewer, IIIF Live, Universal Viewer, or other IIIF-compatible tools',
               copyable: true,
-            },
-            {
-              label: 'ORCID for annotation attribution',
-              href: 'https://docs.google.com/spreadsheets/d/1SPGA--E5eslwkssQfhgH9JHP4zipg3vM8Oe1bY1nQhI/edit?usp=sharing',
-              description:
-                'Add your ORCID to the excel sheet to get access to re:Charted for Suriname maps.',
             },
             {
               label: 'Dashboard with live annotation stats',

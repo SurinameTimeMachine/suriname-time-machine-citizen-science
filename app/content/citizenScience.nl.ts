@@ -180,11 +180,6 @@ export const citizenScienceNl: CitizenScienceContent = {
             'Annoteer historische kaarten met re:Charted — een tool waarmee je gestructureerde notities en transcripties direct op kaartafbeeldingen kunt plaatsen. Jouw annotaties helpen handgeschreven kaartdetails machineleesbaar en doorzoekbaar te maken.',
           links: [
             {
-              label: 'liiive Suriname kaartannotatie alternatief',
-              href: 'https://edu.nl/h8veg',
-              description: 'Plan B - kaartannotatie-omgeving voor Suriname',
-            },
-            {
               label: 're:Charted — Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',
               description: 'Open de re:Charted annotatieviewer voor Suriname',
@@ -205,12 +200,6 @@ export const citizenScienceNl: CitizenScienceContent = {
               description:
                 'Gebruik het manifest met Mirador, Theseus Viewer, IIIF Live, Universal Viewer of andere IIIF-compatibele tools',
               copyable: true,
-            },
-            {
-              label: 'ORCID voor annotatie-toekenning',
-              href: 'https://docs.google.com/spreadsheets/d/1SPGA--E5eslwkssQfhgH9JHP4zipg3vM8Oe1bY1nQhI/edit?usp=sharing',
-              description:
-                'Voeg je ORCID toe aan het Excel-blad om toegang te krijgen tot re:Charted voor Surinaamse kaarten.',
             },
             {
               label: 'Dashboard met live annotatiestatistieken',

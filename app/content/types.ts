@@ -338,15 +338,19 @@ export type DashboardUiStrings = {
     totalAnnotations: string;
     aiAnnotations: string;
     humanAnnotations: string;
+    canvasesAnnotated: string;
     lastUpdated: string;
   };
+  citizenScience: {
+    title: string;
+    description: string;
+    textsSpotted: string;
+    iconsIdentified: string;
+    placesLinked: string;
+  };
   sections: {
-    motivationTitle: string;
-    motivationDescription: string;
     leaderboardTitle: string;
     leaderboardDescription: string;
-    purposeTitle: string;
-    purposeDescription: string;
     canvasTitle: string;
     canvasDescription: string;
   };

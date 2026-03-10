@@ -1,24 +1,30 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126813,
+    "total": 126949,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126813,
-  "humanAnnotations": 320,
-  "aiAnnotations": 126493,
+  "totalAnnotations": 126949,
+  "humanAnnotations": 553,
+  "aiAnnotations": 126396,
+  "canvasesAnnotated": 283,
+  "citizenScience": {
+    "textsSpotted": 233,
+    "iconsIdentified": 10,
+    "placesLinked": 70
+  },
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126664
+      "count": 126636
     },
     {
       "motivation": "textspotting",
-      "count": 104
+      "count": 233
     },
     {
       "motivation": "linking",
-      "count": 34
+      "count": 70
     },
     {
       "motivation": "iconography",
@@ -28,31 +34,43 @@
   "creatorCounts": [
     {
       "label": "Bart van Duijvenbode",
-      "count": 173
-    },
-    {
-      "label": "Thunnis van Oort",
-      "count": 39
-    },
-    {
-      "label": "Jona Schlegel",
-      "count": 35
-    },
-    {
-      "label": "Ryan Jessurun",
-      "count": 23
-    },
-    {
-      "label": "Joan Mertodirjo",
-      "count": 16
+      "count": 261
     },
     {
       "label": "Maurijn Heus, de",
-      "count": 14
+      "count": 45
+    },
+    {
+      "label": "Joan Mertodirjo",
+      "count": 44
     },
     {
       "label": "Peter  Laarakker",
+      "count": 40
+    },
+    {
+      "label": "Thunnis van Oort",
+      "count": 40
+    },
+    {
+      "label": "Jona Schlegel",
+      "count": 36
+    },
+    {
+      "label": "Ryan Jessurun",
+      "count": 35
+    },
+    {
+      "label": "Hans Jansen",
+      "count": 21
+    },
+    {
+      "label": "Catho",
       "count": 14
+    },
+    {
+      "label": "Stijn",
+      "count": 12
     },
     {
       "label": "Guus Frumau",
@@ -61,119 +79,109 @@
     {
       "label": "Ingeborg Verheul",
       "count": 2
-    },
-    {
-      "label": "Catho",
-      "count": 1
-    }
-  ],
-  "purposeCounts": [
-    {
-      "purpose": "supplementing",
-      "count": 126767
-    },
-    {
-      "purpose": "assessing",
-      "count": 161
-    },
-    {
-      "purpose": "selecting",
-      "count": 9
-    },
-    {
-      "purpose": "geotagging",
-      "count": 6
-    },
-    {
-      "purpose": "identifying",
-      "count": 6
-    },
-    {
-      "purpose": "commenting",
-      "count": 4
     }
   ],
   "topCanvases": [
     {
       "canvas": "c9",
+      "label": "Algemeene Kaart van de Colonie of Provintie van Suriname",
       "count": 4135
     },
     {
       "canvas": "c99",
+      "label": "D A 52,2",
       "count": 3398
     },
     {
       "canvas": "c35",
+      "label": "Algemeene kaart van de Colonie of Provintie van Suriname : met de rivieren, districten, ontdekkingen door militaire togten en de grootte der gemeeten plantagie COLLBN 006-11-019",
       "count": 3189
     },
     {
       "canvas": "c33",
+      "label": "Algemeene kaart van de Colonie of Provintie van Suriname :, met de rivieren, districten, ontdekkingen door militaire togten en de grootte der gemeeten plantagien /, door last, op kosten, en met approbatie der E.E. Heeren Directeurs van de Societeit, naar de naaukeurigste waarneemingen door den Ingenieur Alexander de Lavaux geteekend.",
       "count": 2963
     },
     {
       "canvas": "c255",
+      "label": "Nieuwe special kaart van de colonie Suriname met de tot culture gebragt zijnde landen en plantagien eerbiedigst opgedragen aan het Committe van de Bataafsche bezittingen in America en op de kust van Africa / COLLBN 053-15",
       "count": 2962
     },
     {
       "canvas": "c34",
+      "label": " Algemeene kaart van de Colonie of Provintie van Suriname 006-11-010",
       "count": 2905
     },
     {
       "canvas": "c124",
+      "label": "Kaart van het bebouwde gedeelte van Surinamen, gegraveerd door C. van Baarsel en Zoon",
       "count": 2870
     },
     {
       "canvas": "c8",
+      "label": "6108 Surinaamse Waterleiding Mij. Met kavelnummers getekend op de plattegrond van Paramaribo",
       "count": 2298
     },
     {
       "canvas": "c110",
+      "label": "[Kaart van de kust van Suriname, aangevende de ligging der plantages",
       "count": 2286
     },
     {
       "canvas": "c262",
+      "label": "Overzichtskaart van Paramaribo",
       "count": 2186
     },
     {
       "canvas": "c107",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 8",
       "count": 1656
     },
     {
       "canvas": "c88",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 8",
       "count": 1656
     },
     {
       "canvas": "c97",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 8",
       "count": 1656
     },
     {
       "canvas": "c4",
-      "count": 1608
+      "label": "635 Blad III. Suriname. (gekleurd) - 635-635B Kaart van de kolonie Suriname, een gedeelte van Guyana, Nederlandsche bezitting op het vasteland van Zuid-America. Met inzet van Paramaribo",
+      "count": 1604
     },
     {
       "canvas": "c103",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 4",
       "count": 1591
     },
     {
       "canvas": "c84",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 4",
       "count": 1591
     },
     {
       "canvas": "c93",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 4",
       "count": 1591
     },
     {
       "canvas": "c109",
+      "label": "Kaart van de kust van Guayana strekkende van Rio Koeroea tot Rio Suriname met alle droogtens en dieptens",
       "count": 1560
     },
     {
       "canvas": "c14",
+      "label": "429 Generale kaart der kolonie Suriname in Zuid-Amerika, beginnende ten Oosten met de rivier Marowijne en eindigende ten Westen met de Duivelskreek, met alle de daarin uitgegeven gecultiveerde en verlatene landen, verder met aanwijzing van alle thans bezette posten, zoo voor de buiten- als binnenlandsche defensiën",
       "count": 1548
     },
     {
       "canvas": "c116",
+      "label": "Kaart van de rivier de Suriname",
       "count": 1507
     }
   ],
-  "fetchedAt": "2026-03-09T14:57:38.894Z"
+  "fetchedAt": "2026-03-10T10:12:43.100Z"
 }

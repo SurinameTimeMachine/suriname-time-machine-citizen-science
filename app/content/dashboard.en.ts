@@ -25,19 +25,22 @@ export const dashboardEn: DashboardContent = {
       totalAnnotations: 'Total annotations',
       aiAnnotations: 'AI annotations',
       humanAnnotations: 'Human annotations',
+      canvasesAnnotated: 'Map sheets annotated',
       lastUpdated: 'Last updated',
     },
+    citizenScience: {
+      title: 'Citizen Science Spotlight',
+      description:
+        'What our volunteers are discovering on the historic maps — every text, icon, and place counts.',
+      textsSpotted: 'Texts spotted',
+      iconsIdentified: 'Icons identified',
+      placesLinked: 'Places linked',
+    },
     sections: {
-      motivationTitle: 'Annotations by motivation',
-      motivationDescription:
-        'Breakdown of annotation types: textspotting, linking, iconography and more.',
       leaderboardTitle: 'Top contributors',
       leaderboardDescription:
         'Human contributors ranked by the number of annotations they created.',
-      purposeTitle: 'Annotations by purpose',
-      purposeDescription:
-        'How annotations are categorised by their intended purpose.',
-      canvasTitle: 'Annotations per canvas',
+      canvasTitle: 'Most annotated map sheets',
       canvasDescription:
         'Which historic map sheets have received the most annotations so far.',
     },

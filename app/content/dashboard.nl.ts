@@ -25,19 +25,22 @@ export const dashboardNl: DashboardContent = {
       totalAnnotations: 'Totaal annotaties',
       aiAnnotations: 'AI-annotaties',
       humanAnnotations: 'Menselijke annotaties',
+      canvasesAnnotated: 'Kaartbladen geannoteerd',
       lastUpdated: 'Laatst bijgewerkt',
     },
+    citizenScience: {
+      title: 'Citizen Science Spotlight',
+      description:
+        'Wat onze vrijwilligers ontdekken op de historische kaarten — elke tekst, icoon en locatie telt.',
+      textsSpotted: 'Teksten herkend',
+      iconsIdentified: 'Iconen geïdentificeerd',
+      placesLinked: 'Locaties gekoppeld',
+    },
     sections: {
-      motivationTitle: 'Annotaties per motivatie',
-      motivationDescription:
-        'Verdeling van annotatietypes: tekstherkenning, koppeling, iconografie en meer.',
       leaderboardTitle: 'Topbijdragers',
       leaderboardDescription:
         'Menselijke bijdragers gerangschikt op het aantal annotaties dat zij hebben gemaakt.',
-      purposeTitle: 'Annotaties per doel',
-      purposeDescription:
-        'Hoe annotaties worden ingedeeld naar hun beoogde doel.',
-      canvasTitle: 'Annotaties per kaartblad',
+      canvasTitle: 'Meest geannoteerde kaartbladen',
       canvasDescription:
         'Welke historische kaartbladen tot nu toe de meeste annotaties hebben ontvangen.',
     },

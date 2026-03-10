@@ -13,6 +13,8 @@ import { dirname, resolve } from 'node:path';
 
 const BASE_URL = 'https://annorepo.surinametijdmachine.org';
 const CONTAINER = 'suriname-time-machine';
+const IIIF_MANIFEST =
+  'https://surinametimemachine.github.io/iiif-suriname/manifest.json';
 const OUT_PATH = resolve('public/data/annorepo-stats.json');
 const MAX_CONCURRENCY = 3; // max parallel requests to avoid overwhelming AnnRepo
 const REQUEST_TIMEOUT = 15_000; // 15s per request
@@ -101,11 +103,42 @@ async function mapWithLimit(items, fn) {
   return results;
 }
 
+/**
+ * Fetch the IIIF manifest and build a map from canvas short-id to label.
+ * e.g. "c9" → "Algemeene Kaart van de Colonie of Provintie van Suriname"
+ */
+async function fetchCanvasLabels() {
+  /** @type {Record<string, string>} */
+  const map = {};
+  try {
+    const manifest = await fetchJson(IIIF_MANIFEST);
+    for (const item of manifest.items ?? []) {
+      const id = (item.id ?? '').split('/').pop();
+      const labelObj = item.label ?? {};
+      const label =
+        labelObj.en?.[0] ?? labelObj.nl?.[0] ?? labelObj.none?.[0] ?? '';
+      if (id && label) map[id] = label;
+    }
+    console.log(
+      `  Resolved ${Object.keys(map).length} canvas labels from IIIF manifest`,
+    );
+  } catch (err) {
+    console.warn(
+      '  Could not fetch IIIF manifest for canvas labels:',
+      err.message,
+    );
+  }
+  return map;
+}
+
 async function main() {
   console.log('Fetching AnnoRepo statistics');
 
-  const meta = await fetchJson(`${BASE_URL}/services/${CONTAINER}/metadata`);
-  const fields = await fetchJson(`${BASE_URL}/services/${CONTAINER}/fields`);
+  const [meta, fields, canvasLabels] = await Promise.all([
+    fetchJson(`${BASE_URL}/services/${CONTAINER}/metadata`),
+    fetchJson(`${BASE_URL}/services/${CONTAINER}/fields`),
+    fetchCanvasLabels(),
+  ]);
 
   const total = meta.size;
   const humanAnnotations = fields['body.creator.id'] ?? 0;
@@ -116,9 +149,6 @@ async function main() {
   );
   const creators = await fetchJson(
     `${BASE_URL}/services/${CONTAINER}/distinct-values/body.creator.label`,
-  );
-  const purposes = await fetchJson(
-    `${BASE_URL}/services/${CONTAINER}/distinct-values/body.purpose`,
   );
   const sources = await fetchJson(
     `${BASE_URL}/services/${CONTAINER}/distinct-values/target.source`,
@@ -135,25 +165,34 @@ async function main() {
     count: await searchCount({ 'body.creator.label': label }),
   }));
 
-  const purposeCounts = await mapWithLimit(purposes, async (p) => ({
-    purpose: p,
-    count: await searchCount({ 'body.purpose': p }),
-  }));
-
   const canvasCounts = await mapWithLimit(sources, async (src) => {
     const count = await searchCount({ 'target.source': src });
-    const parts = src.split('/');
-    return { canvas: parts[parts.length - 1] || src, count };
+    const id = src.split('/').pop() || src;
+    return { canvas: id, label: canvasLabels[id] || id, count };
   });
+
+  // Extract citizen-science activity counts from motivations
+  const motMap = Object.fromEntries(
+    motivationCounts.map((m) => [m.motivation, m.count]),
+  );
+  const citizenScience = {
+    textsSpotted: motMap['textspotting'] ?? 0,
+    iconsIdentified: motMap['iconography'] ?? 0,
+    placesLinked: motMap['linking'] ?? 0,
+  };
+
+  // Total canvases that received annotations
+  const canvasesAnnotated = canvasCounts.filter((c) => c.count > 0).length;
 
   const stats = {
     metadata: { label: meta.label, total, created: meta.created },
     totalAnnotations: total,
     humanAnnotations,
     aiAnnotations,
+    canvasesAnnotated,
+    citizenScience,
     motivationCounts: motivationCounts.sort((a, b) => b.count - a.count),
     creatorCounts: creatorCounts.sort((a, b) => b.count - a.count),
-    purposeCounts: purposeCounts.sort((a, b) => b.count - a.count),
     topCanvases: canvasCounts.sort((a, b) => b.count - a.count).slice(0, 20),
     fetchedAt: new Date().toISOString(),
   };

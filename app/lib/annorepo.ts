@@ -21,7 +21,14 @@ export type CreatorCount = {
 
 export type CanvasCount = {
   canvas: string;
+  label: string;
   count: number;
+};
+
+export type CitizenScienceStats = {
+  textsSpotted: number;
+  iconsIdentified: number;
+  placesLinked: number;
 };
 
 export type DashboardData = {
@@ -29,9 +36,10 @@ export type DashboardData = {
   totalAnnotations: number;
   humanAnnotations: number;
   aiAnnotations: number;
+  canvasesAnnotated: number;
+  citizenScience: CitizenScienceStats;
   motivationCounts: MotivationCount[];
   creatorCounts: CreatorCount[];
-  purposeCounts: { purpose: string; count: number }[];
   topCanvases: CanvasCount[];
   fetchedAt: string;
 };
@@ -129,18 +137,6 @@ async function getCreatorCounts(creators: string[]): Promise<CreatorCount[]> {
   return results.sort((a, b) => b.count - a.count);
 }
 
-async function getPurposeCounts(
-  purposes: string[],
-): Promise<{ purpose: string; count: number }[]> {
-  const results = await Promise.all(
-    purposes.map(async (purpose) => {
-      const count = await searchCount({ 'body.purpose': purpose });
-      return { purpose, count };
-    }),
-  );
-  return results.sort((a, b) => b.count - a.count);
-}
-
 async function getTopCanvases(
   sources: string[],
   limit = 20,
@@ -150,7 +146,7 @@ async function getTopCanvases(
       const count = await searchCount({ 'target.source': source });
       const parts = source.split('/');
       const canvas = parts[parts.length - 1] || source;
-      return { canvas, count };
+      return { canvas, label: canvas, count };
     }),
   );
   return results.sort((a, b) => b.count - a.count).slice(0, limit);
@@ -162,32 +158,38 @@ export async function fetchDashboardData(): Promise<DashboardData> {
     getFieldCounts(),
   ]);
 
-  const [motivations, creators, purposes, sources] = await Promise.all([
+  const [motivations, creators, sources] = await Promise.all([
     getDistinctValues('motivation'),
     getDistinctValues('body.creator.label'),
-    getDistinctValues('body.purpose'),
     getDistinctValues('target.source'),
   ]);
 
   const humanAnnotations = fields['body.creator.id'] ?? 0;
   const aiAnnotations = containerInfo.total - humanAnnotations;
 
-  const [motivationCounts, creatorCounts, purposeCounts, topCanvases] =
-    await Promise.all([
-      getMotivationCounts(motivations),
-      getCreatorCounts(creators),
-      getPurposeCounts(purposes),
-      getTopCanvases(sources),
-    ]);
+  const [motivationCounts, creatorCounts, topCanvases] = await Promise.all([
+    getMotivationCounts(motivations),
+    getCreatorCounts(creators),
+    getTopCanvases(sources),
+  ]);
+
+  const motMap = Object.fromEntries(
+    motivationCounts.map((m) => [m.motivation, m.count]),
+  );
 
   return {
     metadata: containerInfo,
     totalAnnotations: containerInfo.total,
     humanAnnotations,
     aiAnnotations,
+    canvasesAnnotated: topCanvases.filter((c) => c.count > 0).length,
+    citizenScience: {
+      textsSpotted: motMap['textspotting'] ?? 0,
+      iconsIdentified: motMap['iconography'] ?? 0,
+      placesLinked: motMap['linking'] ?? 0,
+    },
     motivationCounts,
     creatorCounts,
-    purposeCounts,
     topCanvases,
     fetchedAt: new Date().toISOString(),
   };
