@@ -1,5 +1,9 @@
 import Link from 'next/link';
-import type { OutputCategory, OutputContent, OutputItem } from '../content/types';
+import type {
+  OutputCategory,
+  OutputContent,
+  OutputItem,
+} from '../content/types';
 
 type OutputPageProps = {
   content: OutputContent;
@@ -69,9 +73,7 @@ function OutputCard({ item }: { item: OutputItem }) {
         {item.authors && <span>{item.authors}</span>}
         {item.venue && <span className="italic">{item.venue}</span>}
         {item.doi && (
-          <span className="font-mono text-[0.65rem]">
-            DOI: {item.doi}
-          </span>
+          <span className="font-mono text-[0.65rem]">DOI: {item.doi}</span>
         )}
       </div>
     </>
@@ -126,8 +128,7 @@ function CategorySection({
 export function OutputPage({ content }: OutputPageProps) {
   const { ui, items } = content;
   const grouped = groupByCategory(items);
-  const otherLocalePath =
-    content.locale === 'nl' ? '/en/output' : '/output';
+  const otherLocalePath = content.locale === 'nl' ? '/en/output' : '/output';
 
   return (
     <div className="min-h-screen bg-(--cream)">
@@ -182,10 +183,7 @@ export function OutputPage({ content }: OutputPageProps) {
 
       {/* Output Grid */}
       <main className="mx-auto max-w-6xl space-y-12 px-4 py-12 sm:px-6 lg:px-10">
-        <CategorySection
-          title={ui.categories.events}
-          items={grouped.events}
-        />
+        <CategorySection title={ui.categories.events} items={grouped.events} />
         <CategorySection
           title={ui.categories.articles}
           items={grouped.articles}

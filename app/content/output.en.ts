@@ -71,8 +71,7 @@ export const outputEn: OutputContent = {
       category: 'articles',
       date: '2025',
       isoDate: '2025-01-01',
-      authors:
-        'van Oort, T., Prats López, M., Ganzevoort, W. & van Galen, C.',
+      authors: 'van Oort, T., Prats López, M., Ganzevoort, W. & van Galen, C.',
       venue:
         'The Palgrave Encyclopedia of Cultural Heritage and Conflict (Springer)',
     },
