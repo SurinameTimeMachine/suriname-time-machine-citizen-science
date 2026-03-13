@@ -152,7 +152,7 @@ export default function ReChartedDocumentatiePage() {
                 ['#taken', 'Taken bij de mapathon'],
                 ['#bewerkmodus', 'Bewerkmodus'],
               ].map(([href, label], i) => (
-                <li key={href}>
+                <li key={`toc-${href}`}>
                   <a
                     href={href}
                     className="flex gap-2 py-0.5 text-ink/60 transition-colors hover:text-teal-strong"
@@ -315,7 +315,7 @@ export default function ReChartedDocumentatiePage() {
                 ['Rechterpaneel', 'Drie tabbladen — Info, Annotations, Map.'],
               ].map(([title, desc]) => (
                 <div
-                  key={title}
+                  key={`panel-${title}`}
                   className="rounded-sm bg-sand px-5 py-4 ring-1 ring-ink/5"
                 >
                   <p className="text-sm font-semibold text-ink">{title}</p>
@@ -368,7 +368,7 @@ export default function ReChartedDocumentatiePage() {
                   ],
                 ].map(([title, desc]) => (
                   <div
-                    key={title}
+                    key={`map-item-${title}`}
                     className="flex gap-3 rounded-sm bg-white px-4 py-3 ring-1 ring-ink/5"
                   >
                     <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-strong/10 text-[10px] font-bold text-teal-strong">
@@ -491,7 +491,7 @@ export default function ReChartedDocumentatiePage() {
                 },
               ].map((task) => (
                 <div
-                  key={task.n}
+                  key={`task-${task.n}`}
                   className="flex gap-4 rounded-sm bg-white px-5 py-4 shadow-[0_4px_20px_rgba(0,30,24,0.06)] ring-1 ring-ink/5"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-(--deep-teal) text-xs font-bold text-white">

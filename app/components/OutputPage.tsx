@@ -118,7 +118,7 @@ function CategorySection({
       </h2>
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => (
-          <OutputCard key={item.id} item={item} />
+          <OutputCard key={`output-${item.id}`} item={item} />
         ))}
       </div>
     </section>

@@ -4,7 +4,7 @@ import path from 'node:path';
 const W = 32;
 const H = 32;
 
-const COLORS = {
+const colors = {
   deepTeal: hexToRgb('#003c34'),
   tealStrong: hexToRgb('#006d5b'),
   tealBright: hexToRgb('#34d1b3'),
@@ -129,15 +129,15 @@ for (let y = 0; y < H; y++) {
       H - 1 - bgInset,
       bgRadius,
     );
-    acc = over(acc, COLORS.deepTeal, bgA);
+    acc = over(acc, colors.deepTeal, bgA);
 
     // Ring
     const ringA = covRing(x, y, ringCx, ringCy, ringInner, ringOuter);
-    acc = over(acc, COLORS.tealStrong, ringA);
+    acc = over(acc, colors.tealStrong, ringA);
 
     // Dot
     const dotA = covCircle(x, y, dotCx, dotCy, dotR);
-    acc = over(acc, COLORS.tealBright, dotA);
+    acc = over(acc, colors.tealBright, dotA);
 
     // Convert premult -> straight RGB for storage
     const a = acc.a;
@@ -150,24 +150,24 @@ for (let y = 0; y < H; y++) {
       b = acc.pb / a;
     }
 
-    const A = clampByte(Math.round(a * 255));
-    const R = clampByte(Math.round(r * 255));
-    const G = clampByte(Math.round(g * 255));
-    const B = clampByte(Math.round(b * 255));
+    const byteA = clampByte(Math.round(a * 255));
+    const byteR = clampByte(Math.round(r * 255));
+    const byteG = clampByte(Math.round(g * 255));
+    const byteB = clampByte(Math.round(b * 255));
 
     // BMP stores rows bottom-up
     const row = H - 1 - y;
     const pxIndex = (row * W + x) * 4;
-    pixelBuf[pxIndex + 0] = B;
-    pixelBuf[pxIndex + 1] = G;
-    pixelBuf[pxIndex + 2] = R;
-    pixelBuf[pxIndex + 3] = A;
+    pixelBuf[pxIndex + 0] = byteB;
+    pixelBuf[pxIndex + 1] = byteG;
+    pixelBuf[pxIndex + 2] = byteR;
+    pixelBuf[pxIndex + 3] = byteA;
 
     // AND mask bit: 1 means transparent.
     const maskRowOffset = row * maskStride;
     const byteIndex = maskRowOffset + (x >> 3);
     const bit = 7 - (x & 7);
-    if (A === 0) {
+    if (byteA === 0) {
       maskBuf[byteIndex] |= 1 << bit;
     }
   }

@@ -48,7 +48,7 @@ async function fetchJson<T>(url: string): Promise<T> {
   if (!res.ok) {
     throw new Error(`AnnRepo request failed: ${res.status} ${res.statusText}`);
   }
-  return res.json() as Promise<T>;
+  return await (res.json() as Promise<T>);
 }
 
 type ServiceMetadata = {
@@ -69,11 +69,13 @@ async function getContainerInfo(): Promise<ContainerMetadata> {
 }
 
 async function getFieldCounts(): Promise<FieldCounts> {
-  return fetchJson<FieldCounts>(`${BASE_URL}/services/${CONTAINER}/fields`);
+  return await fetchJson<FieldCounts>(
+    `${BASE_URL}/services/${CONTAINER}/fields`,
+  );
 }
 
 async function getDistinctValues(field: string): Promise<string[]> {
-  return fetchJson<string[]>(
+  return await fetchJson<string[]>(
     `${BASE_URL}/services/${CONTAINER}/distinct-values/${encodeURIComponent(field)}`,
   );
 }

@@ -10,6 +10,7 @@ type Section01HeroProps = {
   lead: string;
   kicker: string;
   primaryCtaLabel: string;
+  // eslint-disable-next-line react-x/no-unused-props -- used in commented-out texture figure
   textureAlt: string;
   snapshotLabel: string;
 };
@@ -23,7 +24,6 @@ export function Section01Hero({
   lead,
   kicker,
   primaryCtaLabel,
-  // textureAlt,
   snapshotLabel,
 }: Section01HeroProps) {
   return (
@@ -60,7 +60,7 @@ export function Section01Hero({
               <div className="flex flex-wrap gap-3 text-sm">
                 {quickHighlights.map((item) => (
                   <span
-                    key={item}
+                    key={`highlight-${item}`}
                     className="border border-white/30 px-4 py-1 uppercase tracking-[0.3em]"
                   >
                     {item}
@@ -94,7 +94,7 @@ export function Section01Hero({
                 <dl className="grid gap-4">
                   {heroStats.map((stat) => (
                     <div
-                      key={stat.label}
+                      key={`stat-${stat.label}`}
                       className="border-b border-white/15 pb-3 last:border-0"
                     >
                       <dt className="text-[0.8rem] uppercase tracking-[0.3em] text-white/70">

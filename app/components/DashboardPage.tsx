@@ -113,6 +113,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadData();
   }, [loadData]);
 
@@ -315,8 +316,9 @@ export function DashboardPage({ content }: DashboardPageProps) {
                     />
                     <Tooltip
                       formatter={tooltipFormatter}
-                      labelFormatter={(_, payload) => {
-                        const entry = payload?.[0]?.payload as
+                      labelFormatter={(label, payload) => {
+                        void label;
+                        const entry = payload[0]?.payload as
                           | { fullLabel?: string }
                           | undefined;
                         return entry?.fullLabel ?? '';

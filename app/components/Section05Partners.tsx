@@ -27,7 +27,7 @@ export function Section05Partners({
       <ul className="grid gap-3 text-sm text-ink/85 sm:grid-cols-2">
         {partners.map((partner) => (
           <li
-            key={partner}
+            key={`partner-${partner}`}
             className="px-4 py-3 text-ink shadow-[0_10px_25px_rgba(0,30,24,0.05)] ring-1 ring-white/50"
           >
             {partner}

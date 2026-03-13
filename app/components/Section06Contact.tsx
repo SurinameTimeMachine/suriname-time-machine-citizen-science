@@ -36,7 +36,7 @@ export function Section06Contact({
               </p>
               <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                 {links.map((link) => (
-                  <li key={link.href}>
+                  <li key={`link-${link.href}`}>
                     <a
                       className="text-teal-strong underline decoration-teal-strong/40 underline-offset-2 transition-colors hover:text-teal-strong/80 hover:decoration-teal-strong/60"
                       href={link.href}

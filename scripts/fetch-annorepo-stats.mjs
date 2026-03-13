@@ -37,10 +37,13 @@ async function fetchJson(url) {
     signal: AbortSignal.timeout(REQUEST_TIMEOUT),
   });
   if (!res.ok) throw new Error(`${res.status} ${res.statusText} – ${url}`);
-  return res.json();
+  return await res.json();
 }
 
-const delay = (ms) => new Promise((r) => setTimeout(r, ms));
+const delay = (ms) =>
+  new Promise((r) => {
+    setTimeout(r, ms);
+  });
 
 async function searchCount(query) {
   // Step 1: POST creates a search result set, returns 201 + Location header
@@ -61,7 +64,7 @@ async function searchCount(query) {
   // Step 2: Paginate through result pages and count items
   let total = 0;
   let page = 0;
-  while (true) {
+  for (;;) {
     const pageRes = await fetch(`${location}?page=${page}`, {
       headers: { Accept: 'application/json', ...authHeaders() },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT),
@@ -96,7 +99,7 @@ async function searchItems(query) {
 
   const items = [];
   let page = 0;
-  while (true) {
+  for (;;) {
     const pageRes = await fetch(`${location}?page=${page}`, {
       headers: { Accept: 'application/json', ...authHeaders() },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT),

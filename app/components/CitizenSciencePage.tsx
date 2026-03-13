@@ -105,7 +105,7 @@ function WorkshopCard({ workshop }: { workshop: Workshop }) {
           </p>
           <ul className="space-y-2">
             {workshop.links.map((link) => (
-              <li key={link.href}>
+              <li key={`workshop-link-${link.href}`}>
                 <a
                   href={link.href}
                   target={link.href.startsWith('/') ? undefined : '_blank'}
@@ -259,7 +259,7 @@ function EventBlock({
 
                 return partner.href ? (
                   <a
-                    key={partner.id}
+                    key={`partner-${partner.id}`}
                     href={partner.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -268,7 +268,7 @@ function EventBlock({
                     {inner}
                   </a>
                 ) : (
-                  <div key={partner.id}>{inner}</div>
+                  <div key={`partner-${partner.id}`}>{inner}</div>
                 );
               })}
             </div>
@@ -282,7 +282,10 @@ function EventBlock({
 
             <div className="grid gap-6 lg:grid-cols-3">
               {workshops.map((workshop) => (
-                <WorkshopCard key={workshop.id} workshop={workshop} />
+                <WorkshopCard
+                  key={`workshop-${workshop.id}`}
+                  workshop={workshop}
+                />
               ))}
             </div>
           </div>
@@ -357,7 +360,7 @@ export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
       <main className="mx-auto max-w-6xl space-y-10 px-4 py-12 sm:px-6 lg:px-10">
         {events.map((entry, index) => (
           <EventBlock
-            key={entry.id}
+            key={`event-${entry.id}`}
             entry={entry}
             ui={ui}
             defaultOpen={index === defaultOpenIndex}

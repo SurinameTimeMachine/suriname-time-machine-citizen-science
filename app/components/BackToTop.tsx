@@ -7,6 +7,7 @@ export function BackToTop() {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line no-restricted-syntax
     const header = document.getElementById('site-header');
 
     if (!header || typeof IntersectionObserver === 'undefined') {
@@ -20,6 +21,7 @@ export function BackToTop() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+        if (!entry) return;
         setIsVisible(!entry.isIntersecting);
       },
       {
@@ -32,6 +34,7 @@ export function BackToTop() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line no-restricted-syntax
     const footer = document.getElementById('site-footer');
 
     if (!footer || typeof IntersectionObserver === 'undefined') {
@@ -41,6 +44,7 @@ export function BackToTop() {
     const observer = new IntersectionObserver(
       (entries) => {
         const entry = entries[0];
+        if (!entry) return;
         setIsFooterVisible(entry.isIntersecting);
       },
       {

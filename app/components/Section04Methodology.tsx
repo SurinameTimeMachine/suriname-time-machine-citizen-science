@@ -43,8 +43,8 @@ export function Section04Methodology({
       <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
         <div className="space-y-4">
           <h2 className="text-3xl font-semibold">{title}</h2>
-          {missionParagraphs.map((paragraph, index) => (
-            <RichText key={index}>{paragraph}</RichText>
+          {missionParagraphs.map((paragraph) => (
+            <RichText key={`mission-para-${paragraph}`}>{paragraph}</RichText>
           ))}
         </div>
         <div className="space-y-4 bg-sand px-6 py-6 text-sm shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40">
@@ -62,8 +62,8 @@ export function Section04Methodology({
               {mapAsset.caption}
             </figcaption>
           </figure>
-          {mapParagraphs.map((paragraph, index) => (
-            <RichText key={index} className="text-ink/80">
+          {mapParagraphs.map((paragraph) => (
+            <RichText key={`map-para-${paragraph}`} className="text-ink/80">
               {paragraph}
             </RichText>
           ))}
@@ -74,8 +74,8 @@ export function Section04Methodology({
         <article className="h-full bg-white px-6 py-6 text-sm shadow-[0_15px_35px_rgba(0,30,24,0.08)] ring-1 ring-white/40">
           <h3 className="text-lg font-semibold text-ink">{projectTeamTitle}</h3>
           <div className="mt-3 space-y-4 text-ink">
-            {teamParagraphs.map((paragraph, index) => (
-              <RichText key={index}>{paragraph}</RichText>
+            {teamParagraphs.map((paragraph) => (
+              <RichText key={`team-para-${paragraph}`}>{paragraph}</RichText>
             ))}
           </div>
           <p className="mt-5 text-xs uppercase tracking-[0.3em] text-teal-strong">
@@ -83,7 +83,7 @@ export function Section04Methodology({
           </p>
           <ul className="mt-2 list-disc space-y-1 pl-5 text-ink">
             {employees.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={`employee-${item}`}>{item}</li>
             ))}
           </ul>
         </article>

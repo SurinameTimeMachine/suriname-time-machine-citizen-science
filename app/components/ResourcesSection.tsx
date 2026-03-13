@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import type {
   BookmarkLink,
   ResourcePurpose,
@@ -12,7 +12,7 @@ type ResourcesSectionProps = {
   resources: BookmarkLink[];
 };
 
-const PURPOSE_COLORS: Record<ResourcePurpose, string> = {
+const purposeColors: Record<ResourcePurpose, string> = {
   archive: 'bg-amber-100 text-amber-800 border-amber-200',
   tool: 'bg-blue-100 text-blue-800 border-blue-200',
   inspiration: 'bg-purple-100 text-purple-800 border-purple-200',
@@ -47,7 +47,7 @@ function PurposeBadge({
 }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium ${PURPOSE_COLORS[purpose]}`}
+      className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium ${purposeColors[purpose]}`}
     >
       {label}
     </span>
@@ -99,7 +99,7 @@ function ResourceRow({
         </p>
         <div className="flex flex-wrap gap-1">
           {resource.keywords.slice(0, 4).map((keyword) => (
-            <KeywordTag key={keyword} keyword={keyword} />
+            <KeywordTag key={`keyword-${keyword}`} keyword={keyword} />
           ))}
         </div>
       </div>
@@ -182,7 +182,7 @@ export function ResourcesSection({ ui, resources }: ResourcesSectionProps) {
         <div className="flex flex-wrap gap-2">
           {filterButtons.map(({ key, label }) => (
             <button
-              key={key}
+              key={`filter-${key}`}
               onClick={() => setActiveFilter(key)}
               className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
                 activeFilter === key
@@ -198,7 +198,6 @@ export function ResourcesSection({ ui, resources }: ResourcesSectionProps) {
         {/* Search input */}
         <div className="relative">
           <input
-            type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder={ui.searchPlaceholder}
@@ -240,7 +239,7 @@ export function ResourcesSection({ ui, resources }: ResourcesSectionProps) {
           <div className="divide-y divide-ink/5">
             {filteredResources.map((resource) => (
               <ResourceRow
-                key={resource.id}
+                key={`resource-${resource.id}`}
                 resource={resource}
                 purposeLabel={getPurposeLabel(resource.purpose)}
               />

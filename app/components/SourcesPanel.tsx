@@ -78,7 +78,7 @@ export function SourcesPanel({
             <p className="mb-3 text-xs text-ink/60">{description}</p>
             <ul className="flex flex-wrap gap-2">
               {sources.map((source) => (
-                <li key={source.href}>
+                <li key={`source-${source.href}`}>
                   <a
                     href={source.href}
                     target="_blank"
