@@ -1,44 +1,44 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126949,
+    "total": 126996,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126949,
-  "humanAnnotations": 553,
-  "aiAnnotations": 126396,
+  "totalAnnotations": 126996,
+  "humanAnnotations": 629,
+  "aiAnnotations": 126367,
   "canvasesAnnotated": 283,
-  "contributorCount": 12,
-  "daysActive": 18,
+  "contributorCount": 13,
+  "daysActive": 21,
   "citizenScience": {
-    "textsSpotted": 233,
-    "iconsIdentified": 10,
-    "placesLinked": 70
+    "textsSpotted": 296,
+    "iconsIdentified": 18,
+    "placesLinked": 101
   },
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126636
+      "count": 126581
     },
     {
       "motivation": "textspotting",
-      "count": 233
+      "count": 296
     },
     {
       "motivation": "linking",
-      "count": 70
+      "count": 101
     },
     {
       "motivation": "iconography",
-      "count": 10
+      "count": 18
     }
   ],
   "topCanvases": [
     {
       "canvas": "c9",
       "label": "Algemeene Kaart van de Colonie of Provintie van Suriname",
-      "count": 4135,
-      "citizenCount": 0
+      "count": 4140,
+      "citizenCount": 5
     },
     {
       "canvas": "c99",
@@ -79,8 +79,8 @@
     {
       "canvas": "c8",
       "label": "6108 Surinaamse Waterleiding Mij. Met kavelnummers getekend op de plattegrond van Paramaribo",
-      "count": 2298,
-      "citizenCount": 0
+      "count": 2299,
+      "citizenCount": 2
     },
     {
       "canvas": "c110",
@@ -155,5 +155,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-10T10:50:30.716Z"
+  "fetchedAt": "2026-03-13T09:11:21.974Z"
 }
