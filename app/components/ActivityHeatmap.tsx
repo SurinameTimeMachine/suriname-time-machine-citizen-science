@@ -13,13 +13,13 @@ type ActivityHeatmapProps = {
   };
 };
 
-const CELL = 13;
-const GAP = 3;
+const CELL = 10;
+const GAP = 2;
 const STEP = CELL + GAP;
 const ROWS = 7;
-const WEEKS = 26; // ~6 months
-const LABEL_W = 32;
-const HEADER_H = 20;
+const WEEKS = 18; // ~4.5 months
+const LABEL_W = 28;
+const HEADER_H = 16;
 
 const LEVELS = [
   'var(--teal-soft)',
@@ -139,7 +139,7 @@ export function ActivityHeatmap({
       <svg
         viewBox={`0 0 ${svgW} ${svgH}`}
         className="w-full"
-        style={{ minWidth: 600, maxWidth: '100%' }}
+        style={{ minWidth: 420, maxWidth: '100%' }}
         role="img"
         aria-label="Activity heatmap calendar"
       >
@@ -148,9 +148,9 @@ export function ActivityHeatmap({
           <text
             key={`month-${m.col}`}
             x={LABEL_W + m.col * STEP}
-            y={HEADER_H - 6}
+            y={HEADER_H - 5}
             className="fill-ink/50"
-            fontSize={10}
+            fontSize={9}
             fontFamily="var(--font-geist-sans)"
           >
             {m.label}
@@ -166,7 +166,7 @@ export function ActivityHeatmap({
                 x={LABEL_W - 6}
                 y={HEADER_H + i * STEP + CELL / 2 + 3.5}
                 className="fill-ink/40"
-                fontSize={9}
+                fontSize={8}
                 fontFamily="var(--font-geist-sans)"
                 textAnchor="end"
               >
@@ -188,7 +188,7 @@ export function ActivityHeatmap({
               y={HEADER_H + cell.row * STEP}
               width={CELL}
               height={CELL}
-              rx={2}
+              rx={0}
               fill={fill}
               opacity={opacity}
               className="transition-opacity duration-100"
@@ -225,7 +225,7 @@ export function ActivityHeatmap({
             y={svgH + 10}
             width={CELL}
             height={CELL}
-            rx={2}
+            rx={0}
             fill={level === -1 ? 'var(--ink)' : LEVELS[level]}
             opacity={level === -1 ? 0.04 : 1}
           />
@@ -244,7 +244,7 @@ export function ActivityHeatmap({
       {/* Tooltip (positioned fixed to avoid SVG overflow issues) */}
       {tooltip && (
         <div
-          className="pointer-events-none fixed z-50 rounded-sm bg-(--deep-teal) px-3 py-1.5 text-xs font-medium text-white shadow-lg"
+          className="pointer-events-none fixed z-50 bg-(--deep-teal) px-3 py-1.5 text-xs font-medium text-white shadow-lg"
           style={{
             left: tooltip.x + 12,
             top: tooltip.y - 32,

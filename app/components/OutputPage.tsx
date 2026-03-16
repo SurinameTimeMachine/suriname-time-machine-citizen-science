@@ -68,7 +68,7 @@ function OutputCard({ item }: { item: OutputItem }) {
       <p className="mt-1 text-sm leading-relaxed text-ink/70">
         {item.description}
       </p>
-      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink/50">
+      <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink/60">
         <span>{item.date}</span>
         {item.authors && <span>{item.authors}</span>}
         {item.venue && <span className="italic">{item.venue}</span>}
@@ -85,7 +85,7 @@ function OutputCard({ item }: { item: OutputItem }) {
         href={item.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block rounded-sm border border-ink/5 bg-white p-5 shadow-[0_2px_12px_rgba(0,30,24,0.06)] transition-all hover:shadow-[0_4px_20px_rgba(0,30,24,0.10)] hover:ring-1 hover:ring-teal-strong/20"
+        className="group block border border-slate-200 bg-white p-5 shadow-[0_15px_35px_rgba(0,30,24,0.08)] transition-all hover:shadow-[0_20px_45px_rgba(0,30,24,0.12)] hover:ring-1 hover:ring-teal-strong/20"
       >
         {content}
       </a>
@@ -95,7 +95,7 @@ function OutputCard({ item }: { item: OutputItem }) {
   return (
     <Link
       href={item.href}
-      className="group block rounded-sm border border-ink/5 bg-white p-5 shadow-[0_2px_12px_rgba(0,30,24,0.06)] transition-all hover:shadow-[0_4px_20px_rgba(0,30,24,0.10)] hover:ring-1 hover:ring-teal-strong/20"
+      className="group block border border-slate-200 bg-white p-5 shadow-[0_15px_35px_rgba(0,30,24,0.08)] transition-all hover:shadow-[0_20px_45px_rgba(0,30,24,0.12)] hover:ring-1 hover:ring-teal-strong/20"
     >
       {content}
     </Link>
@@ -113,7 +113,7 @@ function CategorySection({
 
   return (
     <section className="space-y-4">
-      <h2 className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-strong">
+      <h2 className="text-xs font-semibold uppercase tracking-[0.35em] text-teal-strong">
         {title}
       </h2>
       <div className="grid gap-4 sm:grid-cols-2">
@@ -131,14 +131,14 @@ export function OutputPage({ content }: OutputPageProps) {
   const otherLocalePath = content.locale === 'nl' ? '/en/output' : '/output';
 
   return (
-    <div className="min-h-screen bg-(--cream)">
+    <div className="min-h-screen bg-(--cream) text-ink">
       {/* Navigation */}
-      <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+      <header className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-10">
           <div className="flex items-center gap-4">
             <Link
               href={content.locale === 'nl' ? '/' : '/en'}
-              className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
+              className="flex items-center gap-2 text-sm text-ink/70 transition-colors hover:text-teal-strong"
             >
               <svg
                 className="h-4 w-4"
@@ -157,12 +157,12 @@ export function OutputPage({ content }: OutputPageProps) {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
+            <span className="text-xs uppercase tracking-[0.35em] text-teal-strong">
               {ui.navigation.projectCode}
             </span>
             <Link
               href={otherLocalePath}
-              className="rounded-sm border border-ink/10 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-ink/60 transition-colors hover:border-teal-strong/30 hover:text-teal-strong"
+              className="border border-slate-200 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.3em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong"
             >
               {ui.navigation.languageToggleLabel}
             </Link>
@@ -198,13 +198,13 @@ export function OutputPage({ content }: OutputPageProps) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-ink/5 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-10">
+          <div className="flex flex-col gap-2 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              {ui.footer.coordinatorLine} · {ui.footer.organizationLabel}
+              © {new Date().getFullYear()} {ui.footer.organizationLabel}
             </p>
-            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
+            <p>{ui.footer.coordinatorLine}</p>
           </div>
         </div>
       </footer>
