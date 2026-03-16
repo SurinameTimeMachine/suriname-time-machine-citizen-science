@@ -4,6 +4,7 @@ export { LanguageToggle } from './LanguageToggle';
 export { SetHtmlLang } from './SetHtmlLang';
 export { parseInlineLinks, RichText } from './RichText';
 export { DashboardPage } from './DashboardPage';
+export { ActivityHeatmap } from './ActivityHeatmap';
 export { SourcesPanel } from './SourcesPanel';
 export { Section01Hero } from './Section01Hero';
 export { Section02Intro } from './Section02Intro';

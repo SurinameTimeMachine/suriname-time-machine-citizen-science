@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import type { DashboardContent } from '../content/types';
 import type { DashboardData } from '../lib/annorepo';
+import { ActivityHeatmap } from './ActivityHeatmap';
 
 type DashboardPageProps = {
   content: DashboardContent;
@@ -280,6 +281,27 @@ export function DashboardPage({ content }: DashboardPageProps) {
                 />
               </div>
             </section>
+
+            {/* Activity Heatmap */}
+            {data.dailyActivity.length > 0 && (
+              <section>
+                <SectionHeading
+                  title={ui.activity.title}
+                  description={ui.activity.description}
+                />
+                <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
+                  <ActivityHeatmap
+                    data={data.dailyActivity}
+                    locale={content.locale}
+                    labels={{
+                      noActivity: ui.activity.noActivity,
+                      annotation: ui.activity.annotation,
+                      annotations: ui.activity.annotations,
+                    }}
+                  />
+                </div>
+              </section>
+            )}
 
             {/* Top canvases — stacked AI vs citizen science */}
             <section>

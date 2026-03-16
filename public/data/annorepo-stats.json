@@ -1,36 +1,78 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126996,
+    "total": 126941,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126996,
-  "humanAnnotations": 629,
-  "aiAnnotations": 126367,
+  "totalAnnotations": 126941,
+  "humanAnnotations": 669,
+  "aiAnnotations": 126272,
   "canvasesAnnotated": 283,
   "contributorCount": 13,
-  "daysActive": 21,
+  "daysActive": 24,
   "citizenScience": {
-    "textsSpotted": 296,
-    "iconsIdentified": 18,
-    "placesLinked": 101
+    "textsSpotted": 323,
+    "iconsIdentified": 24,
+    "placesLinked": 113
   },
+  "dailyActivity": [
+    {
+      "date": "2026-02-21",
+      "count": 3
+    },
+    {
+      "date": "2026-02-23",
+      "count": 20
+    },
+    {
+      "date": "2026-02-24",
+      "count": 1
+    },
+    {
+      "date": "2026-02-27",
+      "count": 12
+    },
+    {
+      "date": "2026-03-09",
+      "count": 274
+    },
+    {
+      "date": "2026-03-10",
+      "count": 5
+    },
+    {
+      "date": "2026-03-11",
+      "count": 22
+    },
+    {
+      "date": "2026-03-12",
+      "count": 61
+    },
+    {
+      "date": "2026-03-13",
+      "count": 51
+    },
+    {
+      "date": "2026-03-16",
+      "count": 11
+    }
+  ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126581
+      "count": 126481
     },
     {
       "motivation": "textspotting",
-      "count": 296
+      "count": 323
     },
     {
       "motivation": "linking",
-      "count": 101
+      "count": 113
     },
     {
       "motivation": "iconography",
-      "count": 18
+      "count": 24
     }
   ],
   "topCanvases": [
@@ -155,5 +197,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-13T09:11:21.974Z"
+  "fetchedAt": "2026-03-16T15:06:32.634Z"
 }

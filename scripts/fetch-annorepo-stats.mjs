@@ -203,22 +203,41 @@ async function main() {
     return { canvas: id, label: canvasLabels[id] || id, count };
   });
 
-  // Fetch all citizen-science annotations (small sets) and group by canvas
+  // Fetch all citizen-science annotations (small sets) and group by canvas + day
   console.log(
     '  Fetching citizen-science annotation items for per-canvas breakdown…',
   );
-  const [textspottingItems, iconographyItems] = await Promise.all([
-    searchItems({ motivation: 'textspotting' }),
-    searchItems({ motivation: 'iconography' }),
-  ]);
+  const [textspottingItems, iconographyItems, linkingItems] = await Promise.all(
+    [
+      searchItems({ motivation: 'textspotting' }),
+      searchItems({ motivation: 'iconography' }),
+      searchItems({ motivation: 'linking' }),
+    ],
+  );
   /** @type {Record<string, number>} */
   const citizenByCanvas = {};
-  for (const item of [...textspottingItems, ...iconographyItems]) {
+  /** @type {Record<string, number>} */
+  const dailyActivity = {};
+  const allCitizenItems = [
+    ...textspottingItems,
+    ...iconographyItems,
+    ...linkingItems,
+  ];
+  for (const item of allCitizenItems) {
     const src =
       typeof item.target?.source === 'string' ? item.target.source : '';
-    if (!src) continue;
-    const id = src.split('/').pop();
-    if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
+    if (src) {
+      const id = src.split('/').pop();
+      if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
+    }
+    // Extract daily activity from annotation created timestamp
+    const created = item.created ?? item.modified ?? '';
+    if (created) {
+      const day = created.slice(0, 10); // YYYY-MM-DD
+      if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+        dailyActivity[day] = (dailyActivity[day] ?? 0) + 1;
+      }
+    }
   }
 
   // Attach citizenCount to each canvas
@@ -248,6 +267,11 @@ async function main() {
   // Total canvases that received annotations
   const canvasesAnnotated = canvasCounts.filter((c) => c.count > 0).length;
 
+  // Convert dailyActivity map to sorted array
+  const dailyActivityArray = Object.entries(dailyActivity)
+    .map(([date, count]) => ({ date, count }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+
   const stats = {
     metadata: { label: meta.label, total, created: meta.created },
     totalAnnotations: total,
@@ -257,6 +281,7 @@ async function main() {
     contributorCount,
     daysActive,
     citizenScience,
+    dailyActivity: dailyActivityArray,
     motivationCounts: motivationCounts.sort((a, b) => b.count - a.count),
     topCanvases: canvasCounts.sort((a, b) => b.count - a.count).slice(0, 20),
     fetchedAt: new Date().toISOString(),

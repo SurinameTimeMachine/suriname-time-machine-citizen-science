@@ -358,6 +358,13 @@ export type DashboardUiStrings = {
     canvasTitle: string;
     canvasDescription: string;
   };
+  activity: {
+    title: string;
+    description: string;
+    noActivity: string;
+    annotation: string;
+    annotations: string;
+  };
   labels: {
     annotations: string;
     loading: string;

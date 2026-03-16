@@ -27,6 +27,11 @@ export type CitizenScienceStats = {
   placesLinked: number;
 };
 
+export type DailyActivity = {
+  date: string;
+  count: number;
+};
+
 export type DashboardData = {
   metadata: ContainerMetadata;
   totalAnnotations: number;
@@ -36,6 +41,7 @@ export type DashboardData = {
   contributorCount: number;
   daysActive: number;
   citizenScience: CitizenScienceStats;
+  dailyActivity: DailyActivity[];
   motivationCounts: MotivationCount[];
   topCanvases: CanvasCount[];
   fetchedAt: string;
@@ -186,6 +192,7 @@ export async function fetchDashboardData(): Promise<DashboardData> {
       iconsIdentified: motMap['iconography'] ?? 0,
       placesLinked: motMap['linking'] ?? 0,
     },
+    dailyActivity: [],
     motivationCounts,
     topCanvases,
     fetchedAt: new Date().toISOString(),

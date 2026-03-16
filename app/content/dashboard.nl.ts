@@ -48,6 +48,14 @@ export const dashboardNl: DashboardContent = {
       canvasDescription:
         'AI-gegenereerde annotaties en citizen-sciencebijdragen per historisch kaartblad.',
     },
+    activity: {
+      title: 'Citizen science activiteit',
+      description:
+        'Dagelijkse bijdragen van onze vrijwilligers — elk vakje staat voor een dag citizen science werk.',
+      noActivity: 'Geen activiteit',
+      annotation: 'bijdrage',
+      annotations: 'bijdragen',
+    },
     labels: {
       annotations: 'annotaties',
       loading: 'Live data laden uit AnnRepo…',
