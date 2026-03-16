@@ -13,13 +13,13 @@ type ActivityHeatmapProps = {
   };
 };
 
-const CELL = 10;
+const CELL = 8;
 const GAP = 2;
 const STEP = CELL + GAP;
 const ROWS = 7;
-const WEEKS = 18; // ~4.5 months
-const LABEL_W = 28;
-const HEADER_H = 16;
+const WEEKS = 14; // ~3.5 months
+const LABEL_W = 24;
+const HEADER_H = 14;
 
 const LEVELS = [
   'var(--teal-soft)',
@@ -137,9 +137,9 @@ export function ActivityHeatmap({
   return (
     <div className="overflow-x-auto">
       <svg
-        viewBox={`0 0 ${svgW} ${svgH}`}
-        className="w-full"
-        style={{ minWidth: 420, maxWidth: '100%' }}
+        width={svgW}
+        height={svgH + 28}
+        viewBox={`0 0 ${svgW} ${svgH + 28}`}
         role="img"
         aria-label="Activity heatmap calendar"
       >
@@ -150,7 +150,7 @@ export function ActivityHeatmap({
             x={LABEL_W + m.col * STEP}
             y={HEADER_H - 5}
             className="fill-ink/50"
-            fontSize={9}
+            fontSize={8}
             fontFamily="var(--font-geist-sans)"
           >
             {m.label}
@@ -163,10 +163,10 @@ export function ActivityHeatmap({
             label && (
               <text
                 key={`day-${label}`}
-                x={LABEL_W - 6}
-                y={HEADER_H + i * STEP + CELL / 2 + 3.5}
+                x={LABEL_W - 4}
+                y={HEADER_H + i * STEP + CELL / 2 + 3}
                 className="fill-ink/40"
-                fontSize={8}
+                fontSize={7}
                 fontFamily="var(--font-geist-sans)"
                 textAnchor="end"
               >

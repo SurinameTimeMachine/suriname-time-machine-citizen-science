@@ -90,6 +90,7 @@ function truncateLabel(label: string, max = 42): string {
 
 export function DashboardPage({ content }: DashboardPageProps) {
   const { ui } = content;
+  const { activity } = ui;
   const otherLocalePath =
     content.locale === 'nl' ? '/en/dashboard' : '/dashboard';
 
@@ -286,17 +287,17 @@ export function DashboardPage({ content }: DashboardPageProps) {
             {data.dailyActivity.length > 0 && (
               <section>
                 <SectionHeading
-                  title={ui.activity.title}
-                  description={ui.activity.description}
+                  title={activity.title}
+                  description={activity.description}
                 />
                 <div className="overflow-hidden bg-white p-6 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
                   <ActivityHeatmap
                     data={data.dailyActivity}
                     locale={content.locale}
                     labels={{
-                      noActivity: ui.activity.noActivity,
-                      annotation: ui.activity.annotation,
-                      annotations: ui.activity.annotations,
+                      noActivity: activity.noActivity,
+                      annotation: activity.annotation,
+                      annotations: activity.annotations,
                     }}
                   />
                 </div>
