@@ -5,7 +5,7 @@ export const projectsNl: ProjectsContent = {
   seo: {
     title: 'Projecten | Suriname Tijdmachine',
     description:
-      'Ontdek digitale tools en interactieve toepassingen ontwikkeld binnen het Suriname Tijdmachine project — historische kaarten, datavisualisaties en onderzoekstools.',
+      'Ontdek digitale tools en interactieve toepassingen ontwikkeld binnen het Suriname Tijdmachine project, waaronder historische kaarten, datavisualisaties en onderzoekstools.',
     openGraphLocale: 'nl_NL',
   },
   ui: {

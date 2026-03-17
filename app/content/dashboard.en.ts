@@ -5,7 +5,7 @@ export const dashboardEn: DashboardContent = {
   seo: {
     title: 'Annotation Dashboard | Suriname Time Machine',
     description:
-      'Live statistics on annotations created by citizen scientists and AI for the Suriname Time Machine — track progress, view contributors, and explore motivation breakdowns.',
+      'Live statistics on annotations created by citizen scientists and AI for the Suriname Time Machine. Track progress, view contributors, and explore motivation breakdowns.',
     openGraphLocale: 'en_US',
   },
   ui: {
@@ -19,7 +19,7 @@ export const dashboardEn: DashboardContent = {
     hero: {
       tagline: 'Suriname Time Machine',
       title: 'Annotation Dashboard',
-      lead: 'Real-time overview of all annotations created for the Suriname Time Machine — by humans and AI alike. See who is contributing and how the collection grows.',
+      lead: 'Real-time overview of all annotations created for the Suriname Time Machine, by humans and AI alike. See who is contributing and how the collection grows.',
     },
     stats: {
       totalAnnotations: 'Total annotations',
@@ -31,7 +31,7 @@ export const dashboardEn: DashboardContent = {
     citizenScience: {
       title: 'Citizen Science Spotlight',
       description:
-        'What our volunteers are discovering on the historic maps — every text, icon, and place counts.',
+        'What our volunteers are discovering on the historic maps. Every text, icon, and place counts.',
       textsSpotted: 'Texts spotted',
       iconsIdentified: 'Icons identified',
       placesLinked: 'Places linked',
@@ -47,6 +47,19 @@ export const dashboardEn: DashboardContent = {
       canvasTitle: 'Annotations per map sheet',
       canvasDescription:
         'AI-generated annotations and citizen science contributions per historic map sheet.',
+      sortByCitizen: 'Citizen science first',
+      sortByTotal: 'Most annotations first',
+      previousPage: 'Previous',
+      nextPage: 'Next',
+      pageIndicator: 'of',
+    },
+    activity: {
+      title: 'Citizen science activity',
+      description:
+        'Daily contributions by our volunteers. Every square represents a day of citizen science work.',
+      noActivity: 'No activity',
+      annotation: 'contribution',
+      annotations: 'contributions',
     },
     labels: {
       annotations: 'annotations',

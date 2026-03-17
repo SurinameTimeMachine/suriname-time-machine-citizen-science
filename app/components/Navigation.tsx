@@ -1,5 +1,5 @@
 import { LanguageToggle } from '@/app/components/LanguageToggle';
-import { NavLink } from './types';
+import type { NavLink } from './types';
 
 type NavigationProps = {
   navLinks: NavLink[];
@@ -32,7 +32,7 @@ export function Navigation({
           <div className="flex flex-wrap items-center gap-5">
             {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={`nav-${link.href}`}
                 href={link.href}
                 className="uppercase tracking-[0.2em] text-ink/70 transition hover:text-teal-strong"
               >

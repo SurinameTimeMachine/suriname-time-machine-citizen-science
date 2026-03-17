@@ -18,7 +18,7 @@ export function ApplicationsList({ resources }: ApplicationsListProps) {
 
         return (
           <div
-            key={resource.id}
+            key={`resource-${resource.id}`}
             className="border-t border-slate-100/70 first:border-0"
           >
             <button

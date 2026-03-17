@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Bar,
   BarChart,
@@ -13,6 +13,7 @@ import {
 } from 'recharts';
 import type { DashboardContent } from '../content/types';
 import type { DashboardData } from '../lib/annorepo';
+import { ActivityHeatmap } from './ActivityHeatmap';
 
 type DashboardPageProps = {
   content: DashboardContent;
@@ -39,10 +40,10 @@ function StatCard({
 }) {
   return (
     <div
-      className={`rounded-sm px-6 py-5 ring-1 ${accent ? 'bg-(--deep-teal) text-white ring-white/10' : 'bg-white ring-ink/5'}`}
+      className={`px-6 py-5 ring-1 ${accent ? 'bg-(--deep-teal) text-white ring-white/10' : 'bg-white ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]'}`}
     >
       <p
-        className={`text-xs font-semibold uppercase tracking-[0.2em] ${accent ? 'text-white/60' : 'text-ink/50'}`}
+        className={`text-xs font-semibold uppercase tracking-[0.3em] ${accent ? 'text-white/60' : 'text-ink/70'}`}
       >
         {label}
       </p>
@@ -60,16 +61,16 @@ function SectionHeading({
 }) {
   return (
     <div className="mb-6">
-      <h2 className="text-xl font-semibold text-ink sm:text-2xl">{title}</h2>
-      <p className="mt-1 text-sm text-ink/60">{description}</p>
+      <h2 className="text-2xl font-semibold text-ink sm:text-3xl">{title}</h2>
+      <p className="mt-1 text-sm text-ink/70">{description}</p>
     </div>
   );
 }
 
 function ActivityCard({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-sm bg-white px-6 py-5 ring-1 ring-ink/5">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/50">
+    <div className="bg-white px-6 py-5 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink/70">
         {label}
       </p>
       <p className="mt-1 text-2xl font-bold tabular-nums text-ink">
@@ -87,14 +88,172 @@ function truncateLabel(label: string, max = 42): string {
   return label.slice(0, max - 1) + '…';
 }
 
+function CanvasChartSection({
+  data,
+  ui,
+  sortByCitizen,
+  setSortByCitizen,
+  canvasPage,
+  setCanvasPage,
+  pageSize,
+}: {
+  data: DashboardData;
+  ui: DashboardContent['ui'];
+  sortByCitizen: boolean;
+  setSortByCitizen: (v: boolean) => void;
+  canvasPage: number;
+  setCanvasPage: (v: number) => void;
+  pageSize: number;
+}) {
+  const sorted = useMemo(() => {
+    const arr = [...data.topCanvases];
+    if (sortByCitizen) {
+      arr.sort((a, b) => b.citizenCount - a.citizenCount || b.count - a.count);
+    } else {
+      arr.sort((a, b) => b.count - a.count);
+    }
+    return arr;
+  }, [data.topCanvases, sortByCitizen]);
+
+  const totalPages = Math.max(1, Math.ceil(sorted.length / pageSize));
+  const safePage = Math.min(canvasPage, totalPages - 1);
+  const pageItems = sorted.slice(
+    safePage * pageSize,
+    safePage * pageSize + pageSize,
+  );
+
+  return (
+    <section>
+      <SectionHeading
+        title={ui.sections.canvasTitle}
+        description={ui.sections.canvasDescription}
+      />
+
+      {/* Sort toggle */}
+      <div className="mb-4 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          onClick={() => {
+            setSortByCitizen(true);
+            setCanvasPage(0);
+          }}
+          className={`border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] transition-colors ${
+            sortByCitizen
+              ? 'border-teal-strong bg-teal-strong text-white'
+              : 'border-slate-200 text-ink/70 hover:border-teal-strong/40 hover:text-teal-strong'
+          }`}
+        >
+          {ui.sections.sortByCitizen}
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            setSortByCitizen(false);
+            setCanvasPage(0);
+          }}
+          className={`border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] transition-colors ${
+            !sortByCitizen
+              ? 'border-teal-strong bg-teal-strong text-white'
+              : 'border-slate-200 text-ink/70 hover:border-teal-strong/40 hover:text-teal-strong'
+          }`}
+        >
+          {ui.sections.sortByTotal}
+        </button>
+      </div>
+
+      {/* Chart */}
+      <div className="overflow-hidden bg-white p-6 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
+        <ResponsiveContainer
+          width="100%"
+          height={Math.max(200, pageItems.length * 36)}
+        >
+          <BarChart
+            data={pageItems.map((c) => ({
+              name: truncateLabel(c.label),
+              fullLabel: c.label,
+              ai: c.count - c.citizenCount,
+              citizen: c.citizenCount,
+            }))}
+            layout="vertical"
+            margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
+          >
+            <XAxis type="number" tick={{ fontSize: 12 }} tickLine={false} />
+            <YAxis
+              type="category"
+              dataKey="name"
+              tick={{ fontSize: 11 }}
+              tickLine={false}
+              width={240}
+            />
+            <Tooltip
+              formatter={tooltipFormatter}
+              labelFormatter={(label, payload) => {
+                void label;
+                const entry = payload[0]?.payload as
+                  | { fullLabel?: string }
+                  | undefined;
+                return entry?.fullLabel ?? '';
+              }}
+            />
+            <Legend />
+            <Bar
+              dataKey="ai"
+              name={ui.labels.aiLabel}
+              stackId="a"
+              fill="var(--teal-strong)"
+              radius={[0, 0, 0, 0]}
+            />
+            <Bar
+              dataKey="citizen"
+              name={ui.labels.citizenLabel}
+              stackId="a"
+              fill="var(--teal-bright)"
+              radius={[0, 4, 4, 0]}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-4 flex items-center justify-between">
+          <button
+            type="button"
+            disabled={safePage === 0}
+            onClick={() => setCanvasPage(safePage - 1)}
+            className="border border-slate-200 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong disabled:opacity-30 disabled:hover:border-slate-200 disabled:hover:text-ink/70"
+          >
+            {ui.sections.previousPage}
+          </button>
+          <span className="text-xs tabular-nums text-ink/50">
+            {safePage + 1} {ui.sections.pageIndicator} {totalPages}
+          </span>
+          <button
+            type="button"
+            disabled={safePage >= totalPages - 1}
+            onClick={() => setCanvasPage(safePage + 1)}
+            className="border border-slate-200 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong disabled:opacity-30 disabled:hover:border-slate-200 disabled:hover:text-ink/70"
+          >
+            {ui.sections.nextPage}
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export function DashboardPage({ content }: DashboardPageProps) {
   const { ui } = content;
+  const { activity } = ui;
   const otherLocalePath =
     content.locale === 'nl' ? '/en/dashboard' : '/dashboard';
 
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [sortByCitizen, setSortByCitizen] = useState(true);
+  const [canvasPage, setCanvasPage] = useState(0);
+  const CANVAS_PAGE_SIZE = 10;
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -113,18 +272,19 @@ export function DashboardPage({ content }: DashboardPageProps) {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
     loadData();
   }, [loadData]);
 
   return (
-    <div className="min-h-screen bg-(--cream)">
+    <div className="min-h-screen bg-(--cream) text-ink">
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+      <header className="border-b border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-10">
           <div className="flex items-center gap-4">
             <Link
               href={content.locale === 'nl' ? '/' : '/en'}
-              className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
+              className="flex items-center gap-2 text-sm text-ink/70 transition-colors hover:text-teal-strong"
             >
               <svg
                 className="h-4 w-4"
@@ -143,12 +303,12 @@ export function DashboardPage({ content }: DashboardPageProps) {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
+            <span className="text-xs uppercase tracking-[0.35em] text-teal-strong">
               {ui.navigation.projectCode}
             </span>
             <Link
               href={otherLocalePath}
-              className="rounded-sm border border-ink/10 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-ink/60 transition-colors hover:border-teal-strong/30 hover:text-teal-strong"
+              className="border border-slate-200 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.3em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong"
             >
               {ui.navigation.languageToggleLabel}
             </Link>
@@ -202,7 +362,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
             <button
               type="button"
               onClick={loadData}
-              className="rounded-sm bg-teal-strong px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-deep-teal"
+              className="border border-slate-200 px-5 py-2 text-sm font-medium uppercase tracking-[0.25em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong"
             >
               {ui.labels.retryButton}
             </button>
@@ -232,7 +392,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
                   value={formatNumber(data.canvasesAnnotated)}
                 />
               </div>
-              <p className="mt-3 text-xs text-ink/40">
+              <p className="mt-3 text-xs text-ink/50">
                 {ui.stats.lastUpdated}:{' '}
                 {new Date(data.fetchedAt).toLocaleString(
                   content.locale === 'nl' ? 'nl-NL' : 'en-US',
@@ -280,79 +440,49 @@ export function DashboardPage({ content }: DashboardPageProps) {
               </div>
             </section>
 
-            {/* Top canvases — stacked AI vs citizen science */}
-            <section>
-              <SectionHeading
-                title={ui.sections.canvasTitle}
-                description={ui.sections.canvasDescription}
-              />
-              <div className="overflow-hidden rounded-sm bg-white p-6 ring-1 ring-ink/5">
-                <ResponsiveContainer
-                  width="100%"
-                  height={Math.max(400, data.topCanvases.length * 36)}
-                >
-                  <BarChart
-                    data={data.topCanvases.map((c) => ({
-                      name: truncateLabel(c.label),
-                      fullLabel: c.label,
-                      ai: c.count - c.citizenCount,
-                      citizen: c.citizenCount,
-                    }))}
-                    layout="vertical"
-                    margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
-                  >
-                    <XAxis
-                      type="number"
-                      tick={{ fontSize: 12 }}
-                      tickLine={false}
-                    />
-                    <YAxis
-                      type="category"
-                      dataKey="name"
-                      tick={{ fontSize: 11 }}
-                      tickLine={false}
-                      width={240}
-                    />
-                    <Tooltip
-                      formatter={tooltipFormatter}
-                      labelFormatter={(_, payload) => {
-                        const entry = payload?.[0]?.payload as
-                          | { fullLabel?: string }
-                          | undefined;
-                        return entry?.fullLabel ?? '';
-                      }}
-                    />
-                    <Legend />
-                    <Bar
-                      dataKey="ai"
-                      name={ui.labels.aiLabel}
-                      stackId="a"
-                      fill="var(--teal-strong)"
-                      radius={[0, 0, 0, 0]}
-                    />
-                    <Bar
-                      dataKey="citizen"
-                      name={ui.labels.citizenLabel}
-                      stackId="a"
-                      fill="var(--teal-bright)"
-                      radius={[0, 4, 4, 0]}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </section>
+            {/* Activity Heatmap */}
+            {data.dailyActivity.length > 0 && (
+              <section>
+                <SectionHeading
+                  title={activity.title}
+                  description={activity.description}
+                />
+                <div className="overflow-hidden bg-white p-6 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
+                  <ActivityHeatmap
+                    data={data.dailyActivity}
+                    locale={content.locale}
+                    labels={{
+                      noActivity: activity.noActivity,
+                      annotation: activity.annotation,
+                      annotations: activity.annotations,
+                    }}
+                  />
+                </div>
+              </section>
+            )}
+
+            {/* Top canvases: stacked AI vs citizen science */}
+            <CanvasChartSection
+              data={data}
+              ui={ui}
+              sortByCitizen={sortByCitizen}
+              setSortByCitizen={setSortByCitizen}
+              canvasPage={canvasPage}
+              setCanvasPage={setCanvasPage}
+              pageSize={CANVAS_PAGE_SIZE}
+            />
           </>
         )}
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-ink/5 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-10">
+          <div className="flex flex-col gap-2 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              {ui.footer.coordinatorLine} · {ui.footer.organizationLabel}
+              © {new Date().getFullYear()} {ui.footer.organizationLabel}
             </p>
-            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
+            <p>{ui.footer.coordinatorLine}</p>
           </div>
         </div>
       </footer>

@@ -44,8 +44,8 @@ export function Section02Intro({
         </div>
         <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr]">
           <div className="space-y-4">
-            {storyParagraphs.map((paragraph, index) => (
-              <RichText key={index}>{paragraph}</RichText>
+            {storyParagraphs.map((paragraph) => (
+              <RichText key={`story-${paragraph}`}>{paragraph}</RichText>
             ))}
           </div>
           <div className="space-y-4">

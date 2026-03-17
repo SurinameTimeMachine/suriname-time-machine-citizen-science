@@ -45,8 +45,10 @@ export function Section03CaseStudy({
         <div className="space-y-6">
           <p className="flag-label">{label}</p>
           <h2 className="text-3xl font-semibold">{title}</h2>
-          {plantationParagraphs.map((paragraph, index) => (
-            <RichText key={index}>{paragraph}</RichText>
+          {plantationParagraphs.map((paragraph) => (
+            <RichText key={`plantation-para-${paragraph}`}>
+              {paragraph}
+            </RichText>
           ))}
           <p>{sourceParagraph}</p>
           <SourcesPanel
@@ -71,9 +73,9 @@ export function Section03CaseStudy({
             </figcaption>
           </figure>
           <div className="grid gap-3 text-sm">
-            {plantationCaptions.map((caption, index) => (
+            {plantationCaptions.map((caption) => (
               <p
-                key={`${caption}-${index}`}
+                key={`caption-${caption}`}
                 className="border border-white/20 px-4 py-3"
               >
                 {caption}

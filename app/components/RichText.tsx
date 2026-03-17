@@ -22,7 +22,8 @@ export function parseInlineLinks(text: string): ReactNode {
 
     const [, label, href] = match;
     const isExternal =
-      href.startsWith('http://') || href.startsWith('https://');
+      (href?.startsWith('http://') ?? false) ||
+      (href?.startsWith('https://') ?? false);
 
     parts.push(
       <a

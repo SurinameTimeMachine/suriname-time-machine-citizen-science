@@ -37,10 +37,13 @@ async function fetchJson(url) {
     signal: AbortSignal.timeout(REQUEST_TIMEOUT),
   });
   if (!res.ok) throw new Error(`${res.status} ${res.statusText} – ${url}`);
-  return res.json();
+  return await res.json();
 }
 
-const delay = (ms) => new Promise((r) => setTimeout(r, ms));
+const delay = (ms) =>
+  new Promise((r) => {
+    setTimeout(r, ms);
+  });
 
 async function searchCount(query) {
   // Step 1: POST creates a search result set, returns 201 + Location header
@@ -61,7 +64,7 @@ async function searchCount(query) {
   // Step 2: Paginate through result pages and count items
   let total = 0;
   let page = 0;
-  while (true) {
+  for (;;) {
     const pageRes = await fetch(`${location}?page=${page}`, {
       headers: { Accept: 'application/json', ...authHeaders() },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT),
@@ -96,7 +99,7 @@ async function searchItems(query) {
 
   const items = [];
   let page = 0;
-  while (true) {
+  for (;;) {
     const pageRes = await fetch(`${location}?page=${page}`, {
       headers: { Accept: 'application/json', ...authHeaders() },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT),
@@ -200,22 +203,48 @@ async function main() {
     return { canvas: id, label: canvasLabels[id] || id, count };
   });
 
-  // Fetch all citizen-science annotations (small sets) and group by canvas
+  // Fetch all citizen-science annotations (small sets) and group by canvas + day
   console.log(
     '  Fetching citizen-science annotation items for per-canvas breakdown…',
   );
-  const [textspottingItems, iconographyItems] = await Promise.all([
-    searchItems({ motivation: 'textspotting' }),
-    searchItems({ motivation: 'iconography' }),
-  ]);
+  const [textspottingItems, iconographyItems, linkingItems] = await Promise.all(
+    [
+      searchItems({ motivation: 'textspotting' }),
+      searchItems({ motivation: 'iconography' }),
+      searchItems({ motivation: 'linking' }),
+    ],
+  );
   /** @type {Record<string, number>} */
   const citizenByCanvas = {};
-  for (const item of [...textspottingItems, ...iconographyItems]) {
-    const src =
-      typeof item.target?.source === 'string' ? item.target.source : '';
-    if (!src) continue;
-    const id = src.split('/').pop();
-    if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
+  /** @type {Record<string, number>} */
+  const dailyActivity = {};
+  const allCitizenItems = [
+    ...textspottingItems,
+    ...iconographyItems,
+    ...linkingItems,
+  ];
+  for (const item of allCitizenItems) {
+    // textspotting / iconography have canvas in target.source
+    // linking annotations store the canvas in body[].source where purpose="selecting"
+    let src = typeof item.target?.source === 'string' ? item.target.source : '';
+    if (!src && Array.isArray(item.body)) {
+      const selecting = item.body.find(
+        (b) => b.purpose === 'selecting' && typeof b.source === 'string',
+      );
+      if (selecting) src = selecting.source;
+    }
+    if (src) {
+      const id = src.split('/').pop();
+      if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
+    }
+    // Extract daily activity from annotation created timestamp
+    const created = item.created ?? item.modified ?? '';
+    if (created) {
+      const day = created.slice(0, 10); // YYYY-MM-DD
+      if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+        dailyActivity[day] = (dailyActivity[day] ?? 0) + 1;
+      }
+    }
   }
 
   // Attach citizenCount to each canvas
@@ -245,6 +274,11 @@ async function main() {
   // Total canvases that received annotations
   const canvasesAnnotated = canvasCounts.filter((c) => c.count > 0).length;
 
+  // Convert dailyActivity map to sorted array
+  const dailyActivityArray = Object.entries(dailyActivity)
+    .map(([date, count]) => ({ date, count }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+
   const stats = {
     metadata: { label: meta.label, total, created: meta.created },
     totalAnnotations: total,
@@ -254,8 +288,9 @@ async function main() {
     contributorCount,
     daysActive,
     citizenScience,
+    dailyActivity: dailyActivityArray,
     motivationCounts: motivationCounts.sort((a, b) => b.count - a.count),
-    topCanvases: canvasCounts.sort((a, b) => b.count - a.count).slice(0, 20),
+    topCanvases: canvasCounts.sort((a, b) => b.count - a.count),
     fetchedAt: new Date().toISOString(),
   };
 

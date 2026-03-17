@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 're:Charted Documentatie | Suriname Tijdmachine',
   description:
-    'Nederlandse handleiding voor re:Charted — het annotatieplatform voor historische kaarten.',
+    'Nederlandse handleiding voor re:Charted, het annotatieplatform voor historische kaarten.',
   robots: { index: false, follow: false },
 };
 
@@ -117,7 +117,7 @@ export default function ReChartedDocumentatiePage() {
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-white/80">
             Stapsgewijze handleiding voor het annoteren van historische kaarten
-            met re:Charted — het annotatieplatform voor de Suriname Tijdmachine.
+            met re:Charted, het annotatieplatform voor de Suriname Tijdmachine.
           </p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function ReChartedDocumentatiePage() {
                 ['#taken', 'Taken bij de mapathon'],
                 ['#bewerkmodus', 'Bewerkmodus'],
               ].map(([href, label], i) => (
-                <li key={href}>
+                <li key={`toc-${href}`}>
                   <a
                     href={href}
                     className="flex gap-2 py-0.5 text-ink/60 transition-colors hover:text-teal-strong"
@@ -311,11 +311,11 @@ export default function ReChartedDocumentatiePage() {
             <div className="grid gap-4 sm:grid-cols-3">
               {[
                 ['Linkerpaneel', 'Een overzicht van de beschikbare kaarten.'],
-                ['Middenpaneel', 'Het kaartscherm — nadere uitleg hieronder.'],
-                ['Rechterpaneel', 'Drie tabbladen — Info, Annotations, Map.'],
+                ['Middenpaneel', 'Het kaartscherm (nadere uitleg hieronder).'],
+                ['Rechterpaneel', 'Drie tabbladen: Info, Annotations, Map.'],
               ].map(([title, desc]) => (
                 <div
-                  key={title}
+                  key={`panel-${title}`}
                   className="rounded-sm bg-sand px-5 py-4 ring-1 ring-ink/5"
                 >
                   <p className="text-sm font-semibold text-ink">{title}</p>
@@ -368,7 +368,7 @@ export default function ReChartedDocumentatiePage() {
                   ],
                 ].map(([title, desc]) => (
                   <div
-                    key={title}
+                    key={`map-item-${title}`}
                     className="flex gap-3 rounded-sm bg-white px-4 py-3 ring-1 ring-ink/5"
                   >
                     <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-strong/10 text-[10px] font-bold text-teal-strong">
@@ -477,12 +477,12 @@ export default function ReChartedDocumentatiePage() {
                 {
                   n: '1',
                   title: 'Tekstvelden markeren',
-                  desc: 'Markeer tekstvelden op de kaart waar tekst is geschreven — ofwel verbeteren of bevestigen van AI, ofwel het tekenen van nieuwe tekstvelden.',
+                  desc: 'Markeer tekstvelden op de kaart waar tekst is geschreven, ofwel verbeteren of bevestigen van AI, ofwel het tekenen van nieuwe tekstvelden.',
                 },
                 {
                   n: '2',
                   title: 'Inhoud verbeteren',
-                  desc: 'Verbeter de inhoud van de tekstvelden — verbeteren of bevestigen van AI, of tekst invullen.',
+                  desc: 'Verbeter de inhoud van de tekstvelden: verbeteren of bevestigen van AI, of tekst invullen.',
                 },
                 {
                   n: '3',
@@ -491,7 +491,7 @@ export default function ReChartedDocumentatiePage() {
                 },
               ].map((task) => (
                 <div
-                  key={task.n}
+                  key={`task-${task.n}`}
                   className="flex gap-4 rounded-sm bg-white px-5 py-4 shadow-[0_4px_20px_rgba(0,30,24,0.06)] ring-1 ring-ink/5"
                 >
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-(--deep-teal) text-xs font-bold text-white">

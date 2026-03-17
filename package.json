@@ -2,31 +2,42 @@
   "name": "suriname-time-machine-citizen-science",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "prebuild": "node scripts/fetch-annorepo-stats.mjs",
     "build": "next build",
     "dev": "next dev",
     "export": "next build",
-    "lint": "eslint",
     "generate:favicon": "node scripts/generate-favicon.mjs",
+    "lint": "eslint",
     "start": "next start"
   },
   "dependencies": {
-    "next": "16.0.10",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "next": "16.1.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "recharts": "^3.8.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.4.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "baseline-browser-mapping": "^2.10.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.7",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "eslint": "^9.39.4",
+    "eslint-config-upleveled": "^10.0.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "stylelint": "^17.4.0",
+    "stylelint-config-upleveled": "^2.0.5",
+    "stylelint-scss": "^7.0.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
   },
-  "packageManager": "pnpm@10.19.0"
+  "packageManager": "pnpm@10.19.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  }
 }
