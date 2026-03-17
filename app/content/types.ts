@@ -357,6 +357,11 @@ export type DashboardUiStrings = {
   sections: {
     canvasTitle: string;
     canvasDescription: string;
+    sortByCitizen: string;
+    sortByTotal: string;
+    previousPage: string;
+    nextPage: string;
+    pageIndicator: string;
   };
   activity: {
     title: string;

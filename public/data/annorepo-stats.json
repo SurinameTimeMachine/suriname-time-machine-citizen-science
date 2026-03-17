@@ -1,19 +1,19 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126941,
+    "total": 126973,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126941,
-  "humanAnnotations": 669,
-  "aiAnnotations": 126272,
+  "totalAnnotations": 126973,
+  "humanAnnotations": 705,
+  "aiAnnotations": 126268,
   "canvasesAnnotated": 283,
-  "contributorCount": 13,
-  "daysActive": 24,
+  "contributorCount": 14,
+  "daysActive": 25,
   "citizenScience": {
-    "textsSpotted": 323,
-    "iconsIdentified": 24,
-    "placesLinked": 113
+    "textsSpotted": 350,
+    "iconsIdentified": 25,
+    "placesLinked": 125
   },
   "dailyActivity": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "date": "2026-02-23",
-      "count": 20
+      "count": 18
     },
     {
       "date": "2026-02-24",
@@ -34,7 +34,7 @@
     },
     {
       "date": "2026-03-09",
-      "count": 274
+      "count": 273
     },
     {
       "date": "2026-03-10",
@@ -50,29 +50,33 @@
     },
     {
       "date": "2026-03-13",
-      "count": 51
+      "count": 50
     },
     {
       "date": "2026-03-16",
-      "count": 11
+      "count": 49
+    },
+    {
+      "date": "2026-03-17",
+      "count": 6
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126481
+      "count": 126473
     },
     {
       "motivation": "textspotting",
-      "count": 323
+      "count": 350
     },
     {
       "motivation": "linking",
-      "count": 113
+      "count": 125
     },
     {
       "motivation": "iconography",
-      "count": 24
+      "count": 25
     }
   ],
   "topCanvases": [
@@ -195,7 +199,1585 @@
       "label": "Kaart van de rivier de Suriname",
       "count": 1507,
       "citizenCount": 0
+    },
+    {
+      "canvas": "c117",
+      "label": "Kaart van de rivier de Suriname, door G.P.H. Zimmermann, officier der Infanterie",
+      "count": 1465,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c219",
+      "label": "[Kaart van Suriname - sheet 15",
+      "count": 1445,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c220",
+      "label": "[Kaart van Suriname - sheet 16",
+      "count": 1441,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c213",
+      "label": "[Kaart van Suriname - sheet 9",
+      "count": 1434,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c71",
+      "label": "Generale caart van de provintie Suriname :, rivieren & districten met alle d ondekkingen van van [sic] militaire togten mitsgaders de groote der gemeetene plantagien gecarteert op de naauwkeurigste waarnemingen /, [Alexander de Lavaux].",
+      "count": 1307,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c238",
+      "label": "Kaart van Suriname - Sheet 5",
+      "count": 1259,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c258",
+      "label": "Nieuwe specialkaart van de colonie Suriname :, met de tot culture gebragt zĳnde landen en plantagien : eerbiedigst opgedragen aan alle geinteresseerdens op en ingezetenen der gemelde colonie, door I.H. Moseberg, landm. in voornoemde colonie - Sheet 3",
+      "count": 1230,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c243",
+      "label": "Kaart van Suriname - Sheet 10",
+      "count": 1162,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c16",
+      "label": "1160 Kaart van Suriname met naamlijst der in ontginning zijnde plantages. Met inzet van Paramaribo",
+      "count": 1104,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c285",
+      "label": "Plattegrond van de stad Paramaribo",
+      "count": 1104,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c237",
+      "label": "Kaart van Suriname - Sheet 4",
+      "count": 1055,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c269",
+      "label": "Paskaart van de rivieren Commewini, Suriname, Suramaca, Cupanama en Courantin  COLLBN Port 63 N 54",
+      "count": 1044,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c270",
+      "label": "Pas-kaart vande rivieren Commewini, Suriname, Suramaca, Cupanama en Courantin vertoonende alle desselfs plantagie en wie deselve bezitten alles opt naukeurigste opgestelt",
+      "count": 1025,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c259",
+      "label": "Nieuwe specialkaart van de colonie Suriname :, met de tot culture gebragt zĳnde landen en plantagien : eerbiedigst opgedragen aan alle geinteresseerdens op en ingezetenen der gemelde colonie, door I.H. Moseberg, landm. in voornoemde colonie - Sheet 4",
+      "count": 1007,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c214",
+      "label": "[Kaart van Suriname - sheet 10",
+      "count": 932,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c264",
+      "label": "Overzichtskaart van Suriname [waarop aangegeven de bevaarbaarheid van de rivieren]",
+      "count": 823,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c108",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 9",
+      "count": 813,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c89",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 9",
+      "count": 813,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c98",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 9",
+      "count": 813,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c254",
+      "label": "Nieuwe Kaart van Suriname :, vertonende de stromen en land-streken van Suriname, Comowini, Cottica, en Marawini, gelegen in Zuid America op de kusten van Caribana. 6 gr. benoorden de Linie Equinoct. met naauwkeurige aanwijzinge van alle de steden, sterktens en plantagien mitsgaders de diepte der stromen en banken volgens de nieuwste waarnemingen.",
+      "count": 801,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c242",
+      "label": "Kaart van Suriname - Sheet 9",
+      "count": 778,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c263",
+      "label": "Overzichtskaart van Suriname",
+      "count": 778,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c284",
+      "label": "Plattegrond van de stad Paramaribo",
+      "count": 767,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c265",
+      "label": "Overzichtskaart van Suriname [waarop aangegeven de standplaatsen van een Roomsch Katholiek priester en de standplaatsen van onderwijzers, tevens Roomsch Katholiek godsdienstleraar, Febr. 1938]",
+      "count": 760,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c105",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
+      "count": 759,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c86",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
+      "count": 759,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c95",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
+      "count": 759,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c1",
+      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
+      "count": 753,
+      "citizenCount": 88
+    },
+    {
+      "canvas": "c78",
+      "label": "Kaart van de Beneden-Marowijne",
+      "count": 740,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c101",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 2",
+      "count": 737,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c82",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 2",
+      "count": 737,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c91",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 2",
+      "count": 737,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c244",
+      "label": "Kaart van Suriname - Sheet 11",
+      "count": 721,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c239",
+      "label": "Kaart van Suriname - Sheet 6",
+      "count": 708,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c104",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 5",
+      "count": 707,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c85",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 5",
+      "count": 707,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c94",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 5",
+      "count": 707,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c67",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 6",
+      "count": 689,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c291",
+      "label": "Suriname /, geogr. lit. v. E. de Geest.",
+      "count": 684,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c106",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 7",
+      "count": 672,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c87",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 7",
+      "count": 672,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c96",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 7",
+      "count": 672,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c11",
+      "label": "1696 Naadere kaart en rapport, specterende de nieuw te begeeven landeryen in de Marchals kreek en of dezelve tot nadeel konde strekken voor de Houtgrond Weltevreden C.A. 1785.",
+      "count": 665,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c236",
+      "label": "Kaart van Suriname - Sheet 3",
+      "count": 665,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c123",
+      "label": "Kaart van geheel Guajana of de Wilden-kust, en die der Spaansche Westindiën, op het Noord-end van Zuid Amerika",
+      "count": 659,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c268",
+      "label": "Paramaribo",
+      "count": 656,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c267",
+      "label": "Paramaribo 1916-17 vervaardigd door den Opnemingsdienst van Suriname",
+      "count": 636,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c257",
+      "label": "Nieuwe specialkaart van de colonie Suriname :, met de tot culture gebragt zĳnde landen en plantagien : eerbiedigst opgedragen aan alle geinteresseerdens op en ingezetenen der gemelde colonie, door I.H. Moseberg, landm. in voornoemde colonie - Sheet 2",
+      "count": 608,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c5",
+      "label": "6050 Kaart van Suriname",
+      "count": 603,
+      "citizenCount": 3
+    },
+    {
+      "canvas": "c31",
+      "label": "Algemeene kaart van de Colonie of Provintie van Suriname :, met de rivieren, districten, ontdekkingen door Militaire Togten en de Grootte der gemeeten plantagien /, door last, op kosten en met approbatie der E.E. Heeren Directeurs van de Societeit, naar de naaukeurigste waarnemingen door den Ingenieur A. de Lavaux en andere getekent ; in 't koper gebragt door Hendrik de Leth. - Sheet 1",
+      "count": 583,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c225",
+      "label": "[Kaart van Suriname - sheet 21",
+      "count": 557,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c29",
+      "label": "A chart of the colony of Surinam, on the coast of Guyana - Sheet 5",
+      "count": 551,
+      "citizenCount": 5
+    },
+    {
+      "canvas": "c266",
+      "label": "Overzichtskaart van Suriname, aangevende de ligging der op 1 april 1927 uitgegeven houtconcessies en houtvergunningen, benevens de voorgestelde verdeeling van de kolonie in een drietal gebieden, respectievelijk voor klein- en middenexploitatie, voor gr...",
+      "count": 542,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c46",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 6)",
+      "count": 541,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c55",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 6)",
+      "count": 541,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c240",
+      "label": "Kaart van Suriname - Sheet 7",
+      "count": 540,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c252",
+      "label": "Nederlandsch-Guyana",
+      "count": 540,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c24",
+      "label": "A chart of the coast of Guyana",
+      "count": 534,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c241",
+      "label": "Kaart van Suriname - Sheet 8",
+      "count": 508,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c221",
+      "label": "[Kaart van Suriname - sheet 17",
+      "count": 495,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c32",
+      "label": "Algemeene kaart van de Colonie of Provintie van Suriname :, met de rivieren, districten, ontdekkingen door Militaire Togten en de Grootte der gemeeten plantagien /, door last, op kosten en met approbatie der E.E. Heeren Directeurs van de Societeit, naar de naaukeurigste waarnemingen door den Ingenieur A. de Lavaux en andere getekent ; in 't koper gebragt door Hendrik de Leth. - Sheet 2",
+      "count": 487,
+      "citizenCount": 36
+    },
+    {
+      "canvas": "c222",
+      "label": "[Kaart van Suriname - sheet 18",
+      "count": 486,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c66",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 5",
+      "count": 475,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c228",
+      "label": "[Kaart van Suriname - sheet 24",
+      "count": 470,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c206",
+      "label": "[Kaart van Suriname - sheet 2",
+      "count": 468,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c45",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 5)",
+      "count": 465,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c54",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 5)",
+      "count": 465,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c7",
+      "label": "1793 Le Plantage Voorborg à l'Est de la Riviere Surinam etc.",
+      "count": 461,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c193",
+      "label": "Suriname - sheet 6",
+      "count": 444,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c248",
+      "label": "Land kaart van de land streeken Cottica Comowini en Suriname COLLBN Port 63 N 56",
+      "count": 439,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c227",
+      "label": "[Kaart van Suriname - sheet 23",
+      "count": 424,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c102",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 3",
+      "count": 421,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c83",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 3",
+      "count": 421,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c92",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 3",
+      "count": 421,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c126",
+      "label": "Kaart van het tot Suriname behoorende stroomgebied van Lawa, Litanie en Goninie",
+      "count": 420,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c62",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 1",
+      "count": 415,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c273",
+      "label": "Plan de la ville de Paramaribo et de ses environs COLLBN Port 63 N 96",
+      "count": 414,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c194",
+      "label": "Suriname - sheet 7",
+      "count": 411,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c38",
+      "label": "D A 51,4",
+      "count": 405,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c64",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 3",
+      "count": 370,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c10",
+      "label": "MC766 'Carte de la Colonie de Surinam, Situeé dans l'Amerique Meridionale en Terre ferme [...] Par Mr. A, de Lavaux': kaart van Suriname",
+      "count": 359,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c60",
+      "label": "De kusten van Suraname van Marawini tot de Barbice vertoonende de nette en ware distantie der riviere COLLBN 003-08-028",
+      "count": 353,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c37",
+      "label": "Caerte van de rivieren van Suriname en Commowine COLLBN 006-11-009",
+      "count": 352,
+      "citizenCount": 90
+    },
+    {
+      "canvas": "c293",
+      "label": "Woongebieden der Boslandcreolen aan de Suriname rivier",
+      "count": 349,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c209",
+      "label": "[Kaart van Suriname - sheet 5",
+      "count": 347,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c42",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 2)",
+      "count": 343,
+      "citizenCount": 2
+    },
+    {
+      "canvas": "c51",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 2)",
+      "count": 341,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c69",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 8",
+      "count": 341,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c79",
+      "label": "Kaart van de colonie Suriname, en van de Nederlandsche bezittingen in West-Indië en op de kust van Guinea - Sheet 1",
+      "count": 340,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c63",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 2",
+      "count": 338,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c58",
+      "label": "D A 53,2",
+      "count": 333,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c271",
+      "label": "Paskaert van de rivieren van Suriname en Commewyne",
+      "count": 332,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c290",
+      "label": "Schetskaart aangevende de in verschillende tractaten en uitspraken vastgestelde grenzen der 3 Guyana's en de uitkomsten van de aardrijkskundige onderzoekingen.",
+      "count": 332,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c59",
+      "label": "D A 56,7",
+      "count": 330,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c68",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 7",
+      "count": 326,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c272",
+      "label": "Paskaert van de rivieren van Suriname en Commewyne COLLBN Port 63 N 53",
+      "count": 317,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c2",
+      "label": "2030 Kaart van Suriname. Met inzet van Plantagen der Commewijne",
+      "count": 302,
+      "citizenCount": 17
+    },
+    {
+      "canvas": "c19",
+      "label": "66 Paramaribo en omstreken",
+      "count": 295,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c61",
+      "label": "D A 57,5",
+      "count": 295,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c260",
+      "label": "Overzichts-kaart van het district Nickerie",
+      "count": 292,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c292",
+      "label": "Telephoonnet in Suriname =",
+      "count": 292,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c65",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 4",
+      "count": 289,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c250",
+      "label": "Landkaart van de Volkplantingen Suriname en Berbice - Sheet 2",
+      "count": 288,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c224",
+      "label": "[Kaart van Suriname - sheet 20",
+      "count": 285,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c202",
+      "label": "Suriname - sheet 15",
+      "count": 277,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c249",
+      "label": "Landkaart van de Volkplantingen Suriname en Berbice - Sheet 1",
+      "count": 276,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c129",
+      "label": "Kaart van Paramaribo met aanduiding der verschillende grondlagen, voor zooveel deze bekend zijn",
+      "count": 275,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c287",
+      "label": "Schets kaart van de kolonie Suriname of Nederlandsch Guiana, 1855 COLLBN Port 63 N 73",
+      "count": 275,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c215",
+      "label": "[Kaart van Suriname - sheet 11",
+      "count": 272,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c282",
+      "label": "Platte grond van de stad Paramaribo",
+      "count": 268,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c39",
+      "label": "Carte de la Guiane Française & Hollandaise",
+      "count": 268,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c73",
+      "label": "Generale kaart der Kolonie Suriname - sheet 1",
+      "count": 259,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c253",
+      "label": "Nickerie",
+      "count": 253,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c281",
+      "label": "Platte grond van de stad Paramaribo :, zoo verre als dezelve tot het jaar 1804 door het Gouvernement aldaar is opgestelt /, geteekend door A.H. Hiemcke ; J.G. Visser sculp. Amst.m.",
+      "count": 245,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c246",
+      "label": "Kaart van Surinamen COLLBN Port 63 N 55",
+      "count": 242,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c6",
+      "label": "6009 Plattegrond van Paramaribo",
+      "count": 236,
+      "citizenCount": 112
+    },
+    {
+      "canvas": "c27",
+      "label": "A chart of the colony of Surinam, on the coast of Guyana - Sheet 3",
+      "count": 225,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c207",
+      "label": "[Kaart van Suriname - sheet 3",
+      "count": 221,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c47",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 7)",
+      "count": 221,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c56",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 7)",
+      "count": 221,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c232",
+      "label": "[Kaart van Suriname - sheet 28",
+      "count": 218,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c17",
+      "label": "2272 Kaart van Nw. Rotterdam met een gedeelte der Nickeriekust. Met inzet: mond der rivier Corantijn",
+      "count": 212,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c76",
+      "label": "D A 58,2",
+      "count": 212,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c288",
+      "label": "Schets kaart van de kolonie Suriname of Nederlandsch Guiana, 1855 COLLBN Port 63 N 74",
+      "count": 211,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c21",
+      "label": "[Kaart van het noordelijk deel van Suriname] - sheet 1",
+      "count": 209,
+      "citizenCount": 17
+    },
+    {
+      "canvas": "c245",
+      "label": "Kaart van Suriname, aangevende de ligging der scholen =",
+      "count": 207,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c112",
+      "label": "0001",
+      "count": 205,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c191",
+      "label": "Suriname - sheet 4",
+      "count": 205,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c283",
+      "label": "Plattegrond der Plantage Adrichem",
+      "count": 205,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c276",
+      "label": "Plan van Paramaribo, hoofdstad van Suriname",
+      "count": 204,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c36",
+      "label": "Caart van Suriname COLLBN Port 63 N 72",
+      "count": 201,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c216",
+      "label": "[Kaart van Suriname - sheet 12",
+      "count": 200,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c226",
+      "label": "[Kaart van Suriname - sheet 22",
+      "count": 200,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c74",
+      "label": "Generale kaart der Kolonie Suriname - sheet 2",
+      "count": 195,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c230",
+      "label": "[Kaart van Suriname - sheet 26",
+      "count": 194,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c75",
+      "label": "Generale kaart der kolonie Suriname : hoofdzakelijk voorstellende de tegenwoordige bebouwing dier kolonie COLLBN Port 63 N 77",
+      "count": 192,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c195",
+      "label": "Suriname - sheet 8",
+      "count": 191,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c30",
+      "label": "Afteekening van de Rivier Courantin.  COLLBN Port 63 N 59",
+      "count": 185,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c192",
+      "label": "Suriname - sheet 5",
+      "count": 181,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c275",
+      "label": "Plan van Paramaribo",
+      "count": 180,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c130",
+      "label": "Kaart van Suriname - sheet 1",
+      "count": 175,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c72",
+      "label": "Generale kaart der kolonie Suriname :, hoofdzakelijk voorstellende de tegenwoordige bebouwing dier kolonie /, vervaardigd naar vroegere en eigene opmetingen tot het jaar 1832 door den eersten luitenant der artillerie en geadmitteerden landmeter in voornoemde kolonie Mabé ; Dl. Veelwaard en Zoon sculpt. 1835.",
+      "count": 175,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c157",
+      "label": "Kaart van Suriname - sheet 28",
+      "count": 174,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c204",
+      "label": "Suriname - sheet 17",
+      "count": 172,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c125",
+      "label": "Kaart van het terrein tusschen de rivieren Suriname en Saramaca",
+      "count": 167,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c208",
+      "label": "[Kaart van Suriname - sheet 4",
+      "count": 165,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c12",
+      "label": "614 \"Plaan van het hospitaal à Paramaribo in Surinamen.\"",
+      "count": 162,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c201",
+      "label": "Suriname - sheet 14",
+      "count": 160,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c188",
+      "label": "Suriname - sheet 1",
+      "count": 159,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c152",
+      "label": "Kaart van Suriname - sheet 23",
+      "count": 157,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c48",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 8)",
+      "count": 156,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c41",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 1)",
+      "count": 155,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c50",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 1)",
+      "count": 155,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c57",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 8)",
+      "count": 154,
+      "citizenCount": 3
+    },
+    {
+      "canvas": "c23",
+      "label": "[Kaart van het noordelijk deel van Suriname] - sheet 3",
+      "count": 153,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c43",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 3)",
+      "count": 152,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c52",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 3)",
+      "count": 152,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c235",
+      "label": "Kaart van Suriname - Sheet 2",
+      "count": 150,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c118",
+      "label": "Kaart van de stad Paramaribo",
+      "count": 147,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c189",
+      "label": "Suriname - sheet 2",
+      "count": 137,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c111",
+      "label": "Kaart van de Marowijne van af de samenvloeiing der Lawa en Tapanahoni tot Albina",
+      "count": 136,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c203",
+      "label": "Suriname - sheet 16",
+      "count": 134,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c218",
+      "label": "[Kaart van Suriname - sheet 14",
+      "count": 133,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c199",
+      "label": "Suriname - sheet 12",
+      "count": 127,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c196",
+      "label": "Suriname - sheet 9",
+      "count": 125,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c70",
+      "label": "Figuratieve plattegrond der stad Paramaribo (kolonie Suriname, Zuid-Amerika) /, door A.J. Meyer, ambtenaar bij de belastingen. - Sheet 9",
+      "count": 121,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c127",
+      "label": "Kaart van het westelijke gedeelte der kolonie Suriname, of van het Opper en Neder-distrikt Niekerie",
+      "count": 119,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c200",
+      "label": "Suriname - sheet 13",
+      "count": 118,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c210",
+      "label": "[Kaart van Suriname - sheet 6",
+      "count": 118,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c190",
+      "label": "Suriname - sheet 3",
+      "count": 117,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c256",
+      "label": "Nieuwe specialkaart van de colonie Suriname :, met de tot culture gebragt zĳnde landen en plantagien : eerbiedigst opgedragen aan alle geinteresseerdens op en ingezetenen der gemelde colonie, door I.H. Moseberg, landm. in voornoemde colonie - Sheet 1",
+      "count": 116,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c135",
+      "label": "Kaart van Suriname - sheet 6",
+      "count": 113,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c18",
+      "label": "Kaart van Zuidwest Suriname",
+      "count": 110,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c128",
+      "label": "Kaart van het westelijke gedeelte der kolonie Suriname COLLBN Port 63 N 61",
+      "count": 109,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c197",
+      "label": "Suriname - sheet 10",
+      "count": 109,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c217",
+      "label": "[Kaart van Suriname - sheet 13",
+      "count": 107,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c198",
+      "label": "Suriname - sheet 11",
+      "count": 106,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c212",
+      "label": "[Kaart van Suriname - sheet 8",
+      "count": 104,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c44",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 4)",
+      "count": 102,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c119",
+      "label": "0001",
+      "count": 101,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c53",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 4)",
+      "count": 101,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c159",
+      "label": "Kaart van Suriname - sheet 30",
+      "count": 94,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c286",
+      "label": "Religions 1936 [without bushnegroes and aboriginal Indians]",
+      "count": 91,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c211",
+      "label": "[Kaart van Suriname - sheet 7",
+      "count": 90,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c162",
+      "label": "Kaart van Suriname - sheet 33",
+      "count": 86,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c15",
+      "label": "Dutch possessions in South America and the West Indies COLLBN 001-06-002",
+      "count": 84,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c229",
+      "label": "[Kaart van Suriname - sheet 25",
+      "count": 81,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c80",
+      "label": "Kaart van de colonie Suriname, en van de Nederlandsche bezittingen in West-Indië en op de kust van Guinea - Sheet 2",
+      "count": 80,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c289",
+      "label": "Schets van Paramaribo",
+      "count": 78,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c176",
+      "label": "Kaart van Suriname - sheet 47",
+      "count": 76,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c247",
+      "label": "Guyane n�erlandaise COLLBN Port 63 N 82",
+      "count": 76,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c156",
+      "label": "Kaart van Suriname - sheet 27",
+      "count": 75,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c40",
+      "label": "Colonie Surinaame - COLLBN 053-51 (overview)",
+      "count": 75,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c49",
+      "label": "Colonie Surinaame - COLLBN 053-51 (overview)",
+      "count": 75,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c277",
+      "label": "0001",
+      "count": 73,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c158",
+      "label": "Kaart van Suriname - sheet 29",
+      "count": 71,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c177",
+      "label": "Kaart van Suriname - sheet 48",
+      "count": 71,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c234",
+      "label": "Kaart van Suriname - Sheet 1",
+      "count": 66,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c26",
+      "label": "A chart of the colony of Surinam, on the coast of Guyana - Sheet 2",
+      "count": 64,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c261",
+      "label": "D A 56,3",
+      "count": 64,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c274",
+      "label": "Plan of Paramaribo (Capital) /, drawn by J. Bartholomew Junr. F.R.G.S. ; engraved by J. Bartholomew.",
+      "count": 62,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c148",
+      "label": "Kaart van Suriname - sheet 19",
+      "count": 58,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c140",
+      "label": "Kaart van Suriname - sheet 11",
+      "count": 55,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c180",
+      "label": "Kaart van Suriname - sheet 51",
+      "count": 55,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c28",
+      "label": "A chart of the colony of Surinam, on the coast of Guyana - Sheet 4",
+      "count": 55,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c179",
+      "label": "Kaart van Suriname - sheet 50",
+      "count": 52,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c154",
+      "label": "Kaart van Suriname - sheet 25",
+      "count": 50,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c163",
+      "label": "Kaart van Suriname - sheet 34",
+      "count": 48,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c223",
+      "label": "[Kaart van Suriname - sheet 19",
+      "count": 44,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c141",
+      "label": "Kaart van Suriname - sheet 12",
+      "count": 42,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c77",
+      "label": "[Getekende kaart van het noordoostelijk gedeelte van Suriname, met grenzen van districten en zetels van het districtsbestuur",
+      "count": 41,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c155",
+      "label": "Kaart van Suriname - sheet 26",
+      "count": 40,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c161",
+      "label": "Kaart van Suriname - sheet 32",
+      "count": 40,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c173",
+      "label": "Kaart van Suriname - sheet 44",
+      "count": 39,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c172",
+      "label": "Kaart van Suriname - sheet 43",
+      "count": 37,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c205",
+      "label": "[Kaart van Suriname - sheet 1",
+      "count": 37,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c151",
+      "label": "Kaart van Suriname - sheet 22",
+      "count": 36,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c174",
+      "label": "Kaart van Suriname - sheet 45",
+      "count": 35,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c175",
+      "label": "Kaart van Suriname - sheet 46",
+      "count": 34,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c186",
+      "label": "Kaart van Suriname - sheet 57",
+      "count": 34,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c251",
+      "label": "Moengo (Mongo)",
+      "count": 31,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c168",
+      "label": "Kaart van Suriname - sheet 39",
+      "count": 28,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c136",
+      "label": "Kaart van Suriname - sheet 7",
+      "count": 26,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c138",
+      "label": "Kaart van Suriname - sheet 9",
+      "count": 25,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c164",
+      "label": "Kaart van Suriname - sheet 35",
+      "count": 24,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c185",
+      "label": "Kaart van Suriname - sheet 56",
+      "count": 24,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c150",
+      "label": "Kaart van Suriname - sheet 21",
+      "count": 23,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c171",
+      "label": "Kaart van Suriname - sheet 42",
+      "count": 23,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c146",
+      "label": "Kaart van Suriname - sheet 17",
+      "count": 22,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c160",
+      "label": "Kaart van Suriname - sheet 31",
+      "count": 22,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c182",
+      "label": "Kaart van Suriname - sheet 53",
+      "count": 21,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c131",
+      "label": "Kaart van Suriname - sheet 2",
+      "count": 20,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c165",
+      "label": "Kaart van Suriname - sheet 36",
+      "count": 20,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c132",
+      "label": "Kaart van Suriname - sheet 3",
+      "count": 19,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c100",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 1",
+      "count": 18,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c81",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 1",
+      "count": 18,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c90",
+      "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 1",
+      "count": 18,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c178",
+      "label": "Kaart van Suriname - sheet 49",
+      "count": 17,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c187",
+      "label": "Kaart van Suriname - sheet 58",
+      "count": 17,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c184",
+      "label": "Kaart van Suriname - sheet 55",
+      "count": 16,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c166",
+      "label": "Kaart van Suriname - sheet 37",
+      "count": 15,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c183",
+      "label": "Kaart van Suriname - sheet 54",
+      "count": 15,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c137",
+      "label": "Kaart van Suriname - sheet 8",
+      "count": 14,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c169",
+      "label": "Kaart van Suriname - sheet 40",
+      "count": 13,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c153",
+      "label": "Kaart van Suriname - sheet 24",
+      "count": 12,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c144",
+      "label": "Kaart van Suriname - sheet 15",
+      "count": 11,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c167",
+      "label": "Kaart van Suriname - sheet 38",
+      "count": 11,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c25",
+      "label": "A chart of the colony of Surinam, on the coast of Guyana - Sheet 1",
+      "count": 11,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c142",
+      "label": "Kaart van Suriname - sheet 13",
+      "count": 10,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c181",
+      "label": "Kaart van Suriname - sheet 52",
+      "count": 10,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c20",
+      "label": "Groote kaart van de Surinaamsche Ondernemersraad",
+      "count": 9,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c139",
+      "label": "Kaart van Suriname - sheet 10",
+      "count": 8,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c170",
+      "label": "Kaart van Suriname - sheet 41",
+      "count": 8,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c134",
+      "label": "Kaart van Suriname - sheet 5",
+      "count": 7,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c145",
+      "label": "Kaart van Suriname - sheet 16",
+      "count": 6,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c149",
+      "label": "Kaart van Suriname - sheet 20",
+      "count": 6,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c114",
+      "label": "0003",
+      "count": 5,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c121",
+      "label": "0003",
+      "count": 5,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c143",
+      "label": "Kaart van Suriname - sheet 14",
+      "count": 5,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c147",
+      "label": "Kaart van Suriname - sheet 18",
+      "count": 5,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c133",
+      "label": "Kaart van Suriname - sheet 4",
+      "count": 3,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c279",
+      "label": "0003",
+      "count": 3,
+      "citizenCount": 0
+    },
+    {
+      "canvas": "c22",
+      "label": "[Kaart van het noordelijk deel van Suriname] - sheet 2",
+      "count": 1,
+      "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-16T15:06:32.634Z"
+  "fetchedAt": "2026-03-17T09:50:18.371Z"
 }

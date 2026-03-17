@@ -47,6 +47,11 @@ export const dashboardNl: DashboardContent = {
       canvasTitle: 'Annotaties per kaartblad',
       canvasDescription:
         'AI-gegenereerde annotaties en citizen-sciencebijdragen per historisch kaartblad.',
+      sortByCitizen: 'Citizen science eerst',
+      sortByTotal: 'Meeste annotaties eerst',
+      previousPage: 'Vorige',
+      nextPage: 'Volgende',
+      pageIndicator: 'van',
     },
     activity: {
       title: 'Citizen science activiteit',

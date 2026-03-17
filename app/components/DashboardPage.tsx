@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Bar,
   BarChart,
@@ -88,6 +88,160 @@ function truncateLabel(label: string, max = 42): string {
   return label.slice(0, max - 1) + '…';
 }
 
+function CanvasChartSection({
+  data,
+  ui,
+  sortByCitizen,
+  setSortByCitizen,
+  canvasPage,
+  setCanvasPage,
+  pageSize,
+}: {
+  data: DashboardData;
+  ui: DashboardContent['ui'];
+  sortByCitizen: boolean;
+  setSortByCitizen: (v: boolean) => void;
+  canvasPage: number;
+  setCanvasPage: (v: number) => void;
+  pageSize: number;
+}) {
+  const sorted = useMemo(() => {
+    const arr = [...data.topCanvases];
+    if (sortByCitizen) {
+      arr.sort((a, b) => b.citizenCount - a.citizenCount || b.count - a.count);
+    } else {
+      arr.sort((a, b) => b.count - a.count);
+    }
+    return arr;
+  }, [data.topCanvases, sortByCitizen]);
+
+  const totalPages = Math.max(1, Math.ceil(sorted.length / pageSize));
+  const safePage = Math.min(canvasPage, totalPages - 1);
+  const pageItems = sorted.slice(
+    safePage * pageSize,
+    safePage * pageSize + pageSize,
+  );
+
+  return (
+    <section>
+      <SectionHeading
+        title={ui.sections.canvasTitle}
+        description={ui.sections.canvasDescription}
+      />
+
+      {/* Sort toggle */}
+      <div className="mb-4 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          onClick={() => {
+            setSortByCitizen(true);
+            setCanvasPage(0);
+          }}
+          className={`border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] transition-colors ${
+            sortByCitizen
+              ? 'border-teal-strong bg-teal-strong text-white'
+              : 'border-slate-200 text-ink/70 hover:border-teal-strong/40 hover:text-teal-strong'
+          }`}
+        >
+          {ui.sections.sortByCitizen}
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            setSortByCitizen(false);
+            setCanvasPage(0);
+          }}
+          className={`border px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] transition-colors ${
+            !sortByCitizen
+              ? 'border-teal-strong bg-teal-strong text-white'
+              : 'border-slate-200 text-ink/70 hover:border-teal-strong/40 hover:text-teal-strong'
+          }`}
+        >
+          {ui.sections.sortByTotal}
+        </button>
+      </div>
+
+      {/* Chart */}
+      <div className="overflow-hidden bg-white p-6 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
+        <ResponsiveContainer
+          width="100%"
+          height={Math.max(200, pageItems.length * 36)}
+        >
+          <BarChart
+            data={pageItems.map((c) => ({
+              name: truncateLabel(c.label),
+              fullLabel: c.label,
+              ai: c.count - c.citizenCount,
+              citizen: c.citizenCount,
+            }))}
+            layout="vertical"
+            margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
+          >
+            <XAxis type="number" tick={{ fontSize: 12 }} tickLine={false} />
+            <YAxis
+              type="category"
+              dataKey="name"
+              tick={{ fontSize: 11 }}
+              tickLine={false}
+              width={240}
+            />
+            <Tooltip
+              formatter={tooltipFormatter}
+              labelFormatter={(label, payload) => {
+                void label;
+                const entry = payload[0]?.payload as
+                  | { fullLabel?: string }
+                  | undefined;
+                return entry?.fullLabel ?? '';
+              }}
+            />
+            <Legend />
+            <Bar
+              dataKey="ai"
+              name={ui.labels.aiLabel}
+              stackId="a"
+              fill="var(--teal-strong)"
+              radius={[0, 0, 0, 0]}
+            />
+            <Bar
+              dataKey="citizen"
+              name={ui.labels.citizenLabel}
+              stackId="a"
+              fill="var(--teal-bright)"
+              radius={[0, 4, 4, 0]}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="mt-4 flex items-center justify-between">
+          <button
+            type="button"
+            disabled={safePage === 0}
+            onClick={() => setCanvasPage(safePage - 1)}
+            className="border border-slate-200 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong disabled:opacity-30 disabled:hover:border-slate-200 disabled:hover:text-ink/70"
+          >
+            {ui.sections.previousPage}
+          </button>
+          <span className="text-xs tabular-nums text-ink/50">
+            {safePage + 1} {ui.sections.pageIndicator} {totalPages}
+          </span>
+          <button
+            type="button"
+            disabled={safePage >= totalPages - 1}
+            onClick={() => setCanvasPage(safePage + 1)}
+            className="border border-slate-200 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.25em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong disabled:opacity-30 disabled:hover:border-slate-200 disabled:hover:text-ink/70"
+          >
+            {ui.sections.nextPage}
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export function DashboardPage({ content }: DashboardPageProps) {
   const { ui } = content;
   const { activity } = ui;
@@ -97,6 +251,9 @@ export function DashboardPage({ content }: DashboardPageProps) {
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [sortByCitizen, setSortByCitizen] = useState(true);
+  const [canvasPage, setCanvasPage] = useState(0);
+  const CANVAS_PAGE_SIZE = 10;
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -305,67 +462,15 @@ export function DashboardPage({ content }: DashboardPageProps) {
             )}
 
             {/* Top canvases — stacked AI vs citizen science */}
-            <section>
-              <SectionHeading
-                title={ui.sections.canvasTitle}
-                description={ui.sections.canvasDescription}
-              />
-              <div className="overflow-hidden bg-white p-6 ring-1 ring-ink/10 shadow-[0_15px_35px_rgba(0,30,24,0.08)]">
-                <ResponsiveContainer
-                  width="100%"
-                  height={Math.max(400, data.topCanvases.length * 36)}
-                >
-                  <BarChart
-                    data={data.topCanvases.map((c) => ({
-                      name: truncateLabel(c.label),
-                      fullLabel: c.label,
-                      ai: c.count - c.citizenCount,
-                      citizen: c.citizenCount,
-                    }))}
-                    layout="vertical"
-                    margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
-                  >
-                    <XAxis
-                      type="number"
-                      tick={{ fontSize: 12 }}
-                      tickLine={false}
-                    />
-                    <YAxis
-                      type="category"
-                      dataKey="name"
-                      tick={{ fontSize: 11 }}
-                      tickLine={false}
-                      width={240}
-                    />
-                    <Tooltip
-                      formatter={tooltipFormatter}
-                      labelFormatter={(label, payload) => {
-                        void label;
-                        const entry = payload[0]?.payload as
-                          | { fullLabel?: string }
-                          | undefined;
-                        return entry?.fullLabel ?? '';
-                      }}
-                    />
-                    <Legend />
-                    <Bar
-                      dataKey="ai"
-                      name={ui.labels.aiLabel}
-                      stackId="a"
-                      fill="var(--teal-strong)"
-                      radius={[0, 0, 0, 0]}
-                    />
-                    <Bar
-                      dataKey="citizen"
-                      name={ui.labels.citizenLabel}
-                      stackId="a"
-                      fill="var(--teal-bright)"
-                      radius={[0, 4, 4, 0]}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-            </section>
+            <CanvasChartSection
+              data={data}
+              ui={ui}
+              sortByCitizen={sortByCitizen}
+              setSortByCitizen={setSortByCitizen}
+              canvasPage={canvasPage}
+              setCanvasPage={setCanvasPage}
+              pageSize={CANVAS_PAGE_SIZE}
+            />
           </>
         )}
       </main>

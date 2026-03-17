@@ -224,8 +224,15 @@ async function main() {
     ...linkingItems,
   ];
   for (const item of allCitizenItems) {
-    const src =
-      typeof item.target?.source === 'string' ? item.target.source : '';
+    // textspotting / iconography have canvas in target.source
+    // linking annotations store the canvas in body[].source where purpose="selecting"
+    let src = typeof item.target?.source === 'string' ? item.target.source : '';
+    if (!src && Array.isArray(item.body)) {
+      const selecting = item.body.find(
+        (b) => b.purpose === 'selecting' && typeof b.source === 'string',
+      );
+      if (selecting) src = selecting.source;
+    }
     if (src) {
       const id = src.split('/').pop();
       if (id) citizenByCanvas[id] = (citizenByCanvas[id] ?? 0) + 1;
@@ -283,7 +290,7 @@ async function main() {
     citizenScience,
     dailyActivity: dailyActivityArray,
     motivationCounts: motivationCounts.sort((a, b) => b.count - a.count),
-    topCanvases: canvasCounts.sort((a, b) => b.count - a.count).slice(0, 20),
+    topCanvases: canvasCounts.sort((a, b) => b.count - a.count),
     fetchedAt: new Date().toISOString(),
   };
 

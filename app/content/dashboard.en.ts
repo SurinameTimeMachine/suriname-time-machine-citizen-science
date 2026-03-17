@@ -47,6 +47,11 @@ export const dashboardEn: DashboardContent = {
       canvasTitle: 'Annotations per map sheet',
       canvasDescription:
         'AI-generated annotations and citizen science contributions per historic map sheet.',
+      sortByCitizen: 'Citizen science first',
+      sortByTotal: 'Most annotations first',
+      previousPage: 'Previous',
+      nextPage: 'Next',
+      pageIndicator: 'of',
     },
     activity: {
       title: 'Citizen science activity',
