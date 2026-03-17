@@ -5,7 +5,7 @@ export const citizenScienceEn: CitizenScienceContent = {
   seo: {
     title: 'Participatory Science | Suriname Time Machine',
     description:
-      'Join hands-on workshops and events organized by the Suriname Time Machine — georeferencing historic maps, enriching Wikidata, and annotating archival sources together.',
+      'Join hands-on workshops and events organized by the Suriname Time Machine: georeferencing historic maps, enriching Wikidata, and annotating archival sources together.',
     openGraphLocale: 'en_US',
   },
   ui: {
@@ -36,7 +36,7 @@ export const citizenScienceEn: CitizenScienceContent = {
       event: {
         title: 'Mapathon: Maps as a Source for Surinamese History',
         description:
-          'The university libraries of Amsterdam and Leiden hold rich collections of historic Surinamese maps. These contain valuable data about plantations, rivers, streets, and buildings. During this Mapathon we will digitally capture that information — laying a foundation for linking it with other sources such as images and digitized documents about the people who lived there. There are different activities, suitable for both beginners and experienced tech enthusiasts. We provide coffee, tea, and drinks at the closing get-together. Just bring your laptop.',
+          'The university libraries of Amsterdam and Leiden hold rich collections of historic Surinamese maps. These contain valuable data about plantations, rivers, streets, and buildings. During this Mapathon we will digitally capture that information, laying a foundation for linking it with other sources such as images and digitized documents about the people who lived there. There are different activities, suitable for both beginners and experienced tech enthusiasts. We provide coffee, tea, and drinks at the closing get-together. Just bring your laptop.',
         date: '9 March 2026',
         isoDate: '2026-03-09',
         time: '13:00 – 18:00',
@@ -137,10 +137,10 @@ export const citizenScienceEn: CitizenScienceContent = {
                 'List of Wikidata items about Surinamese plantations that still need information',
             },
             {
-              label: 'WikiShootMe — Suriname',
+              label: 'WikiShootMe: Suriname',
               href: 'https://wikishootme.toolforge.org/#lat=5.607704545696418&lng=-55.802306961268194&zoom=9&layers=wikidata_image,wikidata_no_image&sparql_filter=%3Fq%20wdt%3AP31%20wd%3AQ188913%3B%20wdt%3AP17%20wd%3AQ7646305%3B%20wdt%3AP625%20%3Flocation.&worldwide=1',
               description:
-                'Map of Wikidata items in Suriname — find locations that still need a photo',
+                'Map of Wikidata items in Suriname. Find locations that still need a photo',
             },
             {
               label: 'Suriname Heritage Guide',
@@ -149,7 +149,7 @@ export const citizenScienceEn: CitizenScienceContent = {
                 'Reference guide to cultural heritage sites in Suriname',
             },
             {
-              label: '3D Warehouse — Suriname Heritage',
+              label: '3D Warehouse: Suriname Heritage',
               href: 'https://3dwarehouse.sketchup.com/collection/u75b64c27-da53-437b-a355-49f486deb677/Suriname-heritage',
               description: '3D models of Surinamese heritage buildings',
             },
@@ -159,22 +159,22 @@ export const citizenScienceEn: CitizenScienceContent = {
           id: 'map-annotation',
           title: 'Map Annotation Workshop',
           description:
-            'Annotate historic maps with re:Charted — a tool for adding structured notes and transcriptions directly onto map images. Your annotations help make handwritten map details machine-readable and searchable.',
+            'Annotate historic maps with re:Charted, a tool for adding structured notes and transcriptions directly onto map images. Your annotations help make handwritten map details machine-readable and searchable.',
           links: [
             {
-              label: 're:Charted — Suriname Project',
+              label: 're:Charted: Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',
               description: 'Open the re:Charted annotation viewer for Suriname',
             },
             {
               label: 're:Charted Documentation (EN)',
               href: 'https://necessaryreunions.org/documentation',
-              description: 'How to use re:Charted — English guide',
+              description: 'How to use re:Charted (English guide)',
             },
             {
               label: 're:Charted Documentatie (NL)',
               href: '/documentatie/recharted',
-              description: 'Handleiding voor re:Charted — Nederlandse versie',
+              description: 'Handleiding voor re:Charted (Nederlandse versie)',
             },
             {
               label: 'IIIF Manifest (for other viewers)',

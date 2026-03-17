@@ -200,7 +200,7 @@ export function ActivityHeatmap({
                 setTooltip({
                   x: e.clientX,
                   y: e.clientY,
-                  text: `${countText} — ${formatDate(cell.date, locale)}`,
+                  text: `${countText} · ${formatDate(cell.date, locale)}`,
                 });
               }}
               onMouseLeave={() => setTooltip(null)}

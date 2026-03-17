@@ -90,6 +90,19 @@ export const outputNl: OutputContent = {
       venue: 'archipelagos: a journal of Caribbean digital praxis, 2025(8)',
       doi: '10.7916/ARCHIPELAGOS-WKX1-PD50',
     },
+    {
+      id: 'tseg-wijkregisters',
+      title:
+        'De Wijkregisters van Paramaribo, 1828–1847: een nieuwe onderzoeksdatabase over het stadsleven tijdens de slavernij',
+      description:
+        'Data-artikel over hoe de negentiende-eeuwse bevolkingsregistratie van Paramaribo is gedigitaliseerd en omgezet in een onderzoeksdatabase, met beschrijvende statistieken voor 1846.',
+      href: 'https://tseg.nl/article/view/24540/26365',
+      category: 'articles',
+      date: 'Maart 2026',
+      isoDate: '2026-03-01',
+      authors: 'van Oort, T. et al.',
+      venue: 'Tijdschrift voor Sociale en Economische Geschiedenis (TSEG)',
+    },
 
     // ── Presentaties ────────────────────────────────────────────────────
     {
@@ -171,7 +184,7 @@ export const outputNl: OutputContent = {
     // ── Gepubliceerde Code ──────────────────────────────────────────────
     {
       id: 'github-citizen-science',
-      title: 'Suriname Tijdmachine — Citizen Science Website',
+      title: 'Suriname Tijdmachine: Citizen Science Website',
       description:
         'Open-source Next.js-website voor het Suriname Tijdmachine-project: participatieve wetenschapsevenementen, interactieve projectgalerij, annotatie-dashboard en tweetalige content.',
       href: 'https://github.com/SurinameTimeMachine/suriname-time-machine-citizen-science',
@@ -181,13 +194,28 @@ export const outputNl: OutputContent = {
     },
     {
       id: 'github-iiif-suriname',
-      title: 'IIIF Suriname — Kaartcollectie Pipeline',
+      title: 'IIIF Suriname: Kaartcollectie Pipeline',
       description:
         'Python-scripts voor het genereren en onderhouden van het IIIF-manifest van gedigitaliseerde historische Surinaamse kaarten uit meerdere archieven.',
       href: 'https://github.com/SurinameTimeMachine/iiif-suriname',
       category: 'code',
       date: '2025',
       isoDate: '2025-01-01',
+    },
+
+    // ── Media & Commentaar ──────────────────────────────────────────────
+    {
+      id: 'curacao-nu-wijkregisters',
+      title:
+        'Wijkregisters Paramaribo uit slaventijd omgezet in onderzoeksdatabase',
+      description:
+        'Nieuwsbericht op curacao.nu over hoe onderzoekers de wijkregisters van Paramaribo (1828–1847) hebben omgezet in een gestructureerde onderzoeksdatabase, waarmee een belangrijke historische bron over de bevolking van de Surinaamse hoofdstad toegankelijker wordt.',
+      href: 'https://www.curacao.nu/nieuws/suriname/87125/wijkregisters-paramaribo-uit-slaventijd-omgezet-in-onderzoeksdatabase',
+      category: 'media',
+      date: '15 maart 2026',
+      isoDate: '2026-03-15',
+      authors: 'Dick Drayer',
+      venue: 'curacao.nu',
     },
   ],
 };

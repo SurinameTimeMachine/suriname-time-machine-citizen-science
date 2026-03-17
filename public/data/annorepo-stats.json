@@ -1,19 +1,19 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126973,
+    "total": 126985,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126973,
-  "humanAnnotations": 705,
-  "aiAnnotations": 126268,
+  "totalAnnotations": 126985,
+  "humanAnnotations": 712,
+  "aiAnnotations": 126273,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
   "daysActive": 25,
   "citizenScience": {
-    "textsSpotted": 350,
-    "iconsIdentified": 25,
-    "placesLinked": 125
+    "textsSpotted": 356,
+    "iconsIdentified": 27,
+    "placesLinked": 131
   },
   "dailyActivity": [
     {
@@ -58,25 +58,25 @@
     },
     {
       "date": "2026-03-17",
-      "count": 6
+      "count": 20
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126473
+      "count": 126471
     },
     {
       "motivation": "textspotting",
-      "count": 350
+      "count": 356
     },
     {
       "motivation": "linking",
-      "count": 125
+      "count": 131
     },
     {
       "motivation": "iconography",
-      "count": 25
+      "count": 27
     }
   ],
   "topCanvases": [
@@ -345,6 +345,12 @@
       "citizenCount": 0
     },
     {
+      "canvas": "c1",
+      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
+      "count": 759,
+      "citizenCount": 96
+    },
+    {
       "canvas": "c105",
       "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
       "count": 759,
@@ -361,12 +367,6 @@
       "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
       "count": 759,
       "citizenCount": 0
-    },
-    {
-      "canvas": "c1",
-      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 753,
-      "citizenCount": 88
     },
     {
       "canvas": "c78",
@@ -1779,5 +1779,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-17T09:50:18.371Z"
+  "fetchedAt": "2026-03-17T10:17:11.204Z"
 }

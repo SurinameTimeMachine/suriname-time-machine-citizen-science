@@ -461,7 +461,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
               </section>
             )}
 
-            {/* Top canvases — stacked AI vs citizen science */}
+            {/* Top canvases: stacked AI vs citizen science */}
             <CanvasChartSection
               data={data}
               ui={ui}

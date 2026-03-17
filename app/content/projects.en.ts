@@ -5,7 +5,7 @@ export const projectsEn: ProjectsContent = {
   seo: {
     title: 'Projects | Suriname Time Machine',
     description:
-      'Explore digital tools and interactive applications created as part of the Suriname Time Machine project — historic maps, data visualizations, and research tools.',
+      'Explore digital tools and interactive applications created as part of the Suriname Time Machine project, including historic maps, data visualizations, and research tools.',
     openGraphLocale: 'en_US',
   },
   ui: {

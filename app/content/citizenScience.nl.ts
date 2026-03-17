@@ -5,7 +5,7 @@ export const citizenScienceNl: CitizenScienceContent = {
   seo: {
     title: 'Participatie | Suriname Tijdmachine',
     description:
-      'Doe mee aan workshops en evenementen van de Suriname Tijdmachine — georefereer historische kaarten, verrijk Wikidata en annoteer archiefbronnen samen.',
+      'Doe mee aan workshops en evenementen van de Suriname Tijdmachine: georefereer historische kaarten, verrijk Wikidata en annoteer archiefbronnen samen.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -155,10 +155,10 @@ export const citizenScienceNl: CitizenScienceContent = {
                 'Lijst van Wikidata-items over Surinaamse plantages die nog informatie nodig hebben',
             },
             {
-              label: 'WikiShootMe — Suriname',
+              label: 'WikiShootMe: Suriname',
               href: 'https://wikishootme.toolforge.org/#lat=5.607704545696418&lng=-55.802306961268194&zoom=9&layers=wikidata_image,wikidata_no_image&sparql_filter=%3Fq%20wdt%3AP31%20wd%3AQ188913%3B%20wdt%3AP17%20wd%3AQ7646305%3B%20wdt%3AP625%20%3Flocation.&worldwide=1',
               description:
-                'Kaart met Wikidata-items in Suriname — vind locaties die nog een foto nodig hebben',
+                'Kaart met Wikidata-items in Suriname. Vind locaties die nog een foto nodig hebben',
             },
             {
               label: 'Suriname Heritage Guide',
@@ -167,7 +167,7 @@ export const citizenScienceNl: CitizenScienceContent = {
                 'Naslagwerk over culturele erfgoedlocaties in Suriname',
             },
             {
-              label: '3D Warehouse — Suriname Heritage',
+              label: '3D Warehouse: Suriname Heritage',
               href: 'https://3dwarehouse.sketchup.com/collection/u75b64c27-da53-437b-a355-49f486deb677/Suriname-heritage',
               description: '3D-modellen van Surinaams erfgoed',
             },
@@ -177,22 +177,22 @@ export const citizenScienceNl: CitizenScienceContent = {
           id: 'map-annotation',
           title: 'Kaartannotatie',
           description:
-            'Annoteer historische kaarten met re:Charted — een tool waarmee je gestructureerde notities en transcripties direct op kaartafbeeldingen kunt plaatsen. Jouw annotaties helpen handgeschreven kaartdetails machineleesbaar en doorzoekbaar te maken.',
+            'Annoteer historische kaarten met re:Charted, een tool waarmee je gestructureerde notities en transcripties direct op kaartafbeeldingen kunt plaatsen. Jouw annotaties helpen handgeschreven kaartdetails machineleesbaar en doorzoekbaar te maken.',
           links: [
             {
-              label: 're:Charted — Suriname Project',
+              label: 're:Charted: Suriname Project',
               href: 'https://necessaryreunions.org/viewer?project=suriname&canvas=c1',
               description: 'Open de re:Charted annotatieviewer voor Suriname',
             },
             {
               label: 're:Charted Documentation (EN)',
               href: 'https://necessaryreunions.org/documentation',
-              description: 'Handleiding voor re:Charted — Engelse versie',
+              description: 'Handleiding voor re:Charted (Engelse versie)',
             },
             {
               label: 're:Charted Documentatie (NL)',
               href: '/documentatie/recharted',
-              description: 'Handleiding voor re:Charted — Nederlandse versie',
+              description: 'Handleiding voor re:Charted (Nederlandse versie)',
             },
             {
               label: 'IIIF Manifest (voor andere viewers)',

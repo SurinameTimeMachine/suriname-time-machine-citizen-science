@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 're:Charted Documentatie | Suriname Tijdmachine',
   description:
-    'Nederlandse handleiding voor re:Charted — het annotatieplatform voor historische kaarten.',
+    'Nederlandse handleiding voor re:Charted, het annotatieplatform voor historische kaarten.',
   robots: { index: false, follow: false },
 };
 
@@ -117,7 +117,7 @@ export default function ReChartedDocumentatiePage() {
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-white/80">
             Stapsgewijze handleiding voor het annoteren van historische kaarten
-            met re:Charted — het annotatieplatform voor de Suriname Tijdmachine.
+            met re:Charted, het annotatieplatform voor de Suriname Tijdmachine.
           </p>
         </div>
       </section>
@@ -311,8 +311,8 @@ export default function ReChartedDocumentatiePage() {
             <div className="grid gap-4 sm:grid-cols-3">
               {[
                 ['Linkerpaneel', 'Een overzicht van de beschikbare kaarten.'],
-                ['Middenpaneel', 'Het kaartscherm — nadere uitleg hieronder.'],
-                ['Rechterpaneel', 'Drie tabbladen — Info, Annotations, Map.'],
+                ['Middenpaneel', 'Het kaartscherm (nadere uitleg hieronder).'],
+                ['Rechterpaneel', 'Drie tabbladen: Info, Annotations, Map.'],
               ].map(([title, desc]) => (
                 <div
                   key={`panel-${title}`}
@@ -477,12 +477,12 @@ export default function ReChartedDocumentatiePage() {
                 {
                   n: '1',
                   title: 'Tekstvelden markeren',
-                  desc: 'Markeer tekstvelden op de kaart waar tekst is geschreven — ofwel verbeteren of bevestigen van AI, ofwel het tekenen van nieuwe tekstvelden.',
+                  desc: 'Markeer tekstvelden op de kaart waar tekst is geschreven, ofwel verbeteren of bevestigen van AI, ofwel het tekenen van nieuwe tekstvelden.',
                 },
                 {
                   n: '2',
                   title: 'Inhoud verbeteren',
-                  desc: 'Verbeter de inhoud van de tekstvelden — verbeteren of bevestigen van AI, of tekst invullen.',
+                  desc: 'Verbeter de inhoud van de tekstvelden: verbeteren of bevestigen van AI, of tekst invullen.',
                 },
                 {
                   n: '3',

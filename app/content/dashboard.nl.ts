@@ -5,7 +5,7 @@ export const dashboardNl: DashboardContent = {
   seo: {
     title: 'Voortgang | Suriname Tijdmachine',
     description:
-      'Live statistieken over annotaties van burgerwetenschappers en AI voor de Suriname Tijdmachine — volg de voortgang, bekijk bijdragers en verken de motivatieverdeling.',
+      'Live statistieken over annotaties van burgerwetenschappers en AI voor de Suriname Tijdmachine. Volg de voortgang, bekijk bijdragers en verken de motivatieverdeling.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -19,7 +19,7 @@ export const dashboardNl: DashboardContent = {
     hero: {
       tagline: 'Suriname Tijdmachine',
       title: 'Annotatiedashboard',
-      lead: 'Realtime overzicht van alle annotaties voor de Suriname Tijdmachine — door mensen én AI. Bekijk wie bijdraagt en hoe de collectie groeit.',
+      lead: 'Realtime overzicht van alle annotaties voor de Suriname Tijdmachine, door mensen én AI. Bekijk wie bijdraagt en hoe de collectie groeit.',
     },
     stats: {
       totalAnnotations: 'Totaal annotaties',
@@ -31,7 +31,7 @@ export const dashboardNl: DashboardContent = {
     citizenScience: {
       title: 'Citizen Science Spotlight',
       description:
-        'Wat onze vrijwilligers ontdekken op de historische kaarten — elke tekst, icoon en locatie telt.',
+        'Wat onze vrijwilligers ontdekken op de historische kaarten. Elke tekst, icoon en locatie telt.',
       textsSpotted: 'Teksten herkend',
       iconsIdentified: 'Iconen geïdentificeerd',
       placesLinked: 'Locaties gekoppeld',
@@ -56,7 +56,7 @@ export const dashboardNl: DashboardContent = {
     activity: {
       title: 'Citizen science activiteit',
       description:
-        'Dagelijkse bijdragen van onze vrijwilligers — elk vakje staat voor een dag citizen science werk.',
+        'Dagelijkse bijdragen van onze vrijwilligers. Elk vakje staat voor een dag citizen science werk.',
       noActivity: 'Geen activiteit',
       annotation: 'bijdrage',
       annotations: 'bijdragen',
