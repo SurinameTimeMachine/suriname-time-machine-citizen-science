@@ -5,15 +5,15 @@
     "created": "2026-02-20T18:02:24.046Z"
   },
   "totalAnnotations": 126985,
-  "humanAnnotations": 712,
-  "aiAnnotations": 126273,
+  "humanAnnotations": 714,
+  "aiAnnotations": 126271,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
   "daysActive": 25,
   "citizenScience": {
-    "textsSpotted": 356,
+    "textsSpotted": 357,
     "iconsIdentified": 27,
-    "placesLinked": 131
+    "placesLinked": 132
   },
   "dailyActivity": [
     {
@@ -58,21 +58,21 @@
     },
     {
       "date": "2026-03-17",
-      "count": 20
+      "count": 22
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126471
+      "count": 126469
     },
     {
       "motivation": "textspotting",
-      "count": 356
+      "count": 357
     },
     {
       "motivation": "linking",
-      "count": 131
+      "count": 132
     },
     {
       "motivation": "iconography",
@@ -345,12 +345,6 @@
       "citizenCount": 0
     },
     {
-      "canvas": "c1",
-      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 759,
-      "citizenCount": 96
-    },
-    {
       "canvas": "c105",
       "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
       "count": 759,
@@ -367,6 +361,12 @@
       "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
       "count": 759,
       "citizenCount": 0
+    },
+    {
+      "canvas": "c1",
+      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
+      "count": 758,
+      "citizenCount": 97
     },
     {
       "canvas": "c78",
@@ -1779,5 +1779,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-17T10:17:11.204Z"
+  "fetchedAt": "2026-03-17T10:27:46.075Z"
 }
