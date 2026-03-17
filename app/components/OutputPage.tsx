@@ -19,12 +19,12 @@ const CATEGORY_ORDER: OutputCategory[] = [
 ];
 
 const categoryAccent: Record<OutputCategory, string> = {
-  events: 'border-l-teal-strong',
-  articles: 'border-l-amber-500',
-  presentations: 'border-l-blue-500',
-  data: 'border-l-emerald-500',
-  code: 'border-l-purple-500',
-  media: 'border-l-rose-500',
+  events: 'border-l-[var(--deep-teal)]',
+  articles: 'border-l-[var(--teal-strong)]',
+  presentations: 'border-l-[var(--teal-bright)]',
+  data: 'border-l-[var(--teal-soft)]',
+  code: 'border-l-[var(--deep-teal)]',
+  media: 'border-l-[var(--teal-strong)]',
 };
 
 function groupByCategory(
