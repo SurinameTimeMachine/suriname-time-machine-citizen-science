@@ -1,19 +1,19 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 126985,
+    "total": 127058,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 126985,
-  "humanAnnotations": 714,
-  "aiAnnotations": 126271,
+  "totalAnnotations": 127058,
+  "humanAnnotations": 845,
+  "aiAnnotations": 126213,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
-  "daysActive": 25,
+  "daysActive": 26,
   "citizenScience": {
-    "textsSpotted": 357,
-    "iconsIdentified": 27,
-    "placesLinked": 132
+    "textsSpotted": 411,
+    "iconsIdentified": 30,
+    "placesLinked": 169
   },
   "dailyActivity": [
     {
@@ -50,7 +50,7 @@
     },
     {
       "date": "2026-03-13",
-      "count": 50
+      "count": 49
     },
     {
       "date": "2026-03-16",
@@ -58,25 +58,33 @@
     },
     {
       "date": "2026-03-17",
-      "count": 22
+      "count": 102
+    },
+    {
+      "date": "2026-03-18",
+      "count": 15
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126469
+      "count": 126445
     },
     {
       "motivation": "textspotting",
-      "count": 357
+      "count": 411
     },
     {
       "motivation": "linking",
-      "count": 132
+      "count": 169
     },
     {
       "motivation": "iconography",
-      "count": 27
+      "count": 30
+    },
+    {
+      "motivation": "tagging",
+      "count": 3
     }
   ],
   "topCanvases": [
@@ -125,7 +133,7 @@
     {
       "canvas": "c8",
       "label": "6108 Surinaamse Waterleiding Mij. Met kavelnummers getekend op de plattegrond van Paramaribo",
-      "count": 2299,
+      "count": 2297,
       "citizenCount": 2
     },
     {
@@ -197,8 +205,8 @@
     {
       "canvas": "c116",
       "label": "Kaart van de rivier de Suriname",
-      "count": 1507,
-      "citizenCount": 0
+      "count": 1508,
+      "citizenCount": 10
     },
     {
       "canvas": "c117",
@@ -321,6 +329,12 @@
       "citizenCount": 0
     },
     {
+      "canvas": "c1",
+      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
+      "count": 783,
+      "citizenCount": 125
+    },
+    {
       "canvas": "c242",
       "label": "Kaart van Suriname - Sheet 9",
       "count": 778,
@@ -361,12 +375,6 @@
       "label": "Kaart van de kolonie Suriname, een gedeelte van Guijana, Nederlandsche bezitting op het vasteland van Zuid-Amerika - Sheet 6",
       "count": 759,
       "citizenCount": 0
-    },
-    {
-      "canvas": "c1",
-      "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 758,
-      "citizenCount": 97
     },
     {
       "canvas": "c78",
@@ -453,15 +461,15 @@
       "citizenCount": 0
     },
     {
-      "canvas": "c11",
-      "label": "1696 Naadere kaart en rapport, specterende de nieuw te begeeven landeryen in de Marchals kreek en of dezelve tot nadeel konde strekken voor de Houtgrond Weltevreden C.A. 1785.",
+      "canvas": "c236",
+      "label": "Kaart van Suriname - Sheet 3",
       "count": 665,
       "citizenCount": 0
     },
     {
-      "canvas": "c236",
-      "label": "Kaart van Suriname - Sheet 3",
-      "count": 665,
+      "canvas": "c11",
+      "label": "1696 Naadere kaart en rapport, specterende de nieuw te begeeven landeryen in de Marchals kreek en of dezelve tot nadeel konde strekken voor de Houtgrond Weltevreden C.A. 1785.",
+      "count": 664,
       "citizenCount": 0
     },
     {
@@ -687,6 +695,12 @@
       "citizenCount": 0
     },
     {
+      "canvas": "c42",
+      "label": "Colonie Surinaame - COLLBN 053-51 (detail 2)",
+      "count": 353,
+      "citizenCount": 23
+    },
+    {
       "canvas": "c60",
       "label": "De kusten van Suraname van Marawini tot de Barbice vertoonende de nette en ware distantie der riviere COLLBN 003-08-028",
       "count": 353,
@@ -709,12 +723,6 @@
       "label": "[Kaart van Suriname - sheet 5",
       "count": 347,
       "citizenCount": 0
-    },
-    {
-      "canvas": "c42",
-      "label": "Colonie Surinaame - COLLBN 053-51 (detail 2)",
-      "count": 343,
-      "citizenCount": 2
     },
     {
       "canvas": "c51",
@@ -1779,5 +1787,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-17T10:27:46.075Z"
+  "fetchedAt": "2026-03-18T15:59:17.534Z"
 }
