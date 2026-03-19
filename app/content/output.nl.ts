@@ -205,6 +205,17 @@ export const outputNl: OutputContent = {
 
     // ── Media & Commentaar ──────────────────────────────────────────────
     {
+      id: 'ahh-kaarten-verhalen',
+      title: 'Een web van kaarten en verhalen brengt het verleden tot leven',
+      description:
+        'Artikel op de Amsterdam Humanities Hub over de mapathon van de Suriname Tijdmachine in het Bushuis van de UvA, waar een divers gezelschap historische kaarten van Suriname georefereerde en annoteerde met behulp van open tools als Allmaps.',
+      href: 'https://amsterdamhumanitieshub.nl/shared/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
+      category: 'media',
+      date: '18 maart 2026',
+      isoDate: '2026-03-18',
+      venue: 'Amsterdam Humanities Hub',
+    },
+    {
       id: 'curacao-nu-wijkregisters',
       title:
         'Wijkregisters Paramaribo uit slaventijd omgezet in onderzoeksdatabase',
