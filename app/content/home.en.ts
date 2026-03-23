@@ -53,7 +53,7 @@ export const homeContent: HomeContent = {
     },
     section01Hero: {
       tagline: 'SCiTMI • Suriname Citizen Time Machine Incubator',
-      title: 'The Suriname Time Machine brings together scattered sources.',
+      title: 'The Suriname Time Machine brings together scattered sources',
       lead: 'Users can access everything in one place, without constant cross-checking whether data refer to the same people, streets or plantations.',
       kicker:
         'Combining the Suriname Time Machine with the KNAW Citizen Science Incubator.',
