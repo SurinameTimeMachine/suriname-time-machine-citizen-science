@@ -1,3 +1,15 @@
+[[redirects]]
+  from = "https://surinametimemachine.org/*"
+  to = "https://surinametijdmachine.org/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.surinametimemachine.org/*"
+  to = "https://surinametijdmachine.org/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*" # you can configure the correct paths here
   [headers.values]
