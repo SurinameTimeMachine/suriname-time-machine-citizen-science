@@ -205,6 +205,17 @@ export const outputNl: OutputContent = {
 
     // ── Media & Commentaar ──────────────────────────────────────────────
     {
+      id: 'huc-mapathon-succes',
+      title: 'Eerste workshop/mapathon Suriname groot succes',
+      description:
+        'Intern nieuwsbericht op het KNAW Humanities Cluster-intranet over het succes van de eerste mapathon-workshop van de Suriname Tijdmachine.',
+      href: 'https://communicatie.huc.knaw.nl/nl/intranet/nieuws-evenementen/nieuws-detail/2026/03/19/eerste-workshop-mapathon-suriname-groot-succes',
+      category: 'media',
+      date: '19 maart 2026',
+      isoDate: '2026-03-19',
+      venue: 'KNAW Humanities Cluster',
+    },
+    {
       id: 'ahh-kaarten-verhalen',
       title: 'Een web van kaarten en verhalen brengt het verleden tot leven',
       description:
