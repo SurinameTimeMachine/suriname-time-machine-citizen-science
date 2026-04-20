@@ -1,19 +1,19 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 127058,
+    "total": 127066,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 127058,
-  "humanAnnotations": 845,
-  "aiAnnotations": 126213,
+  "totalAnnotations": 127066,
+  "humanAnnotations": 850,
+  "aiAnnotations": 126216,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
-  "daysActive": 26,
+  "daysActive": 59,
   "citizenScience": {
-    "textsSpotted": 411,
-    "iconsIdentified": 30,
-    "placesLinked": 169
+    "textsSpotted": 414,
+    "iconsIdentified": 38,
+    "placesLinked": 171
   },
   "dailyActivity": [
     {
@@ -62,25 +62,25 @@
     },
     {
       "date": "2026-03-18",
-      "count": 15
+      "count": 28
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126445
+      "count": 126440
     },
     {
       "motivation": "textspotting",
-      "count": 411
+      "count": 414
     },
     {
       "motivation": "linking",
-      "count": 169
+      "count": 171
     },
     {
       "motivation": "iconography",
-      "count": 30
+      "count": 38
     },
     {
       "motivation": "tagging",
@@ -331,8 +331,8 @@
     {
       "canvas": "c1",
       "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 783,
-      "citizenCount": 125
+      "count": 789,
+      "citizenCount": 138
     },
     {
       "canvas": "c242",
@@ -1787,5 +1787,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-03-18T15:59:17.534Z"
+  "fetchedAt": "2026-04-20T08:42:03.236Z"
 }
