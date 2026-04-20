@@ -239,5 +239,17 @@ export const outputEn: OutputContent = {
       authors: 'Dick Drayer',
       venue: 'curacao.nu',
     },
+    {
+      id: 'isgeschiedenis-tijdmachine',
+      title:
+        'The Suriname Time Machine Makes Colonial History Accessible Down to the Smallest Details',
+      description:
+        'Article on isgeschiedenis.nl about how the Suriname Time Machine project at the Huygens Institute connects historical sources to make the colonial history of Suriname tangible and traceable for a broad audience.',
+      href: 'https://isgeschiedenis.nl/nieuws/de-suriname-tijdmachine-maakt-koloniale-geschiedenis-tot-in-de-kleinste-details-toegankelijk',
+      category: 'media',
+      date: 'April 2026',
+      isoDate: '2026-04-01',
+      venue: 'isgeschiedenis.nl',
+    },
   ],
 };

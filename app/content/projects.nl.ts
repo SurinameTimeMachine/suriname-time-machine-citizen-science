@@ -301,5 +301,137 @@ export const projectsNl: ProjectsContent = {
       purpose: 'inspiration',
       keywords: ['kunst', 'onderzoek', 'gemeenschappen', 'dekolonisatie'],
     },
+    {
+      id: 'suriname-database-model',
+      name: 'Suriname Tijdmachine Databasemodel',
+      description:
+        'Interactieve visualisatie van het Linked Open Data-model van de Suriname Tijdmachine, met 1.596 historische plantages gemodelleerd met CIDOC-CRM.',
+      href: 'https://suriname-database-model.vercel.app/',
+      purpose: 'tool',
+      keywords: ['linked data', 'CIDOC-CRM', 'datamodel', 'plantages'],
+      institution: 'Huygens Instituut',
+    },
+    {
+      id: 'amsterdam-time-machine',
+      name: 'Amsterdam Time Machine',
+      description:
+        'Publieke onderzoeksbron over de geschiedenis van Amsterdam, met locatiegebonden toegang tot historische informatie als Linked Open Data.',
+      href: 'https://www.amsterdamtimemachine.nl/',
+      purpose: 'inspiration',
+      keywords: ['tijdmachine', 'amsterdam', 'linked data', 'geschiedenis'],
+      institution: 'Universiteit van Amsterdam',
+    },
+    {
+      id: 'allmaps',
+      name: 'Allmaps',
+      description:
+        'Open-source platform voor het cureren, georefereren en verkennen van IIIF-kaarten. Gebruikt in de Suriname Tijdmachine voor het georefereren van historische kaarten.',
+      href: 'https://allmaps.org/',
+      purpose: 'tool',
+      keywords: ['IIIF', 'georeferencing', 'kaarten', 'open source'],
+    },
+    {
+      id: 'allmaps-explore',
+      name: 'Allmaps Explore – Suriname',
+      description:
+        'Experimentele interface voor het verkennen van alle kaarten die met Allmaps zijn gerefereerd, gericht op de regio Suriname.',
+      href: 'https://dev.explore.allmaps.org/#7.06/5.352/-54.974',
+      purpose: 'tool',
+      keywords: ['allmaps', 'verkennen', 'georeferencing', 'kaarten'],
+    },
+    {
+      id: 'github-suriname-time-machine',
+      name: 'Suriname Tijdmachine GitHub',
+      description:
+        'GitHub-organisatie met open-source repositories voor het Suriname Tijdmachine-project.',
+      href: 'https://github.com/surinameTimeMachine/',
+      purpose: 'collaboration',
+      keywords: ['open source', 'github', 'code', 'repositories'],
+      institution: 'Huygens Instituut',
+    },
+    {
+      id: 'utrecht-time-machine',
+      name: 'Utrecht Time Machine',
+      description:
+        'Locatiegebonden erfgoedplatform met wandel- en fietsroutes door de geschiedenis van Utrecht.',
+      href: 'https://utrechttimemachine.nl/routes',
+      purpose: 'inspiration',
+      keywords: ['tijdmachine', 'utrecht', 'routes', 'erfgoed'],
+    },
+    {
+      id: 'htr-hub',
+      name: 'HTR Hub',
+      description:
+        "Zoekmachine voor miljoenen pagina's handgeschreven historische documenten uit Nederlandstalige archieven, waaronder de Raad van Politie Suriname.",
+      href: 'https://htrhub.dekok.xyz/',
+      purpose: 'tool',
+      keywords: ['HTR', 'handschrift', 'archieven', 'zoeken'],
+    },
+    {
+      id: 'time-machine-europe-ltms',
+      name: 'Time Machine Organisation – Local Time Machines',
+      description:
+        'Overzicht van 86+ Local Time Machines in heel Europa, onderdeel van het Time Machine Organisation-netwerk.',
+      href: 'https://www.timemachine.eu/ltms/',
+      purpose: 'reference',
+      keywords: ['tijdmachine', 'europa', 'netwerk', 'lokaal'],
+      institution: 'Time Machine Organisation',
+    },
+    {
+      id: 'adamlink',
+      name: 'Adamlink',
+      description:
+        'Referentiedata-hub voor Amsterdamse collecties, met gekoppelde identifiers voor straten, personen en gebouwen.',
+      href: 'https://adamlink.nl/',
+      purpose: 'reference',
+      keywords: ['linked data', 'amsterdam', 'referentie', 'identifiers'],
+      institution: 'Stichting AdamNet',
+    },
+    {
+      id: 'aezel',
+      name: 'AEZEL – Limburg Time Machine',
+      description:
+        'Genealogische en kadastrale databank voor de Nederlandse provincie Limburg, met erfgoed, kaarten en doorzoekbare bronnen.',
+      href: 'https://aezel.eu/',
+      purpose: 'inspiration',
+      keywords: ['tijdmachine', 'limburg', 'genealogie', 'erfgoed'],
+    },
+    {
+      id: 'same-boats',
+      name: 'In The Same Boats',
+      description:
+        "Interactieve visualisatie die de bewegingen volgt van belangrijke culturele actoren uit het Caribisch gebied, de Amerika's, Afrika en Europa in de 20e-eeuwse Afro-Atlantische wereld.",
+      href: 'https://sameboats.org/#/',
+      purpose: 'inspiration',
+      keywords: ['caribisch', 'afro-atlantisch', 'visualisatie', 'bewegingen'],
+    },
+    {
+      id: 'gent-gemapt',
+      name: 'Gent Gemapt',
+      description:
+        'Interactief platform dat plaatsen, historische kaarten en erfgoedcollecties verbindt voor de stad Gent, België.',
+      href: 'https://www.gentgemapt.be/',
+      purpose: 'inspiration',
+      keywords: ['kaarten', 'erfgoed', 'gent', 'platform'],
+    },
+    {
+      id: 'imaginerio',
+      name: 'imagineRio',
+      description:
+        'Doorzoekbare digitale atlas die de sociale en stedelijke evolutie van Rio de Janeiro illustreert via historische en moderne beelden.',
+      href: 'https://imaginerio.org/en',
+      purpose: 'inspiration',
+      keywords: ['atlas', 'rio de janeiro', 'stadsgeschiedenis', 'kaarten'],
+      institution: 'Rice University',
+    },
+    {
+      id: 'linkedin-suriname-tijdmachine',
+      name: 'Suriname Tijdmachine op LinkedIn',
+      description:
+        'Officiële LinkedIn-pagina van het Suriname Tijdmachine-project voor nieuws, updates en netwerken.',
+      href: 'https://www.linkedin.com/company/suriname-tijdmachine/',
+      purpose: 'collaboration',
+      keywords: ['linkedin', 'social media', 'netwerken', 'updates'],
+    },
   ],
 };
