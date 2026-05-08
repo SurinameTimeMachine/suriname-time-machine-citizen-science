@@ -62,6 +62,21 @@ export const outputNl: OutputContent = {
 
     // ── Wetenschappelijke Artikelen & Boekhoofstukken ───────────────────
     {
+      id: 'dsh-curacao-entity-extraction',
+      title:
+        'Defeating the Haystack: lessons learned from extracting entities from Dutch Curaçao civil certificates, 1879–1949',
+      description:
+        'Artikel over een workflow om ongestructureerde historische burgerlijke akten uit Curaçao om te zetten in een gestructureerde database met behulp van handschriftherkenning, reguliere expressies, large language models en citizen-science-validatie.',
+      href: 'https://academic.oup.com/dsh/advance-article/doi/10.1093/llc/fqag052/8666109',
+      category: 'articles',
+      date: 'Mei 2026',
+      isoDate: '2026-05-01',
+      authors:
+        'Hoek, L., Quanjer, B., van Oort, T., Tjong Kim Sang, E. & Rosenbaum-Feldbrügge, M.',
+      venue: 'Digital Scholarship in the Humanities',
+      doi: '10.1093/llc/fqag052',
+    },
+    {
       id: 'palgrave-citizen-science',
       title:
         'Citizen Science and Participatory Engagement with a Contentious Past: The Historical Database of Suriname and the Caribbean',
@@ -105,6 +120,19 @@ export const outputNl: OutputContent = {
     },
 
     // ── Presentaties ────────────────────────────────────────────────────
+    {
+      id: 'hdsc-deelnemersbijeenkomst-2026',
+      title:
+        'Suriname Time Machine & Sranan Story Collective: voortbouwen en verbinden',
+      description:
+        'Presentatie tijdens de deelnemersbijeenkomst van de Historische Database van Suriname en de Cariben over hoe Suriname Time Machine en de Sranan Story Collective voortbouwen op bestaand citizen-sciencewerk en datasets, plaatsen en gemeenschappen met elkaar verbinden.',
+      href: 'https://historische-database-suriname-curaao.email-provider.eu/web/vpcxivoaao/qxxhysntyp/mru3vpciy4/ksnzsonqvg?lp-t=1774452330',
+      category: 'presentations',
+      date: '8 mei 2026',
+      isoDate: '2026-05-08',
+      venue:
+        'Deelnemersbijeenkomst "Historische Database van Suriname en de Cariben", CBG Centrum voor Familiegeschiedenis, Den Haag',
+    },
     {
       id: 'ecsa-2026-presentation',
       title:

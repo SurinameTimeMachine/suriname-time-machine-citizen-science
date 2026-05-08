@@ -62,6 +62,21 @@ export const outputEn: OutputContent = {
 
     // ── Scientific Articles & Book Chapters ─────────────────────────────
     {
+      id: 'dsh-curacao-entity-extraction',
+      title:
+        'Defeating the Haystack: lessons learned from extracting entities from Dutch Curaçao civil certificates, 1879–1949',
+      description:
+        'Article on a workflow for transforming unstructured historical civil records from Curaçao into a structured database using handwritten text recognition, regular expressions, large language models, and citizen-science validation.',
+      href: 'https://academic.oup.com/dsh/advance-article/doi/10.1093/llc/fqag052/8666109',
+      category: 'articles',
+      date: 'May 2026',
+      isoDate: '2026-05-01',
+      authors:
+        'Hoek, L., Quanjer, B., van Oort, T., Tjong Kim Sang, E. & Rosenbaum-Feldbrügge, M.',
+      venue: 'Digital Scholarship in the Humanities',
+      doi: '10.1093/llc/fqag052',
+    },
+    {
       id: 'palgrave-citizen-science',
       title:
         'Citizen Science and Participatory Engagement with a Contentious Past: The Historical Database of Suriname and the Caribbean',
@@ -105,6 +120,19 @@ export const outputEn: OutputContent = {
     },
 
     // ── Presentations ───────────────────────────────────────────────────
+    {
+      id: 'hdsc-deelnemersbijeenkomst-2026',
+      title:
+        'Suriname Time Machine & Sranan Story Collective: voortbouwen en verbinden',
+      description:
+        "Presentation at the participants' meeting of the Historical Database of Suriname and the Caribbean on how Suriname Time Machine and the Sranan Story Collective build on existing citizen-science work and connect datasets, places, and communities.",
+      href: 'https://historische-database-suriname-curaao.email-provider.eu/web/vpcxivoaao/qxxhysntyp/mru3vpciy4/ksnzsonqvg?lp-t=1774452330',
+      category: 'presentations',
+      date: '8 May 2026',
+      isoDate: '2026-05-08',
+      venue:
+        'Deelnemersbijeenkomst "Historische Database van Suriname en de Cariben", CBG Centrum voor Familiegeschiedenis, The Hague',
+    },
     {
       id: 'ecsa-2026-presentation',
       title:
