@@ -232,6 +232,23 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
     },
     {
+      id: 'paramaribo-zoom',
+      layout: 'full-media',
+      eyebrow: 'Act III · Live exploration',
+      title: 'Zooming in · Paramaribo street by street',
+      subtitle:
+        'Same data, tighter frame — on a historical street map of the capital.',
+      body: [
+        'Bins now resolve at the block level. The Waterkant, the Gouvernementsplein and the streets around the Palmentuin dominate the photographic record.',
+      ],
+      component: 'hexHeatmap',
+      componentProps: { focus: 'paramaribo', hexRadius: 16 },
+      notes: [
+        'Most "Paramaribo" records collapse onto a few iconic streets — the waterfront, the colonial administrative core, and the wealthier residential blocks.',
+        'Whole neighbourhoods that existed in 1900 (working-class quarters, the markets) are barely represented.',
+      ],
+    },
+    {
       id: 'temporal',
       layout: 'full-media',
       eyebrow: 'Act III · Live exploration',
