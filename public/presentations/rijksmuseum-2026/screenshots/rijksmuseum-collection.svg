@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Rijksmuseum Suriname collection preview">
+  <rect width="1280" height="800" fill="#003c34"/>
+  <g fill="#fdf8f2" font-family="system-ui, sans-serif">
+    <text x="64" y="120" font-size="28" letter-spacing="6" opacity="0.7">OFFLINE PREVIEW</text>
+    <text x="64" y="200" font-size="56" font-weight="700">Rijksmuseum × Suriname</text>
+    <text x="64" y="260" font-size="32" opacity="0.85">Visual heritage collection (placeholder)</text>
+  </g>
+  <g stroke="#34d1b3" stroke-width="2" fill="none" opacity="0.6">
+    <rect x="64" y="320" width="320" height="240"/>
+    <rect x="416" y="320" width="320" height="240"/>
+    <rect x="768" y="320" width="320" height="240"/>
+    <rect x="64" y="600" width="1024" height="120"/>
+  </g>
+</svg>
