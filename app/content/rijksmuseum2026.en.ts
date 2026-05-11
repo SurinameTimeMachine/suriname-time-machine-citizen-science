@@ -223,12 +223,18 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'Hex-bin density of real image locations · stroke encodes positional uncertainty.',
       body: [
-        'Following the Gouda Tijdmachine "velepanden" pattern — fill = density, dashed stroke = mean uncertainty (street-level → regional).',
+        'Fill = density on a log scale. Dashed stroke = mean positional uncertainty (street-level → regional).',
+        'Three patterns jump off the 1930 map:',
+      ],
+      bullets: [
+        'A **coastal corridor** from Paramaribo east along the Commewijne plantation belt to Moengo — one continuous teal ribbon following rivers, road and rail.',
+        'A **near-empty interior** — the southern two-thirds of the country is blank, even after our enrichment.',
+        '**Moengo as an outlier** — an isolated hot cell far east of the capital: the Suralco bauxite archive accidentally captured a 20th-century landscape the older drawing tradition never reached.',
       ],
       component: 'hexHeatmap',
       notes: [
-        'Read the map: dense cluster around Paramaribo, a corridor east along the coast to Moengo, the lower Commewijne river plantation belt.',
-        'The southern half of the country is essentially blank in the Rijksmuseum collection — even after our enrichment.',
+        'Read the map: the corridor is *infrastructural* — capital, not country.',
+        'The blankness in the south is an argument, not a flaw: it is the brief for Sranan Story Collective and partnerships with Maroon and indigenous archives.',
       ],
     },
     {
@@ -239,13 +245,18 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'Same data, tighter frame — on a historical street map of the capital.',
       body: [
-        'Bins now resolve at the block level. The Waterkant, the Gouvernementsplein and the streets around the Palmentuin dominate the photographic record.',
+        'At country scale "Paramaribo" is a single hot cell. Zoomed to the city it collapses onto a handful of streets:',
+      ],
+      bullets: [
+        'Waterkant, Gouvernementsplein, the streets around the Palmentuin, Combé — the colonial administrative and wealthier residential core.',
+        'Working-class quarters and the markets that *existed* in 1900 are barely represented.',
+        'Whose Paramaribo got photographed? — a question the hex bins make impossible to dodge.',
       ],
       component: 'hexHeatmap',
       componentProps: { focus: 'paramaribo', hexRadius: 16 },
       notes: [
-        'Most "Paramaribo" records collapse onto a few iconic streets — the waterfront, the colonial administrative core, and the wealthier residential blocks.',
-        'Whole neighbourhoods that existed in 1900 (working-class quarters, the markets) are barely represented.',
+        'Most "Paramaribo" records collapse onto the same ten famous streets.',
+        'Pair this with the critique slides — the city-scale empty bins are a research and acquisition brief.',
       ],
     },
     {
@@ -262,19 +273,23 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
     },
     {
-      id: 'iiif-zoom',
-      layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
-      title: 'Close-reading at deep zoom',
+      id: 'reading-the-map',
+      layout: 'text',
+      background: 'cream',
+      eyebrow: 'Act III · Synthesis',
+      title: 'Reading the map · five stories the patterns tell',
       subtitle:
-        'One image, one place, one moment — at the resolution the IIIF manifest allows.',
-      component: 'iiifViewer',
-      componentProps: {
-        info: '/presentations/rijksmuseum-2026/iiif/sample-info.json',
-        fallback: '/presentations/rijksmuseum-2026/iiif/sample-fallback.svg',
-      },
+        'What the hex bins say before we add a single new image.',
+      bullets: [
+        '**Capital follows capital.** The dense corridor traces colonial infrastructure (river → road → bauxite rail), not the country itself.',
+        '**Medium changed, geography did not.** The photographic boom from c. 1880 *intensifies* the same corridor rather than expanding it.',
+        '**Ten famous streets.** "Paramaribo" at street scale is a handful of administrative and wealthier blocks — entire neighbourhoods stay invisible.',
+        '**Plantation-name half-life.** Lower-Commewijne bins thin out in the 20th c. not because the places vanished, but because their names were renamed, abandoned or absorbed — a slow toponymic erasure visible on the map.',
+        '**Uncertainty as a citizen-science prompt.** Hexes with dashed strokes (mean uncertainty > 5 km) are exactly where community geotagging would move the needle most.',
+      ],
       notes: [
-        'Walk through one well-located photograph. Zoom into a corner — visible faces, signage, plantation buildings — and link those back to gazetteer entries.',
+        'This is the slide where we move from *describing* the dataset to *arguing* with it. Five sentences, five questions for the curators.',
+        'It also sets up Act IV: each pattern points to a critique (whose gaze) and a programme (Sranan Story Collective).',
       ],
     },
 
