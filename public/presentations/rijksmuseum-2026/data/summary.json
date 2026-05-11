@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-11T14:11:43.126Z",
+  "generatedAt": "2026-05-11T14:31:25.179Z",
   "generatedFrom": "SurinameTimeMachine/rijksmuseum-suriname-collection@gemini-cli-batch",
   "totalObjects": 3668,
   "coverage": {
@@ -462,6 +462,6 @@
       "total": 14
     }
   ],
-  "pointsCount": 5331,
-  "featuredCount": 67
+  "pointsCount": 2272,
+  "featuredCount": 61
 }

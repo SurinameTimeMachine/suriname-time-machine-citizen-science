@@ -1,11 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import {
-  generateSamplePoints,
-  HexHeatmap,
-  type ImagePoint,
-} from './HexHeatmap';
+import { AllmapsMap, type ImagePoint } from './AllmapsMap';
 
 type TimeSliderProps = {
   yearStart?: number;
@@ -18,10 +14,7 @@ export function TimeSlider({
   yearEnd = 1910,
   points: pointsProp,
 }: TimeSliderProps) {
-  const points = useMemo(
-    () => pointsProp ?? generateSamplePoints(),
-    [pointsProp],
-  );
+  const points = useMemo(() => pointsProp ?? [], [pointsProp]);
   const [year, setYear] = useState<number>(
     Math.round((yearStart + yearEnd) / 2),
   );
@@ -37,7 +30,7 @@ export function TimeSlider({
   return (
     <div className="flex h-full w-full flex-col">
       <div className="relative min-h-0 flex-1">
-        <HexHeatmap
+        <AllmapsMap
           points={points}
           yearMin={year - window}
           yearMax={year + window}

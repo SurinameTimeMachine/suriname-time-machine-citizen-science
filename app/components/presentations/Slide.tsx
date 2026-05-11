@@ -3,9 +3,9 @@ import type {
   SlideContent,
 } from '../../content/presentationTypes';
 import { RichText } from '../RichText';
+import { AllmapsMap } from './AllmapsMap';
 import { EmbedGazetteer, EmbedRijksmuseum } from './EmbedFrame';
 import { FeaturedGrid } from './FeaturedGrid';
-import { HexHeatmap } from './HexHeatmap';
 import { IIIFViewer } from './IIIFViewer';
 import { MediumOverTime } from './MediumOverTime';
 import { MetadataGapsChart } from './MetadataGapsChart';
@@ -91,7 +91,7 @@ function SlideInteractive({ slide }: { slide: SlideContent }) {
   switch (slide.component) {
     case 'hexHeatmap':
     case 'surinameMap':
-      return <HexHeatmap {...props} />;
+      return <AllmapsMap {...props} />;
     case 'timeSlider':
       return <TimeSlider {...props} />;
     case 'iiifViewer':

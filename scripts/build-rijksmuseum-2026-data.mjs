@@ -52,6 +52,18 @@ const n = collection.length;
 
 const isInt = (v) => typeof v === 'number' && Number.isInteger(v);
 
+// Coordinates that act as "generic" anchors — the whole country (Surinam) and
+// the Paramaribo city centroid. Many objects only have these as their geo tag,
+// which clutters the map with noise. Excluded from points/featured below.
+const GENERIC_ANCHORS = [
+  { lat: 4, lng: -56 }, // Surinam (country)
+  { lat: 5.86667, lng: -55.16667 }, // Paramaribo (city centroid)
+];
+const isGenericAnchor = (lat, lng) =>
+  GENERIC_ANCHORS.some(
+    (a) => Math.abs(a.lat - lat) < 0.001 && Math.abs(a.lng - lng) < 0.001,
+  );
+
 const mediumOf = (o) => {
   const types = o.objectTypes ?? [];
   const mats = o.materials ?? [];
@@ -74,10 +86,15 @@ const mediumOf = (o) => {
 };
 
 const points = [];
+let genericSkipped = 0;
 for (const o of collection) {
   const y = isInt(o.year) ? o.year : null;
   for (const d of o.geoKeywordDetails ?? []) {
     if (d.lat == null || d.lng == null) continue;
+    if (isGenericAnchor(d.lat, d.lng)) {
+      genericSkipped += 1;
+      continue;
+    }
     points.push({
       lat: Math.round(d.lat * 1e5) / 1e5,
       lng: Math.round(d.lng * 1e5) / 1e5,
@@ -197,7 +214,10 @@ const featuredPool = [];
 for (const o of collection) {
   if (!o.hasImage || !o.thumbnailUrl) continue;
   const coords = (o.geoKeywordDetails ?? []).filter(
-    (d) => d.lat != null && d.region === 'suriname',
+    (d) =>
+      d.lat != null &&
+      d.region === 'suriname' &&
+      !isGenericAnchor(d.lat, d.lng),
   );
   if (coords.length === 0) continue;
   const y = o.year;
@@ -259,7 +279,7 @@ writeFileSync(
   JSON.stringify(featured.slice(0, 80), null, 2),
 );
 console.log(
-  `Wrote summary.json, points.json (${points.length}), featured.json (${Math.min(
+  `Wrote summary.json, points.json (${points.length}, skipped ${genericSkipped} generic-anchor points), featured.json (${Math.min(
     featured.length,
     80,
   )})`,
