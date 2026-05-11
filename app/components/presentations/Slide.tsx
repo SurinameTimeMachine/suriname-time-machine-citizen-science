@@ -4,12 +4,15 @@ import type {
 } from '../../content/presentationTypes';
 import { RichText } from '../RichText';
 import { EmbedGazetteer, EmbedRijksmuseum } from './EmbedFrame';
+import { FeaturedGrid } from './FeaturedGrid';
 import { HexHeatmap } from './HexHeatmap';
 import { IIIFViewer } from './IIIFViewer';
+import { MediumOverTime } from './MediumOverTime';
 import { MetadataGapsChart } from './MetadataGapsChart';
 import { QrCodes } from './QrCodes';
 import { TimeMachineBrandMap } from './TimeMachineBrandMap';
 import { TimeSlider } from './TimeSlider';
+import { TopPlacesChart } from './TopPlacesChart';
 
 type SlideProps = {
   slide: SlideContent;
@@ -94,7 +97,13 @@ function SlideInteractive({ slide }: { slide: SlideContent }) {
     case 'iiifViewer':
       return <IIIFViewer {...props} />;
     case 'metadataGapsChart':
-      return <MetadataGapsChart />;
+      return <MetadataGapsChart {...props} />;
+    case 'featuredGrid':
+      return <FeaturedGrid {...props} />;
+    case 'topPlacesChart':
+      return <TopPlacesChart {...props} />;
+    case 'mediumOverTime':
+      return <MediumOverTime {...props} />;
     case 'embedRijksmuseum':
       return <EmbedRijksmuseum />;
     case 'embedGazetteer':

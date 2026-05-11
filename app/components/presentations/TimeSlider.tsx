@@ -1,20 +1,31 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { generateSamplePoints, HexHeatmap } from './HexHeatmap';
+import {
+  generateSamplePoints,
+  HexHeatmap,
+  type ImagePoint,
+} from './HexHeatmap';
 
 type TimeSliderProps = {
   yearStart?: number;
   yearEnd?: number;
+  points?: ImagePoint[];
 };
 
 export function TimeSlider({
   yearStart = 1845,
   yearEnd = 1910,
+  points: pointsProp,
 }: TimeSliderProps) {
-  const [year, setYear] = useState<number>(yearStart + 25);
+  const points = useMemo(
+    () => pointsProp ?? generateSamplePoints(),
+    [pointsProp],
+  );
+  const [year, setYear] = useState<number>(
+    Math.round((yearStart + yearEnd) / 2),
+  );
   const window = 5; // ± years
-  const points = useMemo(() => generateSamplePoints(), []);
 
   const filteredCount = useMemo(
     () =>

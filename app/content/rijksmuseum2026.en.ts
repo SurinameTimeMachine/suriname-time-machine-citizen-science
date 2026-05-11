@@ -106,7 +106,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
       notes: [
         'These numbers come from the suriname-database-model README.',
-        'Plantations are our anchor entity — they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue.',
+        'Plantations are our anchor entity — they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue that links the Rijksmuseum images to people.',
       ],
     },
 
@@ -117,20 +117,20 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'What the Rijksmuseum gave us',
       subtitle:
-        'Public-domain visual heritage of 19th-century Suriname — already IIIF-ready.',
+        'Public-domain visual heritage of Suriname — already IIIF-ready.',
       body: [
-        'The [Rijksmuseum online collection](https://www.rijksmuseum.nl/en/collection) holds an extensive body of Suriname-related imagery: photographs, prints, drawings.',
-        'Crucially: a permissive **public-domain license** and a [IIIF manifest](https://iiif.io/) for every work.',
+        'The [Rijksmuseum online collection](https://www.rijksmuseum.nl/en/collection) holds an extensive body of Suriname-related imagery. Most works are released under a **public domain mark** and ship with a [IIIF manifest](https://iiif.io/), so we can zoom, reuse and redistribute.',
+        'Our working snapshot of the [Suriname slice](https://github.com/SurinameTimeMachine/rijksmuseum-suriname-collection) currently contains **3,668 objects**.',
       ],
       bullets: [
-        '≈ 2,300 Suriname-related works',
-        'Photographs, lithographs, drawings, books',
-        'Most c. 1850–1910',
-        'IIIF manifests + structured metadata via API',
+        '3,668 Suriname-related works',
+        '2,912 with IIIF thumbnails (79%)',
+        'Photographs dominate (foto, stereofoto, prentbriefkaart…)',
+        'Date span: late-18th c. → mid-20th c.',
       ],
       notes: [
-        'Numbers are illustrative — refine before the talk against the latest snapshot in rijksmuseum-suriname-collection.',
-        'Emphasise that IIIF + public domain is what makes the rest possible. Without that, we could not redistribute or zoom.',
+        'Numbers come from the live build script (scripts/build-rijksmuseum-2026-data.mjs) reading collection.json from the gemini-cli-batch branch.',
+        'Emphasise that IIIF + public domain is what makes the rest possible.',
       ],
     },
     {
@@ -138,15 +138,16 @@ export const rijksmuseum2026Content: PresentationContent = {
       layout: 'split',
       eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'State of the data',
-      subtitle: 'Rich titles and creators — geography is the gap.',
+      subtitle:
+        'Titles and dates are nearly complete. Linked places used to be the gap — then we worked on it.',
       body: [
-        'Metadata coverage is uneven. Creator and date are well-populated; **places** are often buried in free-text titles or absent entirely.',
-        'That gap is the opening for our intervention.',
+        'Coverage measured across all 3,668 records in the working snapshot. After the curation sprint, **90.5% of objects are now map-ready** (at least one geo-keyword with coordinates).',
+        'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences — thanks to the disambiguation + Wiki Goes Caribbean sprints.',
       ],
       component: 'metadataGapsChart',
       notes: [
-        'Walk through the bars: creator > title > date > medium > … > place coordinates.',
-        'Punchline: the catalog speaks about *who made* and *what was made*, but not *where it happened*.',
+        'Walk the bars: title → date → creator → thumbnail → place keyword → place → coords → wikidata.',
+        'Point out: persons depicted = 52%, subject keywords = 4%. There is still huge headroom for content-level enrichment.',
       ],
     },
     {
@@ -156,14 +157,14 @@ export const rijksmuseum2026Content: PresentationContent = {
       title: 'What we did to the data',
       subtitle: 'A hybrid pipeline: scripts first, humans second.',
       bullets: [
-        '1 · Fetch every Suriname work via the Rijksmuseum API + IIIF',
-        '2 · Normalise metadata; extract candidate place strings from titles',
-        '3 · Disambiguate against the STM gazetteer (plantations + almanak registers)',
-        '4 · Manual verification in data sprints with Wiki Goes Caribbean',
-        '5 · Publish enriched links back to Wikidata',
+        '1 · Fetch every Suriname work via the Rijksmuseum API + IIIF (3,668 records)',
+        '2 · Normalise metadata; extract candidate place strings from titles and keywords',
+        '3 · Disambiguate against the STM gazetteer, Wikidata and Getty TGN',
+        '4 · Manual verification in data sprints with Wiki Goes Caribbean (1,190+ regions assigned, 710 fresh coordinate backfills)',
+        '5 · Publish enriched, provenance-tracked links — 9,000+ curator edits captured',
       ],
       notes: [
-        'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection.',
+        'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection (PR #8 = working branch).',
         'Stress the *manual* sprint step — automated disambiguation is necessary but not sufficient for colonial place names that repeat across regions.',
       ],
     },
@@ -171,25 +172,47 @@ export const rijksmuseum2026Content: PresentationContent = {
     // ── Act III · Live exploration ─────────────────────────────────────
     {
       id: 'demo-collection',
-      layout: 'embed',
+      layout: 'full-media',
       eyebrow: 'Act III · Live exploration',
-      title: 'Demo · Rijksmuseum × Suriname collection',
-      subtitle: 'Browsing the linked, place-enriched imagery.',
-      component: 'embedRijksmuseum',
+      title: 'A sample of the collection',
+      subtitle: 'One row per decade, sampled from the place-enriched corpus.',
+      component: 'featuredGrid',
+      componentProps: { max: 24 },
       notes: [
-        'Live click-through: filter by place, click a work, show the IIIF zoom + Wikidata link.',
-        'If offline at the venue, fall back to the static screenshot.',
+        'Tiles are real Rijksmuseum thumbnails from the working dataset — each is linked to a Suriname place + a year.',
+        'Point out the visible shift from drawings/lithographs (early decades) to studio + documentary photographs (later decades).',
+        'If online, click a tile to open the Rijksmuseum PID page.',
       ],
     },
     {
       id: 'demo-gazetteer',
-      layout: 'embed',
+      layout: 'split',
       eyebrow: 'Act III · Live exploration',
-      title: 'Demo · STM gazetteer',
-      subtitle: 'The place infrastructure behind the imagery.',
-      component: 'embedGazetteer',
+      title: 'Where the place names cluster',
+      subtitle:
+        'Top Suriname-region matched place names in the working dataset.',
+      body: [
+        'Once free-text strings are reconciled to the STM gazetteer + Wikidata, a clear topography emerges: a coastal photographic corridor from Paramaribo eastward, the bauxite town of Moengo, and a constellation of named plantations.',
+        '*Surinam* is the catch-all label assigned when no narrower place was identified — a useful tally of records still in need of disambiguation.',
+      ],
+      component: 'topPlacesChart',
       notes: [
-        'Open the map view. Click a plantation, show the almanak observations, the polygon from the 1930 QGIS layer, and the linked Rijksmuseum thumbnails.',
+        'Paramaribo is the obvious centre; Moengo (~395 records) is striking — the Suralco bauxite-mining industrial photography archive.',
+        'Almost every plantation that appears was a former sugar / coffee estate along the Commewijne / Suriname rivers.',
+      ],
+    },
+    {
+      id: 'medium-shift',
+      layout: 'full-media',
+      eyebrow: 'Act III · Live exploration',
+      title: 'A medium-shift, decade by decade',
+      subtitle:
+        'Drawings and prints give way to photographs from the 1860s onward.',
+      component: 'mediumOverTime',
+      componentProps: { from: 1820, to: 1970 },
+      notes: [
+        'The wedge of teal-strong (photographs) takes over from the 1860s and dominates by the 1880s.',
+        'This is *not* news historically — but it lets us pose the question: did the geography of what was photographed change, or just the medium? (Spoiler: see the next slide.)',
       ],
     },
     {
@@ -198,14 +221,14 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act III · Live exploration',
       title: 'Where the lens was pointed',
       subtitle:
-        'Hex-bin density of image locations · stroke encodes positional uncertainty.',
+        'Hex-bin density of real image locations · stroke encodes positional uncertainty.',
       body: [
-        'Following the Gouda Tijdmachine "velepanden" pattern — fill = density, dashed stroke = mean uncertainty radius.',
+        'Following the Gouda Tijdmachine "velepanden" pattern — fill = density, dashed stroke = mean uncertainty (street-level → regional).',
       ],
       component: 'hexHeatmap',
       notes: [
-        'Read the map: dense cluster around Paramaribo and the lower Suriname / Commewijne river plantation belt.',
-        'Almost nothing in the interior — the southern half of the country is essentially blank in the Rijksmuseum collection.',
+        'Read the map: dense cluster around Paramaribo, a corridor east along the coast to Moengo, the lower Commewijne river plantation belt.',
+        'The southern half of the country is essentially blank in the Rijksmuseum collection — even after our enrichment.',
       ],
     },
     {
@@ -213,11 +236,12 @@ export const rijksmuseum2026Content: PresentationContent = {
       layout: 'full-media',
       eyebrow: 'Act III · Live exploration',
       title: 'When the lens was open',
-      subtitle: 'Filter the same map by year, 1850–1910.',
+      subtitle: 'Filter the same real points by year.',
       component: 'timeSlider',
+      componentProps: { yearStart: 1840, yearEnd: 1970 },
       notes: [
-        'Drag the slider. Pre-1870 = mostly drawings and lithographs, post-1880 = the photographic boom.',
-        'The geographical footprint barely changes — even the boom in photography stays in the same coastal corridor.',
+        'Drag the slider. Pre-1870 = a thin scatter of drawings and prints. Post-1880 = the photographic boom.',
+        'The geographical footprint barely changes — the photographic boom *intensifies* the existing corridor, it does not broaden it.',
       ],
     },
     {

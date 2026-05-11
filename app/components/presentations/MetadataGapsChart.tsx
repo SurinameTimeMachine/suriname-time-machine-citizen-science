@@ -11,9 +11,8 @@ import {
   YAxis,
 } from 'recharts';
 
-// Illustrative — refine against real coverage stats from the
-// rijksmuseum-suriname-collection dataset.
-const DATA = [
+// Default illustrative fallback (replaced with real coverage by page.tsx).
+const DEFAULT_DATA = [
   { field: 'Title', coverage: 100 },
   { field: 'Creator', coverage: 92 },
   { field: 'Date', coverage: 88 },
@@ -25,6 +24,12 @@ const DATA = [
   { field: 'Coordinates', coverage: 4 },
 ];
 
+export type MetadataGapsRow = { field: string; coverage: number };
+
+type MetadataGapsChartProps = {
+  data?: MetadataGapsRow[];
+};
+
 function color(v: number) {
   if (v >= 80) return 'var(--teal-strong)';
   if (v >= 50) return 'var(--teal-bright)';
@@ -32,12 +37,13 @@ function color(v: number) {
   return 'rgba(11,60,52,0.25)';
 }
 
-export function MetadataGapsChart() {
+export function MetadataGapsChart({ data }: MetadataGapsChartProps = {}) {
+  const rows = data && data.length > 0 ? data : DEFAULT_DATA;
   return (
     <div className="h-full w-full min-h-[320px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
-          data={DATA}
+          data={rows}
           layout="vertical"
           margin={{ top: 8, right: 32, bottom: 8, left: 0 }}
         >
@@ -57,7 +63,7 @@ export function MetadataGapsChart() {
             fontSize={12}
           />
           <Bar dataKey="coverage" radius={[0, 2, 2, 0]}>
-            {DATA.map((d) => (
+            {rows.map((d) => (
               <Cell key={d.field} fill={color(d.coverage)} />
             ))}
             <LabelList
