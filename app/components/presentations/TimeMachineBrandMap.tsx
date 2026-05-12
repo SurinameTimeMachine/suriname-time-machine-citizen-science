@@ -33,7 +33,7 @@ export function TimeMachineBrandMap() {
     <svg
       viewBox={`0 0 ${VIEW_W} ${VIEW_H}`}
       preserveAspectRatio="xMidYMid meet"
-      className="h-full max-h-[60vh] w-full"
+      className="block h-auto w-full"
       role="img"
       aria-label="Map of sister Time Machine projects"
     >

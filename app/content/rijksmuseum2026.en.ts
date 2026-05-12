@@ -52,7 +52,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'what-is-stm',
       layout: 'split',
-      eyebrow: 'Act I · Framing',
       title: 'What is the Suriname Time Machine?',
       subtitle:
         'Technical infrastructure built on the Historical Database of Suriname & the Caribbean (HDSC).',
@@ -74,7 +73,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'time-machine-brand',
       layout: 'two-col',
-      eyebrow: 'Act I · Framing',
       title: 'The Time Machine brand',
       subtitle:
         'A network of city- and region-scale historical infrastructures.',
@@ -91,9 +89,9 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'stm-foundations',
       layout: 'split',
-      eyebrow: 'Act I · Framing',
       title: 'STM’s foundations',
-      subtitle: 'A gazetteer + a place-data model that other sources can plug into.',
+      subtitle:
+        'A gazetteer + a place-data model that other sources can plug into.',
       body: [
         'STM’s data model is anchored on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers** of colonial Suriname.',
         'See it live: [suriname-database-model.vercel.app](https://suriname-database-model.vercel.app/).',
@@ -114,7 +112,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'rijks-dataset-intro',
       layout: 'split',
-      eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'What the Rijksmuseum gave us',
       subtitle:
         'Public-domain visual heritage of Suriname, already IIIF-ready.',
@@ -136,7 +133,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'metadata-gaps',
       layout: 'split',
-      eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'State of the data',
       subtitle:
         'Titles and dates are nearly complete. Linked places used to be the gap, then we worked on it.',
@@ -153,7 +149,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'what-we-did',
       layout: 'text',
-      eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'What we did to the data',
       subtitle: 'A hybrid pipeline: scripts first, humans second.',
       bullets: [
@@ -173,7 +168,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'demo-collection',
       layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
       title: 'A sample of the collection',
       subtitle: 'One row per decade, sampled from the place-enriched corpus.',
       component: 'featuredGrid',
@@ -187,7 +181,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'demo-gazetteer',
       layout: 'split',
-      eyebrow: 'Act III · Live exploration',
       title: 'Where the place names cluster',
       subtitle:
         'Top Suriname-region matched place names in the working dataset.',
@@ -204,7 +197,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'medium-shift',
       layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
       title: 'A medium-shift, decade by decade',
       subtitle:
         'Drawings and prints give way to photographs from the 1860s onward.',
@@ -218,7 +210,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'geo-coverage',
       layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
       title: 'Where the lens was pointed',
       subtitle:
         'Hex-bin density of real image locations · stroke encodes positional uncertainty.',
@@ -240,7 +231,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'paramaribo-zoom',
       layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
       title: 'Zooming in · Paramaribo street by street',
       subtitle:
         'Same data, tighter frame, on a historical street map of the capital.',
@@ -262,7 +252,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'temporal',
       layout: 'full-media',
-      eyebrow: 'Act III · Live exploration',
       title: 'When the lens was open',
       subtitle: 'Filter the same real points by year.',
       component: 'timeSlider',
@@ -276,7 +265,6 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'reading-the-map',
       layout: 'text',
       background: 'cream',
-      eyebrow: 'Act III · Synthesis',
       title: 'Reading the map · five stories the patterns tell',
       subtitle: 'What the hex bins say before we add a single new image.',
       bullets: [
@@ -297,7 +285,6 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'critique-where',
       layout: 'split',
       background: 'cream',
-      eyebrow: 'Act IV · Critique',
       title: 'Critique 1 · Where the lens did *not* look',
       subtitle:
         'The empty halves of the map are a brief for future collecting.',
@@ -320,7 +307,6 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'critique-whose',
       layout: 'split',
       background: 'cream',
-      eyebrow: 'Act IV · Critique',
       title: 'Critique 2 · Whose gaze, whose medium',
       subtitle: 'A visual archive made by a narrow slice of colonial society.',
       body: [
@@ -336,7 +322,6 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'sranan-story',
       layout: 'split',
-      eyebrow: 'Act IV · Outlook',
       title: 'A citizen-science project on Surinamese heritage',
       subtitle:
         'KNAW-funded, Nov 2025 – Jun 2028. Co-designed with community builders before scope is fixed.',
@@ -356,10 +341,26 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
     },
     {
-      id: 'partners',
+      id: 'going-back',
       layout: 'text',
+      title: 'Going back to the community',
+      subtitle: 'What success looks like',
+      bullets: [
+        'A community member opens an image of the plantation their family came from',
+        '… sees the gazetteer entry alongside it: dates, neighbours, surrounding creeks',
+        '… records a story, in their own language, about a relative or a place name',
+        '… and that story becomes part of the linked record, citable, durable, theirs',
+        'Repeat across collectives, regions, and generations',
+      ],
+      notes: [
+        'Land the emotional close. This is the *point* of the infrastructure.',
+        'Acknowledge that we are early, this is a roadmap, not a completed programme.',
+      ],
+    },
+    {
+      id: 'partners',
+      layout: 'qr',
       background: 'cream',
-      eyebrow: 'Act IV · Outlook',
       title: 'Partners and funders',
       subtitle:
         'This work is only possible because of a network of institutional and community partners.',
@@ -419,24 +420,6 @@ export const rijksmuseum2026Content: PresentationContent = {
       notes: [
         'Acknowledge specifically: HDSC for the underlying data; the libraries for the historical maps; Allmaps for georeferencing; Wikimedia NL for reconciliation help; Stichting Pica for funding parts of this work.',
         'The Rijksmuseum is the host today, name it warmly.',
-      ],
-    },
-    {
-      id: 'going-back',
-      layout: 'text',
-      eyebrow: 'Act IV · Outlook',
-      title: 'Going back to the community',
-      subtitle: 'What success looks like',
-      bullets: [
-        'A community member opens an image of the plantation their family came from',
-        '… sees the gazetteer entry alongside it: dates, neighbours, surrounding creeks',
-        '… records a story, in their own language, about a relative or a place name',
-        '… and that story becomes part of the linked record, citable, durable, theirs',
-        'Repeat across collectives, regions, and generations',
-      ],
-      notes: [
-        'Land the emotional close. This is the *point* of the infrastructure.',
-        'Acknowledge that we are early, this is a roadmap, not a completed programme.',
       ],
     },
     {
