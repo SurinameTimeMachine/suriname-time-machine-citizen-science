@@ -75,7 +75,7 @@ export function EmbedGazetteer() {
   return (
     <EmbedFrame
       src="https://suriname-database-model.vercel.app/"
-      title="Suriname Time Machine — gazetteer"
+      title="Suriname Time Machine · gazetteer"
       fallbackSrc="/presentations/rijksmuseum-2026/screenshots/database-model.svg"
     />
   );

@@ -4,7 +4,7 @@ export const rijksmuseum2026Content: PresentationContent = {
   locale: 'en',
   seo: {
     title:
-      'The Suriname Time Machine: Mapping Visual Heritage — Rijksmuseum 2&3D Photography 2026',
+      'The Suriname Time Machine: Mapping Visual Heritage, Rijksmuseum 2&3D Photography 2026',
     description:
       'Conference talk by Thunnis van Oort & Jona Schlegel (Huygens Institute) at the Rijksmuseum 2&3D Photography symposium, 20 May 2026. Geographical mapping of colonial-era Rijksmuseum imagery linked to the Suriname Time Machine gazetteer.',
     openGraphLocale: 'en_GB',
@@ -27,7 +27,7 @@ export const rijksmuseum2026Content: PresentationContent = {
     speakerNotesHint: 'Press S to toggle',
     helpTitle: 'Keyboard shortcuts',
     offlineFallback:
-      'Offline preview — open the live project at the URL above when online.',
+      'Offline preview, open the live project at the URL above when online.',
     loading: 'Loading…',
   },
   slides: [
@@ -40,7 +40,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       title: 'The Suriname Time Machine',
       subtitle: 'Mapping Visual Heritage',
       body: [
-        'Thunnis van Oort & Jona Schlegel — Huygens Institute',
+        'Thunnis van Oort & Jona Schlegel, Huygens Institute',
         'Session P03 · Rijksmuseum Amsterdam',
       ],
       notes: [
@@ -57,7 +57,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'A digital infrastructure linking people, places and visual heritage across colonial Suriname.',
       body: [
-        'The Suriname Time Machine (STM) connects scattered archives into a single, geographically-anchored knowledge graph — built with and for Dutch-Surinamese communities.',
+        'The Suriname Time Machine (STM) connects scattered archives into a single, geographically-anchored knowledge graph, built with and for Dutch-Surinamese communities.',
         'It already serves tens of thousands of users researching genealogical and historical connections through the [Historical Database of Suriname and the Caribbean](https://www.surinameheritage.org).',
       ],
       bullets: [
@@ -67,7 +67,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Co-creation with descendant communities',
       ],
       notes: [
-        'STM is not a website — it is an infrastructure: a gazetteer + a knowledge graph + tooling that other projects can build on.',
+        'STM is not a website. It is an infrastructure: a gazetteer + a knowledge graph + tooling that other projects can build on.',
         'Stress the existing user base: this is not greenfield, the Historical Database already has tens of thousands of users.',
       ],
     },
@@ -80,7 +80,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'A network of city- and region-scale historical infrastructures.',
       body: [
         'STM joins a growing federation: [Venice Time Machine](https://www.timemachine.eu/local-time-machines/), [Amsterdam Time Machine](https://www.amsterdamtimemachine.nl/), [Gouda Tijdmachine](https://www.goudatijdmachine.nl/), and many more.',
-        'Each one builds local gazetteers and visualisations from its own archives — together forming a European-scale linked heritage commons.',
+        'Each one builds local gazetteers and visualisations from its own archives, together forming a European-scale linked heritage commons.',
       ],
       component: 'timeMachineBrandMap',
       notes: [
@@ -95,7 +95,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       title: 'STM’s foundations',
       subtitle: 'Gazetteer + place-data model',
       body: [
-        'Our data model focuses on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers** — modelled in CIDOC-CRM and published as JSON-LD.',
+        'Our data model focuses on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers**, modelled in CIDOC-CRM and published as JSON-LD.',
         'See it live: [suriname-database-model.vercel.app](https://suriname-database-model.vercel.app/).',
       ],
       bullets: [
@@ -106,7 +106,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
       notes: [
         'These numbers come from the suriname-database-model README.',
-        'Plantations are our anchor entity — they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue that links the Rijksmuseum images to people.',
+        'Plantations are our anchor entity, they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue that links the Rijksmuseum images to people.',
       ],
     },
 
@@ -117,7 +117,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'What the Rijksmuseum gave us',
       subtitle:
-        'Public-domain visual heritage of Suriname — already IIIF-ready.',
+        'Public-domain visual heritage of Suriname, already IIIF-ready.',
       body: [
         'The [Rijksmuseum online collection](https://www.rijksmuseum.nl/en/collection) holds an extensive body of Suriname-related imagery. Most works are released under a **public domain mark** and ship with a [IIIF manifest](https://iiif.io/), so we can zoom, reuse and redistribute.',
         'Our working snapshot of the [Suriname slice](https://github.com/SurinameTimeMachine/rijksmuseum-suriname-collection) currently contains **3,668 objects**.',
@@ -129,7 +129,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Date span: late-18th c. → mid-20th c.',
       ],
       notes: [
-        'Numbers come from the live build script (scripts/build-rijksmuseum-2026-data.mjs) reading collection.json from the gemini-cli-batch branch.',
+        'Numbers come from the live build script (scripts/build-rijksmuseum-2026-data.mjs) reading the working collection.json snapshot.',
         'Emphasise that IIIF + public domain is what makes the rest possible.',
       ],
     },
@@ -139,10 +139,10 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act II · The Rijksmuseum dataset',
       title: 'State of the data',
       subtitle:
-        'Titles and dates are nearly complete. Linked places used to be the gap — then we worked on it.',
+        'Titles and dates are nearly complete. Linked places used to be the gap, then we worked on it.',
       body: [
         'Coverage measured across all 3,668 records in the working snapshot. After the curation sprint, **90.5% of objects are now map-ready** (at least one geo-keyword with coordinates).',
-        'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences — thanks to the disambiguation + Wiki Goes Caribbean sprints.',
+        'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences, thanks to the disambiguation + Wiki Goes Caribbean sprints.',
       ],
       component: 'metadataGapsChart',
       notes: [
@@ -161,11 +161,11 @@ export const rijksmuseum2026Content: PresentationContent = {
         '2 · Normalise metadata; extract candidate place strings from titles and keywords',
         '3 · Disambiguate against the STM gazetteer, Wikidata and Getty TGN',
         '4 · Manual verification in data sprints with Wiki Goes Caribbean (1,190+ regions assigned, 710 fresh coordinate backfills)',
-        '5 · Publish enriched, provenance-tracked links — 9,000+ curator edits captured',
+        '5 · Publish enriched, provenance-tracked links, 9,000+ curator edits captured',
       ],
       notes: [
         'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection (PR #8 = working branch).',
-        'Stress the *manual* sprint step — automated disambiguation is necessary but not sufficient for colonial place names that repeat across regions.',
+        'Stress the *manual* sprint step. Scripted disambiguation gets us most of the way, but it is not sufficient for colonial place names that repeat across regions.',
       ],
     },
 
@@ -179,7 +179,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       component: 'featuredGrid',
       componentProps: { max: 24 },
       notes: [
-        'Tiles are real Rijksmuseum thumbnails from the working dataset — each is linked to a Suriname place + a year.',
+        'Tiles are real Rijksmuseum thumbnails from the working dataset, each is linked to a Suriname place + a year.',
         'Point out the visible shift from drawings/lithographs (early decades) to studio + documentary photographs (later decades).',
         'If online, click a tile to open the Rijksmuseum PID page.',
       ],
@@ -193,11 +193,11 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Top Suriname-region matched place names in the working dataset.',
       body: [
         'Once free-text strings are reconciled to the STM gazetteer + Wikidata, a clear topography emerges: a coastal photographic corridor from Paramaribo eastward, the bauxite town of Moengo, and a constellation of named plantations.',
-        '*Surinam* is the catch-all label assigned when no narrower place was identified — a useful tally of records still in need of disambiguation.',
+        '*Surinam* is the catch-all label assigned when no narrower place was identified, a useful tally of records still in need of disambiguation.',
       ],
       component: 'topPlacesChart',
       notes: [
-        'Paramaribo is the obvious centre; Moengo (~395 records) is striking — the Suralco bauxite-mining industrial photography archive.',
+        'Paramaribo is the obvious centre; Moengo (~395 records) is striking, the Suralco bauxite-mining industrial photography archive.',
         'Almost every plantation that appears was a former sugar / coffee estate along the Commewijne / Suriname rivers.',
       ],
     },
@@ -212,7 +212,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       componentProps: { from: 1820, to: 1970 },
       notes: [
         'The wedge of teal-strong (photographs) takes over from the 1860s and dominates by the 1880s.',
-        'This is *not* news historically — but it lets us pose the question: did the geography of what was photographed change, or just the medium? (Spoiler: see the next slide.)',
+        'This is *not* news historically, but it lets us pose the question: did the geography of what was photographed change, or just the medium? (Spoiler: see the next slide.)',
       ],
     },
     {
@@ -227,13 +227,13 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Three patterns jump off the 1930 map:',
       ],
       bullets: [
-        'A **coastal corridor** from Paramaribo east along the Commewijne plantation belt to Moengo — one continuous teal ribbon following rivers, road and rail.',
-        'A **near-empty interior** — the southern two-thirds of the country is blank, even after our enrichment.',
-        '**Moengo as an outlier** — an isolated hot cell far east of the capital: the Suralco bauxite archive accidentally captured a 20th-century landscape the older drawing tradition never reached.',
+        'A **coastal corridor** from Paramaribo east along the Commewijne plantation belt to Moengo, one continuous teal ribbon following rivers, road and rail.',
+        'A **near-empty interior**, the southern two-thirds of the country is blank, even after our enrichment.',
+        '**Moengo as an outlier**, an isolated hot cell far east of the capital: the Suralco bauxite archive accidentally captured a 20th-century landscape the older drawing tradition never reached.',
       ],
       component: 'hexHeatmap',
       notes: [
-        'Read the map: the corridor is *infrastructural* — capital, not country.',
+        'Read the map: the corridor is *infrastructural*, capital, not country.',
         'The blankness in the south is an argument, not a flaw: it is the brief for Sranan Story Collective and partnerships with Maroon and indigenous archives.',
       ],
     },
@@ -243,20 +243,20 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act III · Live exploration',
       title: 'Zooming in · Paramaribo street by street',
       subtitle:
-        'Same data, tighter frame — on a historical street map of the capital.',
+        'Same data, tighter frame, on a historical street map of the capital.',
       body: [
         'At country scale "Paramaribo" is a single hot cell. Zoomed to the city it collapses onto a handful of streets:',
       ],
       bullets: [
-        'Waterkant, Gouvernementsplein, the streets around the Palmentuin, Combé — the colonial administrative and wealthier residential core.',
+        'Waterkant, Gouvernementsplein, the streets around the Palmentuin, Combé, the colonial administrative and wealthier residential core.',
         'Working-class quarters and the markets that *existed* in 1900 are barely represented.',
-        'Whose Paramaribo got photographed? — a question the hex bins make impossible to dodge.',
+        'Whose Paramaribo got photographed? A question the hex bins make impossible to dodge.',
       ],
       component: 'hexHeatmap',
       componentProps: { focus: 'paramaribo', hexRadius: 16 },
       notes: [
         'Most "Paramaribo" records collapse onto the same ten famous streets.',
-        'Pair this with the critique slides — the city-scale empty bins are a research and acquisition brief.',
+        'Pair this with the critique slides, the city-scale empty bins are a research and acquisition brief.',
       ],
     },
     {
@@ -269,7 +269,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       componentProps: { yearStart: 1840, yearEnd: 1970 },
       notes: [
         'Drag the slider. Pre-1870 = a thin scatter of drawings and prints. Post-1880 = the photographic boom.',
-        'The geographical footprint barely changes — the photographic boom *intensifies* the existing corridor, it does not broaden it.',
+        'The geographical footprint barely changes. The photographic boom *intensifies* the existing corridor; it does not broaden it.',
       ],
     },
     {
@@ -278,13 +278,12 @@ export const rijksmuseum2026Content: PresentationContent = {
       background: 'cream',
       eyebrow: 'Act III · Synthesis',
       title: 'Reading the map · five stories the patterns tell',
-      subtitle:
-        'What the hex bins say before we add a single new image.',
+      subtitle: 'What the hex bins say before we add a single new image.',
       bullets: [
         '**Capital follows capital.** The dense corridor traces colonial infrastructure (river → road → bauxite rail), not the country itself.',
         '**Medium changed, geography did not.** The photographic boom from c. 1880 *intensifies* the same corridor rather than expanding it.',
-        '**Ten famous streets.** "Paramaribo" at street scale is a handful of administrative and wealthier blocks — entire neighbourhoods stay invisible.',
-        '**Plantation-name half-life.** Lower-Commewijne bins thin out in the 20th c. not because the places vanished, but because their names were renamed, abandoned or absorbed — a slow toponymic erasure visible on the map.',
+        '**Ten famous streets.** "Paramaribo" at street scale is a handful of administrative and wealthier blocks. Entire neighbourhoods stay invisible.',
+        '**Plantation-name half-life.** Lower-Commewijne bins thin out in the 20th c. not because the places vanished, but because their names were renamed, abandoned or absorbed, a slow toponymic erasure visible on the map.',
         '**Uncertainty as a citizen-science prompt.** Hexes with dashed strokes (mean uncertainty > 5 km) are exactly where community geotagging would move the needle most.',
       ],
       notes: [
@@ -304,7 +303,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'The empty halves of the map are a brief for future collecting.',
       body: [
         'A spatial reading turns absence into a research question: which regions, which communities, which kinds of place are systematically un-imaged?',
-        'The Rijksmuseum can read these gaps as **acquisition priorities** — and as conversation starters with archives elsewhere (Suriname, the UK, France).',
+        'The Rijksmuseum can read these gaps as **acquisition priorities**, and as conversation starters with archives elsewhere (Suriname, the UK, France).',
       ],
       bullets: [
         'Interior / Maroon villages: almost no coverage',
@@ -314,7 +313,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
       notes: [
         'Frame this as constructive, not accusatory.',
-        'The Rijksmuseum is already aware — our contribution is making the absences *visible and addressable*.',
+        'The Rijksmuseum is already aware. Our contribution is making the absences *visible and addressable*.',
       ],
     },
     {
@@ -326,7 +325,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle: 'A visual archive made by a narrow slice of colonial society.',
       body: [
         'Nearly every photograph and print we have was made **by, for, and about** wealthy white Dutch men in Suriname.',
-        'The voices that are missing — Surinamese, indigenous, enslaved and formerly enslaved — left their record in different media: oral history, song, material culture, the landscape itself.',
+        'The voices that are missing, Surinamese, indigenous, enslaved and formerly enslaved, left their record in different media: oral history, song, material culture, the landscape itself.',
         'Our infrastructure has to make space for those media too.',
       ],
       notes: [
@@ -341,16 +340,16 @@ export const rijksmuseum2026Content: PresentationContent = {
       title: 'Sranan Story Collective',
       subtitle: 'A co-creation partnership with Dutch-Surinamese communities.',
       body: [
-        'We are working with the [Sranan Story Collective](https://www.surinameheritage.org/) to bring the dataset back to community settings — and to record the stories that the catalog cannot hold on its own.',
+        'We are working with the [Sranan Story Collective](https://www.surinameheritage.org/) to bring the dataset back to community settings, and to record the stories that the catalog cannot hold on its own.',
       ],
       bullets: [
         'Place-elicited interviews using map + image prompts',
         'Stories linked back to gazetteer entries (not just transcribed)',
         'Audio + transcripts published under community-set licenses',
-        'Iterative — the dataset improves the next session',
+        'Iterative, the dataset improves the next session',
       ],
       notes: [
-        'Highlight that "co-creation" here is not a buzzword — community members shape what counts as a relevant place and what gets recorded.',
+        'Highlight that "co-creation" here is not a buzzword. Community members shape what counts as a relevant place and what gets recorded.',
       ],
     },
     {
@@ -363,12 +362,12 @@ export const rijksmuseum2026Content: PresentationContent = {
         'A community member opens an image of the plantation their family came from',
         '… sees the gazetteer entry alongside it: dates, neighbours, surrounding creeks',
         '… records a story, in their own language, about a relative or a place name',
-        '… and that story becomes part of the linked record — citable, durable, theirs',
+        '… and that story becomes part of the linked record, citable, durable, theirs',
         'Repeat across collectives, regions, and generations',
       ],
       notes: [
         'Land the emotional close. This is the *point* of the infrastructure.',
-        'Acknowledge that we are early — this is a roadmap, not a completed programme.',
+        'Acknowledge that we are early, this is a roadmap, not a completed programme.',
       ],
     },
     {
@@ -405,7 +404,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       },
       notes: [
         'Thanks to: Huygens Institute, Rijksmuseum, Wiki Goes Caribbean, Sranan Story Collective, all sprint participants.',
-        'Invite questions — and invite the audience to scan now while we discuss.',
+        'Invite questions, and invite the audience to scan now while we discuss.',
       ],
     },
   ],

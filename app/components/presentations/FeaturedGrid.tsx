@@ -34,7 +34,7 @@ export function FeaturedGrid({ items = [], max = 24 }: FeaturedGridProps) {
           target="_blank"
           rel="noreferrer noopener"
           className="relative block overflow-hidden bg-(--deep-teal) ring-1 ring-white/10 transition hover:ring-(--teal-bright)"
-          title={`${it.title} — ${it.creator}, ${it.year}`}
+          title={`${it.title} · ${it.creator}, ${it.year}`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element -- external IIIF host */}
           <img
