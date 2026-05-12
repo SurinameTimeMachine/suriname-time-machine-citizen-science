@@ -72,13 +72,12 @@ export const rijksmuseum2026Content: PresentationContent = {
     },
     {
       id: 'time-machine-brand',
-      layout: 'two-col',
+      layout: 'full-media',
       title: 'Where STM sits',
       subtitle:
         'Between the Dutch Time Machines and the global community of colonial-heritage projects.',
       body: [
-        'On one side: sister Time Machines in the Netherlands and Belgium that share our data culture — open, IIIF, citizen-science driven. Think [Amsterdam](https://www.amsterdamtimemachine.nl/), [Gouda](https://www.goudatijdmachine.nl/), [Utrecht](https://utrechttimemachine.nl/), [Aezel](https://aezel.eu/), [Gent Gemapt](https://www.gentgemapt.be/).',
-        'On the other: projects that work with colonial / Atlantic-world sources outside the European Time Machine federation. We learn from [HDSC](https://surinametijdmachine.org), [imagineRio](https://imaginerio.org/en) and [Same Boats](https://sameboats.org/).',
+        'Left: sister Time Machines in NL/BE that share our data culture — open, IIIF, citizen science (Amsterdam, Gouda, Utrecht, Aezel, Gent Gemapt). Right: projects that work with colonial / Atlantic-world sources outside the European TM federation ([HDSC](https://surinametijdmachine.org), [imagineRio](https://imaginerio.org/en), [Same Boats](https://sameboats.org/)).',
       ],
       component: 'timeMachineBrandMap',
       notes: [

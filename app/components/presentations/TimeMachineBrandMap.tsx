@@ -14,9 +14,24 @@ type Peer = {
 // Left circle: Time Machine peers with similar data culture (open, IIIF,
 // citizen-science driven).
 const TM_PEERS: Peer[] = [
-  { name: 'Amsterdam Time Machine', href: 'https://www.amsterdamtimemachine.nl/', x: 215, y: 200 },
-  { name: 'Gouda Tijdmachine', href: 'https://www.goudatijdmachine.nl/', x: 130, y: 320 },
-  { name: 'Utrecht Time Machine', href: 'https://utrechttimemachine.nl/', x: 235, y: 420 },
+  {
+    name: 'Amsterdam Time Machine',
+    href: 'https://www.amsterdamtimemachine.nl/',
+    x: 215,
+    y: 200,
+  },
+  {
+    name: 'Gouda Tijdmachine',
+    href: 'https://www.goudatijdmachine.nl/',
+    x: 130,
+    y: 320,
+  },
+  {
+    name: 'Utrecht Time Machine',
+    href: 'https://utrechttimemachine.nl/',
+    x: 235,
+    y: 420,
+  },
   { name: 'Aezel', href: 'https://aezel.eu/', x: 105, y: 220 },
   { name: 'Gent Gemapt', href: 'https://www.gentgemapt.be/', x: 110, y: 410 },
 ];
@@ -37,11 +52,11 @@ export function TimeMachineBrandMap() {
   const R = 240;
 
   return (
-    <div className="w-full">
+    <div className="flex h-full w-full items-center justify-center">
       <svg
         viewBox="0 0 1000 600"
         preserveAspectRatio="xMidYMid meet"
-        className="block h-auto w-full"
+        className="block max-h-full w-full"
         role="img"
         aria-label="Venn diagram: Suriname Time Machine between Time Machine peers and colonial-heritage peers"
       >
@@ -62,7 +77,7 @@ export function TimeMachineBrandMap() {
           cy={CY}
           r={R}
           fill="var(--deep-teal)"
-          fillOpacity={0.10}
+          fillOpacity={0.1}
           stroke="var(--deep-teal)"
           strokeOpacity={0.35}
           strokeWidth={1.5}
@@ -166,32 +181,15 @@ export function TimeMachineBrandMap() {
           </text>
         </g>
       </svg>
-      <p className="mt-3 text-sm opacity-75">
-        STM borrows the <span className="font-medium">Time Machine</span>{' '}
-        playbook (gazetteers, IIIF, citizen science) and applies it to{' '}
-        <span className="font-medium">colonial</span> sources, so we look in
-        both directions for partners.
-      </p>
     </div>
   );
 }
 
-function PeerLabel({
-  peer,
-  anchor,
-}: {
-  peer: Peer;
-  anchor: 'start' | 'end';
-}) {
+function PeerLabel({ peer, anchor }: { peer: Peer; anchor: 'start' | 'end' }) {
   const dotR = 4;
   return (
     <g>
-      <circle
-        cx={peer.x}
-        cy={peer.y}
-        r={dotR}
-        fill="var(--teal-strong)"
-      />
+      <circle cx={peer.x} cy={peer.y} r={dotR} fill="var(--teal-strong)" />
       <text
         x={peer.x + (anchor === 'start' ? 10 : -10)}
         y={peer.y + 4}
