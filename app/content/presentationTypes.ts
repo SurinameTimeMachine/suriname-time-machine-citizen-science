@@ -25,7 +25,8 @@ export type SlideComponentKey =
   | 'embedRijksmuseum'
   | 'embedGazetteer'
   | 'qrCodes'
-  | 'timeMachineBrandMap';
+  | 'timeMachineBrandMap'
+  | 'partnersGrid';
 
 export type SlideMediaAsset = {
   src: string;

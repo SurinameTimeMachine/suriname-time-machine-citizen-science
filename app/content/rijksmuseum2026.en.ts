@@ -55,20 +55,20 @@ export const rijksmuseum2026Content: PresentationContent = {
       eyebrow: 'Act I · Framing',
       title: 'What is the Suriname Time Machine?',
       subtitle:
-        'A digital infrastructure linking people, places and visual heritage across colonial Suriname.',
+        'Technical infrastructure built on the Historical Database of Suriname & the Caribbean (HDSC).',
       body: [
-        'The Suriname Time Machine (STM) connects scattered archives into a single, geographically-anchored knowledge graph, built with and for Dutch-Surinamese communities.',
-        'It already serves tens of thousands of users researching genealogical and historical connections through the [Historical Database of Suriname and the Caribbean](https://www.surinameheritage.org).',
+        'The [Suriname Time Machine](https://surinametijdmachine.org) (STM) connects maps, registers and historical images into a Linked Open Data architecture, so that ordinary people in colonial Suriname can be followed across the sources that name them.',
+        'STM builds on [HDSC](https://surinametijdmachine.org), the community-funded Historical Database that opened up the slave registers and civil records (1830–1950).',
       ],
       bullets: [
-        'Standardised historical place data (a gazetteer)',
-        'CIDOC-CRM linked-data backbone',
-        'Open, Wikidata-published outputs',
-        'Co-creation with descendant communities',
+        'HDSC: slave registers + civil records, open access',
+        'STM: gazetteer + Linked Open Data graph on top',
+        'Maps + registers + images, all linked',
+        'Co-designed with Surinamese-diaspora communities',
       ],
       notes: [
-        'STM is not a website. It is an infrastructure: a gazetteer + a knowledge graph + tooling that other projects can build on.',
-        'Stress the existing user base: this is not greenfield, the Historical Database already has tens of thousands of users.',
+        'Be clear about the relationship: HDSC is the data; STM is the architecture that links it spatially and to other sources.',
+        'HDSC was crowdfunded and demand-driven, anchored in genealogy and family history.',
       ],
     },
     {
@@ -93,20 +93,20 @@ export const rijksmuseum2026Content: PresentationContent = {
       layout: 'split',
       eyebrow: 'Act I · Framing',
       title: 'STM’s foundations',
-      subtitle: 'Gazetteer + place-data model',
+      subtitle: 'A gazetteer + a place-data model that other sources can plug into.',
       body: [
-        'Our data model focuses on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers**, modelled in CIDOC-CRM and published as JSON-LD.',
+        'STM’s data model is anchored on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers** of colonial Suriname.',
         'See it live: [suriname-database-model.vercel.app](https://suriname-database-model.vercel.app/).',
       ],
       bullets: [
-        '375 plantations · 1700–1863',
-        '22,999 almanak rows · 1818–1861',
-        '1,596 georeferenced QGIS polygons · 1930',
-        '38,371 entities in the JSON-LD graph',
+        'Historic maps, georeferenced via Allmaps',
+        'Almanakken and registers, transcribed and linked',
+        'Plantations as anchor entities',
+        'Open and reusable; published alongside the source code',
       ],
       notes: [
-        'These numbers come from the suriname-database-model README.',
-        'Plantations are our anchor entity, they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue that links the Rijksmuseum images to people.',
+        'Plantations are the anchor entity: they appear in almanakken, civil registers, slave registers, and on the maps. They are the glue that links Rijksmuseum images to people.',
+        'Avoid quoting precise counts on the slide unless verified live, the model is actively growing.',
       ],
     },
 
@@ -141,8 +141,8 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'Titles and dates are nearly complete. Linked places used to be the gap, then we worked on it.',
       body: [
-        'Coverage measured across all 3,668 records in the working snapshot. After the curation sprint, **90.5% of objects are now map-ready** (at least one geo-keyword with coordinates).',
-        'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences, thanks to the disambiguation + Wiki Goes Caribbean sprints.',
+        'Coverage measured across all 3,668 records in the working snapshot. After the curation work, **90.5% of objects are now map-ready** (at least one geo-keyword with coordinates).',
+        'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences.',
       ],
       component: 'metadataGapsChart',
       notes: [
@@ -160,11 +160,11 @@ export const rijksmuseum2026Content: PresentationContent = {
         '1 · Fetch every Suriname work via the Rijksmuseum API + IIIF (3,668 records)',
         '2 · Normalise metadata; extract candidate place strings from titles and keywords',
         '3 · Disambiguate against the STM gazetteer, Wikidata and Getty TGN',
-        '4 · Manual verification in data sprints with Wiki Goes Caribbean (1,190+ regions assigned, 710 fresh coordinate backfills)',
-        '5 · Publish enriched, provenance-tracked links, 9,000+ curator edits captured',
+        '4 · Manual verification in data sprints with Wikimedia Nederland and partner libraries',
+        '5 · Publish enriched, provenance-tracked links back to Wikidata',
       ],
       notes: [
-        'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection (PR #8 = working branch).',
+        'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection.',
         'Stress the *manual* sprint step. Scripted disambiguation gets us most of the way, but it is not sufficient for colonial place names that repeat across regions.',
       ],
     },
@@ -234,7 +234,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       component: 'hexHeatmap',
       notes: [
         'Read the map: the corridor is *infrastructural*, capital, not country.',
-        'The blankness in the south is an argument, not a flaw: it is the brief for Sranan Story Collective and partnerships with Maroon and indigenous archives.',
+        'The blankness in the south is an argument, not a flaw: it is the brief for the citizen-science project and for partnerships with Maroon and indigenous archives.',
       ],
     },
     {
@@ -288,7 +288,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       ],
       notes: [
         'This is the slide where we move from *describing* the dataset to *arguing* with it. Five sentences, five questions for the curators.',
-        'It also sets up Act IV: each pattern points to a critique (whose gaze) and a programme (Sranan Story Collective).',
+        'It also sets up Act IV: each pattern points to a critique (whose gaze) and a programme (the upcoming citizen-science project).',
       ],
     },
 
@@ -329,7 +329,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Our infrastructure has to make space for those media too.',
       ],
       notes: [
-        'This is the pivot to the Sranan Story Collective and the outlook.',
+        'This is the pivot to the citizen-science project and the outlook.',
         'Be explicit: the Rijksmuseum collection is a *partial* archive. Treating it as comprehensive reproduces the colonial gaze.',
       ],
     },
@@ -337,19 +337,88 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'sranan-story',
       layout: 'split',
       eyebrow: 'Act IV · Outlook',
-      title: 'Sranan Story Collective',
-      subtitle: 'A co-creation partnership with Dutch-Surinamese communities.',
+      title: 'A citizen-science project on Surinamese heritage',
+      subtitle:
+        'KNAW-funded, Nov 2025 – Jun 2028. Co-designed with community builders before scope is fixed.',
       body: [
-        'We are working with the [Sranan Story Collective](https://www.surinameheritage.org/) to bring the dataset back to community settings, and to record the stories that the catalog cannot hold on its own.',
+        'The Huygens Institute team is starting a citizen-science project that uses STM’s data as **input**, not as a finished product. Scope, outputs and audiences are co-designed with Surinamese community builders and an Advisory Board (currently being established).',
+        'The aim is to escape the "consultation trap": feedback on a finished product is not co-creation. So co-design happens now, before objectives are fixed.',
       ],
       bullets: [
-        'Place-elicited interviews using map + image prompts',
-        'Stories linked back to gazetteer entries (not just transcribed)',
-        'Audio + transcripts published under community-set licenses',
-        'Iterative, the dataset improves the next session',
+        'Three Community Builder roles: fundraising, coordination, events',
+        'Advisory Board with Surinamese organisations',
+        'Research team at Huygens Institute (KNAW)',
+        'Built on HDSC + STM, but scope is open',
       ],
       notes: [
-        'Highlight that "co-creation" here is not a buzzword. Community members shape what counts as a relevant place and what gets recorded.',
+        '"Co-creation" here is not a buzzword: community builders shape what counts as a relevant question, not just what gets transcribed.',
+        'Be careful not to over-claim. The Advisory Board is being established, not yet active.',
+      ],
+    },
+    {
+      id: 'partners',
+      layout: 'text',
+      background: 'cream',
+      eyebrow: 'Act IV · Outlook',
+      title: 'Partners and funders',
+      subtitle:
+        'This work is only possible because of a network of institutional and community partners.',
+      component: 'partnersGrid',
+      componentProps: {
+        partners: [
+          {
+            name: 'Huygens Institute (KNAW)',
+            logo: '/images/partners/huygens.png',
+            href: 'https://www.huygens.knaw.nl/',
+            role: 'Research host',
+          },
+          {
+            name: 'HDSC',
+            logo: '/images/partners/hdsc.png',
+            href: 'https://surinametijdmachine.org',
+            role: 'Historical Database of Suriname & the Caribbean',
+          },
+          {
+            name: 'Wikimedia Nederland',
+            logo: '/images/partners/wikimedia-nl.png',
+            href: 'https://wikimedia.nl/',
+            role: 'Wikidata reconciliation',
+          },
+          {
+            name: 'Allmaps',
+            logo: '/images/partners/allmaps.svg',
+            href: 'https://allmaps.org/',
+            role: 'Map georeferencing',
+          },
+          {
+            name: 'Allard Pierson',
+            logo: '/images/partners/allard-pierson.svg',
+            href: 'https://allardpierson.nl/',
+            role: 'Map collections',
+          },
+          {
+            name: 'UB Leiden',
+            logo: '/images/partners/ub-leiden.png',
+            href: 'https://www.library.universiteitleiden.nl/',
+            role: 'Map collections',
+          },
+          {
+            name: 'CREATE · UvA',
+            logo: '/images/partners/create-uva.png',
+            href: 'https://www.create.humanities.uva.nl/',
+            role: 'Digital humanities',
+          },
+          {
+            name: 'Stichting Pica',
+            logo: '/images/partners/stichting-pica.svg',
+            href: 'https://stichtingpica.nl/',
+            role: 'Funder',
+          },
+        ],
+      },
+      notes: [
+        'Acknowledge specifically: HDSC for the underlying data; the libraries for the historical maps; Allmaps for georeferencing; Wikimedia NL for reconciliation help; Stichting Pica for funding parts of this work.',
+        'The Rijksmuseum is the host today, name it warmly.',
       ],
     },
     {
@@ -391,19 +460,19 @@ export const rijksmuseum2026Content: PresentationContent = {
             description: 'Place data model + map viewer',
           },
           {
-            label: 'STM citizen science',
-            url: 'https://surinameheritage.org/',
-            description: 'Project home & data sprints',
+            label: 'Suriname Time Machine',
+            url: 'https://surinametijdmachine.org',
+            description: 'Project home, HDSC, citizen science',
           },
           {
             label: 'These slides',
-            url: 'https://surinameheritage.org/en/presentations/rijksmuseum-2026',
+            url: 'https://surinametijdmachine.org/en/presentations/rijksmuseum-2026',
             description: 'Bookmark & share',
           },
         ],
       },
       notes: [
-        'Thanks to: Huygens Institute, Rijksmuseum, Wiki Goes Caribbean, Sranan Story Collective, all sprint participants.',
+        'Thanks to: Huygens Institute, the Rijksmuseum, HDSC contributors, Wikimedia Nederland, Allmaps, Allard Pierson, UB Leiden, CREATE, Stichting Pica, and the community builders shaping the next phase.',
         'Invite questions, and invite the audience to scan now while we discuss.',
       ],
     },

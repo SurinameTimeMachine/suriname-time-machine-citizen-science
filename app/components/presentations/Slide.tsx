@@ -9,6 +9,7 @@ import { FeaturedGrid } from './FeaturedGrid';
 import { IIIFViewer } from './IIIFViewer';
 import { MediumOverTime } from './MediumOverTime';
 import { MetadataGapsChart } from './MetadataGapsChart';
+import { PartnersGrid } from './PartnersGrid';
 import { QrCodes } from './QrCodes';
 import { TimeMachineBrandMap } from './TimeMachineBrandMap';
 import { TimeSlider } from './TimeSlider';
@@ -112,6 +113,8 @@ function SlideInteractive({ slide }: { slide: SlideContent }) {
       return <QrCodes {...props} />;
     case 'timeMachineBrandMap':
       return <TimeMachineBrandMap />;
+    case 'partnersGrid':
+      return <PartnersGrid {...props} />;
     default:
       return null;
   }
