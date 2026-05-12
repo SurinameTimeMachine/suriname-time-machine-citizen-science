@@ -73,17 +73,18 @@ export const rijksmuseum2026Content: PresentationContent = {
     {
       id: 'time-machine-brand',
       layout: 'two-col',
-      title: 'The Time Machine brand',
+      title: 'Where STM sits',
       subtitle:
-        'A network of city- and region-scale historical infrastructures.',
+        'Between the Dutch Time Machines and the global community of colonial-heritage projects.',
       body: [
-        'STM joins a growing federation: [Venice Time Machine](https://www.timemachine.eu/local-time-machines/), [Amsterdam Time Machine](https://www.amsterdamtimemachine.nl/), [Gouda Tijdmachine](https://www.goudatijdmachine.nl/), and many more.',
-        'Each one builds local gazetteers and visualisations from its own archives, together forming a European-scale linked heritage commons.',
+        'On one side: sister Time Machines in the Netherlands and Belgium that share our data culture — open, IIIF, citizen-science driven. Think [Amsterdam](https://www.amsterdamtimemachine.nl/), [Gouda](https://www.goudatijdmachine.nl/), [Utrecht](https://utrechttimemachine.nl/), [Aezel](https://aezel.eu/), [Gent Gemapt](https://www.gentgemapt.be/).',
+        'On the other: projects that work with colonial / Atlantic-world sources outside the European Time Machine federation. We learn from [HDSC](https://surinametijdmachine.org), [imagineRio](https://imaginerio.org/en) and [Same Boats](https://sameboats.org/).',
       ],
       component: 'timeMachineBrandMap',
       notes: [
-        'Briefly name-drop other Time Machines.',
-        'The point: this is a shared methodology, not an isolated experiment. We can compare approaches across cities.',
+        'The Venn shows the position: STM borrows the Time Machine playbook (gazetteer, IIIF, citizen science) and applies it to a colonial subject.',
+        'Be explicit about the limit of the Time Machine federation: it is European-focused. For our scope we look outward — to HDSC for the source data, to imagineRio for a comparable colonial-city digital twin, to Same Boats for Atlantic mobility / black diaspora linked data.',
+        'Avoid framing as "we are part of Europe". The point is the methodological overlap, not the geographical one.',
       ],
     },
     {
