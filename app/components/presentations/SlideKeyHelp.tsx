@@ -37,7 +37,7 @@ export function SlideKeyHelp({ open, onClose, title }: SlideKeyHelpProps) {
         <ul className="mt-6 space-y-3 text-sm">
           {SHORTCUTS.map((s) => (
             <li
-              key={s.keys}
+              key={`shortcut-${s.keys}`}
               className="flex items-center justify-between gap-6"
             >
               <span className="font-mono text-xs uppercase tracking-wider text-ink/70">

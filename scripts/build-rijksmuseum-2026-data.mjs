@@ -14,9 +14,9 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const dirName = dirname(fileURLToPath(import.meta.url));
 const OUT_DIR = resolve(
-  __dirname,
+  dirName,
   '..',
   'public',
   'presentations',
@@ -28,7 +28,7 @@ const candidatePaths = [
   process.env.RIJKS_COLLECTION_JSON,
   '/tmp/rijks-suriname/data/collection.json',
   resolve(
-    __dirname,
+    dirName,
     '..',
     '..',
     'rijksmuseum-suriname-collection',
@@ -80,8 +80,9 @@ const mediumOf = (o) => {
     return 'photo';
   }
   if (types.includes('schilderij')) return 'painting';
-  if (types.some((t) => ['tekening', 'prent', 'aquarel'].includes(t)))
+  if (types.some((t) => ['tekening', 'prent', 'aquarel'].includes(t))) {
     return 'drawing';
+  }
   return 'other';
 };
 

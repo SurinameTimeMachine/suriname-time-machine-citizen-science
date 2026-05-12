@@ -17,7 +17,7 @@ export function QrCodes({ targets }: QrCodesProps) {
     <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
       {list.map((t) => (
         <div
-          key={t.url}
+          key={`qr-${t.url}`}
           className="flex flex-col items-center gap-3 bg-white p-5 text-ink"
         >
           <div

@@ -73,6 +73,7 @@ export function AllmapsMap({
   useEffect(() => {
     let cancelled = false;
     async function init() {
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- L is the conventional Leaflet namespace alias
       const [L, allmaps] = await Promise.all([
         import('leaflet'),
         import('@allmaps/leaflet'),
@@ -98,6 +99,7 @@ export function AllmapsMap({
       ).addTo(map);
 
       // The 1930 Allmaps georeferenced map series.
+      // eslint-disable-next-line @typescript-eslint/naming-convention -- WarpedMapLayer is a constructor (PascalCase is intentional)
       const WarpedMapLayer = (
         allmaps as unknown as {
           WarpedMapLayer: new () => import('leaflet').Layer & {
@@ -161,6 +163,7 @@ export function AllmapsMap({
   useEffect(() => {
     const state = stateRef.current;
     if (!ready || !state) return;
+    // eslint-disable-next-line @typescript-eslint/naming-convention -- L is the conventional Leaflet namespace alias
     const { L, map, markers, hexGroup } = state;
 
     function render() {
@@ -263,9 +266,9 @@ function hexBin(points: ProjPoint[], r: number): Bin[] {
   const dy = r * 1.5;
   const bins = new Map<string, Bin>();
   for (const p of points) {
-    let py = p.y / dy;
+    const py = p.y / dy;
     let pj = Math.round(py);
-    let px = p.x / dx - (pj & 1) / 2;
+    const px = p.x / dx - (pj & 1) / 2;
     let pi = Math.round(px);
     const py1 = py - pj;
     if (Math.abs(py1) * 3 > 1) {

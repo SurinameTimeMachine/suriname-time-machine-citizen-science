@@ -130,11 +130,11 @@ export function TimeMachineBrandMap() {
 
         {/* Peer labels — left circle */}
         {TM_PEERS.map((p) => (
-          <PeerLabel key={p.name} peer={p} anchor="start" />
+          <PeerLabel key={`peer-${p.name}`} peer={p} anchor="start" />
         ))}
         {/* Peer labels — right circle */}
         {COLONIAL_PEERS.map((p) => (
-          <PeerLabel key={p.name} peer={p} anchor="end" />
+          <PeerLabel key={`peer-${p.name}`} peer={p} anchor="end" />
         ))}
 
         {/* Center: Suriname Time Machine */}

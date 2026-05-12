@@ -40,7 +40,7 @@ function color(v: number) {
 export function MetadataGapsChart({ data }: MetadataGapsChartProps = {}) {
   const rows = data && data.length > 0 ? data : DEFAULT_DATA;
   return (
-    <div className="h-full w-full min-h-[320px]">
+    <div className="h-full w-full min-h-80">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={rows}
@@ -64,7 +64,7 @@ export function MetadataGapsChart({ data }: MetadataGapsChartProps = {}) {
           />
           <Bar dataKey="coverage" radius={[0, 2, 2, 0]}>
             {rows.map((d) => (
-              <Cell key={d.field} fill={color(d.coverage)} />
+              <Cell key={`gap-${d.field}`} fill={color(d.coverage)} />
             ))}
             <LabelList
               dataKey="coverage"

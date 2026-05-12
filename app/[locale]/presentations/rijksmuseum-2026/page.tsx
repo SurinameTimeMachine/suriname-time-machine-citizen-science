@@ -140,6 +140,7 @@ async function augmentSlides(
         const enriched = await Promise.all(
           targets.map(async (t) => ({
             ...t,
+            // eslint-disable-next-line @typescript-eslint/no-base-to-string -- calling qrcode library's toString API, not Object.prototype.toString
             svg: await QRCode.toString(t.url, {
               type: 'svg',
               margin: 0,

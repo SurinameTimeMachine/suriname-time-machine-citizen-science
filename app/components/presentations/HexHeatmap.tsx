@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 
 // ── Suriname bounding box (approximate) ──────────────────────────────
-const BOUNDS = {
+const bounds = {
   north: 6.05,
   south: 1.85,
   west: -58.1,
@@ -48,8 +48,8 @@ const VIEW_W = 900;
 const VIEW_H = 720;
 
 function project(lng: number, lat: number): [number, number] {
-  const x = ((lng - BOUNDS.west) / (BOUNDS.east - BOUNDS.west)) * VIEW_W;
-  const y = (1 - (lat - BOUNDS.south) / (BOUNDS.north - BOUNDS.south)) * VIEW_H;
+  const x = ((lng - bounds.west) / (bounds.east - bounds.west)) * VIEW_W;
+  const y = (1 - (lat - bounds.south) / (bounds.north - bounds.south)) * VIEW_H;
   return [x, y];
 }
 
@@ -111,10 +111,10 @@ function generateSamplePoints(count = 420, seed = 1879): ImagePoint[] {
     const lng = well.lng + dx;
     const lat = well.lat + dy;
     if (
-      lng < BOUNDS.west ||
-      lng > BOUNDS.east ||
-      lat < BOUNDS.south ||
-      lat > BOUNDS.north
+      lng < bounds.west ||
+      lng > bounds.east ||
+      lat < bounds.south ||
+      lat > bounds.north
     ) {
       continue;
     }
@@ -280,7 +280,7 @@ export function HexHeatmap({ points, yearMin, yearMax }: HexHeatmapProps) {
           <div className="mt-1 flex items-center gap-1">
             {DENSITY_RAMP.map((c) => (
               <span
-                key={c}
+                key={`density-${c}`}
                 style={{ background: c }}
                 className="block size-3"
               />

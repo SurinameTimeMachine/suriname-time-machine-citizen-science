@@ -42,7 +42,7 @@ export function SpeakerNotes({
       ) : (
         <ul className="space-y-2 text-sm leading-relaxed">
           {notes.map((n) => (
-            <li key={n}>
+            <li key={`note-${n}`}>
               <RichText as="span">{n}</RichText>
             </li>
           ))}

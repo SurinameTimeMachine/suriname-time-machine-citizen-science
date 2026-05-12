@@ -159,7 +159,7 @@ export function SlideDeck({ content }: SlideDeckProps) {
       <div className="deck-print">
         {slides.map((slide, i) => (
           <Slide
-            key={slide.id}
+            key={`slide-${slide.id}`}
             slide={slide}
             index={i}
             total={slides.length}

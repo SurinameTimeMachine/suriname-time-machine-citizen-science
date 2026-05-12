@@ -24,7 +24,7 @@ type SlideProps = {
   printMode?: boolean;
 };
 
-const BG_CLASSES: Record<NonNullable<SlideContent['background']>, string> = {
+const bgClasses: Record<NonNullable<SlideContent['background']>, string> = {
   default: 'bg-white text-ink',
   hero: 'hero-surface text-white',
   cream: 'bg-(--cream) text-ink',
@@ -60,7 +60,7 @@ function SlideBody({ body }: { body: string[] }) {
   return (
     <div className="space-y-3 text-base leading-relaxed sm:text-lg">
       {body.map((p) => (
-        <RichText key={p} className="text-pretty">
+        <RichText key={`body-${p}`} className="text-pretty">
           {p}
         </RichText>
       ))}
@@ -72,10 +72,10 @@ function SlideBullets({ bullets }: { bullets: string[] }) {
   return (
     <ul className="space-y-2 text-base sm:text-lg">
       {bullets.map((b) => (
-        <li key={b} className="flex gap-3">
+        <li key={`bullet-${b}`} className="flex gap-3">
           <span
             aria-hidden
-            className="mt-2 inline-block size-2 shrink-0 -skew-x-12 bg-(--teal-bright)"
+            className="mt-2 inline-block size-2 shrink-0 -skew-x-12 bg-teal-bright"
           />
           <span className="text-pretty">
             <RichText as="span">{b}</RichText>
@@ -88,7 +88,7 @@ function SlideBullets({ bullets }: { bullets: string[] }) {
 
 function SlideInteractive({ slide }: { slide: SlideContent }) {
   if (!slide.component) return null;
-  const props = (slide.componentProps ?? {}) as Record<string, unknown>;
+  const props = slide.componentProps ?? {};
   switch (slide.component) {
     case 'hexHeatmap':
     case 'surinameMap':
@@ -128,7 +128,7 @@ export function Slide({
   ui,
   printMode,
 }: SlideProps) {
-  const bg = BG_CLASSES[slide.background ?? 'default'];
+  const bg = bgClasses[slide.background ?? 'default'];
 
   const inner = (() => {
     switch (slide.layout) {
@@ -140,14 +140,14 @@ export function Slide({
               {slide.title}
             </h1>
             {slide.subtitle ? (
-              <p className="mt-4 text-2xl text-(--teal-bright) sm:text-3xl">
+              <p className="mt-4 text-2xl text-teal-bright sm:text-3xl">
                 {slide.subtitle}
               </p>
             ) : null}
             {slide.body ? (
               <div className="mt-12 space-y-1 text-lg opacity-90">
                 {slide.body.map((p) => (
-                  <RichText key={p}>{p}</RichText>
+                  <RichText key={`title-body-${p}`}>{p}</RichText>
                 ))}
               </div>
             ) : null}
@@ -227,9 +227,9 @@ export function Slide({
 
       case 'embed':
         return (
-          <div className="mx-auto flex h-full max-w-[1600px] flex-col px-6 py-6 lg:px-10 lg:py-8">
+          <div className="mx-auto flex h-full max-w-400 flex-col px-6 py-6 lg:px-10 lg:py-8">
             <SlideHeader slide={slide} printMode={printMode} />
-            <div className="relative min-h-0 flex-1 overflow-hidden ring-1 ring-(--deep-teal)/15">
+            <div className="relative min-h-0 flex-1 overflow-hidden ring-1 ring-deep-teal/15">
               {slide.component ? <SlideInteractive slide={slide} /> : null}
             </div>
           </div>
@@ -237,7 +237,7 @@ export function Slide({
 
       case 'full-media':
         return (
-          <div className="mx-auto flex h-full max-w-[1600px] flex-col px-6 py-6 lg:px-10 lg:py-8">
+          <div className="mx-auto flex h-full max-w-400 flex-col px-6 py-6 lg:px-10 lg:py-8">
             <SlideHeader slide={slide} printMode={printMode} />
             <div className="relative min-h-0 flex-1">
               {slide.component ? <SlideInteractive slide={slide} /> : null}

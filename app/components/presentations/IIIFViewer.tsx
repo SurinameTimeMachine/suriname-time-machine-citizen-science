@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 
 type IIIFViewerProps = {
-  info?: string;
   fallback?: string;
 };
 

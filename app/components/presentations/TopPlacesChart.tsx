@@ -38,7 +38,7 @@ export function TopPlacesChart({ places = [], max = 12 }: TopPlacesChartProps) {
   const data = places.slice(0, max);
   const top = data[0]?.count ?? 1;
   return (
-    <div className="h-full w-full min-h-[320px]">
+    <div className="h-full w-full min-h-80">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
@@ -60,7 +60,7 @@ export function TopPlacesChart({ places = [], max = 12 }: TopPlacesChartProps) {
           />
           <Bar dataKey="count" radius={[0, 2, 2, 0]}>
             {data.map((d) => (
-              <Cell key={d.name} fill={colour(d.count, top)} />
+              <Cell key={`place-${d.name}`} fill={colour(d.count, top)} />
             ))}
             <LabelList
               dataKey="count"
