@@ -27,7 +27,7 @@ type AllmapsMapProps = {
 const SURINAME_ANNOTATION =
   'https://annotations.allmaps.org/manifests/5178b46e14dc211e';
 const PARAMARIBO_ANNOTATION =
-  'https://annotations.allmaps.org/maps/5f85ef4e29065511';
+  'https://annotations.allmaps.org/maps/a8b80690c8e2e4cb';
 
 // Approximate Suriname bbox (south, west) → (north, east) for initial view.
 const SURINAME_BOUNDS: [[number, number], [number, number]] = [
