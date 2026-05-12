@@ -1,4 +1,4 @@
-import type { Metadata } from 'next/dist/lib/metadata/types/metadata-interface';
+import type { Metadata } from 'next';
 import type { PresentationContent } from './presentationTypes';
 
 type CreatePresentationMetadataParams = {
