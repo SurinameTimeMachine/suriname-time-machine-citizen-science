@@ -1,24 +1,32 @@
 import type { ReactNode } from 'react';
 
 /**
- * Parses markdown-style links [text](url) in a string and returns React elements.
- * Supports external links (opens in new tab) and internal anchors.
- * Handles URLs with parentheses (e.g., Wikipedia links).
+ * Parses inline markdown: **bold** and *italic* inside a plain string.
+ * Bold is matched first to avoid the inner asterisks being picked up as italic.
  */
-function parseBold(text: string, keyPrefix: string): ReactNode[] {
-  const boldRegex = /\*\*([^*]+)\*\*/g;
+function parseEmphasis(text: string, keyPrefix: string): ReactNode[] {
+  // Tokenise on **bold** or *italic* (single-line, no nesting).
+  const regex = /(\*\*([^*]+)\*\*)|(\*([^*\s][^*]*?)\*)/g;
   const out: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
-  while ((match = boldRegex.exec(text)) !== null) {
+  while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
       out.push(text.slice(lastIndex, match.index));
     }
-    out.push(
-      <strong key={`${keyPrefix}-b-${match.index}`} className="font-semibold">
-        {match[1]}
-      </strong>,
-    );
+    if (match[2] !== undefined) {
+      out.push(
+        <strong key={`${keyPrefix}-b-${match.index}`} className="font-semibold">
+          {match[2]}
+        </strong>,
+      );
+    } else if (match[4] !== undefined) {
+      out.push(
+        <em key={`${keyPrefix}-i-${match.index}`} className="italic">
+          {match[4]}
+        </em>,
+      );
+    }
     lastIndex = match.index + match[0].length;
   }
   if (lastIndex < text.length) {
@@ -37,10 +45,12 @@ export function parseInlineLinks(text: string): ReactNode {
   let match: RegExpExecArray | null;
 
   while ((match = linkRegex.exec(text)) !== null) {
-    // Add text before the link (with bold parsing)
     if (match.index > lastIndex) {
       parts.push(
-        ...parseBold(text.slice(lastIndex, match.index), `pre-${match.index}`),
+        ...parseEmphasis(
+          text.slice(lastIndex, match.index),
+          `pre-${match.index}`,
+        ),
       );
     }
 
@@ -66,13 +76,11 @@ export function parseInlineLinks(text: string): ReactNode {
     lastIndex = match.index + match[0].length;
   }
 
-  // Add remaining text after the last link (with bold parsing)
   if (lastIndex < text.length) {
-    parts.push(...parseBold(text.slice(lastIndex), `post-${lastIndex}`));
+    parts.push(...parseEmphasis(text.slice(lastIndex), `post-${lastIndex}`));
   }
 
-  // If no links found, parse the whole string for bold
-  return parts.length > 0 ? parts : parseBold(text, 'all');
+  return parts.length > 0 ? parts : parseEmphasis(text, 'all');
 }
 
 type RichTextProps = {
