@@ -77,7 +77,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'Between the Dutch Time Machines and the global community of Atlantic-world and diaspora heritage projects.',
       body: [
-        'Left: sister Time Machines in NL/BE that share our data culture — open, IIIF, citizen science (Amsterdam, Gouda, Utrecht, Aezel, Gent Gemapt). Right: Atlantic-world and diaspora heritage projects that share our research scope ([HDSC](https://surinametijdmachine.org), [imagineRio](https://imaginerio.org/en), [Same Boats](https://sameboats.org/)).',
+        'Left: sister Time Machines in NL/BE that share our data culture — open, IIIF, citizen science (Amsterdam, Gouda, Utrecht, Aezel, Gent Gemapt). Right: Atlantic-world and diaspora heritage projects that share our research scope ([HDSC](https://surinametijdmachine.org), [imagineRio](https://imaginerio.org/en), [Same Boats](https://sameboats.org/), [Enslaved](https://enslaved.org), [SlaveVoyages](https://slavevoyages.com)).',
       ],
       component: 'timeMachineBrandMap',
       notes: [
@@ -93,13 +93,16 @@ export const rijksmuseum2026Content: PresentationContent = {
       subtitle:
         'A gazetteer + a place-data model that other sources can plug into.',
       body: [
-        'STM’s data model is anchored on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers** of colonial Suriname.',
+        'STM’s data model is anchored on **historic maps and images, almanak registers, plantations, addresses, and the network of roads, creeks and rivers** of colonial Suriname.',
+        'Future inclusion: person databases (slave registers, civil records, censuses).',
         'See it live: [data.surinametijdmachine.org](https://data.surinametijdmachine.org).',
+        'Image collection: [images.surinametijdmachine.org](https://images.surinametijdmachine.org).',
       ],
       bullets: [
-        'Historic maps, georeferenced via Allmaps',
+        'Historic maps and images, georeferenced and linked',
         'Almanakken and registers, transcribed and linked',
-        'Plantations as anchor entities',
+        'Plantations and addresses as anchor entities',
+        'Future inclusion: person databases (slave registers, civil records, censuses)',
         'Open and reusable; published alongside the source code',
       ],
       notes: [
