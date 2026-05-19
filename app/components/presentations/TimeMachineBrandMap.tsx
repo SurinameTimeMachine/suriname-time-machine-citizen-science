@@ -43,11 +43,13 @@ const TM_PEERS: Peer[] = [
   },
 ];
 
-// Atlantic peers — 3 items, y 240–480, spacing 120
+// Atlantic peers — 5 items, y 200–480, spacing 70
 const ATLANTIC_PEERS: Peer[] = [
-  { name: 'HDSC', href: 'https://surinametijdmachine.org', y: 240 },
-  { name: 'imagineRio', href: 'https://imaginerio.org/en', y: 360 },
-  { name: 'Same Boats', href: 'https://sameboats.org/', y: 480 },
+  { name: 'HDSC', href: 'https://surinametijdmachine.org', y: 200 },
+  { name: 'Enslaved', href: 'https://enslaved.org', y: 270 },
+  { name: 'imagineRio', href: 'https://imaginerio.org/en', y: 340 },
+  { name: 'Same Boats', href: 'https://sameboats.org/', y: 410 },
+  { name: 'SlaveVoyages', href: 'https://slavevoyages.com', y: 480 },
 ];
 
 export function TimeMachineBrandMap() {
