@@ -1,4 +1,4 @@
-import type { HomeLocale } from '../content/types';
+type HomeLocale = 'nl' | 'en';
 
 type SiteFooterProps = {
   locale: HomeLocale;
@@ -6,18 +6,20 @@ type SiteFooterProps = {
   projectLeadName?: string;
   funderName?: string;
   partnerHref?: string;
-  dataSourcesHref?: string;
   /** Overrides the auto-derived year. */
   year?: number;
 };
 
+/**
+ * Compact global footer for STM identity and project metadata.
+ * Requires id="site-footer" for BackToTop component overlap-avoidance.
+ */
 export function SiteFooter({
   locale,
   projectName = 'Suriname Time Machine',
-  projectLeadName = 'Thunnis',
+  projectLeadName = 'Thunnis van Oort',
   funderName = 'Stichting Pica',
   partnerHref,
-  dataSourcesHref,
   year,
 }: SiteFooterProps) {
   const displayYear = year ?? new Date().getFullYear();
@@ -73,18 +75,6 @@ export function SiteFooter({
           <span className="text-ink/25" aria-hidden>
             •
           </span>
-          {dataSourcesHref ? (
-            <a
-              href={dataSourcesHref}
-              className="transition hover:text-teal-strong"
-            >
-              {labels.dataSources}
-            </a>
-          ) : (
-            <span>
-              {labels.dataSources} {labels.comingSoon}
-            </span>
-          )}
         </div>
       </div>
     </footer>

@@ -47,18 +47,18 @@ export const homeContent: HomeContent = {
   ui: {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
-      projectCode: 'SCiTMI',
-      projectSubtitle: 'Suriname Citizen Time Machine Incubator',
-      languageToggleLabel: 'Nederlands',
+      projectCode: 'STM',
+      projectSubtitle: 'Suriname Time Machine',
+      languageToggleLabel: 'NL',
     },
     section01Hero: {
-      tagline: 'SCiTMI • Suriname Citizen Time Machine Incubator',
+      tagline: 'Suriname Time Machine',
       title: 'The Suriname Time Machine brings together scattered sources',
       lead: 'Users can access everything in one place, without constant cross-checking whether data refer to the same people, streets or plantations.',
       kicker:
-        'Combining the Suriname Time Machine with the KNAW Citizen Science Incubator.',
-      primaryCtaLabel: 'Discover SCiTMI',
-      textureAlt: 'Geometric texture grid representing SCiTMI datasets.',
+        "Connecting archives, maps, and community research across centuries of Suriname's history.",
+      primaryCtaLabel: 'Explore the archives',
+      textureAlt: 'Geometric texture grid representing historical datasets.',
       snapshotLabel: 'Project overview',
     },
     section02Intro: {
@@ -95,7 +95,7 @@ export const homeContent: HomeContent = {
       linksTitle: 'Official project pages',
     },
     footer: {
-      organizationLabel: 'SCiTMI · Suriname Citizen Time Machine Incubator',
+      organizationLabel: 'Suriname Time Machine',
       coordinatorLine:
         'Coordinated by Huygens Institute and partners across Suriname and the Netherlands.',
     },

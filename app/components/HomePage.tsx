@@ -1,6 +1,7 @@
 import type { HomeContent } from '../content/types';
 import { ApplicationsList } from './ApplicationsList';
 import { Navigation } from './Navigation';
+import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
 import { Section01Hero } from './Section01Hero';
 import { Section02Intro } from './Section02Intro';
 import { Section03CaseStudy } from './Section03CaseStudy';
@@ -15,16 +16,17 @@ type HomePageProps = {
 };
 
 export function HomePage({ content }: HomePageProps) {
+  const headerNavLinks = getHeaderNavLinks(content.locale);
+  const domainLinks = getDomainLinks(content.locale);
+
   return (
     <div className="min-h-screen bg-white text-ink">
       <SetHtmlLang lang={content.locale} />
       <Navigation
-        navLinks={content.navLinks}
+        navLinks={headerNavLinks}
         locale={content.locale}
-        locationLabel={content.ui.navigation.locationLabel}
-        projectCode={content.ui.navigation.projectCode}
-        projectSubtitle={content.ui.navigation.projectSubtitle}
         languageToggleLabel={content.ui.navigation.languageToggleLabel}
+        domainLinks={domainLinks}
       />
 
       <main className="flex flex-col gap-0">
@@ -153,10 +155,7 @@ export function HomePage({ content }: HomePageProps) {
         </section>
       </main>
 
-      <SiteFooter
-        organizationLabel={content.ui.footer.organizationLabel}
-        coordinatorLine={content.ui.footer.coordinatorLine}
-      />
+      <SiteFooter locale={content.locale} />
     </div>
   );
 }

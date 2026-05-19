@@ -9,7 +9,11 @@
   "aiAnnotations": 126183,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
+<<<<<<< HEAD
   "daysActive": 81,
+=======
+  "daysActive": 88,
+>>>>>>> 87bdd221e3934320d333af765815d966235bc4e3
   "citizenScience": {
     "textsSpotted": 441,
     "iconsIdentified": 38,
@@ -1799,5 +1803,9 @@
       "citizenCount": 0
     }
   ],
+<<<<<<< HEAD
   "fetchedAt": "2026-05-12T08:37:20.372Z"
+=======
+  "fetchedAt": "2026-05-19T14:58:00.167Z"
+>>>>>>> 87bdd221e3934320d333af765815d966235bc4e3
 }

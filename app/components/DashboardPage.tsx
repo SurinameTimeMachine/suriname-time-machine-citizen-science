@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Bar,
@@ -14,6 +13,9 @@ import {
 import type { DashboardContent } from '../content/types';
 import type { DashboardData } from '../lib/annorepo';
 import { ActivityHeatmap } from './ActivityHeatmap';
+import { Navigation } from './Navigation';
+import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
+import { SiteFooter } from './SiteFooter';
 
 type DashboardPageProps = {
   content: DashboardContent;
@@ -245,8 +247,8 @@ function CanvasChartSection({
 export function DashboardPage({ content }: DashboardPageProps) {
   const { ui } = content;
   const { activity } = ui;
-  const otherLocalePath =
-    content.locale === 'nl' ? '/en/dashboard' : '/dashboard';
+  const headerNavLinks = getHeaderNavLinks(content.locale);
+  const domainLinks = getDomainLinks(content.locale);
 
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -278,43 +280,12 @@ export function DashboardPage({ content }: DashboardPageProps) {
 
   return (
     <div className="min-h-screen bg-(--cream) text-ink">
-      {/* Header */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-5 sm:px-6 lg:px-10">
-          <div className="flex items-center gap-4">
-            <Link
-              href={content.locale === 'nl' ? '/' : '/en'}
-              className="flex items-center gap-2 text-sm text-ink/70 transition-colors hover:text-teal-strong"
-            >
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
-              {ui.navigation.backToHome}
-            </Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-[0.35em] text-teal-strong">
-              {ui.navigation.projectCode}
-            </span>
-            <Link
-              href={otherLocalePath}
-              className="border border-slate-200 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.3em] text-ink/70 transition-colors hover:border-teal-strong/40 hover:text-teal-strong"
-            >
-              {ui.navigation.languageToggleLabel}
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navigation
+        navLinks={headerNavLinks}
+        locale={content.locale}
+        languageToggleLabel={ui.navigation.languageToggleLabel}
+        domainLinks={domainLinks}
+      />
 
       {/* Hero */}
       <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">
@@ -475,17 +446,7 @@ export function DashboardPage({ content }: DashboardPageProps) {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-10">
-          <div className="flex flex-col gap-2 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              © {new Date().getFullYear()} {ui.footer.organizationLabel}
-            </p>
-            <p>{ui.footer.coordinatorLine}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={content.locale} />
     </div>
   );
 }

@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Navigation } from '../../components/Navigation';
+import {
+  getDomainLinks,
+  getHeaderNavLinks,
+} from '../../components/navigationConfig';
+import { SiteFooter } from '../../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 're:Charted Documentatie | Suriname Tijdmachine',
@@ -78,35 +83,16 @@ function VideoLink({
 /* ------------------------------------------------------------------ */
 
 export default function ReChartedDocumentatiePage() {
+  const locale = 'nl';
+
   return (
     <div className="min-h-screen bg-(--cream) text-ink">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
-          <Link
-            href="/participatie"
-            className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
-          >
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M10 19l-7-7m0 0l7-7m-7 7h18"
-              />
-            </svg>
-            Terug naar Participatie
-          </Link>
-          <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
-            STM
-          </span>
-        </div>
-      </header>
+      <Navigation
+        navLinks={getHeaderNavLinks(locale)}
+        locale={locale}
+        languageToggleLabel="EN"
+        domainLinks={getDomainLinks(locale)}
+      />
 
       {/* Hero */}
       <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">
@@ -726,15 +712,7 @@ export default function ReChartedDocumentatiePage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-ink/5 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
-            <p>Projectcoördinator · Huygens Instituut</p>
-            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </div>
   );
 }
