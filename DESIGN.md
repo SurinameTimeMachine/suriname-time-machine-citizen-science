@@ -609,6 +609,56 @@ Charts use Recharts library with colour tokens:
 **Colour:** Use semantic red (can be defined in design tokens)  
 **Position:** Below the field, small text
 
+### Data Loader / Loading States
+
+Use a calm, information-first loader style: compact status line + skeleton blocks that match final layout.
+
+```tsx
+<section
+  role="status"
+  aria-live="polite"
+  aria-busy="true"
+  className="rounded-sm border border-ink/10 bg-white p-5 shadow-[0_15px_35px_rgba(0,30,24,0.08)]"
+>
+  <div className="mb-4 flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-ink/60">
+    <span
+      className="h-2.5 w-2.5 -skew-x-12 bg-teal-strong animate-pulse"
+      aria-hidden
+    />
+    Loading data
+  </div>
+
+  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="h-20 animate-pulse rounded-sm bg-ink/5" />
+    <div className="h-20 animate-pulse rounded-sm bg-ink/5" />
+    <div className="h-20 animate-pulse rounded-sm bg-ink/5" />
+    <div className="h-20 animate-pulse rounded-sm bg-ink/5" />
+  </div>
+
+  <div className="mt-4 h-56 animate-pulse rounded-sm bg-ink/5" />
+</section>
+```
+
+```tsx
+{
+  loading ? (
+    <DataLoader />
+  ) : error ? (
+    <p className="text-sm text-red-600">Could not load data.</p>
+  ) : (
+    <DashboardContent />
+  );
+}
+```
+
+**Loader rules:**
+
+- Match skeleton shape to final UI blocks (stats, chart, table rows)
+- Keep motion subtle (`animate-pulse` only, no spinning full-screen overlays)
+- Always include status text (e.g., "Loading data") for clarity
+- Use `role="status"` and `aria-busy="true"` for accessibility
+- If loading exceeds a few seconds, show retry/help messaging near the loader
+
 ---
 
 ## 10. Utility CSS Classes
