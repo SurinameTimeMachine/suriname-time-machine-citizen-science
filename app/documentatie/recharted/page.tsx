@@ -4,6 +4,7 @@ import {
   getDomainLinks,
   getHeaderNavLinks,
 } from '../../components/navigationConfig';
+import { SiteFooter } from '../../components/SiteFooter';
 
 export const metadata: Metadata = {
   title: 're:Charted Documentatie | Suriname Tijdmachine',
@@ -711,15 +712,7 @@ export default function ReChartedDocumentatiePage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-ink/5 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
-            <p>Projectcoördinator · Huygens Instituut</p>
-            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </div>
   );
 }

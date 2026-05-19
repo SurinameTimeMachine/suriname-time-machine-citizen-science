@@ -8,6 +8,7 @@ import { CopyButton } from './CopyButton';
 import { Navigation } from './Navigation';
 import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
 import { RichText } from './RichText';
+import { SiteFooter } from './SiteFooter';
 
 type CitizenSciencePageProps = {
   content: CitizenScienceContent;
@@ -338,17 +339,7 @@ export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
         ))}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-ink/5 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-4 text-xs text-ink/50">
-            <p>
-              {ui.footer.coordinatorLine} · {ui.footer.organizationLabel}
-            </p>
-            <p>Suriname Time Machine © {new Date().getFullYear()}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={content.locale} />
     </div>
   );
 }

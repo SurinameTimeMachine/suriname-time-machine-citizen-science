@@ -155,10 +155,7 @@ export function HomePage({ content }: HomePageProps) {
         </section>
       </main>
 
-      <SiteFooter
-        organizationLabel={content.ui.footer.organizationLabel}
-        coordinatorLine={content.ui.footer.coordinatorLine}
-      />
+      <SiteFooter locale={content.locale} />
     </div>
   );
 }

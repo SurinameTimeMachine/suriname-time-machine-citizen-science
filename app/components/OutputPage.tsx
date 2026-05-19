@@ -6,6 +6,7 @@ import type {
 } from '../content/types';
 import { Navigation } from './Navigation';
 import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
+import { SiteFooter } from './SiteFooter';
 
 type OutputPageProps = {
   content: OutputContent;
@@ -394,17 +395,7 @@ export function OutputPage({ content }: OutputPageProps) {
         ))}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-10">
-          <div className="flex flex-col gap-2 text-sm text-ink/70 sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              © {new Date().getFullYear()} {ui.footer.organizationLabel}
-            </p>
-            <p>{ui.footer.coordinatorLine}</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter locale={content.locale} />
     </div>
   );
 }
