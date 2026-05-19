@@ -1047,11 +1047,11 @@ kit/
 
 ### Navbar for Each Subdomain
 
-**Citizen Science (main site):**
+**About (main site):**
 
 ```tsx
 domainLinks={[
-  { label: 'Citizen Science', href: '/', isCurrent: true },
+  { label: 'About', href: '/', isCurrent: true },
   { label: 'Images',          href: 'https://images.surinametijdmachine.org' },
   { label: 'Data',            href: 'https://data.surinametijdmachine.org' },
 ]}
@@ -1071,7 +1071,7 @@ domainLinks={[
 
 ```tsx
 domainLinks={[
-  { label: 'Citizen Science', href: 'https://surinametijdmachine.org' },
+  { label: 'About', href: 'https://surinametijdmachine.org' },
   { label: 'Images',          href: 'https://images.surinametijdmachine.org' },
   { label: 'Data',            href: '/', isCurrent: true },
 ]}
