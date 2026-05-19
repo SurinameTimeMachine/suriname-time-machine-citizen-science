@@ -132,7 +132,7 @@ function SlideInteractive({ slide }: { slide: SlideContent }) {
         <EmbedFrame
           src="https://images.surinametijdmachine.org"
           title="Suriname Time Machine image explorer"
-          fallbackSrc="/presentations/rijksmuseum-2026/screenshots/images-live-preview.png"
+          fallbackSrc="/presentations/rijksmuseum-2026/screenshots/images-live-preview-focus2.png"
         />
       );
     case 'qrCodes':
