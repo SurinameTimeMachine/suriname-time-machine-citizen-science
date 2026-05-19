@@ -134,8 +134,7 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'metadata-gaps',
       layout: 'split',
       title: 'State of the data',
-      subtitle:
-        'Titles and dates are nearly complete. Linked places used to be the gap, then we worked on it.',
+      subtitle: 'Titles and dates are nearly complete.',
       body: [
         'Coverage measured across all 3,668 records in the working snapshot. After the curation work, **90.5% of objects are now map-ready** (at least one geo-keyword with coordinates).',
         'Wikidata / Getty links are attached to **88% / 86%** of geo-keyword occurrences.',
@@ -155,8 +154,10 @@ export const rijksmuseum2026Content: PresentationContent = {
         '1 · Fetch every Suriname work via the Rijksmuseum API + IIIF (3,668 records)',
         '2 · Normalise metadata; extract candidate place strings from titles and keywords',
         '3 · Disambiguate against the STM gazetteer, Wikidata and Getty TGN',
-        '4 · Manual verification in data sprints with Wikimedia Nederland and partner libraries',
-        '5 · Publish enriched, provenance-tracked links back to Wikidata',
+        '4 · Manual verification',
+        '5 · Map the images in order to visualise the collection',
+        '6 · Next step: publish enriched, provenance-tracked links back to Wikidata',
+        '7 · Next step: enrich STM place information with linked images',
       ],
       notes: [
         'The pipeline is documented at github.com/SurinameTimeMachine/rijksmuseum-suriname-collection.',
@@ -167,116 +168,30 @@ export const rijksmuseum2026Content: PresentationContent = {
     // ── Act III · Live exploration ─────────────────────────────────────
     {
       id: 'demo-collection',
-      layout: 'full-media',
-      title: 'A sample of the collection',
-      subtitle: 'One row per decade, sampled from the place-enriched corpus.',
-      component: 'featuredGrid',
-      componentProps: { max: 24 },
+      layout: 'embed',
+      title: 'Explore the collection live',
+      subtitle: 'images.surinametijdmachine.org, click to open in a new tab',
+      component: 'embedImages',
       notes: [
-        'Tiles are real Rijksmuseum thumbnails from the working dataset, each is linked to a Suriname place + a year.',
-        'Point out the visible shift from drawings/lithographs (early decades) to studio + documentary photographs (later decades).',
-        'If online, click a tile to open the Rijksmuseum PID page.',
-      ],
-    },
-    {
-      id: 'demo-gazetteer',
-      layout: 'split',
-      title: 'Where the place names cluster',
-      subtitle:
-        'Top Suriname-region matched place names in the working dataset.',
-      body: [
-        'Once free-text strings are reconciled to the STM gazetteer + Wikidata, a clear topography emerges: a coastal photographic corridor from Paramaribo eastward, the bauxite town of Moengo, and a constellation of named plantations.',
-        '*Surinam* is the catch-all label assigned when no narrower place was identified, a useful tally of records still in need of disambiguation.',
-      ],
-      component: 'topPlacesChart',
-      notes: [
-        'Paramaribo is the obvious centre; Moengo (~395 records) is striking, the Suralco bauxite-mining industrial photography archive.',
-        'Almost every plantation that appears was a former sugar / coffee estate along the Commewijne / Suriname rivers.',
-      ],
-    },
-    {
-      id: 'medium-shift',
-      layout: 'full-media',
-      title: 'A medium-shift, decade by decade',
-      subtitle:
-        'Drawings and prints give way to photographs from the 1860s onward.',
-      component: 'mediumOverTime',
-      componentProps: { from: 1820, to: 1970 },
-      notes: [
-        'The wedge of teal-strong (photographs) takes over from the 1860s and dominates by the 1880s.',
-        'This is *not* news historically, but it lets us pose the question: did the geography of what was photographed change, or just the medium? (Spoiler: see the next slide.)',
-      ],
-    },
-    {
-      id: 'geo-coverage',
-      layout: 'full-media',
-      title: 'Where the lens was pointed',
-      subtitle:
-        'Hex-bin density of real image locations · stroke encodes positional uncertainty.',
-      body: [
-        'Fill = density on a log scale. Dashed stroke = mean positional uncertainty (street-level → regional).',
-        'Three patterns jump off the 1930 map:',
-      ],
-      bullets: [
-        'A **coastal corridor** from Paramaribo east along the Commewijne plantation belt to Moengo, one continuous teal ribbon following rivers, road and rail.',
-        'A **near-empty interior**, the southern two-thirds of the country is blank, even after our enrichment.',
-        '**Moengo as an outlier**, an isolated hot cell far east of the capital: the Suralco bauxite archive accidentally captured a 20th-century landscape the older drawing tradition never reached.',
-      ],
-      component: 'hexHeatmap',
-      notes: [
-        'Read the map: the corridor is *infrastructural*, capital, not country.',
-        'The blankness in the south is an argument, not a flaw: it is the brief for the citizen-science project and for partnerships with Maroon and indigenous archives.',
-      ],
-    },
-    {
-      id: 'paramaribo-zoom',
-      layout: 'full-media',
-      title: 'Zooming in · Paramaribo street by street',
-      subtitle:
-        'Same data, tighter frame, on a historical street map of the capital.',
-      body: [
-        'At country scale "Paramaribo" is a single hot cell. Zoomed to the city it collapses onto a handful of streets:',
-      ],
-      bullets: [
-        'Waterkant, Gouvernementsplein, the streets around the Palmentuin, Combé, the colonial administrative and wealthier residential core.',
-        'Working-class quarters and the markets that *existed* in 1900 are barely represented.',
-        'Whose Paramaribo got photographed? A question the hex bins make impossible to dodge.',
-      ],
-      component: 'hexHeatmap',
-      componentProps: { focus: 'paramaribo', hexRadius: 16 },
-      notes: [
-        'Most "Paramaribo" records collapse onto the same ten famous streets.',
-        'Pair this with the critique slides, the city-scale empty bins are a research and acquisition brief.',
-      ],
-    },
-    {
-      id: 'temporal',
-      layout: 'full-media',
-      title: 'When the lens was open',
-      subtitle: 'Filter the same real points by year.',
-      component: 'timeSlider',
-      componentProps: { yearStart: 1840, yearEnd: 1970 },
-      notes: [
-        'Drag the slider. Pre-1870 = a thin scatter of drawings and prints. Post-1880 = the photographic boom.',
-        'The geographical footprint barely changes. The photographic boom *intensifies* the existing corridor; it does not broaden it.',
+        'This is the live site. Click around to show filtering by place, year, and medium.',
+        'The "Open" button top-right opens it in a new tab for the audience to explore themselves.',
+        'If offline, the iframe will not load — mention the URL and move on.',
       ],
     },
     {
       id: 'reading-the-map',
       layout: 'text',
       background: 'cream',
-      title: 'Reading the map · five stories the patterns tell',
-      subtitle: 'What the hex bins say before we add a single new image.',
+      title: 'Reading the data',
+      subtitle: 'Two patterns that stand out, and an open invitation.',
       bullets: [
-        '**Capital follows capital.** The dense corridor traces colonial infrastructure (river → road → bauxite rail), not the country itself.',
-        '**Medium changed, geography did not.** The photographic boom from c. 1880 *intensifies* the same corridor rather than expanding it.',
-        '**Ten famous streets.** "Paramaribo" at street scale is a handful of administrative and wealthier blocks. Entire neighbourhoods stay invisible.',
-        '**Plantation-name half-life.** Lower-Commewijne bins thin out in the 20th c. not because the places vanished, but because their names were renamed, abandoned or absorbed, a slow toponymic erasure visible on the map.',
-        '**Uncertainty as a citizen-science prompt.** Hexes with dashed strokes (mean uncertainty > 5 km) are exactly where community geotagging would move the needle most.',
+        '**Capital follows capital.** The dense image corridor traces colonial infrastructure (river, road, bauxite rail), not the country itself.',
+        '**Ten famous streets.** "Paramaribo" at street scale collapses onto a handful of administrative blocks. Entire neighbourhoods stay invisible.',
+        'There is much more to uncover here. We would love to keep exploring this together with the Rijksmuseum collection team.',
       ],
       notes: [
-        'This is the slide where we move from *describing* the dataset to *arguing* with it. Five sentences, five questions for the curators.',
-        'It also sets up Act IV: each pattern points to a critique (whose gaze) and a programme (the upcoming citizen-science project).',
+        'Keep this light. Two clear observations, then the invitation.',
+        'The third bullet is deliberately open: it signals collaboration rather than conclusions.',
       ],
     },
 

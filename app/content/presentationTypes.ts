@@ -24,6 +24,7 @@ export type SlideComponentKey =
   | 'mediumOverTime'
   | 'embedRijksmuseum'
   | 'embedGazetteer'
+  | 'embedImages'
   | 'qrCodes'
   | 'timeMachineBrandMap'
   | 'partnersGrid';

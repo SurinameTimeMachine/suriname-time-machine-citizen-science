@@ -4,7 +4,7 @@ import type {
 } from '../../content/presentationTypes';
 import { RichText } from '../RichText';
 import { AllmapsMap } from './AllmapsMap';
-import { EmbedGazetteer, EmbedRijksmuseum } from './EmbedFrame';
+import { EmbedFrame, EmbedGazetteer, EmbedRijksmuseum } from './EmbedFrame';
 import { FeaturedGrid } from './FeaturedGrid';
 import { IIIFViewer } from './IIIFViewer';
 import { MediumOverTime } from './MediumOverTime';
@@ -109,6 +109,14 @@ function SlideInteractive({ slide }: { slide: SlideContent }) {
       return <EmbedRijksmuseum />;
     case 'embedGazetteer':
       return <EmbedGazetteer />;
+    case 'embedImages':
+      return (
+        <EmbedFrame
+          src="https://images.surinametijdmachine.org"
+          title="Suriname Time Machine image explorer"
+          fallbackSrc="/presentations/rijksmuseum-2026/screenshots/images-live-preview.png"
+        />
+      );
     case 'qrCodes':
       return <QrCodes {...props} />;
     case 'timeMachineBrandMap':
