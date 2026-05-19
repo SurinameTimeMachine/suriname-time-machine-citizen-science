@@ -227,7 +227,7 @@ export function Slide({
 
       case 'embed':
         return (
-          <div className="mx-auto flex h-full max-w-400 flex-col px-6 py-6 lg:px-10 lg:py-8">
+          <div className="mx-auto flex h-full max-w-400 flex-col px-6 pt-6 pb-14 lg:px-10 lg:pt-8 lg:pb-16">
             <SlideHeader slide={slide} printMode={printMode} />
             <div className="relative min-h-0 flex-1 overflow-hidden ring-1 ring-deep-teal/15">
               {slide.component ? <SlideInteractive slide={slide} /> : null}
@@ -237,7 +237,7 @@ export function Slide({
 
       case 'full-media':
         return (
-          <div className="mx-auto flex h-full max-w-400 flex-col px-6 py-6 lg:px-10 lg:py-8">
+          <div className="mx-auto flex h-full max-w-400 flex-col px-6 pt-6 pb-14 lg:px-10 lg:pt-8 lg:pb-16">
             <SlideHeader slide={slide} printMode={printMode} />
             <div className="relative min-h-0 flex-1">
               {slide.component ? <SlideInteractive slide={slide} /> : null}

@@ -206,6 +206,7 @@ export function SlideDeck({ content }: SlideDeckProps) {
         ofLabel={ui.slideOf}
         onJump={go}
         slides={slides}
+        meta={meta}
       />
 
       <SpeakerNotes
