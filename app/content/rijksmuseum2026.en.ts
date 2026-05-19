@@ -133,7 +133,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         '3,668 Suriname-related works',
         '2,912 with IIIF thumbnails (79%)',
         'Photographs dominate (foto, stereofoto, prentbriefkaart…)',
-        'Date span: late-18th c. → mid-20th c.',
+        'Date span: 18th c. → mid-20th c.',
       ],
       notes: [
         'Numbers come from the live build script (scripts/build-rijksmuseum-2026-data.mjs) reading the working collection.json snapshot.',

@@ -67,7 +67,8 @@ export function EmbedFrame({ src, title, fallbackSrc }: EmbedFrameProps) {
               <img
                 src={fallbackSrc}
                 alt={`${title} (offline preview)`}
-                className="h-full w-full origin-top-left scale-110 object-cover object-top-left"
+                className="h-full w-full object-cover object-top-left"
+                style={{ transform: 'scale(1.2)', transformOrigin: 'top left' }}
               />
               <div className="absolute left-4 top-4 bg-(--deep-teal) px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white">
                 Offline preview
