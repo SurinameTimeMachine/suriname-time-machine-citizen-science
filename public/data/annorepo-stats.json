@@ -1,19 +1,19 @@
 {
   "metadata": {
     "label": "Suriname Time Machine annotations",
-    "total": 127066,
+    "total": 127118,
     "created": "2026-02-20T18:02:24.046Z"
   },
-  "totalAnnotations": 127066,
-  "humanAnnotations": 850,
-  "aiAnnotations": 126216,
+  "totalAnnotations": 127118,
+  "humanAnnotations": 935,
+  "aiAnnotations": 126183,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
-  "daysActive": 59,
+  "daysActive": 88,
   "citizenScience": {
-    "textsSpotted": 414,
+    "textsSpotted": 441,
     "iconsIdentified": 38,
-    "placesLinked": 171
+    "placesLinked": 198
   },
   "dailyActivity": [
     {
@@ -63,20 +63,32 @@
     {
       "date": "2026-03-18",
       "count": 28
+    },
+    {
+      "date": "2026-04-28",
+      "count": 1
+    },
+    {
+      "date": "2026-05-01",
+      "count": 44
+    },
+    {
+      "date": "2026-05-06",
+      "count": 9
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126440
+      "count": 126438
     },
     {
       "motivation": "textspotting",
-      "count": 414
+      "count": 441
     },
     {
       "motivation": "linking",
-      "count": 171
+      "count": 198
     },
     {
       "motivation": "iconography",
@@ -191,15 +203,15 @@
       "citizenCount": 0
     },
     {
+      "canvas": "c14",
+      "label": "429 Generale kaart der kolonie Suriname in Zuid-Amerika, beginnende ten Oosten met de rivier Marowijne en eindigende ten Westen met de Duivelskreek, met alle de daarin uitgegeven gecultiveerde en verlatene landen, verder met aanwijzing van alle thans bezette posten, zoo voor de buiten- als binnenlandsche defensiën",
+      "count": 1572,
+      "citizenCount": 26
+    },
+    {
       "canvas": "c109",
       "label": "Kaart van de kust van Guayana strekkende van Rio Koeroea tot Rio Suriname met alle droogtens en dieptens",
       "count": 1560,
-      "citizenCount": 0
-    },
-    {
-      "canvas": "c14",
-      "label": "429 Generale kaart der kolonie Suriname in Zuid-Amerika, beginnende ten Oosten met de rivier Marowijne en eindigende ten Westen met de Duivelskreek, met alle de daarin uitgegeven gecultiveerde en verlatene landen, verder met aanwijzing van alle thans bezette posten, zoo voor de buiten- als binnenlandsche defensiën",
-      "count": 1548,
       "citizenCount": 0
     },
     {
@@ -331,8 +343,8 @@
     {
       "canvas": "c1",
       "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 789,
-      "citizenCount": 138
+      "count": 790,
+      "citizenCount": 139
     },
     {
       "canvas": "c242",
@@ -1787,5 +1799,5 @@
       "citizenCount": 0
     }
   ],
-  "fetchedAt": "2026-04-20T08:42:03.236Z"
+  "fetchedAt": "2026-05-19T14:58:00.167Z"
 }
