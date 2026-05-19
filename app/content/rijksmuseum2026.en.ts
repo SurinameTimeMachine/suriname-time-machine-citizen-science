@@ -117,6 +117,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Public-domain visual heritage of Suriname, already IIIF-ready.',
       body: [
         'The [Rijksmuseum online collection](https://www.rijksmuseum.nl/en/collection) holds an extensive body of Suriname-related imagery. Most works are released under a **public domain mark** and ship with a [IIIF manifest](https://iiif.io/), so we can zoom, reuse and redistribute.',
+        'We especially want to acknowledge Shannon van Muijen and Digna van Nielen (Rijksmuseum) for their support in opening up and contextualising this collection for collaborative research.',
         'Our working snapshot of the [Suriname slice](https://github.com/SurinameTimeMachine/rijksmuseum-suriname-collection) currently contains **3,668 objects**.',
       ],
       bullets: [
