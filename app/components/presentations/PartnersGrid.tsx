@@ -16,16 +16,16 @@ export function PartnersGrid({
 }: PartnersGridProps) {
   if (!partners.length) return null;
   return (
-    <ul className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
       {partners.map((p) => {
         const inner = (
           <>
-            <div className="flex h-20 items-center justify-center">
+            <div className="flex h-14 items-center justify-center">
               {}
               <img
                 src={p.logo}
                 alt={`${p.name} logo`}
-                className="max-h-16 max-w-full object-contain"
+                className="max-h-10 max-w-full object-contain"
                 loading="lazy"
               />
             </div>
@@ -40,7 +40,7 @@ export function PartnersGrid({
         return (
           <li
             key={`partner-${p.name}`}
-            className="cut-corner bg-white p-4 ring-1 ring-ink/10"
+            className="cut-corner bg-white p-3 ring-1 ring-ink/10"
           >
             {p.href ? (
               <a

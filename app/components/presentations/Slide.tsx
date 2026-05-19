@@ -252,7 +252,7 @@ export function Slide({
 
       case 'qr':
         return (
-          <div className="mx-auto flex h-full max-w-6xl flex-col justify-center px-8 py-16 lg:px-16">
+          <div className="mx-auto flex h-full max-w-6xl flex-col justify-center px-8 py-12 lg:px-16">
             <SlideHeader slide={slide} printMode={printMode} />
             {slide.component ? (
               <div className="mt-8">

@@ -64,7 +64,7 @@ export function EmbedFrame({ src, title, fallbackSrc }: EmbedFrameProps) {
 export function EmbedRijksmuseum() {
   return (
     <EmbedFrame
-      src="https://rijksmuseum-suriname-collection.vercel.app/"
+      src="https://images.surinametijdmachine.org"
       title="Rijksmuseum × Suriname collection"
       fallbackSrc="/presentations/rijksmuseum-2026/screenshots/rijksmuseum-collection.svg"
     />
@@ -74,7 +74,7 @@ export function EmbedRijksmuseum() {
 export function EmbedGazetteer() {
   return (
     <EmbedFrame
-      src="https://suriname-database-model.vercel.app/"
+      src="https://data.surinametijdmachine.org"
       title="Suriname Time Machine · gazetteer"
       fallbackSrc="/presentations/rijksmuseum-2026/screenshots/database-model.svg"
     />

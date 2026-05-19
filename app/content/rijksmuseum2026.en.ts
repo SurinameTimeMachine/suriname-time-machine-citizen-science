@@ -94,7 +94,7 @@ export const rijksmuseum2026Content: PresentationContent = {
         'A gazetteer + a place-data model that other sources can plug into.',
       body: [
         'STM’s data model is anchored on **historic maps, almanak registers, plantations, and the network of roads, creeks and rivers** of colonial Suriname.',
-        'See it live: [suriname-database-model.vercel.app](https://suriname-database-model.vercel.app/).',
+        'See it live: [data.surinametijdmachine.org](https://data.surinametijdmachine.org).',
       ],
       bullets: [
         'Historic maps, georeferenced via Allmaps',
@@ -393,7 +393,7 @@ export const rijksmuseum2026Content: PresentationContent = {
           },
           {
             name: 'Allard Pierson',
-            logo: '/images/partners/allard-pierson.svg',
+            logo: '/images/partners/allard-pierson.svg?v=20260519',
             href: 'https://allardpierson.nl/',
             role: 'Map collections',
           },
@@ -415,6 +415,18 @@ export const rijksmuseum2026Content: PresentationContent = {
             href: 'https://stichtingpica.nl/',
             role: 'Funder',
           },
+          {
+            name: 'Surinaamse Genealogie',
+            logo: '/images/partners/surinaamse-genealogie.jpg',
+            href: 'https://www.surinaamsegenealogie.nl/',
+            role: 'Genealogy community',
+          },
+          {
+            name: 'Nationaal Archief Suriname',
+            logo: '/images/partners/nationaal-archief-suriname.png',
+            href: 'https://nationaalarchief.sr/',
+            role: 'National archive',
+          },
         ],
       },
       notes: [
@@ -426,20 +438,19 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'thanks-qr',
       layout: 'qr',
       background: 'deep',
-      eyebrow: 'Thank you',
-      title: 'Explore the projects',
-      subtitle: 'Scan to open · or visit the URLs below.',
+      title: 'Thank you for your attention',
+      subtitle: 'Explore the projects — scan a QR code or visit the URL below.',
       component: 'qrCodes',
       componentProps: {
         targets: [
           {
             label: 'Rijksmuseum × Suriname',
-            url: 'https://rijksmuseum-suriname-collection.vercel.app/',
+            url: 'https://images.surinametijdmachine.org',
             description: 'Place-enriched image collection',
           },
           {
             label: 'STM gazetteer',
-            url: 'https://suriname-database-model.vercel.app/',
+            url: 'https://data.surinametijdmachine.org',
             description: 'Place data model + map viewer',
           },
           {
