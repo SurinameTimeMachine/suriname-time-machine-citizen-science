@@ -301,7 +301,7 @@ export const projectsEn: ProjectsContent = {
       name: 'Suriname Time Machine Database Model',
       description:
         'Interactive visualization of the Suriname Time Machine Linked Open Data model, exploring 1,596 historical plantations modeled with CIDOC-CRM.',
-      href: 'https://suriname-database-model.vercel.app/',
+      href: 'https://data.surinametijdmachine.org',
       purpose: 'tool',
       keywords: ['linked data', 'CIDOC-CRM', 'data model', 'plantations'],
       institution: 'Huygens Institute',

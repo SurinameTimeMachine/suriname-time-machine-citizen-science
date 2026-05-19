@@ -1,0 +1,12 @@
+export { SlideDeck } from './SlideDeck';
+export { Slide } from './Slide';
+export { SlideProgress } from './SlideProgress';
+export { SpeakerNotes } from './SpeakerNotes';
+export { SlideKeyHelp } from './SlideKeyHelp';
+export { HexHeatmap } from './HexHeatmap';
+export { TimeSlider } from './TimeSlider';
+export { IIIFViewer } from './IIIFViewer';
+export { MetadataGapsChart } from './MetadataGapsChart';
+export { EmbedFrame, EmbedGazetteer, EmbedRijksmuseum } from './EmbedFrame';
+export { QrCodes } from './QrCodes';
+export { TimeMachineBrandMap } from './TimeMachineBrandMap';

@@ -1,0 +1,467 @@
+{
+  "generatedAt": "2026-05-11T14:31:25.179Z",
+  "generatedFrom": "SurinameTimeMachine/rijksmuseum-suriname-collection@gemini-cli-batch",
+  "totalObjects": 3668,
+  "coverage": {
+    "objects": 3668,
+    "image": 79.4,
+    "thumbnail": 79.4,
+    "year": 99.9,
+    "creator": 75.7,
+    "description": 83,
+    "geoKeyword": 96.8,
+    "mapReady": 90.5,
+    "wikidataLink": 88,
+    "gettyLink": 86.4,
+    "persons": 52.1,
+    "subjects": 4.1
+  },
+  "regionCounts": {
+    "suriname": 3308,
+    "netherlands": 14
+  },
+  "topPlaces": [
+    {
+      "name": "Surinam",
+      "count": 2269,
+      "lat": 4,
+      "lng": -56
+    },
+    {
+      "name": "Paramaribo (stad)",
+      "count": 742,
+      "lat": 5.86667,
+      "lng": -55.16667
+    },
+    {
+      "name": "Moengo",
+      "count": 395,
+      "lat": 5.61667,
+      "lng": -54.4
+    },
+    {
+      "name": "Accaribo",
+      "count": 123,
+      "lat": 5.62972,
+      "lng": -55.08528
+    },
+    {
+      "name": "Albina",
+      "count": 102,
+      "lat": 5.5,
+      "lng": -54.05
+    },
+    {
+      "name": "niet-nederland",
+      "count": 92,
+      "lat": null,
+      "lng": null
+    },
+    {
+      "name": "Ma Retraite (Boomskreek)",
+      "count": 84,
+      "lat": 5.84822,
+      "lng": -55.14391
+    },
+    {
+      "name": "Gouvernementsplein",
+      "count": 61,
+      "lat": 5.82623,
+      "lng": -55.15152
+    },
+    {
+      "name": "Waterkant",
+      "count": 58,
+      "lat": 5.82523,
+      "lng": -55.15311
+    },
+    {
+      "name": "Clevia",
+      "count": 50,
+      "lat": 5.87034,
+      "lng": -55.10923
+    },
+    {
+      "name": "Paramaribo",
+      "count": 49,
+      "lat": 5.82392,
+      "lng": -55.15178
+    },
+    {
+      "name": "Q139323507",
+      "count": 45,
+      "lat": 5.23605,
+      "lng": -55.34339
+    },
+    {
+      "name": "Q110559886",
+      "count": 45,
+      "lat": 5.82787,
+      "lng": -55.14797
+    },
+    {
+      "name": "Surinamerivier",
+      "count": 44,
+      "lat": 5.81814,
+      "lng": -55.15912
+    },
+    {
+      "name": "De Morgenstond",
+      "count": 43,
+      "lat": 5.85978,
+      "lng": -55.11951
+    },
+    {
+      "name": "Mr. Dr. J.C. de Mirandastraat",
+      "count": 42,
+      "lat": 5.82626,
+      "lng": -55.15266
+    },
+    {
+      "name": "La Tourtonne",
+      "count": 36,
+      "lat": 5.85057,
+      "lng": -55.14997
+    },
+    {
+      "name": "Suriname",
+      "count": 32,
+      "lat": 5.81814,
+      "lng": -55.15912
+    },
+    {
+      "name": "Patrick Savanna",
+      "count": 32,
+      "lat": 4,
+      "lng": -56
+    },
+    {
+      "name": "Peperpot",
+      "count": 32,
+      "lat": 5.76809,
+      "lng": -55.12462
+    }
+  ],
+  "topCreators": [
+    {
+      "name": "Doijer, Hendrik",
+      "count": 745
+    },
+    {
+      "name": "Diepraam, Willem",
+      "count": 612
+    },
+    {
+      "name": "Muller, Julius Eduard",
+      "count": 138
+    },
+    {
+      "name": "Brouwers, Theodoor",
+      "count": 138
+    },
+    {
+      "name": "Lelyveld, Théodore van",
+      "count": 132
+    },
+    {
+      "name": "Klein, Eugen",
+      "count": 124
+    },
+    {
+      "name": "Merian, Maria Sibylla",
+      "count": 122
+    },
+    {
+      "name": "Boom, Andries Augustus",
+      "count": 118
+    },
+    {
+      "name": "Mentzel, Vincent",
+      "count": 90
+    },
+    {
+      "name": "Curiel, Augusta",
+      "count": 88
+    },
+    {
+      "name": "Poll, Willem van de",
+      "count": 75
+    },
+    {
+      "name": "Chapman, C.J.",
+      "count": 75
+    },
+    {
+      "name": "NRC-Handelsblad BV",
+      "count": 53
+    },
+    {
+      "name": "Bonaparte, Roland Napoleon",
+      "count": 48
+    },
+    {
+      "name": "Hisgen, Friedrich Carel",
+      "count": 47
+    }
+  ],
+  "decades": [
+    {
+      "decade": 1700,
+      "photo": 0,
+      "painting": 1,
+      "drawing": 68,
+      "other": 6,
+      "total": 75
+    },
+    {
+      "decade": 1710,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 3,
+      "other": 0,
+      "total": 3
+    },
+    {
+      "decade": 1720,
+      "photo": 2,
+      "painting": 0,
+      "drawing": 4,
+      "other": 2,
+      "total": 8
+    },
+    {
+      "decade": 1730,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 3,
+      "other": 2,
+      "total": 5
+    },
+    {
+      "decade": 1740,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 3,
+      "other": 0,
+      "total": 3
+    },
+    {
+      "decade": 1750,
+      "photo": 0,
+      "painting": 1,
+      "drawing": 4,
+      "other": 5,
+      "total": 10
+    },
+    {
+      "decade": 1760,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 0,
+      "other": 3,
+      "total": 3
+    },
+    {
+      "decade": 1770,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 5,
+      "other": 2,
+      "total": 7
+    },
+    {
+      "decade": 1780,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 2,
+      "other": 1,
+      "total": 3
+    },
+    {
+      "decade": 1790,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 2,
+      "other": 1,
+      "total": 3
+    },
+    {
+      "decade": 1800,
+      "photo": 0,
+      "painting": 1,
+      "drawing": 3,
+      "other": 12,
+      "total": 16
+    },
+    {
+      "decade": 1810,
+      "photo": 0,
+      "painting": 0,
+      "drawing": 6,
+      "other": 26,
+      "total": 32
+    },
+    {
+      "decade": 1820,
+      "photo": 0,
+      "painting": 3,
+      "drawing": 10,
+      "other": 6,
+      "total": 19
+    },
+    {
+      "decade": 1830,
+      "photo": 0,
+      "painting": 1,
+      "drawing": 20,
+      "other": 3,
+      "total": 24
+    },
+    {
+      "decade": 1840,
+      "photo": 5,
+      "painting": 1,
+      "drawing": 22,
+      "other": 3,
+      "total": 31
+    },
+    {
+      "decade": 1850,
+      "photo": 51,
+      "painting": 0,
+      "drawing": 10,
+      "other": 4,
+      "total": 65
+    },
+    {
+      "decade": 1860,
+      "photo": 11,
+      "painting": 0,
+      "drawing": 32,
+      "other": 3,
+      "total": 46
+    },
+    {
+      "decade": 1870,
+      "photo": 5,
+      "painting": 0,
+      "drawing": 2,
+      "other": 1,
+      "total": 8
+    },
+    {
+      "decade": 1880,
+      "photo": 77,
+      "painting": 1,
+      "drawing": 3,
+      "other": 6,
+      "total": 87
+    },
+    {
+      "decade": 1890,
+      "photo": 321,
+      "painting": 0,
+      "drawing": 0,
+      "other": 8,
+      "total": 329
+    },
+    {
+      "decade": 1900,
+      "photo": 1203,
+      "painting": 0,
+      "drawing": 0,
+      "other": 12,
+      "total": 1215
+    },
+    {
+      "decade": 1910,
+      "photo": 384,
+      "painting": 0,
+      "drawing": 2,
+      "other": 2,
+      "total": 388
+    },
+    {
+      "decade": 1920,
+      "photo": 505,
+      "painting": 0,
+      "drawing": 8,
+      "other": 14,
+      "total": 527
+    },
+    {
+      "decade": 1930,
+      "photo": 36,
+      "painting": 0,
+      "drawing": 1,
+      "other": 5,
+      "total": 42
+    },
+    {
+      "decade": 1940,
+      "photo": 105,
+      "painting": 0,
+      "drawing": 0,
+      "other": 15,
+      "total": 120
+    },
+    {
+      "decade": 1950,
+      "photo": 32,
+      "painting": 0,
+      "drawing": 0,
+      "other": 1,
+      "total": 33
+    },
+    {
+      "decade": 1960,
+      "photo": 7,
+      "painting": 0,
+      "drawing": 0,
+      "other": 4,
+      "total": 11
+    },
+    {
+      "decade": 1970,
+      "photo": 426,
+      "painting": 0,
+      "drawing": 0,
+      "other": 14,
+      "total": 440
+    },
+    {
+      "decade": 1980,
+      "photo": 26,
+      "painting": 0,
+      "drawing": 1,
+      "other": 2,
+      "total": 29
+    },
+    {
+      "decade": 1990,
+      "photo": 30,
+      "painting": 0,
+      "drawing": 0,
+      "other": 0,
+      "total": 30
+    },
+    {
+      "decade": 2000,
+      "photo": 21,
+      "painting": 0,
+      "drawing": 0,
+      "other": 6,
+      "total": 27
+    },
+    {
+      "decade": 2010,
+      "photo": 14,
+      "painting": 0,
+      "drawing": 0,
+      "other": 0,
+      "total": 14
+    }
+  ],
+  "pointsCount": 2272,
+  "featuredCount": 61
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-label="Suriname database model preview">
+  <rect width="1280" height="800" fill="#003c34"/>
+  <g fill="#fdf8f2" font-family="system-ui, sans-serif">
+    <text x="64" y="120" font-size="28" letter-spacing="6" opacity="0.7">OFFLINE PREVIEW</text>
+    <text x="64" y="200" font-size="56" font-weight="700">Suriname database model</text>
+    <text x="64" y="260" font-size="32" opacity="0.85">Linked-data schema explorer (placeholder)</text>
+  </g>
+  <g stroke="#34d1b3" stroke-width="2" fill="none" opacity="0.7">
+    <circle cx="320" cy="500" r="60"/>
+    <circle cx="640" cy="420" r="60"/>
+    <circle cx="960" cy="540" r="60"/>
+    <line x1="380" y1="500" x2="580" y2="420"/>
+    <line x1="700" y1="420" x2="900" y2="540"/>
+    <line x1="380" y1="500" x2="900" y2="540"/>
+  </g>
+</svg>
