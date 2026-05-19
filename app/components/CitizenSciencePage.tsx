@@ -1,11 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import type {
   CitizenScienceContent,
   CitizenScienceEvent,
   Workshop,
 } from '../content/types';
 import { CopyButton } from './CopyButton';
+import { Navigation } from './Navigation';
+import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
 import { RichText } from './RichText';
 
 type CitizenSciencePageProps = {
@@ -297,8 +298,8 @@ function EventBlock({
 
 export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
   const { ui, events } = content;
-  const otherLocalePath =
-    content.locale === 'nl' ? '/en/participatory-science' : '/participatie';
+  const headerNavLinks = getHeaderNavLinks(content.locale);
+  const domainLinks = getDomainLinks(content.locale);
 
   // Find the first upcoming (or today's) event to default-open
   const today = new Date().toISOString().slice(0, 10);
@@ -307,43 +308,12 @@ export function CitizenSciencePage({ content }: CitizenSciencePageProps) {
 
   return (
     <div className="min-h-screen bg-(--cream)">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-ink/5 bg-white/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
-          <div className="flex items-center gap-4">
-            <Link
-              href={content.locale === 'nl' ? '/' : '/en'}
-              className="flex items-center gap-2 text-sm text-ink/60 transition-colors hover:text-teal-strong"
-            >
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
-              {ui.navigation.backToHome}
-            </Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-ink/40">
-              {ui.navigation.projectCode}
-            </span>
-            <Link
-              href={otherLocalePath}
-              className="rounded-sm border border-ink/10 px-2.5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-ink/60 transition-colors hover:border-teal-strong/30 hover:text-teal-strong"
-            >
-              {ui.navigation.languageToggleLabel}
-            </Link>
-          </div>
-        </div>
-      </header>
+      <Navigation
+        navLinks={headerNavLinks}
+        locale={content.locale}
+        languageToggleLabel={ui.navigation.languageToggleLabel}
+        domainLinks={domainLinks}
+      />
 
       {/* Hero */}
       <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">

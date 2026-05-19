@@ -1,6 +1,7 @@
 import type { HomeContent } from '../content/types';
 import { ApplicationsList } from './ApplicationsList';
 import { Navigation } from './Navigation';
+import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
 import { Section01Hero } from './Section01Hero';
 import { Section02Intro } from './Section02Intro';
 import { Section03CaseStudy } from './Section03CaseStudy';
@@ -15,29 +16,8 @@ type HomePageProps = {
 };
 
 export function HomePage({ content }: HomePageProps) {
-  // Create actual page navigation links (not section links)
-  const locale = content.locale;
-  const headerNavLinks = [
-    {
-      label: content.locale === 'en' ? 'Dashboard' : 'Dashboard',
-      href: `${locale === 'en' ? '/en' : ''}/dashboard`,
-    },
-    {
-      label: content.locale === 'en' ? 'Projects' : 'Projecten',
-      href: `${locale === 'en' ? '/en' : ''}/projects`,
-    },
-    {
-      label:
-        content.locale === 'en'
-          ? 'Participatory Science'
-          : 'Participatieve Wetenschap',
-      href: `${locale === 'en' ? '/en' : ''}/participatory-science`,
-    },
-    {
-      label: content.locale === 'en' ? 'Output' : 'Resultaten',
-      href: `${locale === 'en' ? '/en' : ''}/output`,
-    },
-  ];
+  const headerNavLinks = getHeaderNavLinks(content.locale);
+  const domainLinks = getDomainLinks(content.locale);
 
   return (
     <div className="min-h-screen bg-white text-ink">
@@ -46,21 +26,7 @@ export function HomePage({ content }: HomePageProps) {
         navLinks={headerNavLinks}
         locale={content.locale}
         languageToggleLabel={content.ui.navigation.languageToggleLabel}
-        domainLinks={[
-          {
-            label: 'About',
-            href: content.locale === 'en' ? '/en' : '/',
-            isCurrent: true,
-          },
-          {
-            label: 'Images',
-            href: 'https://images.surinametijdmachine.org',
-          },
-          {
-            label: 'Data',
-            href: 'https://data.surinametijdmachine.org',
-          },
-        ]}
+        domainLinks={domainLinks}
       />
 
       <main className="flex flex-col gap-0">
