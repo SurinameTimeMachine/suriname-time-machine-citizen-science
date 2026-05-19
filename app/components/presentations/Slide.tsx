@@ -56,9 +56,15 @@ function SlideHeader({
   );
 }
 
-function SlideBody({ body }: { body: string[] }) {
+function SlideBody({ body, compact }: { body: string[]; compact?: boolean }) {
   return (
-    <div className="space-y-3 text-base leading-relaxed sm:text-lg">
+    <div
+      className={
+        compact
+          ? 'space-y-2 text-sm leading-relaxed sm:text-base'
+          : 'space-y-3 text-base leading-relaxed sm:text-lg'
+      }
+    >
       {body.map((p) => (
         <RichText key={`body-${p}`} className="text-pretty">
           {p}
@@ -68,9 +74,21 @@ function SlideBody({ body }: { body: string[] }) {
   );
 }
 
-function SlideBullets({ bullets }: { bullets: string[] }) {
+function SlideBullets({
+  bullets,
+  compact,
+}: {
+  bullets: string[];
+  compact?: boolean;
+}) {
   return (
-    <ul className="space-y-2 text-base sm:text-lg">
+    <ul
+      className={
+        compact
+          ? 'space-y-1 text-sm sm:text-base'
+          : 'space-y-2 text-base sm:text-lg'
+      }
+    >
       {bullets.map((b) => (
         <li key={`bullet-${b}`} className="flex gap-3">
           <span
@@ -171,21 +189,75 @@ export function Slide({
 
       case 'split':
         return (
-          <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-10 px-8 py-12 lg:grid-cols-2 lg:px-16 lg:py-16">
+          <div
+            className={`mx-auto grid h-full max-w-7xl grid-cols-1 px-8 md:grid-cols-2 lg:px-16 ${
+              slide.id === 'what-is-stm'
+                ? 'gap-6 py-8 lg:py-10'
+                : 'gap-10 py-12 lg:py-16'
+            }`}
+          >
+            <div className="flex flex-col justify-center">
+              <SlideHeader slide={slide} printMode={printMode} />
+              {slide.body ? (
+                <SlideBody
+                  body={slide.body}
+                  compact={slide.id === 'what-is-stm'}
+                />
+              ) : null}
+            </div>
+            <div className="flex flex-col justify-center">
+              {slide.media ? (
+                <figure
+                  className={`cut-corner w-full bg-white ${
+                    slide.id === 'what-is-stm' ? 'aspect-video' : 'aspect-video'
+                  }`}
+                >
+                  {}
+                  <img
+                    src={slide.media.src}
+                    alt={slide.media.alt}
+                    className="block h-full w-full object-contain bg-white"
+                  />
+                  {slide.media.caption && slide.id !== 'what-is-stm' ? (
+                    <figcaption className="bg-white/90 px-4 py-2 text-xs text-ink">
+                      {slide.media.caption}
+                    </figcaption>
+                  ) : null}
+                </figure>
+              ) : null}
+              {slide.component ? <SlideInteractive slide={slide} /> : null}
+              {slide.bullets ? (
+                <div
+                  className={`angled-card bg-white text-ink ${
+                    slide.id === 'what-is-stm' ? 'mt-4 p-5' : 'p-8'
+                  }`}
+                >
+                  <SlideBullets
+                    bullets={slide.bullets}
+                    compact={slide.id === 'what-is-stm'}
+                  />
+                </div>
+              ) : null}
+            </div>
+          </div>
+        );
+
+      case 'two-col':
+        return (
+          <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-10 px-8 py-12 md:grid-cols-[1fr_1.2fr] lg:px-16 lg:py-16">
             <div className="flex flex-col justify-center">
               <SlideHeader slide={slide} printMode={printMode} />
               {slide.body ? <SlideBody body={slide.body} /> : null}
-            </div>
-            <div className="flex flex-col justify-center">
               {slide.bullets ? (
-                <div className="angled-card bg-white p-8 text-ink">
+                <div className="mt-6">
                   <SlideBullets bullets={slide.bullets} />
                 </div>
               ) : null}
+            </div>
+            <div className="flex items-center justify-center">
               {slide.component ? <SlideInteractive slide={slide} /> : null}
-              {slide.media ? (
+              {!slide.component && slide.media ? (
                 <figure className="cut-corner aspect-video w-full bg-white">
-                  {}
                   <img
                     src={slide.media.src}
                     alt={slide.media.alt}
@@ -198,24 +270,6 @@ export function Slide({
                   ) : null}
                 </figure>
               ) : null}
-            </div>
-          </div>
-        );
-
-      case 'two-col':
-        return (
-          <div className="mx-auto grid h-full max-w-7xl grid-cols-1 gap-10 px-8 py-12 lg:grid-cols-[1fr_1.2fr] lg:px-16 lg:py-16">
-            <div className="flex flex-col justify-center">
-              <SlideHeader slide={slide} printMode={printMode} />
-              {slide.body ? <SlideBody body={slide.body} /> : null}
-              {slide.bullets ? (
-                <div className="mt-6">
-                  <SlideBullets bullets={slide.bullets} />
-                </div>
-              ) : null}
-            </div>
-            <div className="flex items-center justify-center">
-              {slide.component ? <SlideInteractive slide={slide} /> : null}
             </div>
           </div>
         );

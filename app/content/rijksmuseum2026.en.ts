@@ -65,6 +65,12 @@ export const rijksmuseum2026Content: PresentationContent = {
         'Maps + registers + images, all linked',
         'Co-designed with Surinamese-diaspora communities',
       ],
+      media: {
+        src: '/presentations/rijksmuseum-2026/screenshots/suriname-official-borders.png',
+        alt: 'Map showing the official borders of the Republic of Suriname and neighboring countries.',
+        caption:
+          'Official borders of the Republic of Suriname (Wikimedia Commons, CC BY-SA).',
+      },
       notes: [
         'Be clear about the relationship: HDSC is the data; STM is the architecture that links it spatially and to other sources.',
         'HDSC was crowdfunded and demand-driven, anchored in genealogy and family history.',
