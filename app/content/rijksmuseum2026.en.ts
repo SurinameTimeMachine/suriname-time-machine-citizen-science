@@ -285,38 +285,23 @@ export const rijksmuseum2026Content: PresentationContent = {
       id: 'critique-where',
       layout: 'split',
       background: 'cream',
-      title: 'Critique 1 · Where the lens did *not* look',
-      subtitle:
-        'The empty halves of the map are a brief for future collecting.',
+      title: 'A partial archive',
+      subtitle: 'What is missing, and who made what we have.',
       body: [
-        'A spatial reading turns absence into a research question: which regions, which communities, which kinds of place are systematically un-imaged?',
-        'The Rijksmuseum can read these gaps as **acquisition priorities**, and as conversation starters with archives elsewhere (Suriname, the UK, France).',
+        'The empty halves of the map are a brief for future collecting. A spatial reading turns absence into a research question: which regions, which communities, which kinds of place are systematically un-imaged?',
+        'These gaps could be read as acquisition priorities, and as conversation starters with archives elsewhere (Suriname, the UK, France).',
+        'The gaps are not neutral either. The collection was produced by a very small, colonially-positioned circle of photographers, missionaries and administrators. What we see is their Suriname, not the country.',
       ],
       bullets: [
         'Interior / Maroon villages: almost no coverage',
         'Indigenous territories: near-total absence',
-        'Religious life outside the Moravian mission: under-documented',
-        'Domestic interiors of enslaved and freed people: invisible',
+        'Domestic life of enslaved and freed people: invisible',
+        'Surviving voices left their record elsewhere: oral history, song, material culture, the landscape itself',
       ],
       notes: [
         'Frame this as constructive, not accusatory.',
-        'The Rijksmuseum is already aware. Our contribution is making the absences *visible and addressable*.',
-      ],
-    },
-    {
-      id: 'critique-whose',
-      layout: 'split',
-      background: 'cream',
-      title: 'Critique 2 · Whose gaze, whose medium',
-      subtitle: 'A visual archive made by a narrow slice of colonial society.',
-      body: [
-        'Nearly every photograph and print we have was made **by, for, and about** wealthy white Dutch men in Suriname.',
-        'The voices that are missing, Surinamese, indigenous, enslaved and formerly enslaved, left their record in different media: oral history, song, material culture, the landscape itself.',
-        'Our infrastructure has to make space for those media too.',
-      ],
-      notes: [
-        'This is the pivot to the citizen-science project and the outlook.',
-        'Be explicit: the Rijksmuseum collection is a *partial* archive. Treating it as comprehensive reproduces the colonial gaze.',
+        'On the producer point: family scenes and female subjects do appear, but always mediated by that same small colonial circle.',
+        'Our contribution is making absences visible and addressable, and pointing to where community knowledge can fill them.',
       ],
     },
     {
