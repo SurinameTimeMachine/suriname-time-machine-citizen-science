@@ -1,0 +1,46 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Concept diagram for co-curated exhibition proposal</title>
+  <desc id="desc">Three balanced overlapping circles labeled Museums, Citizen Science and Suriname Time Machine. A centered badge marks a future exhibition, with oral histories, open questions and community images shown as lightweight tags below.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F1E4" />
+      <stop offset="1" stop-color="#E8F1EC" />
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)" />
+
+  <g opacity="0.18" filter="url(#softGlow)">
+    <circle cx="520" cy="320" r="176" fill="#A44732" />
+    <circle cx="800" cy="320" r="176" fill="#24806F" />
+    <circle cx="1080" cy="320" r="176" fill="#156067" />
+  </g>
+
+  <circle cx="520" cy="320" r="160" fill="#CDAEA2" fill-opacity="0.58" stroke="#8D3022" stroke-width="4" />
+  <circle cx="800" cy="320" r="160" fill="#9FC2B6" fill-opacity="0.58" stroke="#1A6E60" stroke-width="4" />
+  <circle cx="1080" cy="320" r="160" fill="#9CBBBC" fill-opacity="0.56" stroke="#0F525A" stroke-width="4" />
+
+  <text x="520" y="332" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#5C2118">Museums</text>
+  <text x="1080" y="305" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#0D434A">Suriname</text>
+  <text x="1080" y="339" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#0D434A">Time Machine</text>
+
+  <rect x="702" y="276" width="196" height="90" rx="24" fill="#F8F8F6" stroke="#1E5D59" stroke-width="3" />
+  <text x="800" y="311" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#1D4E4A">Future</text>
+  <text x="800" y="339" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#1D4E4A">Exhibition</text>
+
+  <text x="800" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#1D4E4A" opacity="0.92">Citizen science</text>
+
+  <rect x="282" y="582" width="304" height="58" rx="29" fill="#F7EAE5" stroke="#A64A35" stroke-width="2" />
+  <text x="434" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#7C2A1D">Oral histories</text>
+
+  <rect x="646" y="582" width="308" height="58" rx="29" fill="#F4F7F6" stroke="#6E8C86" stroke-dasharray="9 8" stroke-width="2" />
+  <text x="800" y="606" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#36544F">Open questions</text>
+  <text x="800" y="628" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#36544F">themes · ethics · access · governance</text>
+
+  <rect x="1010" y="582" width="348" height="58" rx="29" fill="#E7F2F1" stroke="#1A6D73" stroke-width="2" />
+  <text x="1184" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0E5259">Community images</text>
+</svg>

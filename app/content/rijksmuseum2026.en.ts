@@ -342,19 +342,19 @@ export const rijksmuseum2026Content: PresentationContent = {
     },
     {
       id: 'going-back',
-      layout: 'text',
-      title: 'Going back to the community',
-      subtitle: 'What success looks like',
-      bullets: [
-        'A community member opens an image of the plantation their family came from',
-        '… sees the gazetteer entry alongside it: dates, neighbours, surrounding creeks',
-        '… records a story, in their own language, about a relative or a place name',
-        '… and that story becomes part of the linked record, citable, durable, theirs',
-        'Repeat across collectives, regions, and generations',
-      ],
+      layout: 'split',
+      background: 'cream',
+      title: 'Future direction · Open co-creation',
+      subtitle:
+        'An intentionally unfinished idea: museum collections, community stories and STM in one evolving space.',
+      media: {
+        src: '/presentations/rijksmuseum-2026/screenshots/proposal-layers.svg',
+        alt: 'Concept sketch showing overlap between museums, citizen science and Suriname Time Machine with oral histories and community images feeding into a future co-curated exhibition.',
+      },
       notes: [
-        'Land the emotional close. This is the *point* of the infrastructure.',
-        'Acknowledge that we are early, this is a roadmap, not a completed programme.',
+        'Frame this as a concrete next-phase proposal: not only analysing the archive, but building a shared storytelling environment around it.',
+        'Stress that oral histories are not decorative metadata. They are primary knowledge layers with community governance.',
+        'Close with invitation: pilot with one district (for example Commewijne/Paramaribo), then scale to additional regions and partner museums.',
       ],
     },
     {

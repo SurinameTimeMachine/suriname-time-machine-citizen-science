@@ -176,12 +176,12 @@ export function Slide({
               ) : null}
               {slide.component ? <SlideInteractive slide={slide} /> : null}
               {slide.media ? (
-                <figure className="cut-corner">
+                <figure className="cut-corner aspect-video w-full bg-white">
                   {}
                   <img
                     src={slide.media.src}
                     alt={slide.media.alt}
-                    className="block h-full w-full object-cover"
+                    className="block h-full w-full object-contain bg-white"
                   />
                   {slide.media.caption ? (
                     <figcaption className="bg-white/90 px-4 py-2 text-xs text-ink">
