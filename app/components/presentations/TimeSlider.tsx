@@ -51,7 +51,7 @@ export function TimeSlider({
           step={1}
           value={year}
           onChange={(e) => setYear(Number.parseInt(e.target.value, 10))}
-          className="mt-2 w-full accent-(--teal-strong)"
+          className="mt-2 w-full accent-teal-strong"
           aria-label="Year"
         />
         <p className="mt-2 text-xs uppercase tracking-[0.25em] text-ink/60">

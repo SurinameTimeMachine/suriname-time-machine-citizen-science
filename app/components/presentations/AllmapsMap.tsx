@@ -1,5 +1,6 @@
 'use client';
 
+// @ts-ignore - leaflet CSS types not available
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useMemo, useRef, useState } from 'react';
 

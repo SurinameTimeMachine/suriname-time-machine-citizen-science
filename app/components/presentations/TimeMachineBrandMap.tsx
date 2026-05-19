@@ -1,212 +1,231 @@
-// A two-circle Venn diagram positioning the Suriname Time Machine between
-// (A) sibling Time Machines with similar open / IIIF / citizen-science data,
-// and (B) digital projects on colonial / Atlantic-world heritage that sit
-// outside the European Time Machine federation but share our research scope.
+// A two-ellipse Venn diagram showing the Suriname Time Machine bridging
+// (A) Dutch/BE Time Machine methodology peers, and
+// (B) Atlantic-world and diaspora heritage projects.
+//
+// Geometry (viewBox 0 0 1200 560):
+//   LCX=360  RCX=840  CY=340  RX=320  RY=215
+//   Left  ellipse: x 40–680,   y 125–555
+//   Right ellipse: x 520–1160, y 125–555
+//   Overlap zone:  x 520–680,  centre x=600
+//   Left-only zone centre:  (40+520)/2  = 280
+//   Right-only zone centre: (680+1160)/2 = 920
+//
+// Font sizes: headings 36px bold, peer labels 28px — readable from the back row.
 
-type Peer = {
-  name: string;
-  href?: string;
-  // Position in the 1000×600 viewBox.
-  x: number;
-  y: number;
-};
+type Peer = { name: string; href?: string; y: number };
 
-// Left circle: Time Machine peers with similar data culture (open, IIIF,
-// citizen-science driven).
+const LCX = 360;
+const RCX = 840;
+const CY = 340;
+const RX = 320;
+const RY = 215;
+const LEFT_X = 280;
+const RIGHT_X = 920;
+
+// TM peers — 5 items, y 205–485, spacing 70
 const TM_PEERS: Peer[] = [
   {
     name: 'Amsterdam Time Machine',
     href: 'https://www.amsterdamtimemachine.nl/',
-    x: 215,
-    y: 200,
+    y: 275,
   },
+  { name: 'Aezel', href: 'https://aezel.eu/', y: 205 },
   {
     name: 'Gouda Tijdmachine',
     href: 'https://www.goudatijdmachine.nl/',
-    x: 130,
-    y: 320,
+    y: 345,
   },
+  { name: 'Gent Gemapt', href: 'https://www.gentgemapt.be/', y: 415 },
   {
     name: 'Utrecht Time Machine',
     href: 'https://utrechttimemachine.nl/',
-    x: 235,
-    y: 420,
+    y: 485,
   },
-  { name: 'Aezel', href: 'https://aezel.eu/', x: 105, y: 220 },
-  { name: 'Gent Gemapt', href: 'https://www.gentgemapt.be/', x: 110, y: 410 },
 ];
 
-// Right circle: colonial / Atlantic-world heritage peers we look at *outside*
-// the European Time Machine federation.
-const COLONIAL_PEERS: Peer[] = [
-  { name: 'HDSC', href: 'https://surinametijdmachine.org', x: 785, y: 210 },
-  { name: 'imagineRio', href: 'https://imaginerio.org/en', x: 870, y: 320 },
-  { name: 'Same Boats', href: 'https://sameboats.org/', x: 770, y: 430 },
+// Atlantic peers — 3 items, y 240–480, spacing 120
+const ATLANTIC_PEERS: Peer[] = [
+  { name: 'HDSC', href: 'https://surinametijdmachine.org', y: 240 },
+  { name: 'imagineRio', href: 'https://imaginerio.org/en', y: 360 },
+  { name: 'Same Boats', href: 'https://sameboats.org/', y: 480 },
 ];
 
 export function TimeMachineBrandMap() {
-  // Two big circles, overlapping in the middle. STM sits in the overlap.
-  const LEFT_CX = 340;
-  const RIGHT_CX = 660;
-  const CY = 310;
-  const R = 240;
-
   return (
     <div className="flex h-full w-full items-center justify-center">
       <svg
-        viewBox="0 0 1000 600"
+        viewBox="0 0 1200 560"
         preserveAspectRatio="xMidYMid meet"
         className="block max-h-full w-full"
         role="img"
-        aria-label="Venn diagram: Suriname Time Machine between Time Machine peers and colonial-heritage peers"
+        aria-label="Venn diagram: Suriname Time Machine at the intersection of sibling Time Machines and Atlantic-world heritage projects"
       >
-        {/* Left circle: Time Machine peers */}
-        <circle
-          cx={LEFT_CX}
+        <defs>
+          <clipPath id="clip-left">
+            <ellipse cx={LCX} cy={CY} rx={RX} ry={RY} />
+          </clipPath>
+        </defs>
+
+        {/* ── Fills ─────────────────────────────────────────────────────── */}
+        <ellipse
+          cx={LCX}
           cy={CY}
-          r={R}
-          fill="var(--teal-bright)"
-          fillOpacity={0.12}
-          stroke="var(--teal-strong)"
-          strokeOpacity={0.35}
-          strokeWidth={1.5}
+          rx={RX}
+          ry={RY}
+          fill="#34d1b3"
+          fillOpacity={0.25}
         />
-        {/* Right circle: colonial heritage peers */}
-        <circle
-          cx={RIGHT_CX}
+        <ellipse
+          cx={RCX}
           cy={CY}
-          r={R}
-          fill="var(--deep-teal)"
-          fillOpacity={0.1}
-          stroke="var(--deep-teal)"
-          strokeOpacity={0.35}
-          strokeWidth={1.5}
+          rx={RX}
+          ry={RY}
+          fill="#006d5b"
+          fillOpacity={0.15}
+        />
+        {/* Intersection: clipped extra fill makes it visually distinct */}
+        <ellipse
+          cx={RCX}
+          cy={CY}
+          rx={RX}
+          ry={RY}
+          clipPath="url(#clip-left)"
+          fill="#34d1b3"
+          fillOpacity={0.2}
         />
 
-        {/* Circle headings */}
+        {/* ── Outlines ──────────────────────────────────────────────────── */}
+        <ellipse
+          cx={LCX}
+          cy={CY}
+          rx={RX}
+          ry={RY}
+          fill="none"
+          stroke="#006d5b"
+          strokeWidth={3}
+        />
+        <ellipse
+          cx={RCX}
+          cy={CY}
+          rx={RX}
+          ry={RY}
+          fill="none"
+          stroke="#003c34"
+          strokeWidth={3}
+        />
+
+        {/* ── Headings — above the ellipses (top edge y=125) ────────────── */}
+        {/* Left heading starts at x=45; at 36px "Sibling Time Machines" ends ~460, before overlap at 520 */}
         <text
-          x={LEFT_CX - R + 20}
-          y={CY - R + 30}
-          fontSize={20}
-          fontWeight={600}
-          fill="var(--deep-teal)"
+          x={45}
+          y={58}
+          fontSize={36}
+          fontWeight={800}
+          textAnchor="start"
+          fill="#003c34"
           fontFamily="var(--font-geist-sans)"
         >
           Sibling Time Machines
         </text>
         <text
-          x={LEFT_CX - R + 20}
-          y={CY - R + 54}
-          fontSize={13}
-          fill="var(--deep-teal)"
-          fillOpacity={0.7}
+          x={45}
+          y={92}
+          fontSize={20}
+          textAnchor="start"
+          fill="#006d5b"
           fontFamily="var(--font-geist-sans)"
         >
           open data · IIIF · citizen science
         </text>
 
+        {/* Right heading ends at x=1155; at 36px "Atlantic-world heritage" starts ~700, after overlap end at 680 */}
         <text
-          x={RIGHT_CX + R - 20}
-          y={CY - R + 30}
+          x={1155}
+          y={58}
+          fontSize={36}
+          fontWeight={800}
+          textAnchor="end"
+          fill="#003c34"
+          fontFamily="var(--font-geist-sans)"
+        >
+          Atlantic-world heritage
+        </text>
+        <text
+          x={1155}
+          y={92}
           fontSize={20}
-          fontWeight={600}
           textAnchor="end"
-          fill="var(--deep-teal)"
+          fill="#006d5b"
           fontFamily="var(--font-geist-sans)"
         >
-          Colonial heritage peers
+          diaspora · community archives · global
+        </text>
+
+        {/* ── Peer labels — 28px, centred in their non-overlapping zone ─── */}
+        {TM_PEERS.map((p) => (
+          <PeerLabel key={`tm-${p.name}`} peer={p} x={LEFT_X} />
+        ))}
+        {ATLANTIC_PEERS.map((p) => (
+          <PeerLabel key={`atlantic-${p.name}`} peer={p} x={RIGHT_X} />
+        ))}
+
+        {/* ── STM label in the intersection — one word per line ─────────── */}
+        <text
+          x={600}
+          y={CY - 38}
+          fontSize={30}
+          fontWeight={800}
+          textAnchor="middle"
+          fill="#003c34"
+          fontFamily="var(--font-geist-sans)"
+        >
+          Suriname
         </text>
         <text
-          x={RIGHT_CX + R - 20}
-          y={CY - R + 54}
-          fontSize={13}
-          textAnchor="end"
-          fill="var(--deep-teal)"
-          fillOpacity={0.7}
+          x={600}
+          y={CY + 4}
+          fontSize={30}
+          fontWeight={800}
+          textAnchor="middle"
+          fill="#003c34"
           fontFamily="var(--font-geist-sans)"
         >
-          outside the European TM federation
+          Time
         </text>
-
-        {/* Peer labels — left circle */}
-        {TM_PEERS.map((p) => (
-          <PeerLabel key={`peer-${p.name}`} peer={p} anchor="start" />
-        ))}
-        {/* Peer labels — right circle */}
-        {COLONIAL_PEERS.map((p) => (
-          <PeerLabel key={`peer-${p.name}`} peer={p} anchor="end" />
-        ))}
-
-        {/* Center: Suriname Time Machine */}
-        <g>
-          <circle
-            cx={500}
-            cy={CY}
-            r={70}
-            fill="var(--deep-teal)"
-            stroke="var(--teal-bright)"
-            strokeWidth={3}
-          />
-          <text
-            x={500}
-            y={CY - 8}
-            fontSize={15}
-            fontWeight={700}
-            textAnchor="middle"
-            fill="white"
-            fontFamily="var(--font-geist-sans)"
-          >
-            Suriname
-          </text>
-          <text
-            x={500}
-            y={CY + 12}
-            fontSize={15}
-            fontWeight={700}
-            textAnchor="middle"
-            fill="white"
-            fontFamily="var(--font-geist-sans)"
-          >
-            Time Machine
-          </text>
-          <text
-            x={500}
-            y={CY + 32}
-            fontSize={11}
-            textAnchor="middle"
-            fill="var(--teal-bright)"
-            fontFamily="var(--font-geist-sans)"
-          >
-            both methods · both audiences
-          </text>
-        </g>
+        <text
+          x={600}
+          y={CY + 46}
+          fontSize={30}
+          fontWeight={800}
+          textAnchor="middle"
+          fill="#003c34"
+          fontFamily="var(--font-geist-sans)"
+        >
+          Machine
+        </text>
       </svg>
     </div>
   );
 }
 
-function PeerLabel({ peer, anchor }: { peer: Peer; anchor: 'start' | 'end' }) {
-  const dotR = 4;
+function PeerLabel({ peer, x }: { peer: Peer; x: number }) {
   return (
-    <g>
-      <circle cx={peer.x} cy={peer.y} r={dotR} fill="var(--teal-strong)" />
-      <text
-        x={peer.x + (anchor === 'start' ? 10 : -10)}
-        y={peer.y + 4}
-        fontSize={14}
-        fontWeight={500}
-        textAnchor={anchor}
-        fill="var(--deep-teal)"
-        fontFamily="var(--font-geist-sans)"
-      >
-        {peer.href ? (
-          <a href={peer.href} target="_blank" rel="noopener noreferrer">
-            {peer.name}
-          </a>
-        ) : (
-          peer.name
-        )}
-      </text>
-    </g>
+    <text
+      x={x}
+      y={peer.y}
+      fontSize={28}
+      fontWeight={600}
+      textAnchor="middle"
+      fill="#003c34"
+      fontFamily="var(--font-geist-sans)"
+    >
+      {peer.href ? (
+        <a href={peer.href} target="_blank" rel="noopener noreferrer">
+          {peer.name}
+        </a>
+      ) : (
+        peer.name
+      )}
+    </text>
   );
 }
