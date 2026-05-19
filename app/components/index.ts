@@ -17,4 +17,10 @@ export { SiteFooter } from './SiteFooter';
 export { ResourcesSection } from './ResourcesSection';
 export { CitizenSciencePage } from './CitizenSciencePage';
 export { OutputPage } from './OutputPage';
-export type { MediaAsset, NavLink, ResourceItem, Stat } from './types';
+export type {
+  DomainLink,
+  MediaAsset,
+  NavLink,
+  ResourceItem,
+  Stat,
+} from './types';

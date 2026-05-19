@@ -15,16 +15,52 @@ type HomePageProps = {
 };
 
 export function HomePage({ content }: HomePageProps) {
+  // Create actual page navigation links (not section links)
+  const locale = content.locale;
+  const headerNavLinks = [
+    {
+      label: content.locale === 'en' ? 'Dashboard' : 'Dashboard',
+      href: `${locale === 'en' ? '/en' : ''}/dashboard`,
+    },
+    {
+      label: content.locale === 'en' ? 'Projects' : 'Projecten',
+      href: `${locale === 'en' ? '/en' : ''}/projects`,
+    },
+    {
+      label:
+        content.locale === 'en'
+          ? 'Participatory Science'
+          : 'Participatieve Wetenschap',
+      href: `${locale === 'en' ? '/en' : ''}/participatory-science`,
+    },
+    {
+      label: content.locale === 'en' ? 'Output' : 'Resultaten',
+      href: `${locale === 'en' ? '/en' : ''}/output`,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white text-ink">
       <SetHtmlLang lang={content.locale} />
       <Navigation
-        navLinks={content.navLinks}
+        navLinks={headerNavLinks}
         locale={content.locale}
-        locationLabel={content.ui.navigation.locationLabel}
-        projectCode={content.ui.navigation.projectCode}
-        projectSubtitle={content.ui.navigation.projectSubtitle}
         languageToggleLabel={content.ui.navigation.languageToggleLabel}
+        domainLinks={[
+          {
+            label: 'About',
+            href: content.locale === 'en' ? '/en' : '/',
+            isCurrent: true,
+          },
+          {
+            label: 'Images',
+            href: 'https://images.surinametijdmachine.org',
+          },
+          {
+            label: 'Data',
+            href: 'https://data.surinametijdmachine.org',
+          },
+        ]}
       />
 
       <main className="flex flex-col gap-0">

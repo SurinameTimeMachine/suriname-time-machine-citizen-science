@@ -6,6 +6,7 @@ export type NavLink = {
 export type DomainLink = {
   label: string;
   href: string;
+  /** Highlights with teal-strong and adds aria-current="page". */
   isCurrent?: boolean;
 };
 
@@ -20,10 +21,4 @@ export type MediaAsset = {
   width: number;
   height: number;
   caption: string;
-};
-
-export type ResourceItem = {
-  id: string;
-  description: string;
-  asset: MediaAsset;
 };
