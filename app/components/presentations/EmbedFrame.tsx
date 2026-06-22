@@ -10,8 +10,11 @@ type EmbedFrameProps = {
 
 export function EmbedFrame({ src, title, fallbackSrc }: EmbedFrameProps) {
   const [online, setOnline] = useState<boolean>(true);
-  const [iframeFailed, setIframeFailed] = useState(false);
-  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [failedKey, setFailedKey] = useState<string | null>(null);
+  const [loadedKey, setLoadedKey] = useState<string | null>(null);
+  const frameKey = `${src}::${online ? 'online' : 'offline'}`;
+  const iframeFailed = failedKey === frameKey;
+  const iframeLoaded = loadedKey === frameKey;
 
   useEffect(() => {
     const update = () => setOnline(navigator.onLine);
@@ -25,17 +28,12 @@ export function EmbedFrame({ src, title, fallbackSrc }: EmbedFrameProps) {
   }, []);
 
   useEffect(() => {
-    setIframeFailed(false);
-    setIframeLoaded(false);
-  }, [src, online]);
-
-  useEffect(() => {
     if (!fallbackSrc || !online || iframeLoaded || iframeFailed) return;
     const timeout = window.setTimeout(() => {
-      setIframeFailed(true);
+      setFailedKey(frameKey);
     }, 4000);
     return () => window.clearTimeout(timeout);
-  }, [fallbackSrc, iframeFailed, iframeLoaded, online]);
+  }, [fallbackSrc, frameKey, iframeFailed, iframeLoaded, online]);
 
   const showFallback = (!online || iframeFailed) && fallbackSrc;
 
@@ -76,12 +74,13 @@ export function EmbedFrame({ src, title, fallbackSrc }: EmbedFrameProps) {
             </div>
           ) : (
             <iframe
+              key={`embed-frame-${frameKey}`}
               src={src}
               title={title}
               className="block h-full w-full border-0 bg-white"
               loading="lazy"
-              onLoad={() => setIframeLoaded(true)}
-              onError={() => setIframeFailed(true)}
+              onLoad={() => setLoadedKey(frameKey)}
+              onError={() => setFailedKey(frameKey)}
               sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             />
           )}
