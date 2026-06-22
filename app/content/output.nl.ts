@@ -146,6 +146,68 @@ export const outputNl: OutputContent = {
       venue: 'ECSA 2026, Oulu, Finland',
     },
     {
+      id: 'dhbenelux-poster-2026',
+      title:
+        'Linking Surinamese Heritage Data: Building a Community-Focused Platform',
+      description:
+        'Poster gepresenteerd op Digital Humanities Benelux 2026 over het koppelen van Surinaamse erfgoeddata in een communitygerichte platformaanpak.',
+      href: 'https://zenodo.org/records/20139428',
+      category: 'presentations',
+      date: '4 juni 2026',
+      isoDate: '2026-06-04',
+      authors: 'Jona Schlegel & Thunnis van Oort',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'dhbenelux-workshop-2026',
+      title:
+        'Storytellers by Design Workshop (DH Benelux · Maastricht Edition)',
+      description:
+        'Workshop op DH Benelux 2026 waarin de Suriname Tijdmachine als een van de casestudies werd gebruikt. Jona Schlegel maakte deel uit van het organisatieteam samen met Federica Di Biase en Kelly Gillikin Schoueri.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/',
+      category: 'presentations',
+      date: '2 juni 2026 · 14:00-17:00',
+      isoDate: '2026-06-02',
+      authors: 'Federica Di Biase, Jona Schlegel & Kelly Gillikin Schoueri',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'dhbenelux-workshop-case-study-2026',
+      title: 'Peperpot-casestudy (Storytellers by Design workshopmateriaal)',
+      description:
+        'Casestudymateriaal gebruikt tijdens DH Benelux 2026, met een Suriname Tijdmachine-case rond Peperpot.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/materials/case-studies/peperpot-case-study.pdf',
+      category: 'presentations',
+      date: '2 juni 2026',
+      isoDate: '2026-06-02',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'ach-reparative-infrastructure-2026',
+      title:
+        "A Reparative Digital Infrastructure for Suriname's Past: Adapting the Time Machine Paradigm for a Postcolonial Context",
+      description:
+        'Conferentiepresentatie tijdens de Annual Meeting van de Association of Caribbean Historians.',
+      href: 'https://associationofcaribbeanhistorians.org/annual-meeting-2/',
+      category: 'presentations',
+      date: '28 mei 2026',
+      isoDate: '2026-05-28',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Association of Caribbean Historians, Annual Meeting',
+    },
+    {
+      id: 'rijksmuseum-visual-heritage-2026',
+      title: 'The Suriname Time Machine: Mapping Visual Heritage',
+      description:
+        'Presentatie binnen het lezingen- en symposiumprogramma van het Rijksmuseum over 2D- en 3D-fotografie.',
+      href: 'https://www.rijksmuseum.nl/en/whats-on/lectures-symposiums/2and3d-photography',
+      category: 'presentations',
+      date: '20 mei 2026',
+      isoDate: '2026-05-20',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Rijksmuseum',
+    },
+    {
       id: 'dhbenelux-pico-2025',
       title:
         'Modelling the Enslaved as Historical Persons: Extending the Persons in Context (PiCo) Model to Fit Enslaved Individuals',
@@ -242,6 +304,17 @@ export const outputNl: OutputContent = {
       date: '19 maart 2026',
       isoDate: '2026-03-19',
       venue: 'KNAW Humanities Cluster',
+    },
+    {
+      id: 'uva-kaarten-verhalen-2026',
+      title: 'Een web van kaarten en verhalen brengt het verleden tot leven',
+      description:
+        'Media-artikel van de Faculteit der Geesteswetenschappen van de UvA over de mapathon van de Suriname Tijdmachine en collaboratieve historische kaartpraktijken.',
+      href: 'https://www.uva.nl/shared-content/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
+      category: 'media',
+      date: 'Maart 2026',
+      isoDate: '2026-03-18',
+      venue: 'Universiteit van Amsterdam',
     },
     {
       id: 'ahh-kaarten-verhalen',

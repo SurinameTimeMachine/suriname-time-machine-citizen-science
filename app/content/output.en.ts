@@ -146,6 +146,68 @@ export const outputEn: OutputContent = {
       venue: 'ECSA 2026, Oulu, Finland',
     },
     {
+      id: 'dhbenelux-poster-2026',
+      title:
+        'Linking Surinamese Heritage Data: Building a Community-Focused Platform',
+      description:
+        'Poster presented at Digital Humanities Benelux 2026 on linking Surinamese heritage data in a community-focused platform approach.',
+      href: 'https://zenodo.org/records/20139428',
+      category: 'presentations',
+      date: '4 June 2026',
+      isoDate: '2026-06-04',
+      authors: 'Jona Schlegel & Thunnis van Oort',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'dhbenelux-workshop-2026',
+      title:
+        'Storytellers by Design Workshop (DH Benelux · Maastricht Edition)',
+      description:
+        'Workshop at DH Benelux 2026 featuring Suriname Time Machine as one of the case studies. Jona Schlegel was part of the organizing team together with Federica Di Biase and Kelly Gillikin Schoueri.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/',
+      category: 'presentations',
+      date: '2 June 2026 · 14:00-17:00',
+      isoDate: '2026-06-02',
+      authors: 'Federica Di Biase, Jona Schlegel & Kelly Gillikin Schoueri',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'dhbenelux-workshop-case-study-2026',
+      title: 'Peperpot Case Study (Storytellers by Design Workshop Materials)',
+      description:
+        'Workshop case-study material used during DH Benelux 2026, including a Suriname Time Machine case from Peperpot.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/materials/case-studies/peperpot-case-study.pdf',
+      category: 'presentations',
+      date: '2 June 2026',
+      isoDate: '2026-06-02',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'ach-reparative-infrastructure-2026',
+      title:
+        "A Reparative Digital Infrastructure for Suriname's Past: Adapting the Time Machine Paradigm for a Postcolonial Context",
+      description:
+        'Conference presentation at the Annual Meeting of the Association of Caribbean Historians.',
+      href: 'https://associationofcaribbeanhistorians.org/annual-meeting-2/',
+      category: 'presentations',
+      date: '28 May 2026',
+      isoDate: '2026-05-28',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Association of Caribbean Historians, Annual Meeting',
+    },
+    {
+      id: 'rijksmuseum-visual-heritage-2026',
+      title: 'The Suriname Time Machine: Mapping Visual Heritage',
+      description:
+        'Presentation in the Rijksmuseum lecture and symposium program on 2D and 3D photography.',
+      href: 'https://www.rijksmuseum.nl/en/whats-on/lectures-symposiums/2and3d-photography',
+      category: 'presentations',
+      date: '20 May 2026',
+      isoDate: '2026-05-20',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Rijksmuseum',
+    },
+    {
       id: 'dhbenelux-pico-2025',
       title:
         'Modelling the Enslaved as Historical Persons: Extending the Persons in Context (PiCo) Model to Fit Enslaved Individuals',
@@ -242,6 +304,17 @@ export const outputEn: OutputContent = {
       date: '19 March 2026',
       isoDate: '2026-03-19',
       venue: 'KNAW Humanities Cluster',
+    },
+    {
+      id: 'uva-kaarten-verhalen-2026',
+      title: 'A Web of Maps and Stories Brings the Past to Life',
+      description:
+        'Media article from the University of Amsterdam Faculty of Humanities about the Suriname Time Machine mapathon and collaborative historical mapping practices.',
+      href: 'https://www.uva.nl/shared-content/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
+      category: 'media',
+      date: 'March 2026',
+      isoDate: '2026-03-18',
+      venue: 'University of Amsterdam',
     },
     {
       id: 'ahh-kaarten-verhalen',
