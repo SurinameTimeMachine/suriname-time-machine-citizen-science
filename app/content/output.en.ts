@@ -159,6 +159,35 @@ export const outputEn: OutputContent = {
       venue: 'Digital Humanities Benelux 2026, Maastricht',
     },
     {
+      id: 'mauritius-poster-2026',
+      title:
+        'Bridging the Archive Gap: Suriname Time Machine (STM). Linked Open Data for Humanising Colonial Archives',
+      description:
+        'Poster presented at The Indentured Labour Route at the Crossroads conference on STM and linked open data for humanising colonial archives.',
+      href: 'https://zenodo.org/records/20284156',
+      category: 'presentations',
+      date: '14 May 2026',
+      isoDate: '2026-05-14',
+      authors: 'Sharmila Badloe & Thunnis van Oort',
+      venue:
+        'The Indentured Labour Route at the Crossroads – Imagining New Futures for the Global Diaspora, Mauritius',
+      doi: '10.5281/zenodo.20284156',
+    },
+    {
+      id: 'ach-reparative-infrastructure-zenodo-2026',
+      title: 'The Suriname Time Machine as a Reparative Digital Infrastructure',
+      description:
+        'Zenodo publication of the presentation delivered at the 57th Annual Conference of the Association of Caribbean Historians (ACH).',
+      href: 'https://zenodo.org/records/20809454',
+      category: 'presentations',
+      date: '23 June 2026',
+      isoDate: '2026-06-23',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue:
+        '57th Annual Conference of the Association of Caribbean Historians (ACH), Jamaica',
+      doi: '10.5281/zenodo.20809454',
+    },
+    {
       id: 'dhbenelux-workshop-2026',
       title:
         'Storytellers by Design Workshop (DH Benelux · Maastricht Edition)',
