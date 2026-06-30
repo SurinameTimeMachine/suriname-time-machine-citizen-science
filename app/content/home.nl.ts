@@ -60,7 +60,7 @@ export const homeContent: HomeContent = {
       kicker:
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
-    secondaryCtaLabel: 'Maak kennis met de Sranan Story Collective',
+      secondaryCtaLabel: 'Maak kennis met de Sranan Story Collective',
       textureAlt:
         'Geometrisch raster dat Suriname Tijdmachine-datasets verbeeldt.',
       snapshotLabel: 'Projectoverzicht',
@@ -135,6 +135,7 @@ export const homeContent: HomeContent = {
   section02Intro: {
     paragraphs: [
       'De Suriname Time Machine brengt verspreide bronnen samen. Met de Suriname Tijdmachine hoeven gebruikers niet langer op verschillende plekken bronnen te raadplegen en dubbel te checken of het om dezelfde personen, straten of plantages gaat. Dit maakt het makkelijker om patronen uit het verleden te herkennen, zoals rondom migratie en slavernij, en ook om individuele familiegeschiedenissen beter in kaart te brengen.',
+      'Waar de Suriname Tijdmachine de digitale infrastructuur is die deze bronnen samenbrengt, is de Sranan Story Collective het citizen-science-initiatief eromheen. Samen met Surinaams-Nederlandse diasporagemeenschappen onderzoekt de Collective hoe archiefmateriaal kan worden gebruikt, bevraagd en van context voorzien, en hoe het kan worden verbonden met persoonlijke geschiedenissen, gemeenschapskennis en perspectieven die in de archieven anders mogelijk onzichtbaar blijven.',
       'Neem bijvoorbeeld een portret uit de collectie van het Rijksmuseum, de eerste bekende foto gemaakt in Suriname. Het toont het Surinaamse echtpaar Johannes Ellis en Maria Louisa de Hart, geschilderd in 1846, het jaar waarin hun huwelijk plaatsvond. Hij was toen 33 jaar, Maria Louisa was 19. Het bijschrift vermeldt dat hij in Ghana is geboren, maar haar herkomst is niet vermeld.',
       'Wat online speurwerk levert al snel meer informatie op. Johannes Ellis werd geboren in [Fort Elmina](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016) (in het huidige Ghana). Hij verhuisde naar Suriname, waar hij in de jaren 1830 was hij opgeklommen tot ambtenaar. Maria Louisa was de dochter van de Joodse koopman [Mozes Meijer de Hart](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016) maar werd geboren in slavernij. Zij werd door hem op jonge leeftijd vrijgemaakt. Het stel Ellis-de Hart woonde in de deftige Keizerstraat in Paramaribo. Ze kregen een groot gezin met 1 zoon en 4 dochters.',
       'Zoals veel midden- en hogereklassehuishoudens in 19e-eeuws Suriname bezaten ze tot slaaf gemaakte mensen: in 1846 waren dat 3 mannen, 2 vrouwen en 5 kinderen. Een van deze vrouwen in slavernij heette Marietje. Zij was even oud als Maria Louisa en moeder van 1 zoon en 1 dochter.',

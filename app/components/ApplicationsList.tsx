@@ -75,7 +75,7 @@ export function ApplicationsList({ resources }: ApplicationsListProps) {
                       width={600}
                       height={400}
                       sizes="(min-width: 768px) 400px, 100vw"
-                      className="h-auto max-h-[400px] w-auto max-w-full"
+                      className="h-auto max-h-100 w-auto max-w-full"
                     />
                     {resource.asset.caption && (
                       <figcaption className="border-t border-slate-100 bg-white px-3 py-2 text-xs text-ink/60">
