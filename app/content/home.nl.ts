@@ -60,6 +60,7 @@ export const homeContent: HomeContent = {
       kicker:
         'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
       primaryCtaLabel: 'Ontdek de Tijdmachine',
+    secondaryCtaLabel: 'Maak kennis met de Sranan Story Collective',
       textureAlt:
         'Geometrisch raster dat Suriname Tijdmachine-datasets verbeeldt.',
       snapshotLabel: 'Projectoverzicht',

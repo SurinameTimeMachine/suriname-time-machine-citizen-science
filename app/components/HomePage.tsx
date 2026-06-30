@@ -39,6 +39,7 @@ export function HomePage({ content }: HomePageProps) {
           lead={content.ui.section01Hero.lead}
           kicker={content.ui.section01Hero.kicker}
           primaryCtaLabel={content.ui.section01Hero.primaryCtaLabel}
+          secondaryCtaLabel={content.ui.section01Hero.secondaryCtaLabel}
           textureAlt={content.ui.section01Hero.textureAlt}
           snapshotLabel={content.ui.section01Hero.snapshotLabel}
         />

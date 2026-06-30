@@ -15,6 +15,7 @@ export type HomeUiStrings = {
     lead: string;
     kicker: string;
     primaryCtaLabel: string;
+    secondaryCtaLabel: string;
     textureAlt: string;
     snapshotLabel: string;
   };

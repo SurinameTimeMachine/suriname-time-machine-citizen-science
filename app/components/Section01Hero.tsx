@@ -10,6 +10,7 @@ type Section01HeroProps = {
   lead: string;
   kicker: string;
   primaryCtaLabel: string;
+  secondaryCtaLabel: string;
   // eslint-disable-next-line react-x/no-unused-props -- used in commented-out texture figure
   textureAlt: string;
   snapshotLabel: string;
@@ -24,6 +25,7 @@ export function Section01Hero({
   lead,
   kicker,
   primaryCtaLabel,
+  secondaryCtaLabel,
   snapshotLabel,
 }: Section01HeroProps) {
   return (
@@ -73,6 +75,13 @@ export function Section01Hero({
                   className="inline-flex items-center gap-2 border border-white/40 px-5 py-2 uppercase tracking-[0.25em] text-white transition hover:border-white"
                 >
                   {primaryCtaLabel}
+                  <span aria-hidden>↘</span>
+                </a>
+                <a
+                  href="https://srananstorycollective.org/"
+                  className="inline-flex items-center gap-2 border border-white/40 px-5 py-2 uppercase tracking-[0.25em] text-white transition hover:border-white"
+                >
+                  {secondaryCtaLabel}
                   <span aria-hidden>↘</span>
                 </a>
               </div>

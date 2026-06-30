@@ -58,6 +58,7 @@ export const homeContent: HomeContent = {
       kicker:
         "Connecting archives, maps, and community research across centuries of Suriname's history.",
       primaryCtaLabel: 'Explore the archives',
+      secondaryCtaLabel: 'Get to know the Sranan Story Collective',
       textureAlt: 'Geometric texture grid representing historical datasets.',
       snapshotLabel: 'Project overview',
     },
