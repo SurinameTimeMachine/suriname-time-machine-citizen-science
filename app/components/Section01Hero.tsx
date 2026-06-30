@@ -78,7 +78,7 @@ export function Section01Hero({
                   <span aria-hidden>↘</span>
                 </a>
                 <a
-                  href="https://srananstorycollective.org/"
+                  href="https://srananstorycollective.com"
                   className="inline-flex items-center gap-2 border border-white/40 px-5 py-2 uppercase tracking-[0.25em] text-white transition hover:border-white"
                 >
                   {secondaryCtaLabel}
