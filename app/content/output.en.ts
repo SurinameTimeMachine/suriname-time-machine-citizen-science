@@ -290,6 +290,19 @@ export const outputEn: OutputContent = {
         'van Oort, T., Altink, N., Swaters, D., Smits, E., Pikulić, D., Rosenbaum-Feldbrügge, M., Quanjer, B. & Van Galen, C.',
     },
     {
+      id: 'plantations-almanakken-v2-1',
+      title: 'Plantations Surinaamse Almanakken (Version 2.1)',
+      description:
+        'Updated dataset release with improved data and metadata for the plantation records transcribed from the Surinaamsche Almanak (1818–1847) and the Almanak voor de Nederlandsche West-Indische bezittingen (1856–1861).',
+      href: 'https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/KQ6QCO',
+      category: 'data',
+      date: 'July 2026',
+      isoDate: '2026-07-03',
+      authors:
+        'van Oort, T., Altink, N., Swaters, D., Smits, E., Pikulić, D., Rosenbaum-Feldbrügge, M., Quanjer, B., Mourits, R. & van Galen, C.',
+      doi: '10.34894/KQ6QCO',
+    },
+    {
       id: 'iiif-maps-collection',
       title: 'IIIF Historic Maps of Suriname',
       description:
