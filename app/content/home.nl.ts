@@ -120,7 +120,7 @@ export const homeContent: HomeContent = {
       'Surinaamse bronnen uit de 19e eeuw op interactieve kaarten van Paramaribo en de Surinaamse plantages',
     ],
     stats: [
-      { label: 'Duur', value: '2025-2026, met mogelijke verlenging' },
+      { label: 'Duur', value: '2025-2028' },
       { label: 'Subsidieverstrekker', value: 'Stichting Pica' },
     ],
     background: {

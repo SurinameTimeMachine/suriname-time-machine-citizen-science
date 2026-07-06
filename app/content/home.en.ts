@@ -115,7 +115,7 @@ export const homeContent: HomeContent = {
   section01Hero: {
     highlights: ['Historical data from the 19th century on 1 interactive map'],
     stats: [
-      { label: 'Duration', value: '2025-2026, with possible extension' },
+      { label: 'Duration', value: '2025-2028' },
       { label: 'Subsidy provider', value: 'Pica Foundation' },
     ],
     background: {
