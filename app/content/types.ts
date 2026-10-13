@@ -406,12 +406,14 @@ export type OutputItem = {
   id: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   category: OutputCategory;
   date: string;
   isoDate: string;
   authors?: string;
+  speakers?: string;
   venue?: string;
+  mediaType?: string;
   doi?: string;
 };
 
