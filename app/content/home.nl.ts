@@ -78,9 +78,11 @@ export const homeContent: HomeContent = {
       title: 'Onderzoekshub en methodologie',
       projectTeamTitle: 'Projectteam',
       relatedEmployeesLabel: 'Medewerkers',
+      collectiveLabel: 'Sranan Story Collective',
       digitalInfrastructureTitle: 'Digitale infrastructuur',
       departmentsLabel: 'Afdeling',
-      departmentsValue: 'LivesLab, Huygens Instituut (KNAW)',
+      departmentsValue:
+        'Data & Collecties Huygens Instituut (KNAW), Team Tekstanalyse (Humanities Cluster KNAW)',
       tagsLabel: 'Tags',
       tagsValue:
         'erfgoed · koloniale geschiedenis · linked open data · burgerwetenschap',
@@ -219,10 +221,20 @@ export const homeContent: HomeContent = {
     employees: [
       'Thunnis van Oort – Huygens Instituut',
       'Jona Schlegel – Huygens Instituut',
-      'Gerhard de Kok – Huygens Instituut',
-      'Jelle van Lottum – Huygens Instituut',
+      'Ger Dijkstra – Huygens Instituut',
+      'Meke Goedhart – Huygens Instituut',
       'Matthias Rosenbaum-Feldbrügge – Radboud Universiteit',
+      'Björn Quanjer – Radboud Universiteit',
       'Leon van Wissen – Universiteit van Amsterdam',
+      'Gerhard de Kok – Huygens Instituut',
+      'Coen van Galen – Radboud Universiteit',
+      'Jelle van Lottum – Huygens Instituut',
+      'Sebastiaan Derks – Huygens Instituut',
+    ],
+    collectiveMembers: [
+      'Sharmila Badloe',
+      'Angelique Hoogmoed',
+      'Dewi van Leeuwen Sastromedjo',
     ],
     infrastructureParagraph:
       "De digitale infrastructuur van het project is gebouwd op [Linked Open Data-principes](https://iisg.amsterdam/nl/data/linked-open-data), zodat datasets interoperabel en open toegankelijk zijn. Het platform is ontworpen om continu door te groeien, met nieuwe collecties en bronnen die in de loop van de tijd worden toegevoegd. De onderliggende technologie is bovendien aanpasbaar voor toekomstig gebruik in andere regio's, bijvoorbeeld de (voormalige) Nederlandse Antillen.",
@@ -241,6 +253,10 @@ export const homeContent: HomeContent = {
       'Wikimedia Nederland',
       'Rijksmuseum',
       'AnnoRepo',
+      'Nationaal Instituut voor Geschiedenis en Cultuur (Paramaribo)',
+      'Stichting Herdenking Javaanse Immigratie (STICHJI)',
+      'Sranan Story Collective',
+      'MadeiSu – Madeira descendants in Suriname',
     ],
     mapAsset: {
       src: '/images/section-05-partners-map.png',
