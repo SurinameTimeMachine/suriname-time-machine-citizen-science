@@ -37,6 +37,31 @@ export const outputNl: OutputContent = {
   items: [
     // ── Evenementen ─────────────────────────────────────────────────────
     {
+      id: 'workshop-nas-paramaribo-2026',
+      title:
+        'Workshop Suriname Time Machine: Samen brengen we het verleden op de kaart!',
+      description:
+        'Een interactieve burgerwetenschapsworkshop waarin deelnemers via hun smartphone afbeeldingen uit de Mediabank van het Nationaal Archief Suriname koppelden aan historische locaties op de kaart.',
+      category: 'events',
+      date: '30 september 2026',
+      isoDate: '2026-09-30',
+      speakers: 'Thunnis van Oort, Jona Schlegel',
+      venue: 'Nationaal Archief Suriname (NAS), Paramaribo',
+    },
+    {
+      id: 'stakeholder-consultatie-nigc-2026',
+      title:
+        'Suriname Time Machine & Sranan Story Collective: Consultatie stakeholders koloniaal verleden',
+      description:
+        'Presentatie- en consultatieavond met maatschappelijke en etno-culturele organisaties over wensen, visies en de integratie van historische bronnen (zoals slaven- en emancipatieregisters en CBB-akten) in de digitale infrastructuur.',
+      category: 'events',
+      date: '1 oktober 2026',
+      isoDate: '2026-10-01',
+      speakers: 'Maurits Hassankhan, Thunnis van Oort, Gerhard de Kok',
+      venue:
+        'Nationaal Instituut voor Geschiedenis en Cultuur van Suriname (NIGC) i.s.m. Huygens Instituut (Lalla Rookh gebouw, Paramaribo)',
+    },
+    {
       id: 'mapathon-2026-03',
       title: 'Mapathon: Kaarten als Bron voor Surinaamse Geschiedenis',
       description:
@@ -120,6 +145,31 @@ export const outputNl: OutputContent = {
     },
 
     // ── Presentaties ────────────────────────────────────────────────────
+    {
+      id: 'adekuss-verbonden-geschiedenis-2026',
+      title:
+        'De Suriname Time Machine & Sranan Story Collective: Naar een verbonden geschiedenis van Surinaams erfgoed',
+      description:
+        'Presentatie over het verbinden van verspreide historische bronnen aan locaties, de eerste resultaten van de Suriname Time Machine en de introductie van het Sranan Story Collective.',
+      category: 'presentations',
+      date: '2 oktober 2026',
+      isoDate: '2026-10-02',
+      speakers:
+        'Thunnis van Oort, Jona Schlegel, Matthias Rosenbaum-Feldbrügge, Björn Quanjer',
+      venue:
+        'Universiteitsbibliotheek Anton de Kom Universiteit van Suriname (AdeKUS) i.s.m. Huygens Instituut',
+    },
+    {
+      id: 'adekuss-summerschool-data-2026',
+      title: 'Suriname Time Machine: data analyse en visualisatie',
+      description:
+        'Lezing en demonstratie over data-analyse, visualisatietechnieken en digitale methoden binnen het Suriname Time Machine project.',
+      category: 'presentations',
+      date: '2 oktober 2026',
+      isoDate: '2026-10-02',
+      venue:
+        'Summer School Data Analyse (Anton de Kom Universiteit van Suriname)',
+    },
     {
       id: 'hdsc-deelnemersbijeenkomst-2026',
       title:
@@ -336,6 +386,18 @@ export const outputNl: OutputContent = {
     },
 
     // ── Media & Commentaar ──────────────────────────────────────────────
+    {
+      id: 'abc-suriname-workshop-2026',
+      title:
+        'Nationaal Archief presenteert: workshop Suriname Time Machine',
+      description:
+        'TV- en radio-interview over het burgerwetenschapsproject en de workshop bij het Nationaal Archief Suriname.',
+      category: 'media',
+      date: '30 september 2026',
+      isoDate: '2026-09-30',
+      venue: 'ABC Suriname (ABC Actueel)',
+      mediaType: 'TV / Radio interview',
+    },
     {
       id: 'huc-mapathon-succes',
       title: 'Eerste workshop/mapathon Suriname groot succes',
