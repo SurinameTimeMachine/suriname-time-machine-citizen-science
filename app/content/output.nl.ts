@@ -396,7 +396,7 @@ export const outputNl: OutputContent = {
       date: '30 september 2026',
       isoDate: '2026-09-30',
       venue: 'ABC Suriname (ABC Actueel)',
-      mediaType: 'TV / Radio interview',
+      mediaType: 'TV- en radio-interview',
     },
     {
       id: 'huc-mapathon-succes',
