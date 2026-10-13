@@ -32,6 +32,7 @@ export type HomeUiStrings = {
     title: string;
     projectTeamTitle: string;
     relatedEmployeesLabel: string;
+    collectiveLabel: string;
     digitalInfrastructureTitle: string;
     departmentsLabel: string;
     departmentsValue: string;
@@ -126,6 +127,7 @@ export type HomeContent = {
     };
     teamParagraphs: string[];
     employees: string[];
+    collectiveMembers: string[];
     infrastructureParagraph: string;
   };
   section05Partners: {
