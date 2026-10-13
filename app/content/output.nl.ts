@@ -53,7 +53,7 @@ export const outputNl: OutputContent = {
       title:
         'Suriname Time Machine & Sranan Story Collective: Consultatie stakeholders koloniaal verleden',
       description:
-        'Presentatie- en consultatieavond met maatschappelijke en etno-culturele organisaties over wensen, visies en de integratie van historische bronnen (zoals slaven- en emancipatieregisters en CBB-akten) in de digitale infrastructuur.',
+        'Presentatie- en consultatieavond met maatschappelijke organisaties over wensen en visies rond het ontwerp van de digitale infrastructuur Suriname Time Machine.',
       category: 'events',
       date: '1 oktober 2026',
       isoDate: '2026-10-01',
