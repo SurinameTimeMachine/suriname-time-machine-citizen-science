@@ -1,5 +1,6 @@
 import type { HomeContent } from '../content/types';
 import { ApplicationsList } from './ApplicationsList';
+import { EventAnnouncement } from './EventAnnouncement';
 import { Navigation } from './Navigation';
 import { getDomainLinks, getHeaderNavLinks } from './navigationConfig';
 import { Section01Hero } from './Section01Hero';
@@ -42,6 +43,8 @@ export function HomePage({ content }: HomePageProps) {
           textureAlt={content.ui.section01Hero.textureAlt}
           snapshotLabel={content.ui.section01Hero.snapshotLabel}
         />
+
+        <EventAnnouncement locale={content.locale} />
 
         <section className="relative isolate overflow-hidden bg-white pb-20 pt-16">
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-[radial-gradient(circle_at_top,rgba(52,209,179,0.25),transparent_65%)] lg:block" />
