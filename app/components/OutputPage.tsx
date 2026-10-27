@@ -202,7 +202,8 @@ function OutputCard({
   isNewest: boolean;
 }) {
   const isExternal =
-    item.href.startsWith('http://') || item.href.startsWith('https://');
+    !!item.href &&
+    (item.href.startsWith('http://') || item.href.startsWith('https://'));
 
   const accentBorder = categoryAccent[item.category];
 
@@ -220,7 +221,9 @@ function OutputCard({
       <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink/60">
         <span>{item.date}</span>
         {item.authors && <span>{item.authors}</span>}
+        {item.speakers && <span>{item.speakers}</span>}
         {item.venue && <span className="italic">{item.venue}</span>}
+        {item.mediaType && <span>{item.mediaType}</span>}
         {item.doi && (
           <span className="font-mono text-[0.65rem]">DOI: {item.doi}</span>
         )}
@@ -235,6 +238,10 @@ function OutputCard({
     accentBorder,
     isNewest ? 'ring-1 ring-teal-strong/15' : '',
   ].join(' ');
+
+  if (!item.href) {
+    return <div className={className}>{cardBody}</div>;
+  }
 
   if (isExternal) {
     return (

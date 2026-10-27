@@ -8,10 +8,12 @@ type Section04MethodologyProps = {
   mapAsset: MediaAsset;
   teamParagraphs: string[];
   employees: string[];
+  collectiveMembers: string[];
   infrastructureParagraph: string;
   title: string;
   projectTeamTitle: string;
   relatedEmployeesLabel: string;
+  collectiveLabel: string;
   digitalInfrastructureTitle: string;
   departmentsLabel: string;
   departmentsValue: string;
@@ -25,10 +27,12 @@ export function Section04Methodology({
   mapAsset,
   teamParagraphs,
   employees,
+  collectiveMembers,
   infrastructureParagraph,
   title,
   projectTeamTitle,
   relatedEmployeesLabel,
+  collectiveLabel,
   digitalInfrastructureTitle,
   departmentsLabel,
   departmentsValue,
@@ -84,6 +88,14 @@ export function Section04Methodology({
           <ul className="mt-2 list-disc space-y-1 pl-5 text-ink">
             {employees.map((item) => (
               <li key={`employee-${item}`}>{item}</li>
+            ))}
+          </ul>
+          <p className="mt-5 text-xs uppercase tracking-[0.3em] text-teal-strong">
+            {collectiveLabel}
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-ink">
+            {collectiveMembers.map((item) => (
+              <li key={`collective-member-${item}`}>{item}</li>
             ))}
           </ul>
         </article>

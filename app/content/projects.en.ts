@@ -428,5 +428,20 @@ export const projectsEn: ProjectsContent = {
       purpose: 'collaboration',
       keywords: ['linkedin', 'social media', 'networking', 'updates'],
     },
+    {
+      id: 'told-by-her-2027-8',
+      name: 'Told By Her (2027-8)',
+      description:
+        'Collaboration project by OurHeritage.nl focused on making heritage stories visible through research, storytelling and digital-public engagement from a female perspective.',
+      href: 'https://www.ourheritage.nl/projecten/told-by-her-2027-8',
+      purpose: 'collaboration',
+      keywords: [
+        'female perspective',
+        'heritage',
+        'storytelling',
+        'collaboration',
+      ],
+      institution: 'OurHeritage.nl',
+    },
   ],
 };

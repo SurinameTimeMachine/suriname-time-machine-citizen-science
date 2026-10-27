@@ -37,6 +37,31 @@ export const outputEn: OutputContent = {
   items: [
     // ── Events ──────────────────────────────────────────────────────────
     {
+      id: 'workshop-nas-paramaribo-2026',
+      title:
+        'Workshop Suriname Time Machine: Together bringing the past to the map!',
+      description:
+        'An interactive citizen science workshop where participants used their smartphones to match images from the National Archives Suriname Mediabank to historical locations on the map.',
+      category: 'events',
+      date: '30 September 2026',
+      isoDate: '2026-09-30',
+      speakers: 'Thunnis van Oort, Jona Schlegel',
+      venue: 'National Archives Suriname (NAS), Paramaribo',
+    },
+    {
+      id: 'stakeholder-consultatie-nigc-2026',
+      title:
+        'Suriname Time Machine & Sranan Story Collective: Stakeholder Consultation on Colonial Past',
+      description:
+        'Presentation and consultation evening with civil society organizations regarding expectations and perspectives on the design of the Suriname Time Machine digital infrastructure.',
+      category: 'events',
+      date: '1 October 2026',
+      isoDate: '2026-10-01',
+      speakers: 'Maurits Hassankhan, Thunnis van Oort, Gerhard de Kok',
+      venue:
+        'National Institute for History and Culture of Suriname (NIGC) in collaboration with Huygens Institute (Lalla Rookh building, Paramaribo)',
+    },
+    {
       id: 'mapathon-2026-03',
       title: 'Mapathon: Maps as a Source for Surinamese History',
       description:
@@ -121,6 +146,31 @@ export const outputEn: OutputContent = {
 
     // ── Presentations ───────────────────────────────────────────────────
     {
+      id: 'adekuss-verbonden-geschiedenis-2026',
+      title:
+        'The Suriname Time Machine & Sranan Story Collective: Towards a Connected History of Surinamese Heritage',
+      description:
+        'Presentation on linking dispersed historical sources to locations, sharing initial results of the Suriname Time Machine, and introducing the Sranan Story Collective.',
+      category: 'presentations',
+      date: '2 October 2026',
+      isoDate: '2026-10-02',
+      speakers:
+        'Thunnis van Oort, Jona Schlegel, Matthias Rosenbaum-Feldbrügge, Björn Quanjer',
+      venue:
+        'University Library Anton de Kom University of Suriname (AdeKUS) in collaboration with Huygens Institute',
+    },
+    {
+      id: 'adekuss-summerschool-data-2026',
+      title: 'Suriname Time Machine: Data Analysis and Visualization',
+      description:
+        'Lecture and demonstration on data analysis, visualization techniques, and digital humanities methods within the Suriname Time Machine project.',
+      category: 'presentations',
+      date: '2 October 2026',
+      isoDate: '2026-10-02',
+      venue:
+        'Summer School Data Analysis (Anton de Kom University of Suriname)',
+    },
+    {
       id: 'hdsc-deelnemersbijeenkomst-2026',
       title:
         'Suriname Time Machine & Sranan Story Collective: voortbouwen en verbinden',
@@ -144,6 +194,97 @@ export const outputEn: OutputContent = {
       date: 'March 2026',
       isoDate: '2026-03-01',
       venue: 'ECSA 2026, Oulu, Finland',
+    },
+    {
+      id: 'dhbenelux-poster-2026',
+      title:
+        'Linking Surinamese Heritage Data: Building a Community-Focused Platform',
+      description:
+        'Poster presented at Digital Humanities Benelux 2026 on linking Surinamese heritage data in a community-focused platform approach.',
+      href: 'https://zenodo.org/records/20139428',
+      category: 'presentations',
+      date: '4 June 2026',
+      isoDate: '2026-06-04',
+      authors: 'Jona Schlegel & Thunnis van Oort',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'mauritius-poster-2026',
+      title:
+        'Bridging the Archive Gap: Suriname Time Machine (STM). Linked Open Data for Humanising Colonial Archives',
+      description:
+        'Poster presented at The Indentured Labour Route at the Crossroads conference on STM and linked open data for humanising colonial archives.',
+      href: 'https://zenodo.org/records/20284156',
+      category: 'presentations',
+      date: '14 May 2026',
+      isoDate: '2026-05-14',
+      authors: 'Sharmila Badloe & Thunnis van Oort',
+      venue:
+        'The Indentured Labour Route at the Crossroads – Imagining New Futures for the Global Diaspora, Mauritius',
+      doi: '10.5281/zenodo.20284156',
+    },
+    {
+      id: 'ach-reparative-infrastructure-zenodo-2026',
+      title: 'The Suriname Time Machine as a Reparative Digital Infrastructure',
+      description:
+        'Zenodo publication of the presentation delivered at the 57th Annual Conference of the Association of Caribbean Historians (ACH).',
+      href: 'https://zenodo.org/records/20809454',
+      category: 'presentations',
+      date: '23 June 2026',
+      isoDate: '2026-06-23',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue:
+        '57th Annual Conference of the Association of Caribbean Historians (ACH), Jamaica',
+      doi: '10.5281/zenodo.20809454',
+    },
+    {
+      id: 'dhbenelux-workshop-2026',
+      title:
+        'Storytellers by Design Workshop (DH Benelux · Maastricht Edition)',
+      description:
+        'Workshop at DH Benelux 2026 featuring Suriname Time Machine as one of the case studies. Jona Schlegel was part of the organizing team together with Federica Di Biase and Kelly Gillikin Schoueri.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/',
+      category: 'presentations',
+      date: '2 June 2026 · 14:00-17:00',
+      isoDate: '2026-06-02',
+      authors: 'Federica Di Biase, Jona Schlegel & Kelly Gillikin Schoueri',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'dhbenelux-workshop-case-study-2026',
+      title: 'Peperpot Case Study (Storytellers by Design Workshop Materials)',
+      description:
+        'Workshop case-study material used during DH Benelux 2026, including a Suriname Time Machine case from Peperpot.',
+      href: 'https://jonaschlegel.github.io/storytellers-by-design/materials/case-studies/peperpot-case-study.pdf',
+      category: 'presentations',
+      date: '2 June 2026',
+      isoDate: '2026-06-02',
+      venue: 'Digital Humanities Benelux 2026, Maastricht',
+    },
+    {
+      id: 'ach-reparative-infrastructure-2026',
+      title:
+        "A Reparative Digital Infrastructure for Suriname's Past: Adapting the Time Machine Paradigm for a Postcolonial Context",
+      description:
+        'Conference presentation at the Annual Meeting of the Association of Caribbean Historians.',
+      href: 'https://associationofcaribbeanhistorians.org/annual-meeting-2/',
+      category: 'presentations',
+      date: '28 May 2026',
+      isoDate: '2026-05-28',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Association of Caribbean Historians, Annual Meeting',
+    },
+    {
+      id: 'rijksmuseum-visual-heritage-2026',
+      title: 'The Suriname Time Machine: Mapping Visual Heritage',
+      description:
+        'Presentation in the Rijksmuseum lecture and symposium program on 2D and 3D photography.',
+      href: 'https://www.rijksmuseum.nl/en/whats-on/lectures-symposiums/2and3d-photography',
+      category: 'presentations',
+      date: '20 May 2026',
+      isoDate: '2026-05-20',
+      authors: 'Thunnis van Oort & Jona Schlegel',
+      venue: 'Rijksmuseum',
     },
     {
       id: 'dhbenelux-pico-2025',
@@ -199,6 +340,19 @@ export const outputEn: OutputContent = {
         'van Oort, T., Altink, N., Swaters, D., Smits, E., Pikulić, D., Rosenbaum-Feldbrügge, M., Quanjer, B. & Van Galen, C.',
     },
     {
+      id: 'plantations-almanakken-v2-1',
+      title: 'Plantations Surinaamse Almanakken (Version 2.1)',
+      description:
+        'Updated dataset release with improved data and metadata for the plantation records transcribed from the Surinaamsche Almanak (1818–1847) and the Almanak voor de Nederlandsche West-Indische bezittingen (1856–1861).',
+      href: 'https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/KQ6QCO',
+      category: 'data',
+      date: 'July 2026',
+      isoDate: '2026-07-03',
+      authors:
+        'van Oort, T., Altink, N., Swaters, D., Smits, E., Pikulić, D., Rosenbaum-Feldbrügge, M., Quanjer, B., Mourits, R. & van Galen, C.',
+      doi: '10.34894/KQ6QCO',
+    },
+    {
       id: 'iiif-maps-collection',
       title: 'IIIF Historic Maps of Suriname',
       description:
@@ -233,6 +387,17 @@ export const outputEn: OutputContent = {
 
     // ── Media & Commentary ─────────────────────────────────────────────
     {
+      id: 'abc-suriname-workshop-2026',
+      title: 'National Archives presents: Suriname Time Machine workshop',
+      description:
+        'TV and radio interview highlighting the citizen science project and the workshop at the National Archives Suriname.',
+      category: 'media',
+      date: '30 September 2026',
+      isoDate: '2026-09-30',
+      venue: 'ABC Suriname (ABC Actueel)',
+      mediaType: 'TV / Radio interview',
+    },
+    {
       id: 'huc-mapathon-succes',
       title: 'First Suriname Workshop/Mapathon a Great Success',
       description:
@@ -242,6 +407,17 @@ export const outputEn: OutputContent = {
       date: '19 March 2026',
       isoDate: '2026-03-19',
       venue: 'KNAW Humanities Cluster',
+    },
+    {
+      id: 'uva-kaarten-verhalen-2026',
+      title: 'A Web of Maps and Stories Brings the Past to Life',
+      description:
+        'Media article from the University of Amsterdam Faculty of Humanities about the Suriname Time Machine mapathon and collaborative historical mapping practices.',
+      href: 'https://www.uva.nl/shared-content/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
+      category: 'media',
+      date: 'March 2026',
+      isoDate: '2026-03-18',
+      venue: 'University of Amsterdam',
     },
     {
       id: 'ahh-kaarten-verhalen',

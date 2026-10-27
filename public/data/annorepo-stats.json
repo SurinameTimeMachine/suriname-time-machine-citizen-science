@@ -5,19 +5,15 @@
     "created": "2026-02-20T18:02:24.046Z"
   },
   "totalAnnotations": 127118,
-  "humanAnnotations": 935,
-  "aiAnnotations": 126183,
+  "humanAnnotations": 944,
+  "aiAnnotations": 126174,
   "canvasesAnnotated": 283,
   "contributorCount": 14,
-<<<<<<< HEAD
-  "daysActive": 81,
-=======
-  "daysActive": 88,
->>>>>>> 87bdd221e3934320d333af765815d966235bc4e3
+  "daysActive": 122,
   "citizenScience": {
-    "textsSpotted": 441,
+    "textsSpotted": 443,
     "iconsIdentified": 38,
-    "placesLinked": 198
+    "placesLinked": 202
   },
   "dailyActivity": [
     {
@@ -54,7 +50,7 @@
     },
     {
       "date": "2026-03-13",
-      "count": 49
+      "count": 47
     },
     {
       "date": "2026-03-16",
@@ -79,20 +75,28 @@
     {
       "date": "2026-05-06",
       "count": 9
+    },
+    {
+      "date": "2026-05-20",
+      "count": 2
+    },
+    {
+      "date": "2026-05-28",
+      "count": 6
     }
   ],
   "motivationCounts": [
     {
       "motivation": "supplementing",
-      "count": 126438
+      "count": 126432
     },
     {
       "motivation": "textspotting",
-      "count": 441
+      "count": 443
     },
     {
       "motivation": "linking",
-      "count": 198
+      "count": 202
     },
     {
       "motivation": "iconography",
@@ -209,8 +213,8 @@
     {
       "canvas": "c14",
       "label": "429 Generale kaart der kolonie Suriname in Zuid-Amerika, beginnende ten Oosten met de rivier Marowijne en eindigende ten Westen met de Duivelskreek, met alle de daarin uitgegeven gecultiveerde en verlatene landen, verder met aanwijzing van alle thans bezette posten, zoo voor de buiten- als binnenlandsche defensiën",
-      "count": 1572,
-      "citizenCount": 26
+      "count": 1571,
+      "citizenCount": 29
     },
     {
       "canvas": "c109",
@@ -347,8 +351,8 @@
     {
       "canvas": "c1",
       "label": "16A401 \"Nieuwe Kaart van Suriname, Comowini, Cottica & Marawini, ...\".",
-      "count": 790,
-      "citizenCount": 139
+      "count": 787,
+      "citizenCount": 138
     },
     {
       "canvas": "c242",
@@ -1803,9 +1807,5 @@
       "citizenCount": 0
     }
   ],
-<<<<<<< HEAD
-  "fetchedAt": "2026-05-12T08:37:20.372Z"
-=======
-  "fetchedAt": "2026-05-19T14:58:00.167Z"
->>>>>>> 87bdd221e3934320d333af765815d966235bc4e3
+  "fetchedAt": "2026-06-22T08:35:49.379Z"
 }

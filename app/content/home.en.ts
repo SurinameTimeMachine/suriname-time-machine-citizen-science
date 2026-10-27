@@ -58,6 +58,7 @@ export const homeContent: HomeContent = {
       kicker:
         "Connecting archives, maps, and community research across centuries of Suriname's history.",
       primaryCtaLabel: 'Explore the archives',
+      secondaryCtaLabel: 'Get to know the Sranan Story Collective',
       textureAlt: 'Geometric texture grid representing historical datasets.',
       snapshotLabel: 'Project overview',
     },
@@ -74,9 +75,11 @@ export const homeContent: HomeContent = {
       title: 'Research hub and methodology',
       projectTeamTitle: 'Project team',
       relatedEmployeesLabel: 'Related employees',
+      collectiveLabel: 'Sranan Story Collective',
       digitalInfrastructureTitle: 'Digital infrastructure',
       departmentsLabel: 'Departments',
-      departmentsValue: 'LivesLab',
+      departmentsValue:
+        'Data & Collections Huygens Institute (KNAW), Text Analysis Team (Humanities Cluster KNAW)',
       tagsLabel: 'Tags',
       tagsValue: 'heritage · overseas territories · society',
     },
@@ -114,7 +117,7 @@ export const homeContent: HomeContent = {
   section01Hero: {
     highlights: ['Historical data from the 19th century on 1 interactive map'],
     stats: [
-      { label: 'Duration', value: '2025-2026, with possible extension' },
+      { label: 'Duration', value: '2025-2028' },
       { label: 'Subsidy provider', value: 'Pica Foundation' },
     ],
     background: {
@@ -129,6 +132,7 @@ export const homeContent: HomeContent = {
   section02Intro: {
     paragraphs: [
       'The Suriname Time Machine brings together scattered sources. Users can access everything in one place, without constant cross-checking whether data refer to the same people, streets or plantations. Easy research helps to reveal broader patterns, such as those linked to migration and slavery, and makes it easier to trace individual family histories.',
+      'While the Suriname Time Machine is the digital infrastructure that brings together these sources, the Sranan Story Collective is the citizen science initiative around it. Together with Dutch-Surinamese diaspora communities, it explores how archival material can be used, questioned and contextualised, and how it can be connected with personal histories, community knowledge and perspectives that may otherwise remain absent from the record.',
       'Take, for example, a portrait from the Rijksmuseum collection. It shows the Surinamese couple Johannes Ellis and Maria Louisa de Hart, painted in 1846, the year their marriage took place. He was 33 at the time; she was 19. The caption notes that he was born in Ghana, but her origins are unknown.',
       "A little online digging tells us more. Johannes Ellis was born in [Fort Elmina](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016) (present-day Ghana) and moved to Suriname, where he became a civil servant in the 1830s. Maria Louisa was the daughter of [Mozes Meijer de Hart](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016), a Jewish merchant. She was born into slavery, but freed by her father at a young age. The couple lived in Keizerstraat, one of Paramaribo's most prestigious addresses. They had five children, one son and four daughters.",
       'Like many middle- and upperclass households in 19th-century Suriname, they owned enslaved people: in 1846, their household included three men, two women and five children. One of these women, Marietje, was the same age as Maria Louisa and had two young children of her own.',
@@ -209,11 +213,21 @@ export const homeContent: HomeContent = {
     ],
     employees: [
       'Thunnis van Oort – Huygens Institute',
-      'Jona Schlegel - Huygens Institute',
-      'Gerhard de Kok – Huygens Institute',
-      'Jelle van Lottum – Huygens Institute',
+      'Jona Schlegel – Huygens Institute',
+      'Ger Dijkstra – Huygens Institute',
+      'Meke Goedhart – Huygens Institute',
       'Matthias Rosenbaum-Feldbrügge – Radboud University',
+      'Björn Quanjer – Radboud University',
       'Leon van Wissen – University of Amsterdam',
+      'Gerhard de Kok – Huygens Institute',
+      'Coen van Galen – Radboud University',
+      'Jelle van Lottum – Huygens Institute',
+      'Sebastiaan Derks – Huygens Institute',
+    ],
+    collectiveMembers: [
+      'Sharmila Badloe',
+      'Angelique Hoogmoed',
+      'Dewi van Leeuwen Sastromedjo',
     ],
     infrastructureParagraph:
       "The project's digital infrastructure is built on [Linked Open Data principles](https://iisg.amsterdam/nl/data/linked-open-data), ensuring that datasets are interoperable and openly accessible. The platform is designed to grow continuously, with new collections and sources being added over time. The underlying technology will also be adaptable for future use in other regions, for example the (former) Netherlands Antilles.",
@@ -231,6 +245,10 @@ export const homeContent: HomeContent = {
       'International Institute of Social History',
       'Wikidata',
       'AnnoRepo',
+      'National Institute for History and Culture (Paramaribo)',
+      'Stichting Herdenking Javaanse Immigratie (STICHJI)',
+      'Sranan Story Collective',
+      'MadeiSu – Madeira descendants in Suriname',
     ],
     mapAsset: {
       src: '/images/section-05-partners-map.png',

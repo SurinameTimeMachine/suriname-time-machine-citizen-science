@@ -15,6 +15,7 @@ export type HomeUiStrings = {
     lead: string;
     kicker: string;
     primaryCtaLabel: string;
+    secondaryCtaLabel: string;
     textureAlt: string;
     snapshotLabel: string;
   };
@@ -31,6 +32,7 @@ export type HomeUiStrings = {
     title: string;
     projectTeamTitle: string;
     relatedEmployeesLabel: string;
+    collectiveLabel: string;
     digitalInfrastructureTitle: string;
     departmentsLabel: string;
     departmentsValue: string;
@@ -125,6 +127,7 @@ export type HomeContent = {
     };
     teamParagraphs: string[];
     employees: string[];
+    collectiveMembers: string[];
     infrastructureParagraph: string;
   };
   section05Partners: {
@@ -403,12 +406,14 @@ export type OutputItem = {
   id: string;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   category: OutputCategory;
   date: string;
   isoDate: string;
   authors?: string;
+  speakers?: string;
   venue?: string;
+  mediaType?: string;
   doi?: string;
 };
 
