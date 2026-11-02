@@ -33,6 +33,41 @@ function Video({ video }: { video: HackalodVideo }) {
   );
 }
 
+type Part = (typeof c.parts.items)[number];
+
+/** Animated GIF or looping muted clip for a part, with the slide as fallback. */
+function PartMedia({ part }: { part: Part }) {
+  const fit =
+    part.animation?.fit === 'contain'
+      ? 'object-contain bg-[#f2eee7]'
+      : 'object-cover';
+  if (part.animation?.kind === 'video') {
+    return (
+      <video
+        className={`aspect-video w-full ${fit}`}
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={part.image}
+        aria-label={part.alt}
+      >
+        <source src={part.animation.src} type="video/mp4" />
+      </video>
+    );
+  }
+  return (
+    <Image
+      src={part.animation?.src ?? part.image}
+      alt={part.alt}
+      width={1600}
+      height={900}
+      unoptimized={part.animation?.kind === 'gif'}
+      className={`aspect-video w-full ${fit}`}
+    />
+  );
+}
+
 function SectionHeader({
   eyebrow,
   title,
@@ -144,13 +179,7 @@ export function HackalodReportPage() {
                 key={`part-${part.title}`}
                 className={`${card} overflow-hidden`}
               >
-                <Image
-                  src={part.image}
-                  alt={part.alt}
-                  width={1600}
-                  height={900}
-                  className="aspect-video w-full object-cover"
-                />
+                <PartMedia part={part} />
                 <div className="p-5">
                   <h3 className="mb-2 text-lg font-semibold text-ink">
                     {part.title}

@@ -12,6 +12,12 @@ export type HackalodVideo = {
   portrait?: boolean;
 };
 
+export type PartAnimation = {
+  kind: 'gif' | 'video';
+  src: string;
+  fit: 'cover' | 'contain';
+};
+
 export const hackalod2026 = {
   path: '/projects/hackalod-2026',
   seo: {
@@ -59,21 +65,42 @@ export const hackalod2026 = {
         title: 'De muur op locatie',
         text: 'In de gang van ’s Lands Hospitaal verschijnen namen op de planken wand, op handhoogte. Een tijdslider loopt vanaf 1765. Onbevestigde namen staan er vaag, als krijt; bewezen namen worden ingekerfd.',
         image: `${HACKALOD_BASE}/dias/dia-05.webp`,
+        animation: {
+          kind: 'gif',
+          src: `${HACKALOD_BASE}/onderdeel-muur.gif`,
+          fit: 'cover',
+        },
         alt: 'Ontwerp van de muur: de gang van ’s Lands Hospitaal met geprojecteerde namen op de planken wand',
       },
       {
         title: 'De mobiele webapp',
         text: 'Je scant een QR-code bij een naam: geen app store, geen account. Je spreekt in wat je weet. Het transcript loopt live mee en de AI markeert personen, plaatsen, data, gebouwen, beroepen en relaties. De inspreker bevestigt of corrigeert die voorstellen; de AI beslist nooit zelf.',
         image: `${HACKALOD_BASE}/dias/dia-07.webp`,
+        animation: {
+          kind: 'gif',
+          src: `${HACKALOD_BASE}/onderdeel-webapp.gif`,
+          fit: 'contain',
+        },
         alt: 'Ontwerp van de mobiele webapp waarin je een verhaal inspreekt',
       },
       {
         title: 'De 3D-kaart',
         text: '“Wie was er ooit in ’s Lands Hospitaal?” Elk lichtje is een mens: aankomend uit een plantage, een straat of van een schip, of vertrekkend. Naast de kaart staan voorgestelde personen met hun bewijsniveau (bewezen, waarschijnlijk, mogelijk), onderin een tijdlijn van 1765 tot 2026 met slavernij, contractarbeid en migratie naar Nederland.',
         image: `${HACKALOD_BASE}/dias/dia-08.webp`,
+        animation: {
+          kind: 'video',
+          src: `${HACKALOD_BASE}/onderdeel-kaart.mp4`,
+          fit: 'cover',
+        },
         alt: 'De 3D-kaart van ’s Lands Hospitaal met personen als lichtjes en een tijdlijn',
       },
-    ],
+    ] as {
+      title: string;
+      text: string;
+      image: string;
+      alt: string;
+      animation?: PartAnimation;
+    }[],
   },
   videos: [
     {
