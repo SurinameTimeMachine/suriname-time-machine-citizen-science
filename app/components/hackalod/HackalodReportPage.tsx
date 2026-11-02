@@ -131,15 +131,6 @@ export function HackalodReportPage() {
                   {c.question.image.caption}
                 </figcaption>
               </figure>
-              {c.question.quotes.map((q) => (
-                <blockquote
-                  key={`q-${q.text}`}
-                  className="border-l-4 border-teal-strong bg-white px-5 py-4"
-                >
-                  <p className="text-lg font-medium text-ink">‘{q.text}’</p>
-                  <footer className="mt-1 text-sm text-ink/60">{q.who}</footer>
-                </blockquote>
-              ))}
             </div>
           </div>
         </section>
