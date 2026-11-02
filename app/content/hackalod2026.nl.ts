@@ -50,20 +50,6 @@ export const hackalod2026 = {
       caption:
         'Praalgraf van Johan en Cornelis Evertsen, Nieuwe Kerk, Middelburg.',
     },
-    quotes: [
-      {
-        text: 'Ik weet niet wie mijn voorouders zijn.',
-        who: 'Nisha Marapin, vrijwilliger Surinaams Slavenregister',
-      },
-      {
-        text: 'Iedereen is wel eens in ’s Lands Hospitaal geweest. Daar starten we!',
-        who: 'Het team',
-      },
-      {
-        text: 'Wie is je vader, wie is je moeder.',
-        who: 'Tante Es (Jörgen Raymann)',
-      },
-    ],
   },
   parts: {
     eyebrow: 'Wat we bouwden',
