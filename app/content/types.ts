@@ -230,10 +230,22 @@ export type ResourcesUiStrings = {
   };
 };
 
+/** A highlighted project shown above the project grid (e.g. an event report). */
+export type FeaturedProject = {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  image: { src: string; alt: string };
+};
+
 export type ProjectsContent = {
   locale: HomeLocale;
   seo: ProjectsSeo;
   ui: ProjectsUiStrings;
+  featured?: FeaturedProject;
   projects: ProjectItem[];
   resourcesUi: ResourcesUiStrings;
   resources: BookmarkLink[];

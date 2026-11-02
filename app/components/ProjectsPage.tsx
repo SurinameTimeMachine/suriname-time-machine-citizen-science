@@ -1,5 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type {
+  FeaturedProject,
   ProjectCategory,
   ProjectItem,
   ProjectsContent,
@@ -101,6 +103,42 @@ function CategorySection({
   );
 }
 
+function FeaturedSection({ featured }: { featured: FeaturedProject }) {
+  return (
+    <section>
+      <Link
+        href={featured.href}
+        className="group grid overflow-hidden rounded-sm bg-white shadow-[0_4px_20px_rgba(0,30,24,0.08)] ring-1 ring-ink/5 transition-all hover:shadow-[0_8px_30px_rgba(0,30,24,0.12)] hover:ring-teal-strong/20 md:grid-cols-2"
+      >
+        <div className="relative aspect-16/10 overflow-hidden bg-slate-100 md:aspect-auto">
+          <Image
+            src={featured.image.src}
+            alt={featured.image.alt}
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+        <div className="flex flex-col justify-center gap-3 p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-strong">
+            {featured.eyebrow}
+          </p>
+          <h2 className="text-2xl font-semibold text-ink sm:text-3xl">
+            {featured.title}
+          </h2>
+          <p className="text-lg text-ink/70">{featured.subtitle}</p>
+          <p className="text-sm leading-relaxed text-ink/70">
+            {featured.description}
+          </p>
+          <span className="mt-2 text-sm font-semibold text-teal-strong">
+            {featured.linkLabel} →
+          </span>
+        </div>
+      </Link>
+    </section>
+  );
+}
+
 export function ProjectsPage({ content }: ProjectsPageProps) {
   const { ui, projects } = content;
   const grouped = groupByCategory(projects);
@@ -129,6 +167,7 @@ export function ProjectsPage({ content }: ProjectsPageProps) {
 
       {/* Projects Grid */}
       <main className="mx-auto max-w-6xl space-y-12 px-4 py-12 sm:px-6 lg:px-10">
+        {content.featured && <FeaturedSection featured={content.featured} />}
         <CategorySection title={ui.categories.maps} projects={grouped.maps} />
         <CategorySection title={ui.categories.data} projects={grouped.data} />
         <CategorySection

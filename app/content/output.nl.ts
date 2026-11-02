@@ -37,6 +37,19 @@ export const outputNl: OutputContent = {
   items: [
     // ── Evenementen ─────────────────────────────────────────────────────
     {
+      id: 'hackalod-2026-i-was-here',
+      title: 'HackaLOD 2026: I Was Here – ’s Lands Hospitaal × Zeeland',
+      description:
+        'Op de HackaLOD 2026 in Middelburg bouwde het team Suriname Time Machine / Shadows of the Past in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Rapportage, presentatie en vijf gecureerde familieverhalen staan bij Projecten.',
+      href: '/projects/hackalod-2026',
+      category: 'events',
+      date: '31 oktober 2026',
+      isoDate: '2026-10-31',
+      speakers:
+        'Jona Schlegel, Thunnis van Oort, Kay Pepping, Arthur van Schravendijk, Nisha Marapin, Martijn Arts',
+      venue: 'HackaLOD 2026, Middelburg',
+    },
+    {
       id: 'workshop-nas-paramaribo-2026',
       title:
         'Workshop Suriname Time Machine: Samen brengen we het verleden op de kaart!',
@@ -388,8 +401,7 @@ export const outputNl: OutputContent = {
     // ── Media & Commentaar ──────────────────────────────────────────────
     {
       id: 'abc-suriname-workshop-2026',
-      title:
-        'Nationaal Archief presenteert: workshop Suriname Time Machine',
+      title: 'Nationaal Archief presenteert: workshop Suriname Time Machine',
       description:
         'TV- en radio-interview over het burgerwetenschapsproject en de workshop bij het Nationaal Archief Suriname.',
       category: 'media',
