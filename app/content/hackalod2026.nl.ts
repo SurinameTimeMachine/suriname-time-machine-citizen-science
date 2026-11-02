@@ -201,7 +201,6 @@ export const hackalod2026 = {
         label: 'Datasets op DataverseNL (HDSC)',
         href: 'https://dataverse.nl/dataverse/HDSC',
       },
-      { label: 'HackaLOD', href: 'https://hackalod.dekok.xyz/' },
     ],
     closing:
       '“Je hoeft geen Zeeuwse voorouders te hebben om in Middelburg je geschiedenis te vinden.”',
