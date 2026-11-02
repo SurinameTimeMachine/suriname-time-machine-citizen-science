@@ -10,7 +10,10 @@ export const metadata: Metadata = {
     title: hackalod2026.seo.title,
     description: hackalod2026.seo.description,
     locale: 'nl_NL',
-    images: ['/images/hackalod-2026/dias/dia-01.webp'],
+    // Absolute: the static export has no metadataBase to resolve relative URLs against.
+    images: [
+      'https://surinametijdmachine.org/images/hackalod-2026/dias/dia-01.webp',
+    ],
   },
 };
 

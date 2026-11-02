@@ -135,79 +135,84 @@ export function HackalodStoryPage({ slug }: { slug: StorySlug }) {
 
   return (
     <HackalodShell>
-      <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <Link href={back} className="text-sm text-teal-strong hover:underline">
-          ← I Was Here · HackaLOD 2026
-        </Link>
-        <p className="mt-6 text-xs uppercase tracking-[0.2em] text-ink/50">
-          {story.category}
-        </p>
-        <h1 className="mt-2 text-4xl font-semibold leading-tight text-ink sm:text-5xl [&_em]:text-teal-strong">
-          {story.title}
-        </h1>
-        <p className="mt-2 text-xl text-ink/70">{story.subtitle}</p>
-        <p className="mt-6 text-lg leading-relaxed text-ink/80">
-          {plain(story.introduction)}
-        </p>
-      </main>
-
-      {visuals && (
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <StoryFigure image={visuals.hero} folder={visuals.folder} hero />
-        </div>
-      )}
-
-      <div className="mx-auto max-w-3xl space-y-12 px-4 py-12 sm:px-6">
-        {story.sections.map((section, index) => {
-          const ending =
-            section.heading === 'Gebleven' ||
-            ('ending' in section && section.ending);
-          return (
-            <section
-              key={`section-${section.heading}`}
-              className={
-                ending ? 'rounded-sm bg-sand p-6 ring-1 ring-ink/5' : ''
-              }
-            >
-              {!ending && (
-                <p className="text-sm font-semibold text-teal-strong">
-                  {String(
-                    chapterNumbers[section.heading] ?? index + 1,
-                  ).padStart(2, '0')}
-                </p>
-              )}
-              <h2 className="mb-4 text-2xl font-semibold text-ink">
-                {section.heading}
-              </h2>
-              <div className="space-y-4 text-base leading-relaxed text-ink/80">
-                {paragraphs(section.text).map((text) => (
-                  <p key={`text-${text}`}>{plain(text)}</p>
-                ))}
-              </div>
-              {visuals && (
-                <ChapterImages
-                  groups={visuals.chapters[section.heading]}
-                  folder={visuals.folder}
-                />
-              )}
-            </section>
-          );
-        })}
-
-        <footer className="border-t border-ink/10 pt-6 text-sm leading-relaxed text-ink/60">
-          {'sources' in story ? (
-            <p>{story.sources}</p>
-          ) : (
-            <p>Dit verhaal wordt verder aangevuld.</p>
-          )}
+      <main>
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
           <Link
             href={back}
-            className="mt-4 inline-block font-semibold text-teal-strong"
+            className="text-sm text-teal-strong hover:underline"
           >
-            ← Alle verhalen
+            ← I Was Here · HackaLOD 2026
           </Link>
-        </footer>
-      </div>
+          <p className="mt-6 text-xs uppercase tracking-[0.2em] text-ink/50">
+            {story.category}
+          </p>
+          <h1 className="mt-2 text-4xl font-semibold leading-tight text-ink sm:text-5xl [&_em]:text-teal-strong">
+            {story.title}
+          </h1>
+          <p className="mt-2 text-xl text-ink/70">{story.subtitle}</p>
+          <p className="mt-6 text-lg leading-relaxed text-ink/80">
+            {plain(story.introduction)}
+          </p>
+        </div>
+
+        {visuals && (
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <StoryFigure image={visuals.hero} folder={visuals.folder} hero />
+          </div>
+        )}
+
+        <div className="mx-auto max-w-3xl space-y-12 px-4 py-12 sm:px-6">
+          {story.sections.map((section, index) => {
+            const ending =
+              section.heading === 'Gebleven' ||
+              ('ending' in section && section.ending);
+            return (
+              <section
+                key={`section-${section.heading}`}
+                className={
+                  ending ? 'rounded-sm bg-sand p-6 ring-1 ring-ink/5' : ''
+                }
+              >
+                {!ending && (
+                  <p className="text-sm font-semibold text-teal-strong">
+                    {String(
+                      chapterNumbers[section.heading] ?? index + 1,
+                    ).padStart(2, '0')}
+                  </p>
+                )}
+                <h2 className="mb-4 text-2xl font-semibold text-ink">
+                  {section.heading}
+                </h2>
+                <div className="space-y-4 text-base leading-relaxed text-ink/80">
+                  {paragraphs(section.text).map((text) => (
+                    <p key={`text-${text}`}>{plain(text)}</p>
+                  ))}
+                </div>
+                {visuals && (
+                  <ChapterImages
+                    groups={visuals.chapters[section.heading]}
+                    folder={visuals.folder}
+                  />
+                )}
+              </section>
+            );
+          })}
+
+          <footer className="border-t border-ink/10 pt-6 text-sm leading-relaxed text-ink/60">
+            {'sources' in story ? (
+              <p>{story.sources}</p>
+            ) : (
+              <p>Dit verhaal wordt verder aangevuld.</p>
+            )}
+            <Link
+              href={back}
+              className="mt-4 inline-block font-semibold text-teal-strong"
+            >
+              ← Alle verhalen
+            </Link>
+          </footer>
+        </div>
+      </main>
     </HackalodShell>
   );
 }
