@@ -3,6 +3,12 @@
 // In de tekst verwijst [woorden](p:id) naar een persoon en [woorden](g:id) naar een plek op de HackaLOD-kaart;
 // op deze site worden die als gewone tekst getoond. [woorden](s:slug) linkt naar een ander verhaal op deze site.
 
+// Verhalen die (tijdelijk) offline staan, bijvoorbeeld tot er toestemming van de familie is.
+// De tekst blijft hieronder bewaard; haal de slug uit deze lijst om het verhaal weer te publiceren.
+export const offlineStories: ReadonlySet<string> = new Set([
+  'door-dezelfde-poort',
+]);
+
 export const STORY_IMAGE_BASE = '/images/hackalod-2026/verhalen';
 
 export type StoryImage = {

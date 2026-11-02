@@ -6,6 +6,7 @@ import {
   type HackalodVideo,
 } from '../../content/hackalod2026.nl';
 import {
+  offlineStories,
   storyOverview,
   storyOverviewImageSizes,
 } from '../../content/hackalod2026Stories';
@@ -247,43 +248,47 @@ export function HackalodReportPage() {
             lead={c.stories.lead}
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {storyOverview.map((story) => {
-              const [w, h] = storyOverviewImageSizes[story.slug] ?? [604, 408];
-              return (
-                <Link
-                  key={`story-${story.slug}`}
-                  href={`${c.path}/verhalen/${story.slug}`}
-                  className={`${card} group flex flex-col overflow-hidden transition-all hover:ring-teal-strong/20`}
-                >
-                  <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
-                    <Image
-                      src={story.image}
-                      alt={story.alt}
-                      width={w}
-                      height={h}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col gap-2 p-5">
-                    <p className="text-[11px] uppercase tracking-[0.15em] text-ink/50">
-                      {story.eyebrow}
-                    </p>
-                    <h3 className="text-xl font-semibold text-ink group-hover:text-teal-strong">
-                      {story.title}
-                    </h3>
-                    <p className="text-sm font-medium text-ink/70">
-                      {story.subtitle}
-                    </p>
-                    <p className="flex-1 text-sm leading-relaxed text-ink/70">
-                      {story.description}
-                    </p>
-                    <span className="mt-2 text-sm font-semibold text-teal-strong">
-                      Lees het verhaal →
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+            {storyOverview
+              .filter((story) => !offlineStories.has(story.slug))
+              .map((story) => {
+                const [w, h] = storyOverviewImageSizes[story.slug] ?? [
+                  604, 408,
+                ];
+                return (
+                  <Link
+                    key={`story-${story.slug}`}
+                    href={`${c.path}/verhalen/${story.slug}`}
+                    className={`${card} group flex flex-col overflow-hidden transition-all hover:ring-teal-strong/20`}
+                  >
+                    <div className="relative aspect-16/10 overflow-hidden bg-slate-100">
+                      <Image
+                        src={story.image}
+                        alt={story.alt}
+                        width={w}
+                        height={h}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col gap-2 p-5">
+                      <p className="text-[11px] uppercase tracking-[0.15em] text-ink/50">
+                        {story.eyebrow}
+                      </p>
+                      <h3 className="text-xl font-semibold text-ink group-hover:text-teal-strong">
+                        {story.title}
+                      </h3>
+                      <p className="text-sm font-medium text-ink/70">
+                        {story.subtitle}
+                      </p>
+                      <p className="flex-1 text-sm leading-relaxed text-ink/70">
+                        {story.description}
+                      </p>
+                      <span className="mt-2 text-sm font-semibold text-teal-strong">
+                        Lees het verhaal →
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </section>
 

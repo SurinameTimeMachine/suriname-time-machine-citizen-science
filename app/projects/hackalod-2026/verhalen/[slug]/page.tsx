@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { HackalodStoryPage } from '../../../../components/hackalod/HackalodStoryPage';
 import { hackalod2026 } from '../../../../content/hackalod2026.nl';
 import {
+  offlineStories,
   stories,
   type StorySlug,
 } from '../../../../content/hackalod2026Stories';
@@ -10,13 +11,15 @@ import {
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return Object.keys(stories).map((slug) => ({ slug }));
+  return Object.keys(stories)
+    .filter((slug) => !offlineStories.has(slug))
+    .map((slug) => ({ slug }));
 }
 
 export const dynamicParams = false;
 
 function isSlug(slug: string): slug is StorySlug {
-  return slug in stories;
+  return slug in stories && !offlineStories.has(slug);
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

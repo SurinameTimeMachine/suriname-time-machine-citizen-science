@@ -40,7 +40,7 @@ export const outputNl: OutputContent = {
       id: 'hackalod-2026-i-was-here',
       title: 'HackaLOD 2026: I Was Here – ’s Lands Hospitaal × Zeeland',
       description:
-        'Op de HackaLOD 2026 in Middelburg bouwde het team Suriname Time Machine / Shadows of the Past in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Rapportage, presentatie en zes gecureerde familieverhalen staan bij Projecten.',
+        'Op de HackaLOD 2026 in Middelburg bouwde het team Suriname Time Machine / Shadows of the Past in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Rapportage, presentatie en vijf gecureerde familieverhalen staan bij Projecten.',
       href: '/projects/hackalod-2026',
       category: 'events',
       date: '31 oktober 2026',

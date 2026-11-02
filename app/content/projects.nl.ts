@@ -56,7 +56,7 @@ export const projectsNl: ProjectsContent = {
     title: 'I Was Here',
     subtitle: '’s Lands Hospitaal × Zeeland',
     description:
-      'Op HackaLOD 2026 in Middelburg bouwde ons team in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Lees de rapportage, bekijk de presentatie en lees zes gecureerde familieverhalen.',
+      'Op HackaLOD 2026 in Middelburg bouwde ons team in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Lees de rapportage, bekijk de presentatie en lees vijf gecureerde familieverhalen.',
     href: '/projects/hackalod-2026',
     linkLabel: 'Bekijk de rapportage',
     image: {
