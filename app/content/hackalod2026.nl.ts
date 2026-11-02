@@ -108,7 +108,7 @@ export const hackalod2026 = {
       poster: `${HACKALOD_BASE}/video-1-poster.jpg`,
       title: 'De kaart in actie',
       caption:
-        'Inzoomen op ’s Lands Hospitaal, met voorgestelde personen en de tijdlijn.',
+        'Inzoomen op ’s Lands Hospitaal, met voorgestelde personen en de tijdlijn. Dit was het ontwerp, dat daarna ook echt zo is gebouwd.',
     },
     {
       src: `${HACKALOD_BASE}/video-2.mp4`,
