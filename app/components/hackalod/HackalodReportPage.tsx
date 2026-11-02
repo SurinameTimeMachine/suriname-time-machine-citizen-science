@@ -334,6 +334,9 @@ export function HackalodReportPage() {
           <p className="max-w-3xl text-2xl font-medium leading-snug text-ink">
             {c.links.closing}
           </p>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-ink/75">
+            {c.links.datasets}
+          </p>
           <ul className="mt-6 flex flex-wrap gap-4 text-sm">
             {c.links.items.map((l) => (
               <li key={`l-${l.href}`}>

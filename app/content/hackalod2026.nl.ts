@@ -181,15 +181,25 @@ export const hackalod2026 = {
       'De koppelfunctie',
       'Eerlijk over de demo',
       'Architectuur',
-      'Afsluiting',
+      'Afsluiting, gebruikte datasets en code',
     ],
   },
   links: {
     eyebrow: 'Verder',
+    datasets:
+      'Gebruikte datasets onder andere: slaven- en emancipatieregisters, Burgerlijke Stand Suriname, wijkregisters Paramaribo, volkstellingen 1921 en 1950, Collectie Philip Dikland, Wikidata, diverse beeldbanken en Delpher.',
     items: [
       {
         label: 'Code en data op GitHub',
         href: 'https://github.com/SurinameTimeMachine/Hackalod2026',
+      },
+      {
+        label: 'Gebruikte data (suriname-database-model)',
+        href: 'https://github.com/SurinameTimeMachine/suriname-database-model/tree/main/data',
+      },
+      {
+        label: 'Datasets op DataverseNL (HDSC)',
+        href: 'https://dataverse.nl/dataverse/HDSC',
       },
       { label: 'HackaLOD', href: 'https://hackalod.dekok.xyz/' },
     ],
