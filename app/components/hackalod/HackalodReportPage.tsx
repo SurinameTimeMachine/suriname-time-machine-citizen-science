@@ -62,26 +62,46 @@ export function HackalodReportPage() {
   return (
     <HackalodShell>
       <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">
-        <div className="relative mx-auto max-w-6xl">
-          <Link
-            href="/projects"
-            className="mb-6 inline-block text-sm text-white/70 hover:text-white"
-          >
-            ← Projecten
-          </Link>
-          <Eyebrow light>{c.hero.eyebrow}</Eyebrow>
-          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
-            {c.hero.title}
-          </h1>
-          <p className="mt-2 text-xl text-white/85 sm:text-2xl">
-            {c.hero.subtitle}
-          </p>
-          <p className="mt-6 max-w-2xl text-lg text-white/80">{c.hero.lead}</p>
-          <p className="mt-8 text-sm text-white/70">
-            <span className="font-semibold text-white">{c.hero.teamLabel}</span>
-            <br />
-            {c.hero.team}
-          </p>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[3fr_2fr]">
+          <div>
+            <Link
+              href="/projects"
+              className="mb-6 inline-block text-sm text-white/70 hover:text-white"
+            >
+              ← Projecten
+            </Link>
+            <Eyebrow light>{c.hero.eyebrow}</Eyebrow>
+            <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+              {c.hero.title}
+            </h1>
+            <p className="mt-2 text-xl text-white/85 sm:text-2xl">
+              {c.hero.subtitle}
+            </p>
+            <p className="mt-6 max-w-2xl text-lg text-white/80">
+              {c.hero.lead}
+            </p>
+            <p className="mt-8 text-sm text-white/70">
+              <span className="font-semibold text-white">
+                {c.hero.teamLabel}
+              </span>
+              <br />
+              {c.hero.team}
+            </p>
+          </div>
+          {/* Juryprijs */}
+          <figure>
+            <Image
+              src={c.hero.prizePhoto.src}
+              alt={c.hero.prizePhoto.alt}
+              width={c.hero.prizePhoto.width}
+              height={c.hero.prizePhoto.height}
+              priority
+              className="w-full rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+            />
+            <figcaption className="mt-3 text-sm text-white/75">
+              {c.hero.prizePhoto.caption}
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -99,6 +119,18 @@ export function HackalodReportPage() {
               ))}
             </div>
             <div className="space-y-4">
+              <figure>
+                <Image
+                  src={c.question.image.src}
+                  alt={c.question.image.alt}
+                  width={c.question.image.width}
+                  height={c.question.image.height}
+                  className={`${card} w-full`}
+                />
+                <figcaption className="mt-2 text-sm text-ink/60">
+                  {c.question.image.caption}
+                </figcaption>
+              </figure>
               {c.question.quotes.map((q) => (
                 <blockquote
                   key={`q-${q.text}`}

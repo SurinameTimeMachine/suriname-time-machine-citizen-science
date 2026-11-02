@@ -23,7 +23,15 @@ export const hackalod2026 = {
     eyebrow: 'HackaLOD 2026 · Middelburg · 31 oktober 2026',
     title: 'I Was Here',
     subtitle: '’s Lands Hospitaal × Zeeland',
-    lead: 'In 24 uur bouwde ons team een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Samen met gecureerde familieverhalen laten ze zien hoe archieven, nazaten en vrijwilligers elkaar kunnen vinden.',
+    lead: 'In 24 uur bouwde ons team een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Samen met gecureerde familieverhalen laten ze zien hoe archieven, nazaten en vrijwilligers elkaar kunnen vinden. Het project won de juryprijs van HackaLOD 2026.',
+    prizePhoto: {
+      src: `${HACKALOD_BASE}/juryprijs.webp`,
+      width: 1179,
+      height: 851,
+      alt: 'Het team van I Was Here met de cheque van de juryprijs (€ 1.000) in de Nieuwe Kerk in Middelburg',
+      caption:
+        'Het team van I Was Here met de juryprijs van HackaLOD 2026, in de Nieuwe Kerk in Middelburg.',
+    },
     team: 'Jona Schlegel · Thunnis van Oort · Kay Pepping · Arthur van Schravendijk · Nisha Marapin · Martijn Arts',
     teamLabel: 'Suriname Time Machine / Shadows of the Past',
   },
@@ -31,9 +39,17 @@ export const hackalod2026 = {
     eyebrow: 'De vraag',
     title: 'Wie wordt herinnerd, en wie niet?',
     body: [
-      'In de Nieuwe Kerk in Middelburg staat het praalgraf van Johan en Cornelis Evertsen, “ter eeuwige nagedachtenis”. Twee Zeeuwse namen in marmer. De mensen op Zeeuwse schepen en plantages staan vaak alleen als nummer in een journaal of register. Een directe link tussen de Evertsens en het hospitaal is er niet: zij sneuvelden in 1666, een jaar vóór de Zeeuwse verovering van Suriname. Voor ons is de kerk het symbool van wie herinnerd wordt en wie niet.',
-      'I Was Here geeft de anderen dezelfde eer: een naam, een jaar, een plek. We beginnen bij ’s Lands Hospitaal, het Militair Hospitaal aan de Gravenstraat in Paramaribo. Bijna elke Surinaamse familie heeft er ooit iemand gehad: geboren, verpleegd, gestorven of aan het werk.',
+      'In de Nieuwe Kerk in Middelburg staat het praalgraf van Johan en Cornelis Evertsen, “ter eeuwige nagedachtenis”. Twee Zeeuwse mannen in marmer. De tot slaaf gemaakte mensen op Zeeuwse slavenschepen en Surinaamse plantages staan vaak alleen als nummer in een journaal of register. Voor ons is het praalgraf in deze kerk het symbool van wie herinnerd wordt en wie niet.',
+      'I Was Here wil dezelfde eer toekennen aan alle mensen die in koloniaal Suriname leefden: een naam, een jaar, een plek. We beginnen bij ’s Lands Hospitaal, het Militair Hospitaal aan de Gravenstraat in Paramaribo. Bijna elke Surinaamse familie heeft een verbinding met deze plek: een familielid was er geboren, verpleegd, stierf er of werkte er als verpleger.',
     ],
+    image: {
+      src: `${HACKALOD_BASE}/praalgraf-evertsen.webp`,
+      width: 600,
+      height: 640,
+      alt: 'Het marmeren praalgraf van Johan en Cornelis Evertsen in de Nieuwe Kerk in Middelburg',
+      caption:
+        'Praalgraf van Johan en Cornelis Evertsen, Nieuwe Kerk, Middelburg.',
+    },
     quotes: [
       {
         text: 'Ik weet niet wie mijn voorouders zijn.',
