@@ -1,7 +1,7 @@
 // Gecureerde verhalen van HackaLOD 2026 (I Was Here).
 // Overgenomen uit SurinameTimeMachine/Hackalod2026, apps/map-webapp/app/stories.
 // In de tekst verwijst [woorden](p:id) naar een persoon en [woorden](g:id) naar een plek op de HackaLOD-kaart;
-// op deze site worden die als gewone tekst getoond.
+// op deze site worden die als gewone tekst getoond. [woorden](s:slug) linkt naar een ander verhaal op deze site.
 
 export const STORY_IMAGE_BASE = '/images/hackalod-2026/verhalen';
 
@@ -16,7 +16,22 @@ export type StoryImage = {
 };
 export type ImageGroup = {
   layout: 'single' | 'portraits' | 'clippings';
+  label?: string;
   items: StoryImage[];
+};
+export type TreePerson = {
+  name: string;
+  detail?: string;
+  highlight?: boolean;
+  minor?: boolean;
+};
+export type FamilyTree = {
+  title: string;
+  branches: readonly (readonly TreePerson[])[];
+  join?: string;
+  couple: readonly TreePerson[];
+  descendants: readonly TreePerson[];
+  note?: string;
 };
 export const storyImages: Record<
   string,
@@ -84,7 +99,8 @@ export const storyImages: Record<
       file: '01-groepsfoto-vervuurt-donner.jpg',
       width: 604,
       height: 408,
-      caption: 'Familie Vervuurt en Donner, circa 1915–1917.',
+      caption:
+        'Familie Vervuurt en Donner, Paramaribo, ca. 1915–1917. In het midden Emeline Zechiel en Gustaaf Vervuurt; de namen zijn later in rood bijgeschreven. Hilda Louise staat er niet bij: zij overleed in 1912.',
     },
     chapters: {
       'De Donners': [
@@ -95,53 +111,58 @@ export const storyImages: Record<
               file: '02-donner-en-naharen.jpg',
               width: 678,
               height: 462,
-              caption: 'J.W.A. Donner en Elmina Albertina Naharen.',
+              caption:
+                'Johann Wilhelm Anton Donner en Elmina Albertina Naharen, Stevens betovergrootouders.',
             },
             {
               file: '03-paul-donner-geschilderd.jpg',
               width: 592,
               height: 880,
-              caption: 'Geschilderd portret van Paul Donner.',
+              caption: 'Geschilderd portret van Paul Donner, broer van Ida.',
             },
             {
               file: '04-antoinette-donner.jpg',
               width: 664,
               height: 960,
-              caption: 'Antoinette Donner, moeder van Hilda Louise.',
+              caption:
+                'Antoinette Donner, zus van Ida en moeder van Hilda Louise.',
             },
           ],
         },
         {
           layout: 'clippings',
+          label: 'Uit de krant · via Delpher',
           items: [
             {
               file: '05-krant-bevallen-1886.jpg',
               width: 460,
               height: 156,
-              caption: 'Rubriek Bevallen, 11 juni 1886.',
+              caption:
+                'Rubriek ‘Bevallen’, 11 juni 1886: “E. Donner, geb. Naharen, z.”',
             },
             {
               file: '06-advertentie-boekhouden.jpg',
               width: 239,
               height: 289,
-              caption: 'Advertentie J.W.A. Donner, Gonggrijpstraat.',
+              caption: 'Advertentie van J.W.A. Donner, Gonggrijpstraat.',
             },
             {
               file: '07-advertentie-waterverfportretten.jpg',
               width: 460,
               height: 277,
-              caption: 'Advertentie Waterverf-Portretten, J.W.H. Donner.',
+              caption: 'Advertentie ‘Waterverf-Portretten’ van J.W.H. Donner.',
             },
             {
               file: '08-dankbetuiging-1917.jpg',
               width: 302,
               height: 265,
-              caption: 'Dankbetuiging na overlijden Elmina, 1 november 1917.',
+              caption:
+                'Dankbetuiging na het overlijden van Elmina, Paramaribo, 1 november 1917.',
             },
           ],
         },
       ],
-      Vader: [
+      Walther: [
         {
           layout: 'single',
           items: [
@@ -150,7 +171,8 @@ export const storyImages: Record<
               width: 1328,
               height: 493,
               displayWidth: 664,
-              caption: 'Vier portretten uit de familie Donner.',
+              caption:
+                'Vier portretten uit de familie Donner. Rechts J.W.A. Donner en Elmina Naharen.',
             },
           ],
         },
@@ -162,7 +184,8 @@ export const storyImages: Record<
               width: 800,
               height: 1067,
               displayWidth: 400,
-              caption: 'Jean Donner met John William Donner.',
+              caption:
+                'Jean Donner, broer van Ida, met John William Donner uit Brazilië.',
             },
           ],
         },
@@ -459,18 +482,270 @@ export const stories = {
     ),
     subtitle: 'Het verhaal van Steven Walther Coutinho',
     introduction:
-      'In 2020 zit Steven in de wachtkamer van [’s Lands Hospitaal](g:stm-1885-address-0327). Ruim een eeuw eerder stierven daar twee van zijn familieleden en werd er een neefje geboren.',
+      'Steven woont in Paramaribo. In 2020 komt hij op doktersbezoek in [’s Lands Hospitaal](g:stm-1885-address-0327) aan de Gravenstraat. Niets ernstigs. Ruim honderd jaar geleden was het anders: toen stierven daar twee van zijn familieleden en werd er een neefje geboren. Een reconstructie langs twee familielijnen: Vervuurt en Donner van vaderskant, Coutinho van moederskant.',
+    meta: 'Leestijd ± 9 minuten · Bronnen: Nationaal Archief Suriname, Delpher, familiearchieven Vervuurt, Donner en Coutinho',
     sections: [
       {
-        heading: 'Een wachtkamer als beginpunt',
-        text: 'Een bezoek aan het hospitaal wordt het beginpunt voor een familiegeschiedenis.',
+        heading: 'Een wachtkamer aan de Gravenstraat',
+        text: [
+          'Het verhaal begint in een wachtkamer. In 2020 heeft Steven Walther Coutinho voor het eerst een afspraak bij een arts in ’s Lands Hospitaal in Paramaribo. De laatste keer is rond juli 2023, bij dr. Bernardo Panka. Opgenomen is hij er nooit.',
+          'Steven is op 15 september 1976 geboren in Leidschendam. Hij groeit op in Australië, bij zijn moeder Yvonne Gisela Coutinho en zijn stiefvader. In 1990, hij is dan dertien, verhuist hij naar Paramaribo, omdat zijn moeder daar wil wonen.',
+          'Zijn vader, de econoom prof. dr. Walther Donner, ziet hij af en aan. Pas als Steven in Delft gaat studeren, leert hij hem echt kennen.',
+          'Wat Steven in die wachtkamer niet weet: zijn familie ging al ruim een eeuw eerder door dezelfde poort.',
+        ],
+        quote: {
+          text: 'Het is een mooi gebouw, maar wel oud en slecht onderhouden. Je moet uitkijken dat het niet uit elkaar valt als je ertegenaan stoot.',
+          by: 'Steven Coutinho over ’s Lands Hospitaal',
+        },
       },
-      { heading: 'De Donners', text: '' },
-      { heading: 'Vader', text: '' },
+      {
+        heading: 'Het meisje dat ontbreekt',
+        text: [
+          'Op 28 mei 1912 overlijdt in het Militair Hospitaal Hilda Louise Vervuurt. Ze is drie jaar en negen maanden oud. De chef van het hospitaal, Tiddo Reddingius, doet zelf aangifte bij de burgerlijke stand.',
+          'Hilda is een dochter van Edwin Vervuurt en Catharina Antoinette Donner. Edwin is een broer van Stevens overgrootvader Gustaaf Vervuurt. Antoinette is een zus van zijn overgrootmoeder Ida Donner. Twee broers trouwden met twee zussen. Zo was Hilda een dubbele nicht van Stevens grootmoeder Gusta.',
+          'Een paar jaar later laat de familie een groepsfoto maken voor een houten huis. Ruim vijftig mensen staan erop. Edwin en Antoinette staan rechts, met hun kinderen Charlie, Bert, Julie, Richinel, George, Lex, Annie, Betsy en August. Hilda staat er niet bij.',
+        ],
+        quote: {
+          text: 'Ruim vijftig familieleden op één foto. Eén naam ontbreekt.',
+        },
+      },
+      {
+        heading: 'Van De Drie Gebroeders naar de Gonggrijpstraat',
+        text: [
+          'De familie van Stevens vader komt uit twee richtingen. De ene begint rond 1740 in Weeze, net over de Duitse grens. Daar wordt Petrus Vervuurt geboren. Zijn zoon Jan komt via Heteren in de Betuwe naar Paramaribo en sterft daar in 1820.',
+          'De andere begint op plantage De Drie Gebroeders aan de Boven-Suriname. Daar leeft Santje, tot slaaf gemaakt, overleden vóór 1848. Haar dochter Brunette is veldmeid. Brunettes dochter Julia, geboren op 17 maart 1847, is huismeid.',
+          'Op 1 juli 1863 worden moeder en dochter vrij. Ze krijgen de naam Zechiel. In 1881 trouwt Julia met schoenmaker Carel Constantijn Vervuurt, kleinzoon van Jan. Hun zoon Gustaaf Egbert, in 1871 geboren als Zechiel, heet vanaf dat huwelijk Vervuurt.',
+          'Gustaaf wordt schrijnwerker en meubelmaker. Met Ida Henriëtte (Jetje) Donner krijgt hij minstens negen kinderen; sommigen heten Vervuurt, anderen Donner. In 1921 woont het hele gezin in de Gonggrijpstraat. Een van de dochters is Augusta Egbertina, Gusta, geboren in 1906: Stevens grootmoeder.',
+        ],
+        tree: {
+          title: 'Vaderskant · Van Weeze en De Drie Gebroeders naar Steven',
+          branches: [
+            [
+              {
+                name: 'Santje',
+                detail: 'De Drie Gebroeders · overleden vóór 1848',
+              },
+              {
+                name: 'Brunette Dorothea Zechiel',
+                detail: 'ca. 1823 · vrij 1 juli 1863',
+              },
+              {
+                name: 'Emelina Julia Zechiel',
+                detail: '1847–1917 · vrij 1 juli 1863',
+              },
+            ],
+            [
+              { name: 'Petrus Vervuurt', detail: 'Weeze, ca. 1740' },
+              {
+                name: 'Jan Vervuurt',
+                detail: 'Heteren 1766 – Paramaribo 1820',
+              },
+              {
+                name: 'Mathijs Godlieb Vervuurt',
+                detail: '1800–1874 · met Constantia Francina Bruining',
+              },
+              {
+                name: 'Carel Constantijn Vervuurt',
+                detail: '1837–1909 · schoenmaker',
+              },
+            ],
+          ],
+          join: 'getrouwd 23 maart 1881',
+          couple: [
+            { name: 'Gustaaf Egbert Vervuurt', detail: '1871 · meubelmaker' },
+            {
+              name: 'Ida Henriëtte Donner',
+              detail: '1879 · Rencontre, Boven-Para',
+            },
+          ],
+          descendants: [
+            { name: 'Augusta Egbertina (Gusta) Donner', detail: '1906' },
+            { name: 'Walther Donner', detail: 'Paramaribo, 9 december 1929' },
+            {
+              name: 'Steven Walther Coutinho',
+              detail: 'Leidschendam, 15 september 1976',
+              highlight: true,
+            },
+          ],
+        },
+      },
+      {
+        heading: 'De Donners',
+        text: [
+          'Ida Donner wordt in 1879 geboren op Rencontre aan de Boven-Para. Haar ouders zijn Johann Wilhelm Anton Donner en Elmina Albertina Naharen: Stevens betovergrootouders.',
+          'J.W.A. Donner is brigadier bij het Korps Marechaussee en later ambtenaar. In de krant kondigt hij een cursus aan in boekhouden en handelsrekenen, vanuit de Gonggrijpstraat. Een J.W.H. Donner biedt waterverfportretten aan, met als voorbeeld een portret van den Duitschen Keizer. Ruim een halve eeuw later wordt zijn achterkleinzoon Walther boekhouder.',
+          'Ida’s zus Antoinette trouwt met Edwin Vervuurt; zij zijn de ouders van Hilda. Hun broers Paul en Jean staan op de foto’s die de familie bewaarde. Elmina overlijdt in oktober 1917, na wat de dankbetuiging in de krant een smartelijke ziekte noemt.',
+        ],
+      },
+      {
+        heading: 'Walther',
+        text: [
+          'Op 9 december 1929 krijgt Gusta Donner in Paramaribo een zoon: Walther. Hij groeit op bij zijn grootouders in de Gonggrijpstraat en werkt na de lagere school in de meubelzaak van opa Vervuurt. ’s Avonds gaat hij naar school.',
+          'Rond zijn achttiende vertrekt hij naar Aruba, waar hij boekhouder wordt. Hij trouwt, studeert in Nederland en promoveert. Hij is lid van de Rekenkamer op Curaçao en werkt daarna als econoom bij de Surinaamse ministeries van Economische Zaken en Landbouw.',
+          'In de jaren zeventig geeft hij economieles in Wassenaar en Den Haag. Dan wordt in Leidschendam Steven geboren, uit zijn relatie met Yvonne Coutinho. Daarna werkt Walther op Barbados, in Miami en in Costa Rica. Zijn laatste jaren woont hij in Huize Margriet in Paramaribo, de stad waar het begon.',
+        ],
+      },
+      {
+        heading: 'Van Penedono naar de Jodensavanne',
+        text: [
+          'Stevens moeder brengt een heel andere geschiedenis mee. Zijn eigen stamboom van de Coutinho’s begint in Penedono, in Noord-Portugal, bij D. Vasco Fernandes Coutinho, heer van Leomil in de veertiende eeuw.',
+          'De eerste Coutinho in de Nieuwe Wereld op zijn stamblad is Mosseh Henriques Coutinho. Op 17 juni 1682 trouwt hij op Curaçao met Rahel de Ishak Henriquez Moron. Steven noteerde dat Mosseh waarschijnlijk een zoon is van een van de eerste joodse families die in 1659 op Curaçao aankwamen.',
+          'Hun zoon Jahacob woont al in Suriname. Hij sterft in 1788 en ligt begraven op de Jodensavanne. Daarna volgen vier generaties in Paramaribo, tot Aaron Mozes Coutinho (1850–1917). Zijn zoon Leonel Edwin, geboren in 1901, is Stevens grootvader.',
+          'Leonel Edwin trouwt met Hilda Mendeszoon. Via haar loopt de lijn die Steven liet vastleggen als halachische vaststelling: van moeder op moeder, terug tot Ester Princeza Fernandes. Zo heeft Steven twee Hilda’s in zijn familie: zijn grootmoeder, en het meisje dat in 1912 in het hospitaal stierf.',
+        ],
+        tree: {
+          title: 'Moederskant · Coutinho en de halachische lijn',
+          branches: [
+            [
+              {
+                name: 'Mosseh Henriques Coutinho',
+                detail: 'ca. 1663 · trouwt Curaçao 1682',
+              },
+              {
+                name: 'Jahacob Henriques Coutinho',
+                detail: 'ca. 1700–1788 · Jodensavanne',
+              },
+              {
+                name: 'Mosseh (1724) · Jahacob (1759) · Mosseh (1796)',
+                minor: true,
+              },
+              {
+                name: 'Aaron Mozes Coutinho',
+                detail: '1850–1917 · met Wilhelmina Halfhide',
+              },
+              { name: 'Leonel Edwin Coutinho', detail: '1901' },
+            ],
+            [
+              { name: 'Ester Princeza Fernandes', detail: 'met Carel Meyer' },
+              {
+                name: 'Esther Carolina Meyer',
+                detail: '1833 · met Jan M.F. Grunberg',
+              },
+              {
+                name: 'Jacqueline Ferdina Grunberg',
+                detail: '1884 · met Gustaaf R. Mendeszoon',
+              },
+              { name: 'Hilda Mendeszoon', detail: 'Stevens grootmoeder' },
+            ],
+          ],
+          couple: [
+            { name: 'Yvonne Gisela Coutinho', detail: '18 januari 1939' },
+            { name: 'Walther Donner', detail: '1929' },
+          ],
+          descendants: [
+            {
+              name: 'Steven Walther Coutinho',
+              detail: '1976',
+              highlight: true,
+            },
+          ],
+          note: 'Rechts de halachische lijn, van moeder op moeder.',
+        },
+      },
+      {
+        heading: 'Gravenstraat B 2',
+        text: 'In de akten van rond 1900 heet ’s Lands Hospitaal nog Militair Hospitaal, Gravenstraat B 2. Drie keer staat Stevens familie er in de burgerlijke stand. Telkens doet de leiding van het hospitaal zelf aangifte.',
+        events: [
+          {
+            year: '1907',
+            text: 'Frederik Jacobus (Frits) Vervuurt overlijdt, 64 jaar. Hij is een broer van Stevens betovergrootvader Carel Constantijn. Aangever: Joseph van de Winkel, administrateur.',
+          },
+          {
+            year: '1912',
+            text: 'Hilda Louise Vervuurt overlijdt, drie jaar en negen maanden. Aangever: Tiddo Reddingius, chef.',
+          },
+          {
+            year: '1914',
+            text: 'Etienne Ludwig Vervuurt wordt geboren, zoon van Gustaafs broer Reinhard Constantijn. Aangever: H.A. Hovenkamp, chef.',
+          },
+        ],
+        after: [
+          'Ook in de zorg zelf staan familienamen. In 1884 is Francois Albertus Vervuurt ziekenoppasser in het hospitaal; hij tekent bij minstens tien overlijdens. Of hij familie is, is nog niet bewezen. Aan moederskant is Salomon Coutinho, broer van Stevens betovergrootvader Aaron Mozes, in 1891 ziekenoppasser. In welk hospitaal staat er niet bij.',
+          'In 1914, het jaar waarin Etienne er wordt geboren, staat aan dezelfde poort een portier: Jacobus Carolus van Bochove, van wie het verhaal [‘Gekomen, gebleven’](s:gekomen-gebleven) vertelt.',
+        ],
+        quote: {
+          text: 'Twee ziekenoppassers, aan twee kanten van één stamboom.',
+        },
+      },
       {
         heading: 'Door dezelfde poort',
-        text: 'Generaties van de familie zijn op verschillende momenten met dezelfde plek verbonden.',
+        ending: true,
+        text: 'Twee families, twee wegen. De ene loopt van Weeze en plantage De Drie Gebroeders naar de Gonggrijpstraat. De andere van Penedono via Curaçao en de Jodensavanne naar de Keizerstraat. Ze komen samen in Steven, en in een gebouw aan de Gravenstraat. Ruim een eeuw na Frits, Hilda en Etienne zit hij er zelf in de wachtkamer.',
       },
+    ],
+    timeline: [
+      {
+        date: '17-06-1682',
+        text: 'Mosseh Henriques Coutinho trouwt op Curaçao met Rahel de Ishak Henriquez Moron',
+      },
+      { date: 'ca. 1740', text: 'Petrus Vervuurt geboren in Weeze' },
+      {
+        date: '07-08-1788',
+        text: 'Jahacob Henriques Coutinho overleden, begraven op de Jodensavanne',
+      },
+      { date: '10-03-1820', text: 'Jan Vervuurt overleden in Paramaribo' },
+      {
+        date: '17-03-1847',
+        text: 'Julia geboren op plantage De Drie Gebroeders, dochter van Brunette',
+      },
+      {
+        date: '01-07-1863',
+        text: 'Brunette en Julia vrij, met de naam Zechiel',
+      },
+      {
+        date: '17-06-1871',
+        text: 'Gustaaf Egbert Zechiel geboren, later Vervuurt',
+      },
+      {
+        date: '22-02-1879',
+        text: 'Ida Henriëtte Donner geboren op Rencontre, Boven-Para',
+      },
+      {
+        date: '23-03-1881',
+        text: 'Huwelijk Julia Zechiel en Carel Constantijn Vervuurt',
+      },
+      {
+        date: '1907',
+        text: 'Frits Vervuurt overleden in het Militair Hospitaal',
+      },
+      {
+        date: '28-05-1912',
+        text: 'Hilda Louise Vervuurt overleden in het Militair Hospitaal, 3 jaar',
+      },
+      {
+        date: '1914',
+        text: 'Etienne Ludwig Vervuurt geboren in het Militair Hospitaal',
+      },
+      { date: '10-1917', text: 'Elmina Albertina Donner-Naharen overleden' },
+      {
+        date: '1921',
+        text: 'Gezin Vervuurt-Donner in de Gonggrijpstraat (volkstelling)',
+      },
+      { date: '09-12-1929', text: 'Walther Donner geboren in Paramaribo' },
+      { date: '18-01-1939', text: 'Yvonne Gisela Coutinho geboren' },
+      {
+        date: '15-09-1976',
+        text: 'Steven Walther Coutinho geboren in Leidschendam',
+      },
+      { date: '1990', text: 'Steven verhuist van Australië naar Paramaribo' },
+      {
+        date: '2020–2023',
+        text: 'Steven op doktersbezoek in ’s Lands Hospitaal',
+      },
+    ],
+    sourceList: [
+      'Overlijden Hilda Louise Vervuurt, 1912: SR-NA_2.10.61_1132_0111-l',
+      'Overlijden Frits Vervuurt, 1907, en geboorte Etienne Ludwig Vervuurt, 1914: Nationaal Archief Suriname, burgerlijke stand',
+      'Geboorte Gustaaf Egbert Zechiel, 1871: SR-NA_2.10.61_47_0167-l',
+      'Overlijden Carel Constantijn Vervuurt, 1909: SR-NA_2.10.61_1123_0241-l',
+      'Brunette Dorothea en Julia Emelina Zechiel: slavenregisters en emancipatieregister, Id_person 16883 en 16924',
+      'Gezin Vervuurt-Donner: volkstelling 1921, Gonggrijpstraat, kring XXIII, lijst 131',
+      'Overlijden Rebecca Goedschalk, 1858: SR-NA_2.10.61_1000_0081-l',
+      'Overlijden Salomon Coutinho, 1894: SR-NA_2.10.61_1076_0162-l',
+      'Krantenberichten J.W.A. Donner en Elmina Naharen: Delpher',
+      'Descendants of Petrus Vervuurt (Legacy, 11 april 2002)',
+      'Stamboom van Coutinho en Joods-Halachische Genealogie Yvonne G. Coutinho (Steven Coutinho; o.a. dr. John de Bye)',
+      'Levensloop Walther Donner (3 september 2022)',
     ],
   },
   'klerk-marechaussee-boer': {
