@@ -90,11 +90,14 @@ export const hackalod2026 = {
       portrait: true,
     },
   ] satisfies HackalodVideo[],
-  /**
-   * Schermopname van de website. Zet hier het pad naar de video zodra die er is,
-   * bijvoorbeeld `${HACKALOD_BASE}/schermopname.mp4`; tot dan wordt de sectie niet getoond.
-   */
-  screenRecording: null as HackalodVideo | null,
+  /** Schermopname van de website (verhalen en kaart). Op null zetten om de sectie te verbergen. */
+  screenRecording: {
+    src: `${HACKALOD_BASE}/schermopname.mp4`,
+    poster: `${HACKALOD_BASE}/schermopname-poster.jpg`,
+    title: 'Verhalen en kaart',
+    caption:
+      'Een rondgang door de HackaLOD-website: van de verhalen naar de kaart, ’s Lands Hospitaal en de namenmuur.',
+  } as HackalodVideo | null,
   linking: {
     eyebrow: 'De kern',
     title: 'De koppelfunctie',
