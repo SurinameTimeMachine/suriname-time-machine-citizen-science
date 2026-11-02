@@ -51,6 +51,19 @@ export const projectsNl: ProjectsContent = {
       keywords: 'Trefwoorden',
     },
   },
+  featured: {
+    eyebrow: 'Uitgelicht · HackaLOD 2026',
+    title: 'I Was Here',
+    subtitle: '’s Lands Hospitaal × Zeeland',
+    description:
+      'Op HackaLOD 2026 in Middelburg bouwde ons team in 24 uur een muur met namen, een mobiele webapp om verhalen in te spreken en een 3D-kaart van ’s Lands Hospitaal in Paramaribo. Lees de rapportage, bekijk de presentatie en lees vijf gecureerde familieverhalen.',
+    href: '/projects/hackalod-2026',
+    linkLabel: 'Bekijk de rapportage',
+    image: {
+      src: '/images/hackalod-2026/dias/dia-08.webp',
+      alt: '3D-kaart van ’s Lands Hospitaal met personen als lichtjes',
+    },
+  },
   projects: [
     {
       id: 'iiif-maps',

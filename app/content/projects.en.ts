@@ -51,6 +51,19 @@ export const projectsEn: ProjectsContent = {
       keywords: 'Keywords',
     },
   },
+  featured: {
+    eyebrow: 'Featured · HackaLOD 2026',
+    title: 'I Was Here',
+    subtitle: '’s Lands Hospitaal × Zeeland',
+    description:
+      'At HackaLOD 2026 in Middelburg our team built, in 24 hours, a wall of names, a mobile web app for recording family stories and a 3D map of ’s Lands Hospitaal (the Military Hospital) in Paramaribo. The report, the pitch slides and five curated family stories are available in Dutch.',
+    href: '/projects/hackalod-2026',
+    linkLabel: 'Read the report (in Dutch)',
+    image: {
+      src: '/images/hackalod-2026/dias/dia-08.webp',
+      alt: '3D map of ’s Lands Hospitaal with people shown as lights',
+    },
+  },
   projects: [
     {
       id: 'iiif-maps',
