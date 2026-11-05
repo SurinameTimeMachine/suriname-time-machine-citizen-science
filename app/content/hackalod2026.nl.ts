@@ -127,6 +127,12 @@ export const hackalod2026 = {
     caption:
       'Een rondgang door de HackaLOD-website: van de verhalen naar de kaart, ’s Lands Hospitaal en de namenmuur.',
   } as HackalodVideo | null,
+  /** YouTube-video over de projectie. Op null zetten om hem te verbergen. */
+  projectionVideo: {
+    youtubeId: '29jwLlPVJ84',
+    title: 'Zo werkt de projectie',
+    caption: 'Arthur van Schravendijk legt uit hoe de projectie werkt.',
+  } as { youtubeId: string; title: string; caption: string } | null,
   linking: {
     eyebrow: 'De kern',
     title: 'De koppelfunctie',
