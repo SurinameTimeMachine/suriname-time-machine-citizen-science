@@ -41,7 +41,7 @@ function YouTubeVideo({
 }) {
   return (
     <figure className="w-full">
-      <div className="aspect-video w-full overflow-hidden rounded-sm bg-black shadow-[0_4px_20px_rgba(0,30,24,0.12)]">
+      <div className="aspect-video min-h-[200px] w-full overflow-hidden rounded-sm bg-black shadow-[0_4px_20px_rgba(0,30,24,0.12)]">
         <iframe
           className="h-full w-full"
           src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
