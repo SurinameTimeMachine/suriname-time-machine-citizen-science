@@ -252,7 +252,7 @@
         }
       ],
       "dateModified": "2026-10-31",
-      "temporalCoverage": "1667/1950"
+      "temporalCoverage": "1700/1930"
     },
     {
       "@type": "Dataset",
@@ -269,11 +269,11 @@
       ],
       "description": [
         {
-          "@value": "IIIF-manifest met 293 gedigitaliseerde historische kaarten van Suriname uit de universiteitsbibliotheken van Amsterdam en Leiden, met HTR-annotaties, voor georefereren en annoteren.",
+          "@value": "IIIF-manifest met 293 scans van historische kaarten van Suriname (1688-1958) uit het Nationaal Archief en de universiteitsbibliotheken van Amsterdam en Leiden, met HTR-annotaties, voor georefereren en annoteren.",
           "@language": "nl"
         },
         {
-          "@value": "IIIF manifest of 293 digitised historical maps of Suriname from the Amsterdam and Leiden university libraries, with HTR annotations, for georeferencing and annotation.",
+          "@value": "IIIF manifest of 293 scans of historical maps of Suriname (1688-1958) from the Nationaal Archief and the Amsterdam and Leiden university libraries, with HTR annotations, for georeferencing and annotation.",
           "@language": "en"
         }
       ],
@@ -356,7 +356,7 @@
         }
       ],
       "dateModified": "2026-02-02",
-      "temporalCoverage": "1667/1950"
+      "temporalCoverage": "1688/1958"
     }
   ]
 }
