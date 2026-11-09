@@ -1,0 +1,147 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "DataCatalog",
+  "@id": "https://surinametijdmachine.org/datasets/catalog.jsonld",
+  "name": [
+    { "@value": "Datasets Suriname Tijdmachine", "@language": "nl" },
+    { "@value": "Suriname Time Machine datasets", "@language": "en" }
+  ],
+  "description": [
+    { "@value": "Datasets die binnen de Suriname Tijdmachine zijn gemaakt of verrijkt: historische locatiegegevens en kaartmateriaal over Suriname, gekoppeld aan erfgoedcollecties.", "@language": "nl" },
+    { "@value": "Datasets created or enriched by the Suriname Time Machine: historical location data and maps of Suriname, linked to heritage collections.", "@language": "en" }
+  ],
+  "url": "https://surinametijdmachine.org/output",
+  "publisher": {
+    "@id": "https://ror.org/04x6kq749",
+    "@type": "Organization",
+    "name": "Huygens Instituut",
+    "url": "https://www.huygens.knaw.nl/"
+  },
+  "dataset": [
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.34894/KQ6QCO",
+      "identifier": "https://doi.org/10.34894/KQ6QCO",
+      "name": [
+        { "@value": "Plantations Surinaamse Almanakken", "@language": "en" }
+      ],
+      "description": [
+        { "@value": "Lijst van plantages uit de Surinaamsche Almanak (1818-1847) en de Almanak voor de Nederlandsche West-Indische bezittingen (1856-1861), getranscribeerd, gestandaardiseerd en gekoppeld aan Wikidata. Versie 2.", "@language": "nl" },
+        { "@value": "Plantations listed in the Surinaamsche Almanak (1818-1847) and the Almanak voor de Nederlandsche West-Indische bezittingen (1856-1861), transcribed, standardised and linked to Wikidata. Version 2.", "@language": "en" }
+      ],
+      "version": "2",
+      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "dateCreated": "2025-01-01",
+      "datePublished": "2025-12-09",
+      "dateModified": "2026-09-19",
+      "inLanguage": ["nl", "en"],
+      "keywords": ["Suriname", "plantages", "slavernij", "almanakken", "Wikidata"],
+      "spatialCoverage": "http://www.wikidata.org/entity/Q730",
+      "temporalCoverage": "1818/1861",
+      "mainEntityOfPage": "https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/KQ6QCO",
+      "creator": [
+        { "@type": "Person", "@id": "https://orcid.org/0000-0001-8912-0508", "name": "Thunnis van Oort" }
+      ],
+      "publisher": {
+        "@id": "https://ror.org/016xsfp80",
+        "@type": "Organization",
+        "name": "Radboud Universiteit (Historische Database van Suriname en de Cariben)",
+        "url": "https://www.ru.nl/onderzoek/onderzoeksprojecten/historische-database-van-suriname-en-de-cariben"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Thunnis van Oort",
+        "email": "thunnis.van.oort@huygens.knaw.nl"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/651364",
+          "encodingFormat": "text/csv",
+          "name": "Plantations Surinaamse Almanakken v2.0.csv"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://surinametijdmachine.org/datasets/catalog.jsonld#gazetteer",
+      "name": [
+        { "@value": "Gazetteer Suriname Tijdmachine", "@language": "nl" },
+        { "@value": "Suriname Time Machine gazetteer", "@language": "en" }
+      ],
+      "description": [
+        { "@value": "Historische plaatsen in Suriname met geometrie en vaste identifiers: plantages, adressen in Paramaribo (1885), kreken, rivieren, nederzettingen, militaire posten en marrondorpen. Gemodelleerd in CIDOC-CRM en gekoppeld aan Wikidata.", "@language": "nl" },
+        { "@value": "Historical places in Suriname with geometry and persistent identifiers: plantations, Paramaribo addresses (1885), creeks, rivers, settlements, military posts and maroon villages. Modelled in CIDOC-CRM and linked to Wikidata.", "@language": "en" }
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "dateCreated": "2026-01-06",
+      "datePublished": "2026-11-09",
+      "inLanguage": ["nl", "en"],
+      "keywords": ["Suriname", "gazetteer", "historische geografie", "plantages", "Paramaribo", "linked data"],
+      "spatialCoverage": "http://www.wikidata.org/entity/Q730",
+      "mainEntityOfPage": "https://github.com/SurinameTimeMachine/suriname-database-model",
+      "creator": [
+        { "@id": "https://ror.org/04x6kq749", "@type": "Organization", "name": "Huygens Instituut" }
+      ],
+      "publisher": {
+        "@id": "https://ror.org/04x6kq749",
+        "@type": "Organization",
+        "name": "Huygens Instituut",
+        "url": "https://www.huygens.knaw.nl/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Thunnis van Oort",
+        "email": "thunnis.van.oort@huygens.knaw.nl"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://raw.githubusercontent.com/SurinameTimeMachine/suriname-database-model/main/data/places-gazetteer.jsonld",
+          "encodingFormat": "application/ld+json"
+        }
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://surinametimemachine.github.io/iiif-suriname/manifest.json",
+      "name": [
+        { "@value": "Surinaams kaartmateriaal (IIIF-collectie)", "@language": "nl" },
+        { "@value": "Surinamese maps (IIIF collection)", "@language": "en" }
+      ],
+      "description": [
+        { "@value": "IIIF-manifest met 293 gedigitaliseerde historische kaarten van Suriname uit de universiteitsbibliotheken van Amsterdam en Leiden, met HTR-annotaties, voor georefereren en annoteren.", "@language": "nl" },
+        { "@value": "IIIF manifest of 293 digitised historical maps of Suriname from the Amsterdam and Leiden university libraries, with HTR annotations, for georeferencing and annotation.", "@language": "en" }
+      ],
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "dateCreated": "2025-12-17",
+      "datePublished": "2026-02-02",
+      "inLanguage": ["nl", "en"],
+      "keywords": ["Suriname", "historische kaarten", "IIIF", "cartografie"],
+      "spatialCoverage": "http://www.wikidata.org/entity/Q730",
+      "mainEntityOfPage": "https://github.com/SurinameTimeMachine/iiif-suriname",
+      "creator": [
+        { "@id": "https://ror.org/04x6kq749", "@type": "Organization", "name": "Huygens Instituut" }
+      ],
+      "publisher": {
+        "@id": "https://ror.org/04x6kq749",
+        "@type": "Organization",
+        "name": "Huygens Instituut",
+        "url": "https://www.huygens.knaw.nl/"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "name": "Thunnis van Oort",
+        "email": "thunnis.van.oort@huygens.knaw.nl"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://surinametimemachine.github.io/iiif-suriname/manifest.json",
+          "encodingFormat": "application/ld+json",
+          "usageInfo": "https://iiif.io/api/presentation/3.0/"
+        }
+      ]
+    }
+  ]
+}
