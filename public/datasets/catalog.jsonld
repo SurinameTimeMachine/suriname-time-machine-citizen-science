@@ -96,6 +96,82 @@
               "@language": "nl"
             }
           ]
+        },
+        {
+          "@type": "Person",
+          "name": [
+            {
+              "@value": "Nico Altink",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": [
+            {
+              "@value": "Doortje Swaters",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": [
+            {
+              "@value": "Evi Smits",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "name": [
+            {
+              "@value": "Damian Pikulić",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://orcid.org/0000-0002-5082-6850",
+          "name": [
+            {
+              "@value": "Matthias Rosenbaum-Feldbrügge",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://orcid.org/0000-0003-2492-7380",
+          "name": [
+            {
+              "@value": "Björn Quanjer",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://orcid.org/0000-0002-2267-1679",
+          "name": [
+            {
+              "@value": "Rick Mourits",
+              "@language": "nl"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://orcid.org/0000-0003-1423-0686",
+          "name": [
+            {
+              "@value": "Coen van Galen",
+              "@language": "nl"
+            }
+          ]
         }
       ],
       "publisher": {
