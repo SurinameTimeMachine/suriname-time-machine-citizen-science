@@ -22,3 +22,10 @@
   for = "/datasets/*.jsonld"
   [headers.values]
     Content-Type = "application/ld+json; charset=utf-8"
+
+# Serve the current STM gazetteer (maintained in suriname-database-model) under a stable URL
+[[redirects]]
+  from = "/datasets/gazetteer.jsonld"
+  to = "https://raw.githubusercontent.com/SurinameTimeMachine/suriname-database-model/main/data/places-gazetteer.jsonld"
+  status = 200
+  force = true
