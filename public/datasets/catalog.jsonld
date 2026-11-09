@@ -23,7 +23,27 @@
     }
   ],
   "url": "https://surinametijdmachine.org/output",
-  "publisher": null,
+  "publisher": {
+    "@id": "https://ror.org/04x6kq749",
+    "@type": "Organization",
+    "name": [
+      {
+        "@value": "Huygens Instituut",
+        "@language": "nl"
+      }
+    ],
+    "url": "https://www.huygens.knaw.nl/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "name": [
+        {
+          "@value": "Thunnis van Oort",
+          "@language": "nl"
+        }
+      ],
+      "email": "thunnis.van.oort@huygens.knaw.nl"
+    }
+  },
   "dataset": [
     {
       "@type": "Dataset",
@@ -90,13 +110,23 @@
         "url": "https://www.ru.nl/onderzoek/onderzoeksprojecten/historische-database-van-suriname-en-de-cariben",
         "contactPoint": {
           "@type": "ContactPoint",
-          "name": "Thunnis van Oort",
+          "name": [
+            {
+              "@value": "Thunnis van Oort",
+              "@language": "nl"
+            }
+          ],
           "email": "thunnis.van.oort@huygens.knaw.nl"
         }
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "name": "Thunnis van Oort",
+        "name": [
+          {
+            "@value": "Thunnis van Oort",
+            "@language": "nl"
+          }
+        ],
         "email": "thunnis.van.oort@huygens.knaw.nl"
       },
       "distribution": [
@@ -167,7 +197,12 @@
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "name": "Thunnis van Oort",
+            "name": [
+              {
+                "@value": "Thunnis van Oort",
+                "@language": "nl"
+              }
+            ],
             "email": "thunnis.van.oort@huygens.knaw.nl"
           }
         }
@@ -184,13 +219,23 @@
         "url": "https://www.huygens.knaw.nl/",
         "contactPoint": {
           "@type": "ContactPoint",
-          "name": "Thunnis van Oort",
+          "name": [
+            {
+              "@value": "Thunnis van Oort",
+              "@language": "nl"
+            }
+          ],
           "email": "thunnis.van.oort@huygens.knaw.nl"
         }
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "name": "Thunnis van Oort",
+        "name": [
+          {
+            "@value": "Thunnis van Oort",
+            "@language": "nl"
+          }
+        ],
         "email": "thunnis.van.oort@huygens.knaw.nl"
       },
       "distribution": [
@@ -205,7 +250,9 @@
             }
           ]
         }
-      ]
+      ],
+      "dateModified": "2026-10-31",
+      "temporalCoverage": "1667/1950"
     },
     {
       "@type": "Dataset",
@@ -259,7 +306,12 @@
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "name": "Thunnis van Oort",
+            "name": [
+              {
+                "@value": "Thunnis van Oort",
+                "@language": "nl"
+              }
+            ],
             "email": "thunnis.van.oort@huygens.knaw.nl"
           }
         }
@@ -276,13 +328,23 @@
         "url": "https://www.huygens.knaw.nl/",
         "contactPoint": {
           "@type": "ContactPoint",
-          "name": "Thunnis van Oort",
+          "name": [
+            {
+              "@value": "Thunnis van Oort",
+              "@language": "nl"
+            }
+          ],
           "email": "thunnis.van.oort@huygens.knaw.nl"
         }
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "name": "Thunnis van Oort",
+        "name": [
+          {
+            "@value": "Thunnis van Oort",
+            "@language": "nl"
+          }
+        ],
         "email": "thunnis.van.oort@huygens.knaw.nl"
       },
       "distribution": [
@@ -292,7 +354,9 @@
           "encodingFormat": "application/json",
           "usageInfo": "https://iiif.io/api/presentation/3.0/"
         }
-      ]
+      ],
+      "dateModified": "2026-02-02",
+      "temporalCoverage": "1667/1950"
     }
   ]
 }
