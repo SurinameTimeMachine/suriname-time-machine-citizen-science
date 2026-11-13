@@ -381,15 +381,16 @@ export const outputNl: OutputContent = {
     // ── Gepubliceerde Data ──────────────────────────────────────────────
     {
       id: 'locatiepunten-paramaribo-1885',
-      title: 'Locatiepunten Paramaribo 1885',
+      title: 'Paramaribo historical address locations, 1885',
       description:
-        'Ruim 3.100 adrespunten van Paramaribo naar de Figuratieve plattegrond van A.J. Meyer (1885), geplaatst op de kaart van de Opnemingsdienst uit 1916–1917, met straten (1885 en 1916) en wijkgrenzen. Verschijnt als open dataset (CC BY 4.0) in de HDSC-collectie op DataverseNL.',
-      href: 'https://dataverse.nl/dataverse/HDSC',
+        'Open dataset met 3.105 locatiepunten in Paramaribo (3.005 met een adres) naar de Figuratieve plattegrond van A.J. Meyer (1885), geplaatst op de kaart van de Opnemingsdienst uit 1916–1917, met de straten van 1885 en 1916 en de wijkgrenzen van 1885. Gepubliceerd in de HDSC-collectie op DataverseNL onder CC BY 4.0.',
+      href: 'https://doi.org/10.34894/UNFLPK',
       category: 'data',
-      date: 'Verwacht december 2026',
-      isoDate: '2026-12-15',
+      date: '13 november 2026',
+      isoDate: '2026-11-13',
       authors: 'van Oort, T.',
-      upcoming: true,
+      venue: 'DataverseNL',
+      doi: '10.34894/UNFLPK',
     },
     {
       id: 'historische-kaarten-suriname-v2',

@@ -381,15 +381,16 @@ export const outputEn: OutputContent = {
     // ── Published Data ──────────────────────────────────────────────────
     {
       id: 'locatiepunten-paramaribo-1885',
-      title: 'Location points Paramaribo 1885',
+      title: 'Paramaribo historical address locations, 1885',
       description:
-        'Over 3,100 address points in Paramaribo after A.J. Meyer’s Figurative map (1885), placed on the 1916–1917 survey map, with streets (1885 and 1916) and ward boundaries. To be released as an open dataset (CC BY 4.0) in the HDSC collection on DataverseNL.',
-      href: 'https://dataverse.nl/dataverse/HDSC',
+        'Open dataset of 3,105 location points in Paramaribo (3,005 with an address) after A.J. Meyer’s Figurative map (1885), placed on the 1916–1917 survey map, with the streets of 1885 and 1916 and the 1885 ward boundaries. Published in the HDSC collection on DataverseNL under CC BY 4.0.',
+      href: 'https://doi.org/10.34894/UNFLPK',
       category: 'data',
-      date: 'Expected December 2026',
-      isoDate: '2026-12-15',
+      date: '13 November 2026',
+      isoDate: '2026-11-13',
       authors: 'van Oort, T.',
-      upcoming: true,
+      venue: 'DataverseNL',
+      doi: '10.34894/UNFLPK',
     },
     {
       id: 'historische-kaarten-suriname-v2',
