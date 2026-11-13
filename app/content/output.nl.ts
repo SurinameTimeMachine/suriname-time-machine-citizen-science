@@ -29,6 +29,7 @@ export const outputNl: OutputContent = {
       code: 'Gepubliceerde Code',
       media: 'Media & Commentaar',
     },
+    upcomingLabel: 'Binnenkort',
     footer: {
       coordinatorLine: 'Projectcoördinator',
       organizationLabel: 'Huygens Instituut',
@@ -36,6 +37,18 @@ export const outputNl: OutputContent = {
   },
   items: [
     // ── Evenementen ─────────────────────────────────────────────────────
+    {
+      id: 'ssc-lancering-2026',
+      title: 'Lancering Sranan Story Collective',
+      description:
+        'Samen met Suriname Tijdmachine lanceert Sranan Story Collective het nieuwe collectief, met een talkshow, ontmoetingen en een afsluitende borrel. Aanmelden kan via de homepage.',
+      href: '/#ssc-lancering',
+      category: 'events',
+      date: '29 november 2026 · 14:00–17:30',
+      isoDate: '2026-11-29',
+      venue: 'Zandkasteel, Amsterdam-Zuidoost',
+      upcoming: true,
+    },
     {
       id: 'hackalod-2026-i-was-here',
       title: 'HackaLOD 2026: I Was Here – ’s Lands Hospitaal × Zeeland',
@@ -158,6 +171,32 @@ export const outputNl: OutputContent = {
     },
 
     // ── Presentaties ────────────────────────────────────────────────────
+    {
+      id: 'nde-conferentie-2026',
+      title: 'Erfgoed en onderzoek: een droomhuwelijk',
+      description:
+        'Deelsessie op de NDE-conferentie ‘Wie schrijft geschiedenis?’ met Julienne Fabias (Nationaal Archief Curaçao) en Lianne Leonora (Mongui Maduro Library). Thunnis van Oort spreekt vanuit het onderzoeksperspectief: de Suriname Tijdmachine als gebruiker van erfgoedbronnen, en de vraag waar verrijkingen van onderzoekers en vrijwilligers bewaard kunnen worden als de erfgoedinstelling dat zelf niet kan.',
+      href: 'https://netwerkdigitaalerfgoed.nl/conferentie-wie-schrijft-geschiedenis/programma-26-november/',
+      category: 'presentations',
+      date: '26 november 2026',
+      isoDate: '2026-11-26',
+      speakers: 'Julienne Fabias, Lianne Leonora, Thunnis van Oort',
+      venue: 'NDE-conferentie 2026, Munthuys, Utrecht',
+      upcoming: true,
+    },
+    {
+      id: 'geobuzz-2026',
+      title:
+        'Samen kaarten lezen: van Suriname Tijdmachine naar een citizen-sciencetool voor historische kaarten',
+      description:
+        'Presentatie over de Suriname Tijdmachine, de resultaten van de HackaLOD 2026 en de mapathon, en de nieuwe annotatietool re:charted waarmee deelnemers samen met Sranan Story Collective historische kaarten van Suriname gaan lezen en annoteren.',
+      category: 'presentations',
+      date: '17 november 2026',
+      isoDate: '2026-11-17',
+      speakers: 'Thunnis van Oort',
+      venue: 'Geobuzz 2026',
+      upcoming: true,
+    },
     {
       id: 'adekuss-verbonden-geschiedenis-2026',
       title:
@@ -340,6 +379,30 @@ export const outputNl: OutputContent = {
     },
 
     // ── Gepubliceerde Data ──────────────────────────────────────────────
+    {
+      id: 'locatiepunten-paramaribo-1885',
+      title: 'Locatiepunten Paramaribo 1885',
+      description:
+        'Ruim 3.100 adrespunten van Paramaribo naar de Figuratieve plattegrond van A.J. Meyer (1885), geplaatst op de kaart van de Opnemingsdienst uit 1916–1917, met straten (1885 en 1916) en wijkgrenzen. Verschijnt als open dataset (CC BY 4.0) in de HDSC-collectie op DataverseNL.',
+      href: 'https://dataverse.nl/dataverse/HDSC',
+      category: 'data',
+      date: 'Verwacht december 2026',
+      isoDate: '2026-12-15',
+      authors: 'van Oort, T.',
+      upcoming: true,
+    },
+    {
+      id: 'historische-kaarten-suriname-v2',
+      title:
+        'Historische kaarten van Suriname: metadata en georeferenties (versie 2)',
+      description:
+        'Referentielijst van gedigitaliseerde historische kaarten van Suriname in Nederlandse en Amerikaanse collecties, met georeferenties in Allmaps voor een deel van de kaarten en een aanvullende, nog niet gecureerde lijst kaartmateriaal. Verschijnt als open dataset in de HDSC-collectie op DataverseNL.',
+      href: 'https://dataverse.nl/dataverse/HDSC',
+      category: 'data',
+      date: 'Verwacht eind 2026',
+      isoDate: '2026-12-31',
+      upcoming: true,
+    },
     {
       id: 'plantations-almanakken',
       title: 'Plantations Surinaamse Almanakken',
