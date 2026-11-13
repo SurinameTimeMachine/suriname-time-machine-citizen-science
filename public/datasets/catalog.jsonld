@@ -437,6 +437,150 @@
       ],
       "dateModified": "2026-02-02",
       "temporalCoverage": "1688/1958"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.34894/UNFLPK",
+      "identifier": "https://doi.org/10.34894/UNFLPK",
+      "name": [
+        {
+          "@value": "Paramaribo historical address locations, 1885",
+          "@language": "en"
+        },
+        {
+          "@value": "Locatiepunten historische adressen Paramaribo, 1885",
+          "@language": "nl"
+        }
+      ],
+      "description": [
+        {
+          "@value": "Location points of 3,105 urban plots (erven) in Paramaribo in 1885, based on the schematic town plan by A.J. Meyer (1885) and placed on the 1916-17 map of the Opnemingsdienst van Suriname. Includes street lines of 1885 and 1916-17 and the boundaries of the eight 1885 districts.",
+          "@language": "en"
+        },
+        {
+          "@value": "Locatiepunten van 3.105 erven in Paramaribo in 1885, op basis van de figuratieve plattegrond van A.J. Meyer (1885), geplaatst op de kaart van de Opnemingsdienst van Suriname (1916-17). Met straatlijnen van 1885 en 1916-17 en de grenzen van de acht wijken van 1885.",
+          "@language": "nl"
+        }
+      ],
+      "version": "1",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "datePublished": "2026-11-13",
+      "inLanguage": [
+        "en",
+        "nl"
+      ],
+      "keywords": [
+        "Paramaribo",
+        "Suriname",
+        "historische adressen",
+        "historische GIS",
+        "erven"
+      ],
+      "spatialCoverage": {
+        "@id": "http://www.wikidata.org/entity/Q3001"
+      },
+      "temporalCoverage": "1885/1917",
+      "mainEntityOfPage": "https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/UNFLPK",
+      "creator": [
+        {
+          "@type": "Person",
+          "@id": "https://orcid.org/0000-0001-8912-0508",
+          "name": [
+            {
+              "@value": "Thunnis van Oort",
+              "@language": "nl"
+            }
+          ]
+        }
+      ],
+      "publisher": {
+        "@id": "https://ror.org/04x6kq749",
+        "@type": "Organization",
+        "name": [
+          {
+            "@value": "Huygens Instituut",
+            "@language": "nl"
+          }
+        ],
+        "url": "https://www.huygens.knaw.nl/",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "name": [
+            {
+              "@value": "Thunnis van Oort",
+              "@language": "nl"
+            }
+          ],
+          "email": "thunnis.van.oort@huygens.knaw.nl"
+        }
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "name": [
+          {
+            "@value": "Thunnis van Oort",
+            "@language": "nl"
+          }
+        ],
+        "email": "thunnis.van.oort@huygens.knaw.nl"
+      },
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/696492?format=original",
+          "encodingFormat": "text/csv",
+          "name": [
+            {
+              "@value": "locatiepunten_paramaribo_1885.csv",
+              "@language": "en"
+            }
+          ]
+        },
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/696496",
+          "encodingFormat": "application/geo+json",
+          "name": [
+            {
+              "@value": "locatiepunten_paramaribo_1885.geojson",
+              "@language": "en"
+            }
+          ]
+        },
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/696495",
+          "encodingFormat": "application/geo+json",
+          "name": [
+            {
+              "@value": "straten_paramaribo_1885.geojson",
+              "@language": "en"
+            }
+          ]
+        },
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/696499",
+          "encodingFormat": "application/geo+json",
+          "name": [
+            {
+              "@value": "straten_paramaribo_1916.geojson",
+              "@language": "en"
+            }
+          ]
+        },
+        {
+          "@type": "DataDownload",
+          "contentUrl": "https://dataverse.nl/api/access/datafile/696493",
+          "encodingFormat": "application/geo+json",
+          "name": [
+            {
+              "@value": "wijkgrenzen_paramaribo_1885.geojson",
+              "@language": "en"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
