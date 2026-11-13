@@ -427,6 +427,8 @@ export type OutputItem = {
   venue?: string;
   mediaType?: string;
   doi?: string;
+  /** Aangekondigd/aanstaand: toont een label "Binnenkort" op de kaart. */
+  upcoming?: boolean;
 };
 
 export type OutputSeo = {
@@ -456,6 +458,7 @@ export type OutputUiStrings = {
     code: string;
     media: string;
   };
+  upcomingLabel: string;
   footer: {
     coordinatorLine: string;
     organizationLabel: string;
