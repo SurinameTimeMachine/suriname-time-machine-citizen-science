@@ -464,10 +464,23 @@ export const outputEn: OutputContent = {
 
     // ── Media & Commentary ─────────────────────────────────────────────
     {
+      id: 'huygens-juryprijs-hackalod-2026',
+      title: 'Researchers Suriname Time Machine win HackaLOD 2026 jury prize',
+      description:
+        'News item from the Huygens Institute on the jury prize for the Suriname Time Machine team at HackaLOD 2026: an application where archives, descendants and volunteers can find each other.',
+      href: 'https://www.huygens.knaw.nl/en/researchers-suriname-time-machine-win-hackalod-2026-jury-prize/',
+      category: 'media',
+      date: '16 November 2026',
+      isoDate: '2026-11-16',
+      venue: 'Huygens Institute',
+      mediaType: 'News item',
+    },
+    {
       id: 'abc-suriname-workshop-2026',
       title: 'National Archives presents: Suriname Time Machine workshop',
       description:
         'TV and radio interview highlighting the citizen science project and the workshop at the National Archives Suriname.',
+      href: 'https://www.youtube.com/watch?v=uYwIrPHf32E',
       category: 'media',
       date: '30 September 2026',
       isoDate: '2026-09-30',

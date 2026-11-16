@@ -41,7 +41,7 @@ export const outputNl: OutputContent = {
       id: 'ssc-lancering-2026',
       title: 'Lancering Sranan Story Collective',
       description:
-        'Samen met Suriname Tijdmachine lanceert Sranan Story Collective het nieuwe collectief, met een talkshow, ontmoetingen en een afsluitende borrel. Aanmelden kan via de homepage.',
+        'Samen met Suriname Time Machine lanceert Sranan Story Collective het nieuwe collectief, met een talkshow, ontmoetingen en een afsluitende borrel. Aanmelden kan via de homepage.',
       href: '/#ssc-lancering',
       category: 'events',
       date: '29 november 2026 · 14:00–17:30',
@@ -175,7 +175,7 @@ export const outputNl: OutputContent = {
       id: 'nde-conferentie-2026',
       title: 'Erfgoed en onderzoek: een droomhuwelijk',
       description:
-        'Deelsessie op de NDE-conferentie ‘Wie schrijft geschiedenis?’ met Julienne Fabias (Nationaal Archief Curaçao) en Lianne Leonora (Mongui Maduro Library). Thunnis van Oort spreekt vanuit het onderzoeksperspectief: de Suriname Tijdmachine als gebruiker van erfgoedbronnen, en de vraag waar verrijkingen van onderzoekers en vrijwilligers bewaard kunnen worden als de erfgoedinstelling dat zelf niet kan.',
+        'Deelsessie op de NDE-conferentie ‘Wie schrijft geschiedenis?’ met Julienne Fabias (Nationaal Archief Curaçao) en Lianne Leonora (Mongui Maduro Library). Thunnis van Oort spreekt vanuit het onderzoeksperspectief: de Suriname Time Machine als gebruiker van erfgoedbronnen, en de vraag waar verrijkingen van onderzoekers en vrijwilligers bewaard kunnen worden als de erfgoedinstelling dat zelf niet kan.',
       href: 'https://netwerkdigitaalerfgoed.nl/conferentie-wie-schrijft-geschiedenis/programma-26-november/',
       category: 'presentations',
       date: '26 november 2026',
@@ -187,9 +187,9 @@ export const outputNl: OutputContent = {
     {
       id: 'geobuzz-2026',
       title:
-        'Samen kaarten lezen: van Suriname Tijdmachine naar een citizen-sciencetool voor historische kaarten',
+        'Samen kaarten lezen: van Suriname Time Machine naar een citizen-sciencetool voor historische kaarten',
       description:
-        'Presentatie over de Suriname Tijdmachine, de resultaten van de HackaLOD 2026 en de mapathon, en de nieuwe annotatietool re:charted waarmee deelnemers samen met Sranan Story Collective historische kaarten van Suriname gaan lezen en annoteren.',
+        'Presentatie over de Suriname Time Machine, de resultaten van de HackaLOD 2026 en de mapathon, en de nieuwe annotatietool re:charted waarmee deelnemers samen met Sranan Story Collective historische kaarten van Suriname gaan lezen en annoteren.',
       category: 'presentations',
       date: '17 november 2026',
       isoDate: '2026-11-17',
@@ -464,10 +464,23 @@ export const outputNl: OutputContent = {
 
     // ── Media & Commentaar ──────────────────────────────────────────────
     {
+      id: 'huygens-juryprijs-hackalod-2026',
+      title: 'Onderzoekers Suriname Tijdmachine winnen juryprijs HackaLOD 2026',
+      description:
+        'Nieuwsbericht van het Huygens Instituut over de juryprijs voor het team van Suriname Time Machine op de HackaLOD 2026: een toepassing waar archieven, nazaten en vrijwilligers elkaar kunnen vinden.',
+      href: 'https://www.huygens.knaw.nl/onderzoekers-van-suriname-tijdmachine-winnen-juryprijs-hackalod-2026/',
+      category: 'media',
+      date: '16 november 2026',
+      isoDate: '2026-11-16',
+      venue: 'Huygens Instituut',
+      mediaType: 'Nieuwsbericht',
+    },
+    {
       id: 'abc-suriname-workshop-2026',
       title: 'Nationaal Archief presenteert: workshop Suriname Time Machine',
       description:
         'TV- en radio-interview over het burgerwetenschapsproject en de workshop bij het Nationaal Archief Suriname.',
+      href: 'https://www.youtube.com/watch?v=uYwIrPHf32E',
       category: 'media',
       date: '30 september 2026',
       isoDate: '2026-09-30',
