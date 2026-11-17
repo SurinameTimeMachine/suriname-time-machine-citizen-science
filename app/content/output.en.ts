@@ -190,6 +190,7 @@ export const outputEn: OutputContent = {
         'Reading maps together: from Suriname Time Machine to a citizen science tool for historical maps (Dutch)',
       description:
         'Presentation on the Suriname Time Machine, the results of HackaLOD 2026 and the mapathon, and the new annotation tool re:charted, with which participants and Sranan Story Collective will read and annotate historical maps of Suriname together.',
+      href: '/output/geobuzz-2026',
       category: 'presentations',
       date: '17 November 2026',
       isoDate: '2026-11-17',
