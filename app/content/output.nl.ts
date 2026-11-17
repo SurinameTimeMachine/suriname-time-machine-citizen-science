@@ -195,7 +195,6 @@ export const outputNl: OutputContent = {
       isoDate: '2026-11-17',
       speakers: 'Thunnis van Oort',
       venue: 'Geobuzz 2026',
-      upcoming: true,
     },
     {
       id: 'adekuss-verbonden-geschiedenis-2026',
