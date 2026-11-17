@@ -197,9 +197,11 @@ const categoryIcon: Record<OutputCategory, () => React.JSX.Element> = {
 function OutputCard({
   item,
   isNewest,
+  upcomingLabel,
 }: {
   item: OutputItem;
   isNewest: boolean;
+  upcomingLabel: string;
 }) {
   const isExternal =
     !!item.href &&
@@ -209,6 +211,11 @@ function OutputCard({
 
   const cardBody = (
     <>
+      {item.upcoming && (
+        <span className="mb-2 inline-block bg-teal-strong px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white">
+          {upcomingLabel}
+        </span>
+      )}
       <div className="flex items-start justify-between gap-2">
         <h3 className="text-base font-semibold text-ink group-hover:text-teal-strong">
           {item.title}
@@ -270,11 +277,13 @@ function CategorySection({
   items,
   category,
   even,
+  upcomingLabel,
 }: {
   title: string;
   items: OutputItem[];
   category: OutputCategory;
   even: boolean;
+  upcomingLabel: string;
 }) {
   if (items.length === 0) return null;
 
@@ -305,6 +314,7 @@ function CategorySection({
               key={`output-${item.id}`}
               item={item}
               isNewest={item.id === newestId}
+              upcomingLabel={upcomingLabel}
             />
           ))}
         </div>
@@ -398,6 +408,7 @@ export function OutputPage({ content }: OutputPageProps) {
             items={cat.items}
             category={cat.key}
             even={i % 2 === 0}
+            upcomingLabel={content.ui.upcomingLabel}
           />
         ))}
       </main>
