@@ -3,9 +3,9 @@ import type { CitizenScienceContent } from './types';
 export const citizenScienceNl: CitizenScienceContent = {
   locale: 'nl',
   seo: {
-    title: 'Participatie | Suriname Tijdmachine',
+    title: 'Participatie | Suriname Time Machine',
     description:
-      'Doe mee aan workshops en evenementen van de Suriname Tijdmachine: georefereer historische kaarten, verrijk Wikidata en annoteer archiefbronnen samen.',
+      'Doe mee aan workshops en evenementen van de Suriname Time Machine: georefereer historische kaarten, verrijk Wikidata en annoteer archiefbronnen samen.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -17,7 +17,7 @@ export const citizenScienceNl: CitizenScienceContent = {
       backToHome: 'Back to Home',
     },
     hero: {
-      tagline: 'Suriname Tijdmachine',
+      tagline: 'Suriname Time Machine',
       title: 'Participatie & Evenementen',
       lead: 'Draag bij aan historisch onderzoek via hands-on workshops, mapathons en gezamenlijke datasessies. Iedereen kan helpen het verleden te ontsluiten.',
     },
@@ -51,7 +51,7 @@ export const citizenScienceNl: CitizenScienceContent = {
       partners: [
         {
           id: 'suriname-tijdmachine',
-          name: 'Suriname Tijdmachine',
+          name: 'Suriname Time Machine',
           href: 'https://www.huygens.knaw.nl/projecten/suriname-tijdmachine/',
         },
         {

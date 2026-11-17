@@ -3,9 +3,9 @@ import type { DashboardContent } from './types';
 export const dashboardNl: DashboardContent = {
   locale: 'nl',
   seo: {
-    title: 'Voortgang | Suriname Tijdmachine',
+    title: 'Voortgang | Suriname Time Machine',
     description:
-      'Live statistieken over annotaties van burgerwetenschappers en AI voor de Suriname Tijdmachine. Volg de voortgang, bekijk bijdragers en verken de motivatieverdeling.',
+      'Live statistieken over annotaties van burgerwetenschappers en AI voor de Suriname Time Machine. Volg de voortgang, bekijk bijdragers en verken de motivatieverdeling.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -17,9 +17,9 @@ export const dashboardNl: DashboardContent = {
       backToHome: 'Terug naar Home',
     },
     hero: {
-      tagline: 'Suriname Tijdmachine',
+      tagline: 'Suriname Time Machine',
       title: 'Annotatiedashboard',
-      lead: 'Realtime overzicht van alle annotaties voor de Suriname Tijdmachine, door mensen én AI. Bekijk wie bijdraagt en hoe de collectie groeit.',
+      lead: 'Realtime overzicht van alle annotaties voor de Suriname Time Machine, door mensen én AI. Bekijk wie bijdraagt en hoe de collectie groeit.',
     },
     stats: {
       totalAnnotations: 'Totaal annotaties',

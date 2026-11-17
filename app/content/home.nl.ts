@@ -39,34 +39,34 @@ const sharedSources = [
 export const homeContent: HomeContent = {
   locale: 'nl',
   seo: {
-    title: 'Suriname Tijdmachine',
+    title: 'Suriname Time Machine',
     description:
-      'Ontdek hoe archiefmateriaal over Suriname samenkomt op historische kaarten in de Suriname Tijdmachine.',
+      'Ontdek hoe archiefmateriaal over Suriname samenkomt op historische kaarten in de Suriname Time Machine.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
     navigation: {
       locationLabel: 'Paramaribo • Suriname',
       projectCode: 'STM',
-      projectSubtitle: 'Suriname Tijdmachine',
+      projectSubtitle: 'Suriname Time Machine',
       languageToggleLabel: 'EN',
     },
     section01Hero: {
       tagline:
         'Huygens Instituut | Historische Database Suriname en de Cariben | Stichting Pica',
       title:
-        'De Suriname Tijdmachine brengt verspreide historische bronnen samen op de kaart',
+        'De Suriname Time Machine brengt verspreide historische bronnen samen op de kaart',
       lead: 'Gebruikers vinden alle informatie op één plek, zonder telkens te moeten controleren of gegevens over dezelfde mensen, straten of plantages gaan. Zo wordt het gemakkelijker om de weg te vinden in het verleden. De herkomst van informatie wordt altijd vermeld zodat gebruikers zelf de originele bron kunnen raadplegen en hun eigen oordeel vellen. ',
       kicker:
-        'De Suriname Tijdmachine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
-      primaryCtaLabel: 'Ontdek de Tijdmachine',
+        'De Suriname Time Machine is een samenwerkingsverband van burgerwetenschappers, erfgoedinstellingen en onderzoekers.',
+      primaryCtaLabel: 'Ontdek de Time Machine',
       secondaryCtaLabel: 'Maak kennis met de Sranan Story Collective',
       textureAlt:
-        'Geometrisch raster dat Suriname Tijdmachine-datasets verbeeldt.',
+        'Geometrisch raster dat Suriname Time Machine-datasets verbeeldt.',
       snapshotLabel: 'Projectoverzicht',
     },
     section02Intro: {
-      eyebrow: 'De Suriname Tijdmachine',
+      eyebrow: 'De Suriname Time Machine',
       sourcesTitle: 'Bronnen',
       sourcesDescription: 'Raadpleeg de originele archieven:',
     },
@@ -103,7 +103,7 @@ export const homeContent: HomeContent = {
     },
     footer: {
       coordinatorLine: 'Coördinatie: Thunnis van Oort',
-      organizationLabel: 'Suriname Tijdmachine',
+      organizationLabel: 'Suriname Time Machine',
     },
   },
   navLinks: [
@@ -136,8 +136,8 @@ export const homeContent: HomeContent = {
   },
   section02Intro: {
     paragraphs: [
-      'De Suriname Time Machine brengt verspreide bronnen samen. Met de Suriname Tijdmachine hoeven gebruikers niet langer op verschillende plekken bronnen te raadplegen en dubbel te checken of het om dezelfde personen, straten of plantages gaat. Dit maakt het makkelijker om patronen uit het verleden te herkennen, zoals rondom migratie en slavernij, en ook om individuele familiegeschiedenissen beter in kaart te brengen.',
-      'Waar de Suriname Tijdmachine de digitale infrastructuur is die deze bronnen samenbrengt, is de Sranan Story Collective het citizen-science-initiatief eromheen. Samen met Surinaams-Nederlandse diasporagemeenschappen onderzoekt de Collective hoe archiefmateriaal kan worden gebruikt, bevraagd en van context voorzien, en hoe het kan worden verbonden met persoonlijke geschiedenissen, gemeenschapskennis en perspectieven die in de archieven anders mogelijk onzichtbaar blijven.',
+      'De Suriname Time Machine brengt verspreide bronnen samen. Met de Suriname Time Machine hoeven gebruikers niet langer op verschillende plekken bronnen te raadplegen en dubbel te checken of het om dezelfde personen, straten of plantages gaat. Dit maakt het makkelijker om patronen uit het verleden te herkennen, zoals rondom migratie en slavernij, en ook om individuele familiegeschiedenissen beter in kaart te brengen.',
+      'Waar de Suriname Time Machine de digitale infrastructuur is die deze bronnen samenbrengt, is de Sranan Story Collective het citizen-science-initiatief eromheen. Samen met Surinaams-Nederlandse diasporagemeenschappen onderzoekt de Collective hoe archiefmateriaal kan worden gebruikt, bevraagd en van context voorzien, en hoe het kan worden verbonden met persoonlijke geschiedenissen, gemeenschapskennis en perspectieven die in de archieven anders mogelijk onzichtbaar blijven.',
       'Neem bijvoorbeeld een portret uit de collectie van het Rijksmuseum, de eerste bekende foto gemaakt in Suriname. Het toont het Surinaamse echtpaar Johannes Ellis en Maria Louisa de Hart, geschilderd in 1846, het jaar waarin hun huwelijk plaatsvond. Hij was toen 33 jaar, Maria Louisa was 19. Het bijschrift vermeldt dat hij in Ghana is geboren, maar haar herkomst is niet vermeld.',
       'Wat online speurwerk levert al snel meer informatie op. Johannes Ellis werd geboren in [Fort Elmina](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016) (in het huidige Ghana). Hij verhuisde naar Suriname, waar hij in de jaren 1830 was hij opgeklommen tot ambtenaar. Maria Louisa was de dochter van de Joodse koopman [Mozes Meijer de Hart](https://www.nationaalarchief.nl/onderzoeken/archief/1.05.11.09/invnr/64/file/NL-HaNA_1.05.11.09_64_0016) maar werd geboren in slavernij. Zij werd door hem op jonge leeftijd vrijgemaakt. Het stel Ellis-de Hart woonde in de deftige Keizerstraat in Paramaribo. Ze kregen een groot gezin met 1 zoon en 4 dochters.',
       'Zoals veel midden- en hogereklassehuishoudens in 19e-eeuws Suriname bezaten ze tot slaaf gemaakte mensen: in 1846 waren dat 3 mannen, 2 vrouwen en 5 kinderen. Een van deze vrouwen in slavernij heette Marietje. Zij was even oud als Maria Louisa en moeder van 1 zoon en 1 dochter.',
@@ -198,10 +198,10 @@ export const homeContent: HomeContent = {
   section04Methodology: {
     missionParagraphs: [
       'Voor deze informatie zijn meerdere online databestanden bezocht: de Burgerlijke Stand van Suriname, het Wijkregister van Paramaribo en het Slavenregister (allemaal te raadplegen op de website van het Nationaal Archief Suriname), het Emancipatieregister (Nationaal Archief Nederland) en daarnaast de Digitale Bibliotheek voor de Nederlandse Letteren (DBNL) en Delpher, beide beheerd door de Koninklijke Bibliotheek. We moeten het verhaal van Ellis-de Hart letterlijk bij elkaar sprokkelen.',
-      'Dit is precies het probleem dat de Suriname Tijdmachine wil oplossen. Door één centrale plek voor zulke databestanden te maken, kan straks informatie over het echtpaar Ellis-de Hart veel sneller worden gevonden. De Suriname Tijdmachine wordt zo’n knooppunt dat verschillende bronnen samenbrengt. Zo kunnen we meer te weten komen over het leven van Surinamers in het verleden. Dat is weliswaar makkelijker bij rijkere mensen zoals Ellis-de Hart, omdat zij meer sporen hebben achtergelaten. Maar ook over minder rijke mensen en mensen die in slavernij leefden, valt meer te ontdekken als we bronnen op één plek combineren.',
-      'De Tijdmachine integreert een steeds groeiend aantal databanken uit Surinames verleden, beheerd door verschillende erfgoedinstellingen, op één digitale kaart. Onderzoekers kunnen daardoor efficiënter en nauwkeuriger werken. Mensen die hun familiegeschiedenis onderzoeken vinden informatie gemakkelijker terug, ook wanneer namen of adressen in de loop van de tijd zijn veranderd.',
-      'Erfgoedinstellingen, zoals het Rijksmuseum, kunnen de tijdmachine gebruiken om objecten in hun collectie beter te begrijpen en beschrijven, zoals het portret van het echtpaar Ellis-de Hart, of afbeeldingen van verschillende plantages met dezelfde naam, iets dat veel voorkwam in Suriname. Zo waren er minstens vijf plantages genaamd [Libanon](https://www.wikidata.org/w/index.php?search=libanon+plantation&language=en&title=Special%3ASearch&ns0=1), allemaal gelegen aan een andere rivier of kreek.',
-      'De Suriname Tijdmachine is geïnspireerd op het [Europese Time Machine project](https://www.timemachine.eu/), dat technologie en erfgoed samenbrengt om het verleden van steden en samenlevingen digitaal tot leven te wekken. In Nederland zijn diverse tijdmachineprojecten zoals [Amsterdam Time Machine](https://www.amsterdamtimemachine.nl/) en [Gouda tijdmachine](https://www.goudatijdmachine.nl/). De Suriname tijdmachine richt de blik buiten Europa, op een land in het mondiale Zuiden.',
+      'Dit is precies het probleem dat de Suriname Time Machine wil oplossen. Door één centrale plek voor zulke databestanden te maken, kan straks informatie over het echtpaar Ellis-de Hart veel sneller worden gevonden. De Suriname Time Machine wordt zo’n knooppunt dat verschillende bronnen samenbrengt. Zo kunnen we meer te weten komen over het leven van Surinamers in het verleden. Dat is weliswaar makkelijker bij rijkere mensen zoals Ellis-de Hart, omdat zij meer sporen hebben achtergelaten. Maar ook over minder rijke mensen en mensen die in slavernij leefden, valt meer te ontdekken als we bronnen op één plek combineren.',
+      'De Suriname Time Machine integreert een steeds groeiend aantal databanken uit Surinames verleden, beheerd door verschillende erfgoedinstellingen, op één digitale kaart. Onderzoekers kunnen daardoor efficiënter en nauwkeuriger werken. Mensen die hun familiegeschiedenis onderzoeken vinden informatie gemakkelijker terug, ook wanneer namen of adressen in de loop van de tijd zijn veranderd.',
+      'Erfgoedinstellingen, zoals het Rijksmuseum, kunnen de Suriname Time Machine gebruiken om objecten in hun collectie beter te begrijpen en beschrijven, zoals het portret van het echtpaar Ellis-de Hart, of afbeeldingen van verschillende plantages met dezelfde naam, iets dat veel voorkwam in Suriname. Zo waren er minstens vijf plantages genaamd [Libanon](https://www.wikidata.org/w/index.php?search=libanon+plantation&language=en&title=Special%3ASearch&ns0=1), allemaal gelegen aan een andere rivier of kreek.',
+      'De Suriname Time Machine is geïnspireerd op het [Europese Time Machine project](https://www.timemachine.eu/), dat technologie en erfgoed samenbrengt om het verleden van steden en samenlevingen digitaal tot leven te wekken. In Nederland zijn diverse tijdmachineprojecten zoals [Amsterdam Time Machine](https://www.amsterdamtimemachine.nl/) en [Gouda tijdmachine](https://www.goudatijdmachine.nl/). De Suriname Time Machine richt de blik buiten Europa, op een land in het mondiale Zuiden.',
     ],
     mapParagraphs: [
       'Een kaart van Paramaribo uit 1846 met per adres de etniciteit van zowel vrije als onvrije inwoners, volgens de aanduidingen van huidskleur gehanteerd in het Wijkregister van dat jaar. Blauw staat voor inwoners van Afrikaanse herkomst, rood voor (witte) Europeanen en groen voor personen van gemengde of inheemse afkomst. Hoe groter de cirkel hoe meer bewoners.',
@@ -215,8 +215,8 @@ export const homeContent: HomeContent = {
         'Een kaart van Paramaribo uit 1846 die per adres de etniciteit van zowel vrije als onvrije inwoners laat zien.',
     },
     teamParagraphs: [
-      'De Suriname Tijdmachine wordt geleid door onderzoeker Thunnis van Oort. Van Oort werkte eerder mee aan de [Historische Database van Suriname en de Cariben (HDSC)](https://www.ru.nl/onderzoek/onderzoeksprojecten/historische-database-van-suriname-en-de-cariben), een grootschalig onderzoeksproject aan de Radboud Universiteit, waarbij honderden burgerwetenschappers hielpen met het digitaliseren van historische gegevens.',
-      'In 2023 kregen de gedigitaliseerde slavenregisters van Suriname en Curaçao internationale erkenning: ze werden opgenomen in het [Memory of the World Register van UNESCO](https://www.nationaalarchief.nl/beleven/nieuws/archieven-over-slavernij-op-de-unesco-lijst), de VN-organisatie voor erfgoedbehoud. De HDSC is één van de partners van het Suriname tijdmachine.',
+      'De Suriname Time Machine wordt geleid door onderzoeker Thunnis van Oort. Van Oort werkte eerder mee aan de [Historische Database van Suriname en de Cariben (HDSC)](https://www.ru.nl/onderzoek/onderzoeksprojecten/historische-database-van-suriname-en-de-cariben), een grootschalig onderzoeksproject aan de Radboud Universiteit, waarbij honderden burgerwetenschappers hielpen met het digitaliseren van historische gegevens.',
+      'In 2023 kregen de gedigitaliseerde slavenregisters van Suriname en Curaçao internationale erkenning: ze werden opgenomen in het [Memory of the World Register van UNESCO](https://www.nationaalarchief.nl/beleven/nieuws/archieven-over-slavernij-op-de-unesco-lijst), de VN-organisatie voor erfgoedbehoud. De HDSC is één van de partners van het Suriname Time Machine.',
     ],
     employees: [
       'Thunnis van Oort – Huygens Instituut',

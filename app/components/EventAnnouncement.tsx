@@ -6,7 +6,7 @@ const eventCopy = {
     label: 'Kom erbij · 29 november 2026',
     title: 'Lancering Sranan Story Collective',
     intro:
-      'Samen met Suriname Tijd Machine lanceert Sranan Story Collective het nieuwe collectief. Kom langs voor een talkshow, ontmoetingen en een afsluitende borrel.',
+      'Samen met Suriname Time Machine lanceert Sranan Story Collective het nieuwe collectief. Kom langs voor een talkshow, ontmoetingen en een afsluitende borrel.',
     date: 'Zondag 29 november 2026',
     time: 'Inloop 14:00 · programma 14:15–17:30 uur',
     location: 'Zandkasteel, Amsterdam-Zuidoost',

@@ -7,7 +7,7 @@ import {
 import { SiteFooter } from '../../components/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 're:Charted Documentatie | Suriname Tijdmachine',
+  title: 're:Charted Documentatie | Suriname Time Machine',
   description:
     'Nederlandse handleiding voor re:Charted, het annotatieplatform voor historische kaarten.',
   robots: { index: false, follow: false },
@@ -97,13 +97,13 @@ export default function ReChartedDocumentatiePage() {
       {/* Hero */}
       <section className="hero-surface px-4 py-16 sm:px-6 lg:px-10">
         <div className="mx-auto max-w-6xl">
-          <p className="flag-label mb-4 text-white/80">Suriname Tijdmachine</p>
+          <p className="flag-label mb-4 text-white/80">Suriname Time Machine</p>
           <h1 className="mb-6 text-3xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
             re:Charted Handleiding
           </h1>
           <p className="max-w-2xl text-lg leading-relaxed text-white/80">
             Stapsgewijze handleiding voor het annoteren van historische kaarten
-            met re:Charted, het annotatieplatform voor de Suriname Tijdmachine.
+            met re:Charted, het annotatieplatform voor de Suriname Time Machine.
           </p>
         </div>
       </section>
@@ -185,8 +185,8 @@ export default function ReChartedDocumentatiePage() {
               </p>
               <p>
                 De informatie die uit deze mapathon voortkomt, komt als open
-                data voor iedereen beschikbaar in het kader van de Suriname
-                Tijdmachine.
+                data voor iedereen beschikbaar in het kader van de Suriname Time
+                Machine.
               </p>
             </div>
             <p className="mt-6 text-xs leading-relaxed text-ink/40">
@@ -275,8 +275,8 @@ export default function ReChartedDocumentatiePage() {
                 Linksboven in het scherm in de balk naast <em>re:Charted</em> is
                 een knop om te wisselen tussen <strong>NeRu</strong> (Necessary
                 Reunions, Indiase kaarten) en <strong>STM</strong> (Suriname
-                Tijdmachine). In de mapathon richten we ons op de Suriname
-                Tijdmachine (STM).
+                Time Machine). In de mapathon richten we ons op de Suriname Time
+                Machine (STM).
               </p>
               <p>
                 We gebruiken in de mapathon alleen de tool re:Charted, de andere
