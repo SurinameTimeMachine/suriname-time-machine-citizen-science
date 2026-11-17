@@ -21,7 +21,7 @@ export type PartAnimation = {
 export const hackalod2026 = {
   path: '/projects/hackalod-2026',
   seo: {
-    title: 'I Was Here · HackaLOD 2026 | Suriname Tijdmachine',
+    title: 'I Was Here · HackaLOD 2026 | Suriname Time Machine',
     description:
       'Rapportage van I Was Here, het project van Suriname Time Machine / Shadows of the Past op HackaLOD 2026 in Middelburg: ’s Lands Hospitaal in Paramaribo verbonden met Zeeland.',
   },

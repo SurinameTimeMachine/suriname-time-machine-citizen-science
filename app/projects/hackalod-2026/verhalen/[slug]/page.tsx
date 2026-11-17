@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isSlug(slug)) return {};
   const story = stories[slug];
   return {
-    title: `${story.subtitle} · I Was Here | Suriname Tijdmachine`,
+    title: `${story.subtitle} · I Was Here | Suriname Time Machine`,
     description: story.introduction.replace(
       /\[([^\]]+)\]\((?:p|g):[^)\s]+\)/g,
       '$1',
