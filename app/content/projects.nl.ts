@@ -3,9 +3,9 @@ import type { ProjectsContent } from './types';
 export const projectsNl: ProjectsContent = {
   locale: 'nl',
   seo: {
-    title: 'Projecten | Suriname Tijdmachine',
+    title: 'Projecten | Suriname Time Machine',
     description:
-      'Ontdek digitale tools en interactieve toepassingen ontwikkeld binnen het Suriname Tijdmachine project, waaronder historische kaarten, datavisualisaties en onderzoekstools.',
+      'Ontdek digitale tools en interactieve toepassingen ontwikkeld binnen het Suriname Time Machine project, waaronder historische kaarten, datavisualisaties en onderzoekstools.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -17,9 +17,9 @@ export const projectsNl: ProjectsContent = {
       backToHome: 'Terug naar Home',
     },
     hero: {
-      tagline: 'Suriname Tijdmachine',
+      tagline: 'Suriname Time Machine',
       title: 'Digitale Projecten & Tools',
-      lead: 'Een verzameling interactieve toepassingen, visualisaties en onderzoekstools ontwikkeld binnen het Suriname Tijdmachine project om historische data toegankelijk en verkenbaar te maken.',
+      lead: 'Een verzameling interactieve toepassingen, visualisaties en onderzoekstools ontwikkeld binnen het Suriname Time Machine project om historische data toegankelijk en verkenbaar te maken.',
     },
     categories: {
       maps: 'Historische Kaarten',
@@ -316,9 +316,9 @@ export const projectsNl: ProjectsContent = {
     },
     {
       id: 'suriname-database-model',
-      name: 'Suriname Tijdmachine Databasemodel',
+      name: 'Suriname Time Machine Databasemodel',
       description:
-        'Interactieve visualisatie van het Linked Open Data-model van de Suriname Tijdmachine, met 1.596 historische plantages gemodelleerd met CIDOC-CRM.',
+        'Interactieve visualisatie van het Linked Open Data-model van de Suriname Time Machine, met 1.596 historische plantages gemodelleerd met CIDOC-CRM.',
       href: 'https://data.surinametijdmachine.org',
       purpose: 'tool',
       keywords: ['linked data', 'CIDOC-CRM', 'datamodel', 'plantages'],
@@ -338,7 +338,7 @@ export const projectsNl: ProjectsContent = {
       id: 'allmaps',
       name: 'Allmaps',
       description:
-        'Open-source platform voor het cureren, georefereren en verkennen van IIIF-kaarten. Gebruikt in de Suriname Tijdmachine voor het georefereren van historische kaarten.',
+        'Open-source platform voor het cureren, georefereren en verkennen van IIIF-kaarten. Gebruikt in de Suriname Time Machine voor het georefereren van historische kaarten.',
       href: 'https://allmaps.org/',
       purpose: 'tool',
       keywords: ['IIIF', 'georeferencing', 'kaarten', 'open source'],
@@ -354,9 +354,9 @@ export const projectsNl: ProjectsContent = {
     },
     {
       id: 'github-suriname-time-machine',
-      name: 'Suriname Tijdmachine GitHub',
+      name: 'Suriname Time Machine GitHub',
       description:
-        'GitHub-organisatie met open-source repositories voor het Suriname Tijdmachine-project.',
+        'GitHub-organisatie met open-source repositories voor het Suriname Time Machine-project.',
       href: 'https://github.com/surinameTimeMachine/',
       purpose: 'collaboration',
       keywords: ['open source', 'github', 'code', 'repositories'],
@@ -439,9 +439,9 @@ export const projectsNl: ProjectsContent = {
     },
     {
       id: 'linkedin-suriname-tijdmachine',
-      name: 'Suriname Tijdmachine op LinkedIn',
+      name: 'Suriname Time Machine op LinkedIn',
       description:
-        'Officiële LinkedIn-pagina van het Suriname Tijdmachine-project voor nieuws, updates en netwerken.',
+        'Officiële LinkedIn-pagina van het Suriname Time Machine-project voor nieuws, updates en netwerken.',
       href: 'https://www.linkedin.com/company/suriname-tijdmachine/',
       purpose: 'collaboration',
       keywords: ['linkedin', 'social media', 'netwerken', 'updates'],

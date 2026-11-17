@@ -51,7 +51,7 @@ export const citizenScienceEn: CitizenScienceContent = {
       partners: [
         {
           id: 'suriname-tijdmachine',
-          name: 'Suriname Tijdmachine',
+          name: 'Suriname Time Machine',
           href: 'https://www.huygens.knaw.nl/projecten/suriname-tijdmachine/',
         },
         {

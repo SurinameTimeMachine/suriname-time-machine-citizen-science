@@ -3,9 +3,9 @@ import type { OutputContent } from './types';
 export const outputNl: OutputContent = {
   locale: 'nl',
   seo: {
-    title: 'Output | Suriname Tijdmachine',
+    title: 'Output | Suriname Time Machine',
     description:
-      'Publicaties, presentaties, datasets, evenementen en open-source code van het Suriname Tijdmachine-project.',
+      'Publicaties, presentaties, datasets, evenementen en open-source code van het Suriname Time Machine-project.',
     openGraphLocale: 'nl_NL',
   },
   ui: {
@@ -17,9 +17,9 @@ export const outputNl: OutputContent = {
       backToHome: 'Terug naar Home',
     },
     hero: {
-      tagline: 'Suriname Tijdmachine',
+      tagline: 'Suriname Time Machine',
       title: 'Projectoutput',
-      lead: 'Een overzicht van evenementen, wetenschappelijke publicaties, presentaties, gepubliceerde datasets, open-source code en media van het Suriname Tijdmachine-project.',
+      lead: 'Een overzicht van evenementen, wetenschappelijke publicaties, presentaties, gepubliceerde datasets, open-source code en media van het Suriname Time Machine-project.',
     },
     categories: {
       events: 'Evenementen',
@@ -90,7 +90,7 @@ export const outputNl: OutputContent = {
       title:
         'Sranan Story Collective: Een Citizen Science Project starten over Surinaams Erfgoed',
       description:
-        'Presentatie op de European Citizen Science Association (ECSA) 2026-conferentie in Oulu, Finland, over de citizen-science-ambities en -methoden van de Suriname Tijdmachine.',
+        'Presentatie op de European Citizen Science Association (ECSA) 2026-conferentie in Oulu, Finland, over de citizen-science-ambities en -methoden van de Suriname Time Machine.',
       href: '/ecsa2026/',
       category: 'events',
       date: 'Maart 2026',
@@ -201,7 +201,7 @@ export const outputNl: OutputContent = {
       title:
         'Sranan Story Collective: Een Citizen Science Project starten over Surinaams Erfgoed',
       description:
-        'Presentatie op ECSA 2026 over hoe de Suriname Tijdmachine gemeenschappen betrekt bij citizen science rond Surinaams erfgoed, met georeferencing, Wikidata-bewerking en kaartannotatie.',
+        'Presentatie op ECSA 2026 over hoe de Suriname Time Machine gemeenschappen betrekt bij citizen science rond Surinaams erfgoed, met georeferencing, Wikidata-bewerking en kaartannotatie.',
       href: '/ecsa2026/',
       category: 'presentations',
       date: 'Maart 2026',
@@ -255,7 +255,7 @@ export const outputNl: OutputContent = {
       title:
         'Storytellers by Design Workshop (DH Benelux · Maastricht Edition)',
       description:
-        'Workshop op DH Benelux 2026 waarin de Suriname Tijdmachine als een van de casestudies werd gebruikt. Jona Schlegel maakte deel uit van het organisatieteam samen met Federica Di Biase en Kelly Gillikin Schoueri.',
+        'Workshop op DH Benelux 2026 waarin de Suriname Time Machine als een van de casestudies werd gebruikt. Jona Schlegel maakte deel uit van het organisatieteam samen met Federica Di Biase en Kelly Gillikin Schoueri.',
       href: 'https://jonaschlegel.github.io/storytellers-by-design/',
       category: 'presentations',
       date: '2 juni 2026 · 14:00-17:00',
@@ -267,7 +267,7 @@ export const outputNl: OutputContent = {
       id: 'dhbenelux-workshop-case-study-2026',
       title: 'Peperpot-casestudy (Storytellers by Design workshopmateriaal)',
       description:
-        'Casestudymateriaal gebruikt tijdens DH Benelux 2026, met een Suriname Tijdmachine-case rond Peperpot.',
+        'Casestudymateriaal gebruikt tijdens DH Benelux 2026, met een Suriname Time Machine-case rond Peperpot.',
       href: 'https://jonaschlegel.github.io/storytellers-by-design/materials/case-studies/peperpot-case-study.pdf',
       category: 'presentations',
       date: '2 juni 2026',
@@ -379,9 +379,9 @@ export const outputNl: OutputContent = {
     // ── Gepubliceerde Code ──────────────────────────────────────────────
     {
       id: 'github-citizen-science',
-      title: 'Suriname Tijdmachine: Citizen Science Website',
+      title: 'Suriname Time Machine: Citizen Science Website',
       description:
-        'Open-source Next.js-website voor het Suriname Tijdmachine-project: participatieve wetenschapsevenementen, interactieve projectgalerij, annotatie-dashboard en tweetalige content.',
+        'Open-source Next.js-website voor het Suriname Time Machine-project: participatieve wetenschapsevenementen, interactieve projectgalerij, annotatie-dashboard en tweetalige content.',
       href: 'https://github.com/SurinameTimeMachine/suriname-time-machine-citizen-science',
       category: 'code',
       date: '2025–2026',
@@ -414,7 +414,7 @@ export const outputNl: OutputContent = {
       id: 'huc-mapathon-succes',
       title: 'Eerste workshop/mapathon Suriname groot succes',
       description:
-        'Intern nieuwsbericht op het KNAW Humanities Cluster-intranet over het succes van de eerste mapathon-workshop van de Suriname Tijdmachine.',
+        'Intern nieuwsbericht op het KNAW Humanities Cluster-intranet over het succes van de eerste mapathon-workshop van de Suriname Time Machine.',
       href: 'https://communicatie.huc.knaw.nl/nl/intranet/nieuws-evenementen/nieuws-detail/2026/03/19/eerste-workshop-mapathon-suriname-groot-succes',
       category: 'media',
       date: '19 maart 2026',
@@ -425,7 +425,7 @@ export const outputNl: OutputContent = {
       id: 'uva-kaarten-verhalen-2026',
       title: 'Een web van kaarten en verhalen brengt het verleden tot leven',
       description:
-        'Media-artikel van de Faculteit der Geesteswetenschappen van de UvA over de mapathon van de Suriname Tijdmachine en collaboratieve historische kaartpraktijken.',
+        'Media-artikel van de Faculteit der Geesteswetenschappen van de UvA over de mapathon van de Suriname Time Machine en collaboratieve historische kaartpraktijken.',
       href: 'https://www.uva.nl/shared-content/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
       category: 'media',
       date: 'Maart 2026',
@@ -436,7 +436,7 @@ export const outputNl: OutputContent = {
       id: 'ahh-kaarten-verhalen',
       title: 'Een web van kaarten en verhalen brengt het verleden tot leven',
       description:
-        'Artikel op de Amsterdam Humanities Hub over de mapathon van de Suriname Tijdmachine in het Bushuis van de UvA, waar een divers gezelschap historische kaarten van Suriname georefereerde en annoteerde met behulp van open tools als Allmaps.',
+        'Artikel op de Amsterdam Humanities Hub over de mapathon van de Suriname Time Machine in het Bushuis van de UvA, waar een divers gezelschap historische kaarten van Suriname georefereerde en annoteerde met behulp van open tools als Allmaps.',
       href: 'https://amsterdamhumanitieshub.nl/shared/faculteiten/nl/faculteit-der-geesteswetenschappen/nieuws/2026/03/een-web-van-kaarten-en-verhalen-brengt-het-verleden-tot-leven.html',
       category: 'media',
       date: '18 maart 2026',
@@ -461,7 +461,7 @@ export const outputNl: OutputContent = {
       title:
         'De Suriname Tijdmachine maakt koloniale geschiedenis tot in de kleinste details toegankelijk',
       description:
-        'Artikel op isgeschiedenis.nl over hoe het Suriname Tijdmachine-project bij het Huygens Instituut historische bronnen verbindt om de koloniale geschiedenis van Suriname tastbaar en traceerbaar te maken voor een breed publiek.',
+        'Artikel op isgeschiedenis.nl over hoe het Suriname Time Machine-project bij het Huygens Instituut historische bronnen verbindt om de koloniale geschiedenis van Suriname tastbaar en traceerbaar te maken voor een breed publiek.',
       href: 'https://isgeschiedenis.nl/nieuws/de-suriname-tijdmachine-maakt-koloniale-geschiedenis-tot-in-de-kleinste-details-toegankelijk',
       category: 'media',
       date: 'April 2026',
