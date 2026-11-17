@@ -6,6 +6,7 @@ import {
   geobuzz2026,
 } from '../../content/geobuzz2026.nl';
 import { Eyebrow, HackalodShell } from '../hackalod/HackalodShell';
+import { SlideClip } from './SlideClip';
 
 const pct = (n: number) => `${(n * 100).toFixed(2)}%`;
 
@@ -60,23 +61,15 @@ export function GeobuzzPage() {
                       priority={i === 0}
                     />
                     {slide.video && (
-                      <video
-                        className="absolute object-cover"
+                      <SlideClip
+                        src={slide.video.src}
                         style={{
                           left: pct(slide.video.left),
                           top: pct(slide.video.top),
                           width: pct(slide.video.width),
                           height: pct(slide.video.height),
                         }}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="metadata"
-                        aria-hidden="true"
-                      >
-                        <source src={slide.video.src} type="video/mp4" />
-                      </video>
+                      />
                     )}
                   </div>
                   <figcaption className="mt-2 text-sm text-ink/70">
