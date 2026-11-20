@@ -164,9 +164,9 @@ export const outputEn: OutputContent = {
         'Data article describing how the nineteenth-century population registers of Paramaribo were digitized and converted into a research database, with descriptive statistics for 1846.',
       href: 'https://tseg.nl/article/view/24540/26365',
       category: 'articles',
-      date: 'March 2026',
-      isoDate: '2026-03-01',
-      authors: 'van Oort, T. et al.',
+      date: '11 December 2025',
+      isoDate: '2025-12-11',
+      authors: 'van Oort, T.',
       venue:
         'TSEG – The Low Countries Journal of Social and Economic History 22(3), 97–122',
       doi: '10.52024/x5vgg810',
