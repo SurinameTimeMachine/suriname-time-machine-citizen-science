@@ -159,7 +159,7 @@ export const outputNl: OutputContent = {
     {
       id: 'tseg-wijkregisters',
       title:
-        'De Wijkregisters van Paramaribo, 1828–1847: een nieuwe onderzoeksdatabase over het stadsleven tijdens de slavernij',
+        'The Paramaribo Ward Register Database: A Fine-grained View of an Urban Slave Society (1828-1847)',
       description:
         'Data-artikel over hoe de negentiende-eeuwse bevolkingsregistratie van Paramaribo is gedigitaliseerd en omgezet in een onderzoeksdatabase, met beschrijvende statistieken voor 1846.',
       href: 'https://tseg.nl/article/view/24540/26365',
@@ -167,7 +167,9 @@ export const outputNl: OutputContent = {
       date: 'Maart 2026',
       isoDate: '2026-03-01',
       authors: 'van Oort, T. et al.',
-      venue: 'Tijdschrift voor Sociale en Economische Geschiedenis (TSEG)',
+      venue:
+        'TSEG – The Low Countries Journal of Social and Economic History 22(3), 97–122',
+      doi: '10.52024/x5vgg810',
     },
 
     // ── Presentaties ────────────────────────────────────────────────────
