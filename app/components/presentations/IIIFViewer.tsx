@@ -27,7 +27,7 @@ export function IIIFViewer({ fallback }: IIIFViewerProps) {
 
   return (
     <div className="relative h-full w-full overflow-hidden bg-black select-none">
-      {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- drag-to-pan zoom surface; keyboard alternative provided via buttons below */}
+      {/* eslint-disable-next-line jsx-a11y-x/no-noninteractive-element-interactions -- drag-to-pan zoom surface; keyboard alternative provided via buttons below */}
       <div
         role="application"
         aria-label="Zoomable image viewer"

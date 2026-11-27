@@ -16,7 +16,7 @@ function Video({ video }: { video: HackalodVideo }) {
   return (
     <figure className={video.portrait ? 'mx-auto w-full max-w-xs' : 'w-full'}>
       {/* No caption files exist yet for these recordings. */}
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      {/* eslint-disable-next-line jsx-a11y-x/media-has-caption */}
       <video
         className="w-full rounded-sm bg-black shadow-[0_4px_20px_rgba(0,30,24,0.12)]"
         controls

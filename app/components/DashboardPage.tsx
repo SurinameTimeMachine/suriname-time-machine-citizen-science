@@ -190,10 +190,9 @@ function CanvasChartSection({
             <Tooltip
               formatter={tooltipFormatter}
               labelFormatter={(label, payload) => {
-                void label;
+                void typeof label;
                 const entry = payload[0]?.payload as
-                  | { fullLabel?: string }
-                  | undefined;
+                  { fullLabel?: string } | undefined;
                 return entry?.fullLabel ?? '';
               }}
             />
@@ -274,8 +273,8 @@ export function DashboardPage({ content }: DashboardPageProps) {
   }, []);
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    loadData();
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- initial load shares retry logic
+    loadData().catch(console.error);
   }, [loadData]);
 
   return (
