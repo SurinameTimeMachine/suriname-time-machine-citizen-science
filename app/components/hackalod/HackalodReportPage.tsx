@@ -34,6 +34,33 @@ function Video({ video }: { video: HackalodVideo }) {
   );
 }
 
+function YouTubeVideo({
+  video,
+}: {
+  video: NonNullable<typeof c.projectionVideo>;
+}) {
+  return (
+    <figure className="w-full">
+      <div className="aspect-video min-h-[200px] w-full overflow-hidden rounded-sm bg-black shadow-[0_4px_20px_rgba(0,30,24,0.12)]">
+        <iframe
+          className="h-full w-full"
+          src={`https://www.youtube-nocookie.com/embed/${video.youtubeId}`}
+          title={video.title}
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+      <figcaption className="mt-3 text-sm text-ink/70">
+        <span className="font-semibold text-ink">{video.title}</span>{' '}
+        {video.caption}
+      </figcaption>
+    </figure>
+  );
+}
+
 type Part = (typeof c.parts.items)[number];
 
 /** Animated GIF or looping muted clip for a part, with the slide as fallback. */
@@ -200,10 +227,13 @@ export function HackalodReportPage() {
         </section>
 
         {/* Schermopname (verschijnt zodra de video is toegevoegd) */}
-        {c.screenRecording && (
+        {(c.screenRecording ?? c.projectionVideo) && (
           <section>
-            <SectionHeader eyebrow="Demo" title="Zo werkt de website" />
-            <Video video={c.screenRecording} />
+            <SectionHeader eyebrow="Demo" title="Zo werkt het" />
+            <div className="space-y-10">
+              {c.screenRecording && <Video video={c.screenRecording} />}
+              {c.projectionVideo && <YouTubeVideo video={c.projectionVideo} />}
+            </div>
           </section>
         )}
 
